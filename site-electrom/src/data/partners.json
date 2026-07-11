@@ -1,0 +1,180 @@
+{
+  "partners": [
+    {
+      "id": 9,
+      "name": "ENEL-SP",
+      "logo": "/partners/Enel_SP.webp",
+      "type": "utility",
+      "link": "https://www.enel.com.br/",
+      "linkType": "external",
+      "description": "Concessionária de energia elétrica atuante em São Paulo, com diversos projetos da Electrom homologados com sucesso.",
+      "category": "concessionaire",
+      "priority": 1
+    },
+    {
+      "id": 10,
+      "name": "CPFL Paulista",
+      "logo": "/partners/Logo-CPFLPaulista.png",
+      "type": "utility",
+      "link": "https://www.cpfl.com.br/",
+      "linkType": "external",
+      "description": "Uma das maiores distribuidoras do país, onde a Electrom possui obras e projetos de engenharia industrial homologados.",
+      "category": "concessionaire",
+      "priority": 1
+    },
+    {
+      "id": 11,
+      "name": "CPFL Piratininga",
+      "logo": "/partners/Logo-CPFLPiratinga.png",
+      "type": "utility",
+      "link": "https://www.cpfl.com.br/",
+      "linkType": "external",
+      "description": "Distribuidora do grupo CPFL que atende o interior e litoral paulista, com projetos de geração distribuída homologados pela Electrom.",
+      "category": "concessionaire",
+      "priority": 1
+    },
+    {
+      "id": 12,
+      "name": "COELBA",
+      "logo": "/partners/logoCoelba.png",
+      "type": "utility",
+      "link": "https://www.neoenergia.com/paginas/default.aspx",
+      "linkType": "external",
+      "description": "Companhia de Eletricidade do Estado da Bahia (Neoenergia), com conexões e homologações de plantas efetuadas pela Electrom.",
+      "category": "concessionaire",
+      "priority": 2
+    },
+    {
+      "id": 13,
+      "name": "Energisa",
+      "logo": "/partners/Energisa_Logo.webp",
+      "type": "utility",
+      "link": "https://www.energisa.com.br/",
+      "linkType": "external",
+      "description": "Grande grupo privado do setor elétrico nacional, com projetos e obras integradas de forma homologada pela Electrom.",
+      "category": "concessionaire",
+      "priority": 2
+    },
+    {
+      "id": 14,
+      "name": "EDP",
+      "logo": "/partners/logo EDP.png",
+      "type": "utility",
+      "link": "https://www.edp.com.br/",
+      "linkType": "external",
+      "description": "Distribuidora com forte atuação nacional e foco em transição energética, contendo obras homologadas em sua rede de distribuição.",
+      "category": "concessionaire",
+      "priority": 2
+    },
+    {
+      "id": 15,
+      "name": "Elektro",
+      "logo": "/partners/elektro-logo.svg",
+      "type": "utility",
+      "link": "https://www.neoenergia.com/paginas/default.aspx",
+      "linkType": "external",
+      "description": "Distribuidora da Neoenergia que atende cidades paulistas e sul-mato-grossenses, homologada com projetos industriais e comerciais da Electrom.",
+      "category": "concessionaire",
+      "priority": 2
+    },
+    {
+      "id": 16,
+      "name": "Jinko Solar",
+      "logo": "/partners/logoJinko.png",
+      "type": "hardware",
+      "link": "https://www.jinkosolar.com/",
+      "linkType": "external",
+      "description": "Líder global na fabricação de módulos fotovoltaicos de altíssima eficiência, integrada aos projetos de geração solar da Electrom.",
+      "category": "equipment",
+      "priority": 2
+    },
+    {
+      "id": 17,
+      "name": "JA Solar",
+      "logo": "/partners/JA_SolarLogo.webp",
+      "type": "hardware",
+      "link": "https://www.jasolar.com/",
+      "linkType": "external",
+      "description": "Fabricante tier-1 global de células e painéis solares de alta performance presente em nossas instalações comerciais e de grande porte.",
+      "category": "equipment",
+      "priority": 2
+    },
+    {
+      "id": 18,
+      "name": "DMEGC Solar",
+      "logo": "/partners/logoDMEGC.webp",
+      "type": "hardware",
+      "link": "https://www.dmegcsolar.com/",
+      "linkType": "external",
+      "description": "Marca referência em inovação e durabilidade de módulos fotovoltaicos utilizados pela nossa engenharia em ambientes rigorosos.",
+      "category": "equipment",
+      "priority": 3
+    },
+    {
+      "id": 19,
+      "name": "PHB Solar",
+      "logo": "/partners/LogoPHB.png",
+      "type": "hardware",
+      "link": "https://www.phbsolar.com.br/",
+      "linkType": "external",
+      "description": "Pioneira nacional no desenvolvimento de inversores, sistemas de fixação solar e proteção elétrica homologados no mercado brasileiro.",
+      "category": "equipment",
+      "priority": 2
+    },
+    {
+      "id": 20,
+      "name": "Hoymiles",
+      "logo": "/partners/logoHoymiles.svg",
+      "type": "hardware",
+      "link": "https://www.hoymiles.com/",
+      "linkType": "external",
+      "description": "Especialista mundial em microinversores de nível de módulo (MLPE), trazendo máxima eficiência e segurança individualizada por painel.",
+      "category": "equipment",
+      "priority": 2
+    },
+    {
+      "id": 21,
+      "name": "GoodWe",
+      "logo": "/partners/logoGoodwe.svg",
+      "type": "hardware",
+      "link": "https://br.goodwe.com/",
+      "linkType": "external",
+      "description": "Fabricante de inversores inteligentes e soluções de armazenamento de alta tecnologia para sistemas de geração solar comercial e residencial.",
+      "category": "equipment",
+      "priority": 2
+    },
+    {
+      "id": 22,
+      "name": "Growatt",
+      "logo": "/partners/GrowattLogo.png",
+      "type": "hardware",
+      "link": "https://www.growatt.com/",
+      "linkType": "external",
+      "description": "Fornecedora líder global de inversores solares fotovoltaicos focada em soluções inteligentes de gestão ativa e armazenamento de energia.",
+      "category": "equipment",
+      "priority": 2
+    },
+    {
+      "id": 23,
+      "name": "Intelbras Solar",
+      "logo": "/partners/logoIntelbras.png",
+      "type": "hardware",
+      "link": "https://www.intelbras.com/pt-br/energia-solar",
+      "linkType": "external",
+      "description": "Grande marca de tecnologia brasileira, oferecendo soluções robustas e homologadas de energia solar fotovoltaica e segurança integrada.",
+      "category": "equipment",
+      "priority": 2
+    }
+  ],
+  "settings": {
+    "autoScrollInterval": 3000,
+    "showCategoryFilter": false,
+    "showPriorityOrder": true,
+    "enableModal": true,
+    "responsiveBreakpoints": {
+      "mobile": 1,
+      "tablet": 3,
+      "desktop": 5
+    }
+  }
+}
