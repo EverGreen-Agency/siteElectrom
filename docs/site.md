@@ -2,6 +2,8 @@
 
 > Criar um site digital de alto impacto para posicionar a Electrom como referência em **Engenharia das Energias**, refletindo sua autoridade técnica, sustentabilidade, eficiência e legado de 25+ anos no setor elétrico e solar. O site deve unir beleza, fluidez, interatividade e storytelling para elevar sua presença digital a nível premium.
 
+teste de fork
+
 ---
 
 ## 🎯 Objetivo Estratégico

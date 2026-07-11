@@ -1,4 +1,4 @@
-Agora o Jogo é diferente, eu preciso que você desenho o Site Map para a empresa de um cliente meu, A Electrom.
+ja sAgora o Jogo é diferente, eu preciso que você desenho o Site Map para a empresa de um cliente meu, A Electrom.
 A Electrom Engenharia é uma empresa consolidada, com mais de 25 anos de experiência e um amplo portfólio de obras entregues. Seu foco na sustentabilidade e eficiência energética é um diferencial relevante no setor de engenharia elétrica e energia solar. No entanto, a marca possui baixa presença digital, limitando seu alcance e sua percepção de autoridade no mercado.
 Agora, a empresa busca se posicionar como "Engenharia das Energias", enfatizando sua expertise em soluções energéticas inovadoras e sustentáveis.
 Percepção do Público e Reputação
