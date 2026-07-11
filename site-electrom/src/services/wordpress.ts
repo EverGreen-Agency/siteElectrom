@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosResponse, AxiosError, InternalAxiosRequestConfig } from 'axios';
+import axios, { AxiosResponse, AxiosError, InternalAxiosRequestConfig } from 'axios';
 
 // URL da API do WordPress
 const WORDPRESS_API_URL = 'https://wp.electrom.eng.br/wp-json/wp/v2';
@@ -104,7 +104,7 @@ export interface AutoridadePost {
   featured_media: number;
   template: string;
   meta: {
-    [key: string]: any;
+    [key: string]: unknown;
   };
   _embedded?: {
     'wp:featuredmedia'?: Array<{
@@ -143,7 +143,7 @@ export interface AutoridadePost {
     }>;
     twitter_card: string;
     schema: {
-      [key: string]: any;
+      [key: string]: unknown;
     };
   };
 }
@@ -158,6 +158,28 @@ export interface Certificate {
     issue_date: string;
     certificate_url: string;
     image_url: string;
+  };
+}
+
+export interface Partner {
+  id: number;
+  title: {
+    rendered: string;
+  };
+  acf: {
+    partner_type?: string;
+    partner_category?: string;
+    website_url?: string;
+    priority?: number;
+    link_type?: string;
+    description?: string;
+  };
+  featured_media?: number;
+  _embedded?: {
+    'wp:featuredmedia'?: Array<{
+      source_url: string;
+      alt_text: string;
+    }>;
   };
 }
 
@@ -220,7 +242,7 @@ export const wordpressService = {
         });
         console.log('Resposta da API:', response.data);
         return response.data;
-      } catch (error) {
+      } catch {
         console.log('Tentando rota alternativa...');
         // Se falhar, tentar sem _embed
         const response = await api.get('/certificado', {
@@ -230,14 +252,32 @@ export const wordpressService = {
         });
         return response.data;
       }
-    } catch (error: any) {
+    } catch (error) {
+      const err = error as AxiosError;
       console.error('Erro detalhado:', {
-        message: error.message,
-        response: error.response?.data,
-        status: error.response?.status,
-        headers: error.response?.headers,
+        message: err.message,
+        response: err.response?.data,
+        status: err.response?.status,
+        headers: err.response?.headers,
         url: WORDPRESS_API_URL
       });
+      return [];
+    }
+  },
+
+  // Buscar parceiros cadastrados no WordPress Headless
+  async getPartners(): Promise<Partner[]> {
+    try {
+      console.log('Buscando parceiros do WordPress...');
+      const response = await api.get('/partners', {
+        params: {
+          per_page: 100,
+          _embed: true
+        }
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Erro ao buscar parceiros do WordPress:', error);
       return [];
     }
   },

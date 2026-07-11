@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="transparent"/>
+  <!-- Trina Solar Triangles Symbol Concept -->
+  <polygon points="15,35 25,15 35,35" fill="none" stroke="#FFC72C" stroke-width="2"/>
+  <polygon points="20,35 25,23 30,35" fill="#FFC72C"/>
+  <circle cx="25" cy="15" r="3" fill="#FFFFFF"/>
+  <!-- Typo -->
+  <text x="44" y="27" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">trinasolar</text>
+  <text x="44" y="38" font-family="'Inter', sans-serif" font-size="8" font-weight="600" fill="#7AA2E4" letter-spacing="1">SMART ENERGY</text>
+</svg>

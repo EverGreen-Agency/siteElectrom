@@ -1,37 +1,38 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { companyData } from '../data/companyData';
+import dynamic from 'next/dynamic';
+
+const InteractiveMap = dynamic(() => import('./InteractiveMap'), {
+  ssr: false,
+  loading: () => (
+    <div className="absolute inset-0 bg-[#030504] z-20 flex flex-col items-center justify-center gap-3">
+      <div className="w-8 h-8 border-2 border-brand-cyan/20 border-t-brand-cyan rounded-full animate-spin" />
+      <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">Carregando Mapa Operacional...</span>
+    </div>
+  )
+});
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
 
   const footerSections = [
     {
       title: "Soluções",
       links: [
-        { name: "Energia Solar", href: "/solucoes/energia-solar" },
-        { name: "Eficiência Energética", href: "/solucoes/eficiencia" },
-        { name: "Projetos Elétricos", href: "/solucoes/projetos-eletricos" },
-        { name: "Consultoria", href: "/solucoes/consultoria" }
+        { name: "Energia Solar", href: "/solucoes" },
+        { name: "Eficiência Energética", href: "/solucoes" },
+        { name: "Projetos Elétricos", href: "/solucoes" },
+        { name: "Consultoria", href: "/solucoes" }
       ]
     },
     {
       title: "Empresa",
       links: [
-        { name: "Sobre Nós", href: "/sobre" },
-        { name: "Cases de Sucesso", href: "/cases" },
         { name: "Sustentabilidade", href: "/sustentabilidade" },
         { name: "Blog", href: "/blog" }
-      ]
-    },
-    {
-      title: "Suporte",
-      links: [
-        { name: "Contato", href: "/contato" },
-        { name: "WhatsApp", href: "https://wa.me/5548999999999" },
-        { name: "Agendar Consultoria", href: "https://calendly.com/electrom" },
-        { name: "Central de Ajuda", href: "/ajuda" }
       ]
     }
   ];
@@ -39,212 +40,164 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/company/electrom-engenharia",
+      href: companyData.social.linkedin,
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72zm0 0"/>
+          <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72zm0 0" />
         </svg>
       )
     },
     {
       name: "Instagram",
-      href: "https://instagram.com/electromengenharia",
+      href: companyData.social.instagram,
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.41.59.22 1.01.48 1.45.92.44.44.7.86.92 1.45.17.46.354 1.26.41 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.41 2.43-.22.59-.48 1.01-.92 1.45-.44.44-.86.7-1.45.92-.46.17-1.26.354-2.43.41-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.43-.41-.59-.22-1.01-.48-1.45-.92-.44-.44-.7-.86-.92-1.45-.17-.46-.354-1.26-.41-2.43C2.212 15.784 2.2 15.4 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.97.41-2.43.22-.59.48-1.01.92-1.45.44-.44.86-.7 1.45-.92.46-.17 1.26-.354 2.43-.41C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.736 0 8.332.012 7.052.07 5.77.128 4.87.312 4.1.54c-.77.23-1.42.54-2.07 1.19-.65.65-.96 1.3-1.19 2.07-.23.77-.412 1.67-.47 2.95C.012 8.332 0 8.736 0 12c0 3.264.012 3.668.07 4.948.058 1.28.24 2.18.47 2.95.23.77.54 1.42 1.19 2.07.65.65 1.3.96 2.07 1.19.77.23 1.67.412 2.95.47C8.332 23.988 8.736 24 12 24s3.668-.012 4.948-.07c1.28-.058 2.18-.24 2.95-.47.77-.23 1.42-.54 2.07-1.19.65-.65.96-1.3 1.19-2.07.23-.77.412-1.67.47-2.95.058-1.28.07-1.684.07-4.948 0-3.264-.012-3.668-.07-4.948-.058-1.28-.24-2.18-.47-2.95-.23-.77-.54-1.42-1.19-2.07-.65-.65-1.3-.96-2.07-1.19-.77-.23-1.67-.412-2.95-.47C15.668.012 15.264 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm7.844-10.406a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
-        </svg>
-      )
-    },
-    {
-      name: "YouTube",
-      href: "https://youtube.com/@electromengenharia",
-      icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.41.59.22 1.01.48 1.45.92.44.44.7.86.92 1.45.17.46.354 1.26.41 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.41 2.43-.22.59-.48 1.01-.92 1.45-.44.44-.86.7-1.45.92-.46.17-1.26.354-2.43.41-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.43-.41-.59-.22-1.01-.48-1.45-.92-.44-.44-.7-.86-.92-1.45-.17-.46-.354-1.26-.41-2.43C2.212 15.784 2.2 15.4 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.97.41-2.43.22-.59.48-1.01.92-1.45.44-.44.86-.7 1.45-.92.46-.17 1.26-.354 2.43-.41C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.736 0 8.332.012 7.052.07 5.77.128 4.87.312 4.1.54c-.77.23-1.42.54-2.07 1.19-.65.65-.96 1.3-1.19 2.07-.23.77-.412 1.67-.47 2.95C.012 8.332 0 8.736 0 12c0 3.264.012 3.668.07 4.948.058 1.28.24 2.18.47 2.95.23.77.54 1.42 1.19 2.07.65.65 1.3.96 2.07 1.19.77.23 1.67.412 2.95.47C8.332 23.988 8.736 24 12 24s3.668-.012 4.948-.07c1.28-.058 2.18-.24 2.95-.47.77-.23 1.42-.54 2.07-1.19.65-.65.96-1.3 1.19-2.07.23-.77.412-1.67.47-2.95.058-1.28.07-1.684.07-4.948 0-3.264-.012-3.668-.07-4.948-.058-1.28-.24-2.18-.47-2.95-.23-.77-.54-1.42-1.19-2.07-.65-.65-1.3-.96-2.07-1.19-.77-.23-1.67-.412-2.95-.47C15.668.012 15.264 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm7.844-10.406a1.44 1.44 0 1 0 0 2.88 1.44 0 0 0 0-2.88z" />
         </svg>
       )
     }
   ];
 
-  const certifications = [
-    { name: "CREA-SC", logo: "/certifications/crea.png" },
-    { name: "ISO 9001", logo: "/certifications/iso.png" },
-    { name: "ABNT", logo: "/certifications/abnt.png" }
-  ];
+  const certifications = ["CREA Registrado", "ISO 9001 Homologado", "NBR 5410/NR-10"];
 
   return (
-    <footer className="bg-brand-petrol text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M20 20c0-11.046-8.954-20-20-20v20h20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
+    <footer className="bg-[#030504] text-white relative overflow-hidden border-t border-white/10 pt-16 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
 
-      <div className="relative z-10">
-        {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12">
-            
-            {/* Company Info */}
-            <motion.div
-              className="lg:col-span-1"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-brand-blue mb-2">Electrom</h3>
-                <p className="text-sm text-white/70 uppercase tracking-wide">Engenharia das Energias</p>
-              </div>
-              
-              <p className="text-white/80 mb-6 leading-relaxed">
-                Transformando o futuro energético há mais de 25 anos com soluções sustentáveis e inovadoras.
-              </p>
+      {/* Top ambient glow to cleanly separate from the previous section */}
+      <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-brand-blue/10 blur-[120px] pointer-events-none rounded-full opacity-60" />
 
-              {/* Contact Info */}
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span className="text-sm text-white/80">Florianópolis, SC</span>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <a href="mailto:contato@electrom.com.br" className="text-sm text-white/80 hover:text-brand-blue transition-colors">
-                    contato@electrom.com.br
-                  </a>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <a href="tel:+5548999999999" className="text-sm text-white/80 hover:text-brand-blue transition-colors">
-                    (48) 99999-9999
-                  </a>
-                </div>
-              </div>
+      {/* Blueprint background grid */}
+      <div className="absolute inset-0 blueprint-bg opacity-[0.08] pointer-events-none mix-blend-overlay" />
 
-              {/* Social Links */}
-              <div className="flex gap-3">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-white/10 rounded-lg hover:bg-brand-blue hover:scale-110 transition-all duration-300"
-                    whileHover={{ y: -2 }}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    aria-label={social.name}
-                  >
-                    {social.icon}
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
+      <motion.div 
+        className="max-w-7xl mx-auto px-6 md:px-8 relative z-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.15 } }
+        }}
+      >
 
-            {/* Footer Links */}
-            {footerSections.map((section, sectionIndex) => (
-              <motion.div
-                key={section.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
-              >
-                <h4 className="text-lg font-semibold mb-4 text-brand-blue">
+        {/* Main Footer layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16">
+
+          {/* Col 1: Corporate identity & Newsletter (col-span-4) */}
+          <motion.div 
+            className="lg:col-span-4 space-y-6"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+            }}
+          >
+            <div>
+              <h3 className="text-2xl font-display font-black text-brand-blue">{companyData.name.split(' ')[0].toUpperCase()}</h3>
+              <span className="text-[10px] font-mono tracking-widest text-brand-cyan uppercase font-bold">
+                {companyData.slogan}
+              </span>
+            </div>
+
+            <p className="text-xs text-gray-400 font-light leading-relaxed max-w-sm">
+              Mais de {companyData.experienceYears} anos de engenharia disruptiva de alta performance, descarbonizando operações e entregando o máximo rendimento energético aos nossos clientes.
+            </p>
+
+            {/* Social Links */}
+            <div className="flex gap-3.5 pt-2">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 bg-white/5 border border-white/10 rounded-lg hover:border-brand-blue/30 text-gray-400 hover:text-white transition-all duration-300"
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Col 2 & 3: Sections of Links (col-span-3) */}
+          <motion.div 
+            className="lg:col-span-3 grid grid-cols-2 gap-4 lg:gap-8"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+            }}
+          >
+            {footerSections.map((section) => (
+              <div key={section.title} className="space-y-4">
+                <h4 className="text-xs font-mono font-bold text-brand-blue uppercase tracking-widest">
                   {section.title}
                 </h4>
                 <ul className="space-y-3">
-                  {section.links.map((link, linkIndex) => (
+                  {section.links.map((link) => (
                     <li key={link.name}>
                       <a
                         href={link.href}
-                        target={link.href.startsWith('http') ? '_blank' : '_self'}
-                        rel={link.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                        className="text-white/80 hover:text-brand-blue transition-colors duration-300 text-sm flex items-center gap-2 group"
+                        className="text-xs text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-1.5"
                       >
                         {link.name}
-                        {link.href.startsWith('http') && (
-                          <svg className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        )}
                       </a>
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Col 4: Regional operations map (col-span-5) */}
+          <motion.div 
+            className="lg:col-span-5 space-y-4"
+            variants={{
+              hidden: { opacity: 0, scale: 0.95 },
+              visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }
+            }}
+          >
+            <h4 className="text-xs font-mono font-bold text-brand-blue uppercase tracking-widest">
+              Nossa Presença Operacional
+            </h4>
+            <div className="relative w-full h-[300px] lg:h-[400px] bg-[#060c0a] border border-white/5 rounded-2xl overflow-hidden shadow-2xl">
+              <InteractiveMap />
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Bottom copyright details and credentials */}
+        <motion.div 
+          className="border-t border-white/5 py-8 flex flex-col md:flex-row justify-between items-center gap-6"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { duration: 1 } }
+          }}
+        >
+
+          {/* Credentials */}
+          <div className="flex flex-wrap items-center gap-4 text-xs">
+            <span className="text-gray-500 font-mono text-[10px] uppercase">Garantias:</span>
+            {certifications.map((c) => (
+              <span key={c} className="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-[10px] font-mono text-gray-400 hover:text-white transition-colors cursor-default">
+                {c}
+              </span>
             ))}
           </div>
-        </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-4 md:px-6 py-6">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              
-              {/* Certifications */}
-              <motion.div
-                className="flex items-center gap-6"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="text-sm text-white/60">Certificações:</span>
-                <div className="flex gap-4">
-                  {certifications.map((cert, index) => (
-                    <div
-                      key={cert.name}
-                      className="flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full"
-                    >
-                      <span className="text-xs text-white/70">{cert.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Copyright */}
-              <motion.div
-                className="text-center md:text-right"
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <p className="text-sm text-white/60 mb-1">
-                  © {currentYear} Electrom Engenharia. Todos os direitos reservados.
-                </p>
-                <div className="flex flex-wrap justify-center md:justify-end gap-4 text-xs text-white/50">
-                  <a href="/legal/privacidade" className="hover:text-brand-blue transition-colors">
-                    Política de Privacidade
-                  </a>
-                  <span>•</span>
-                  <a href="/legal/termos" className="hover:text-brand-blue transition-colors">
-                    Termos de Uso
-                  </a>
-                  <span>•</span>
-                  <a href="/legal/cookies" className="hover:text-brand-blue transition-colors">
-                    Cookies
-                  </a>
-                </div>
-              </motion.div>
+          {/* Copyright details */}
+          <div className="text-center md:text-right font-mono text-[10px] text-gray-500 space-y-1">
+            <div>© {currentYear} ELECTROM ENGENHARIA LTDA. CNPJ ATIVO.</div>
+            <div className="flex justify-center md:justify-end gap-3 text-gray-400">
+              <a href="/legal/privacidade" className="hover:text-brand-blue">Privacidade</a>
+              <span>•</span>
+              <a href="/legal/termos" className="hover:text-brand-blue">Termos</a>
             </div>
           </div>
-        </div>
-      </div>
+
+        </motion.div>
+
+      </motion.div>
+
     </footer>
   );
-} 
+}

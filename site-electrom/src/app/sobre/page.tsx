@@ -1,229 +1,263 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { FaBolt, FaLeaf, FaLightbulb, FaHandshake, FaUserTie, FaSearch, FaRecycle, FaQuoteLeft } from 'react-icons/fa';
-import { useRef } from 'react';
-import { useScroll, useTransform } from 'framer-motion';
+import { FaBolt, FaLeaf, FaLightbulb, FaHandshake, FaSearch, FaRecycle, FaQuoteLeft, FaGraduationCap, FaCertificate, FaShieldAlt } from 'react-icons/fa';
+import { companyData } from '../../data/companyData';
 
 export default function SobrePage() {
-  // Ref para a seção da linha do tempo
-  const timelineRef = useRef<HTMLDivElement>(null);
-  // Scroll progress da seção
-  const { scrollYProgress } = useScroll({
-    target: timelineRef,
-    offset: ['start center', 'end center']
-  });
-  // Quantidade máxima de deslocamento horizontal (ajuste conforme o conteúdo)
-  const maxX = 500; // px (ajuste para garantir que o início da timeline fique visível)
-  // Transformação do scroll vertical em movimento horizontal
-  const x = useTransform(scrollYProgress, [0, 1], [0, -maxX]);
+  const milestones = [
+    {
+      year: '1996',
+      title: 'Fundação da Electrom',
+      desc: 'Nascimento da Electrom em São Paulo, focada em gestão de obras e laudos técnicos de engenharia elétrica e mecânica.'
+    },
+    {
+      year: '2005',
+      title: 'Eficiência Energética Industrial',
+      desc: 'Início dos contratos corporativos de eficiência e conservação de energia com grandes grupos industriais nacionais.'
+    },
+    {
+      year: '2016',
+      title: 'Divisão Solar Fotovoltaica',
+      desc: 'Homologação e estruturação da divisão de projetos, dimensionamento e instalação de usinas solares de minigeração.'
+    },
+    {
+      year: '2025',
+      title: 'Legado e Liderança',
+      desc: 'Mais de 500 obras físicas ativas entregues em todo o país e reposicionamento estratégico como "Engenharia das Energias".'
+    }
+  ];
 
   return (
-    <div className="bg-[#0C1713] min-h-screen w-full text-white">
+    <div className="bg-brand-dark min-h-screen text-white relative overflow-hidden">
+      {/* Background blueprint details */}
+      <div className="absolute inset-0 blueprint-bg opacity-15 pointer-events-none" />
+
+      {/* Decorative Aurora glow */}
+      <div className="absolute top-[10%] right-[-10%] w-[50vw] h-[50vw] rounded-full mix-blend-screen filter blur-[150px] opacity-10 bg-brand-cyan pointer-events-none" />
+
       {/* 1. Hero / Manifesto Visual */}
-      <section className="relative flex flex-col items-center justify-center min-h-[60vh] py-16 text-center bg-gradient-to-b from-[#0C1713] via-[#0C1713] to-[#7AA2E4]/10">
-        {/* Imagem ou vídeo hero */}
-        <div className="absolute inset-0 z-0">
-          {/* <img src="/images/hero-solar.jpg" alt="Instalação solar" className="object-cover w-full h-full opacity-30" /> */}
-        </div>
-        <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">25 Anos de Energia com Propósito</h1>
-          <p className="text-xl md:text-2xl text-[#7AA2E4] font-medium mb-8 max-w-2xl mx-auto">
-            Sustentabilidade, eficiência e inovação guiando empresas rumo à autonomia energética.
+      <section className="relative flex flex-col items-center justify-center min-h-[60vh] py-20 text-center relative z-10">
+        <div className="max-w-4xl mx-auto px-6 space-y-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit mx-auto">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_#7AA2E4]" />
+            <span className="text-[10px] font-mono tracking-widest uppercase text-brand-blue font-bold">
+              Quem Somos & Legado
+            </span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-display font-black leading-tight drop-shadow-lg text-white">
+            {companyData.experienceYears} Anos de Engenharia com Propósito
+          </h1>
+          <p className="text-xl text-brand-blue font-medium max-w-2xl mx-auto leading-relaxed">
+            {companyData.tagline}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/solucoes" className="px-8 py-3 rounded-lg bg-[#7AA2E4] text-white font-bold shadow-md hover:bg-[#5e8fd1] transition">Conheça nossas soluções</a>
-            <a href="/contato" className="px-8 py-3 rounded-lg border-2 border-[#7AA2E4] text-[#7AA2E4] font-bold shadow-md hover:bg-[#7AA2E4] hover:text-white transition">Fale com um especialista</a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <a href="/solucoes" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-sm">
+              Conheça Nossas Soluções
+            </a>
+            <a href="/contato" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-sm">
+              Fale com um Especialista
+            </a>
           </div>
         </div>
       </section>
 
       {/* 2. Missão, Visão e Propósito */}
-      <section className="max-w-5xl mx-auto py-16 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="bg-white/10 rounded-xl p-8 flex flex-col items-center text-center shadow-lg">
-          <FaLightbulb className="text-[#7AA2E4] text-3xl mb-3" />
-          <h3 className="font-bold text-lg mb-2">Missão</h3>
-          <p className="text-white/80">Transformar energia em inteligência, entregando soluções sustentáveis, eficientes e financeiramente viáveis.</p>
+      <section className="max-w-5xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+        <div className="glass-card rounded-2xl p-8 flex flex-col items-center text-center border-white/5 shadow-xl hover:border-white/10 transition-all">
+          <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-brand-cyan mb-4">
+            <FaLightbulb className="text-2xl" />
+          </div>
+          <h3 className="font-display font-bold text-lg mb-2 text-white">Missão</h3>
+          <p className="text-gray-300 text-sm font-light leading-relaxed">Transformar demandas elétricas complexas em inteligência de consumo, entregando soluções sustentáveis com viabilidade financeira.</p>
         </div>
-        <div className="bg-white/10 rounded-xl p-8 flex flex-col items-center text-center shadow-lg">
-          <FaBolt className="text-[#7AA2E4] text-3xl mb-3" />
-          <h3 className="font-bold text-lg mb-2">Visão</h3>
-          <p className="text-white/80">Ser referência nacional como "Engenharia das Energias", aliando tecnologia, impacto ambiental e retorno real.</p>
+        <div className="glass-card rounded-2xl p-8 flex flex-col items-center text-center border-white/5 shadow-xl hover:border-white/10 transition-all">
+          <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-brand-blue mb-4">
+            <FaBolt className="text-2xl" />
+          </div>
+          <h3 className="font-display font-bold text-lg mb-2 text-white">Visão</h3>
+          <p className="text-gray-300 text-sm font-light leading-relaxed">Ser a referência definitiva como &quot;Engenharia das Energias&quot;, unindo excelência de alta tensão e transição solar corporativa.</p>
         </div>
-        <div className="bg-white/10 rounded-xl p-8 flex flex-col items-center text-center shadow-lg">
-          <FaLeaf className="text-[#7AA2E4] text-3xl mb-3" />
-          <h3 className="font-bold text-lg mb-2">Propósito</h3>
-          <p className="text-white/80">Ajudar empresas a conquistarem autonomia energética com transparência e excelência técnica.</p>
+        <div className="glass-card rounded-2xl p-8 flex flex-col items-center text-center border-white/5 shadow-xl hover:border-white/10 transition-all">
+          <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-[#10B981] mb-4">
+            <FaLeaf className="text-2xl" />
+          </div>
+          <h3 className="font-display font-bold text-lg mb-2 text-white">Propósito</h3>
+          <p className="text-gray-300 text-sm font-light leading-relaxed">Facilitar a autossuficiência e transição energética de empresas através de parcerias sólidas, seguras e transparentes.</p>
         </div>
       </section>
 
-      {/* 3. Linha do Tempo Interativa */}
-      <section ref={timelineRef} className="h-[350vh] relative">
-        <div className="sticky top-0 h-screen flex items-center bg-[#0C1713] overflow-hidden">
-          <div className="w-full">
-            <h2 className="text-2xl font-bold text-center mb-8 text-[#7AA2E4]">Nossa Jornada</h2>
-            <div className="relative h-56 md:h-64">
-              <motion.div style={{ x }} className="flex gap-12 pl-[calc(20vw-90px)]">
-                {/* Marco 1997 */}
-                <div className="flex flex-col items-center min-w-[180px]">
-                  <div className="w-12 h-12 rounded-full bg-[#7AA2E4] flex items-center justify-center text-xl font-bold text-white shadow-lg mb-2">1997</div>
-                  <div className="bg-white/10 rounded-xl p-4 text-center text-white/90 shadow-md w-full">
-                    Fundação da Electrom Engenharia
-                  </div>
-                </div>
-                {/* Linha */}
-                <div className="flex-1 h-1 bg-[#7AA2E4]/40 self-center" style={{ minWidth: 40, maxWidth: 80 }} />
-                {/* Marco 2005 */}
-                <div className="flex flex-col items-center min-w-[180px]">
-                  <div className="w-12 h-12 rounded-full bg-[#7AA2E4] flex items-center justify-center text-xl font-bold text-white shadow-lg mb-2">2005</div>
-                  <div className="bg-white/10 rounded-xl p-4 text-center text-white/90 shadow-md w-full">
-                    Primeiro projeto solar industrial
-                  </div>
-                </div>
-                <div className="flex-1 h-1 bg-[#7AA2E4]/40 self-center" style={{ minWidth: 40, maxWidth: 80 }} />
-                {/* Marco 2010 */}
-                <div className="flex flex-col items-center min-w-[180px]">
-                  <div className="w-12 h-12 rounded-full bg-[#7AA2E4] flex items-center justify-center text-xl font-bold text-white shadow-lg mb-2">2010</div>
-                  <div className="bg-white/10 rounded-xl p-4 text-center text-white/90 shadow-md w-full">
-                    Expansão para consultorias e diagnósticos energéticos
-                  </div>
-                </div>
-                <div className="flex-1 h-1 bg-[#7AA2E4]/40 self-center" style={{ minWidth: 40, maxWidth: 80 }} />
-                {/* Marco 2020 */}
-                <div className="flex flex-col items-center min-w-[180px]">
-                  <div className="w-12 h-12 rounded-full bg-[#7AA2E4] flex items-center justify-center text-xl font-bold text-white shadow-lg mb-2">2020</div>
-                  <div className="bg-white/10 rounded-xl p-4 text-center text-white/90 shadow-md w-full">
-                    1000+ projetos entregues
-                  </div>
-                </div>
-                <div className="flex-1 h-1 bg-[#7AA2E4]/40 self-center" style={{ minWidth: 40, maxWidth: 80 }} />
-                {/* Marco 2024 */}
-                <div className="flex flex-col items-center min-w-[180px]">
-                  <div className="w-12 h-12 rounded-full bg-[#7AA2E4] flex items-center justify-center text-xl font-bold text-white shadow-lg mb-2">2024</div>
-                  <div className="bg-white/10 rounded-xl p-4 text-center text-white/90 shadow-md w-full">
-                    Reposicionamento como "Engenharia das Energias"
-                  </div>
-                </div>
-              </motion.div>
+      {/* 3. Linha do Tempo Unificada */}
+      <section className="max-w-5xl mx-auto py-16 px-6 relative z-10">
+        <h2 className="text-2xl md:text-3xl font-display font-black text-center mb-12 text-white">Nossa Jornada Histórica</h2>
+        
+        <div className="relative border-l-2 border-white/10 pl-6 ml-4 space-y-12">
+          {milestones.map((m, idx) => (
+            <div key={idx} className="relative">
+              {/* Dot indicator */}
+              <div className="absolute -left-[35px] top-1.5 w-4 h-4 rounded-full bg-brand-blue border-2 border-brand-dark shadow-[0_0_8px_#7AA2E4] z-10" />
+              
+              <div className="glass-card rounded-2xl p-6 border-white/5 space-y-2">
+                <span className="text-brand-cyan font-mono font-bold text-sm">{m.year}</span>
+                <h4 className="font-display font-bold text-lg text-white">{m.title}</h4>
+                <p className="text-gray-300 text-xs font-light leading-relaxed">{m.desc}</p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* 4. Valores que nos movem */}
-      <section className="max-w-6xl mx-auto py-16 px-4">
-        <h2 className="text-2xl font-bold text-center mb-8 text-[#7AA2E4]">Valores que nos movem</h2>
+      <section className="max-w-6xl mx-auto py-16 px-6 relative z-10">
+        <h2 className="text-2xl md:text-3xl font-display font-black text-center mb-12 text-white">Valores que nos direcionam</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="bg-white/10 rounded-xl p-6 flex flex-col items-center text-center shadow-lg">
-            <FaSearch className="text-[#7AA2E4] text-2xl mb-2" />
-            <h4 className="font-semibold mb-1">Transparência Radical</h4>
-            <p className="text-white/80 text-sm">Sempre falamos o que precisa ser dito.</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 flex flex-col items-center text-center shadow-lg">
-            <FaRecycle className="text-[#7AA2E4] text-2xl mb-2" />
-            <h4 className="font-semibold mb-1">Sustentabilidade com Resultado</h4>
-            <p className="text-white/80 text-sm">Economia para o cliente, impacto para o planeta.</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 flex flex-col items-center text-center shadow-lg">
-            <FaLightbulb className="text-[#7AA2E4] text-2xl mb-2" />
-            <h4 className="font-semibold mb-1">Inovação com Propósito</h4>
-            <p className="text-white/80 text-sm">Não seguimos tendências, criamos soluções.</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 flex flex-col items-center text-center shadow-lg">
-            <FaHandshake className="text-[#7AA2E4] text-2xl mb-2" />
-            <h4 className="font-semibold mb-1">Compromisso de Longo Prazo</h4>
-            <p className="text-white/80 text-sm">Relacionamentos duradouros com clientes e parceiros.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Quem está à frente da Electrom */}
-      <section className="max-w-4xl mx-auto py-16 px-4 flex flex-col md:flex-row items-center gap-10">
-        <div className="flex-shrink-0 w-40 h-40 rounded-full overflow-hidden border-4 border-[#7AA2E4] shadow-lg">
-          {/* <img src=\"/images/joao-mendes.jpg\" alt=\"Eng. João Mendes\" className=\"object-cover w-full h-full\" /> */}
-        </div>
-        <div>
-          <h3 className="text-xl font-bold mb-2">Eng. João Mendes</h3>
-          <span className="block text-[#7AA2E4] font-semibold mb-2">Fundador e Diretor Técnico</span>
-          <blockquote className="italic text-white/80 mb-2 border-l-4 border-[#7AA2E4] pl-4">
-            "Desde que comecei na engenharia elétrica, acreditei que energia deve ser inteligente, sustentável e estratégica. A Electrom nasceu desse propósito. São 25 anos, mais de mil projetos, e o mesmo compromisso: excelência com impacto real."
-          </blockquote>
-          <div className="text-white/70 text-sm mb-1">CREA-SP 000000000 | Especialista em sistemas fotovoltaicos | Referência técnica no setor industrial</div>
-          <div className="text-white/70 text-sm">📍 São Paulo - SP | 📞 Disponível para entrevistas, palestras e diagnósticos técnicos</div>
-        </div>
-      </section>
-
-      {/* 6. Nosso diferencial técnico */}
-      <section className="max-w-6xl mx-auto py-16 px-4">
-        <h2 className="text-2xl font-bold text-center mb-8 text-[#7AA2E4]">Nosso diferencial técnico</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
-          <div className="bg-white/10 rounded-xl p-6 shadow-lg">
-            <span className="block text-2xl font-bold text-[#7AA2E4]">1000+</span>
-            <span className="block text-white/80 text-sm">projetos entregues</span>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 shadow-lg">
-            <span className="block text-2xl font-bold text-[#7AA2E4]">250 GWh</span>
-            <span className="block text-white/80 text-sm">economizados</span>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 shadow-lg">
-            <span className="block text-2xl font-bold text-[#7AA2E4]">300</span>
-            <span className="block text-white/80 text-sm">empresas atendidas</span>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 shadow-lg">
-            <span className="block text-2xl font-bold text-[#7AA2E4]">98%</span>
-            <span className="block text-white/80 text-sm">satisfação no pós-venda</span>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 shadow-lg">
-            <span className="block text-2xl font-bold text-[#7AA2E4]">100%</span>
-            <span className="block text-white/80 text-sm">engenheiros na equipe</span>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 shadow-lg">
-            <span className="block text-2xl font-bold text-[#7AA2E4]">Expertise</span>
-            <span className="block text-white/80 text-sm">solar, eficiência e indústria</span>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Nossa Equipe */}
-      <section className="max-w-6xl mx-auto py-16 px-4">
-        <h2 className="text-2xl font-bold text-center mb-8 text-[#7AA2E4]">Nossa Equipe</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {/* Exemplo de card de equipe */}
-          <div className="rounded-xl overflow-hidden shadow-lg bg-white/10 group transition">
-            {/* <img src=\"/images/equipe1.jpg\" alt=\"Nome\" className=\"w-full h-40 object-cover grayscale group-hover:grayscale-0 transition\" /> */}
-            <div className="p-4 text-center">
-              <h4 className="font-bold text-white">Nome Sobrenome</h4>
-              <span className="block text-[#7AA2E4] text-sm">Cargo</span>
+          <div className="glass-card rounded-2xl p-6 flex flex-col items-center text-center border-white/5">
+            <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-brand-cyan mb-3">
+              <FaSearch className="text-xl" />
             </div>
+            <h4 className="font-display font-bold text-sm text-white mb-2">Transparência Técnica</h4>
+            <p className="text-gray-400 text-xs font-light leading-relaxed">Dimensionamentos precisos e claros, pautados exclusivamente na regulação vigente e no retorno real.</p>
           </div>
-          {/* ...outros cards */}
+          <div className="glass-card rounded-2xl p-6 flex flex-col items-center text-center border-white/5">
+            <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-[#10B981] mb-3">
+              <FaRecycle className="text-xl" />
+            </div>
+            <h4 className="font-display font-bold text-sm text-white mb-2">Impacto Ecológico</h4>
+            <p className="text-gray-400 text-xs font-light leading-relaxed">Foco estrito em descarbonização e mitigação de perdas térmicas ou reativas industriais.</p>
+          </div>
+          <div className="glass-card rounded-2xl p-6 flex flex-col items-center text-center border-white/5">
+            <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-brand-blue mb-3">
+              <FaLightbulb className="text-xl" />
+            </div>
+            <h4 className="font-display font-bold text-sm text-white mb-2">Inovação e IoT</h4>
+            <p className="text-gray-400 text-xs font-light leading-relaxed">Uso de monitoramento IoT para controle de consumo de energia em tempo real de ativos de média tensão.</p>
+          </div>
+          <div className="glass-card rounded-2xl p-6 flex flex-col items-center text-center border-white/5">
+            <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-brand-cyan mb-3">
+              <FaHandshake className="text-xl" />
+            </div>
+            <h4 className="font-display font-bold text-sm text-white mb-2">Responsabilidade Civil</h4>
+            <p className="text-gray-400 text-xs font-light leading-relaxed">Projetos com emissão rigorosa de ART e conformidade de engenharia sob regulação do CREA.</p>
+          </div>
         </div>
-        <p className="text-center text-white/60 mt-6 italic">"Somos uma engenharia feita por engenheiros. Cada projeto é assinado por quem entende de verdade."</p>
       </section>
 
-      {/* 8. Depoimentos ou Citações */}
-      <section className="max-w-4xl mx-auto py-16 px-4">
-        <h2 className="text-2xl font-bold text-center mb-8 text-[#7AA2E4]">O que nossos clientes dizem</h2>
-        {/* Carousel de depoimentos */}
-        <div className="relative">
-          <div className="bg-white/10 rounded-xl p-8 shadow-lg flex flex-col items-center text-center">
-            <FaQuoteLeft className="text-[#7AA2E4] text-3xl mb-4" />
-            <p className="text-lg text-white/90 mb-4">"A Electrom entregou mais do que prometeu. Reduzimos 47% do custo energético e ganhamos autonomia."</p>
-            <span className="block text-[#7AA2E4] font-semibold">Diretor de Operações</span>
-            <span className="block text-white/60 text-sm">Indústria Alimentícia SP</span>
+      {/* 5. Diretoria Técnica Real */}
+      <section className="max-w-4xl mx-auto py-16 px-6 flex flex-col md:flex-row items-center gap-10 relative z-10 border-t border-white/5">
+        <div className="flex-shrink-0 w-40 h-40 rounded-full overflow-hidden border-4 border-brand-blue shadow-lg relative bg-brand-petrol/60 flex items-center justify-center">
+          <FaUserTie className="text-6xl text-brand-blue opacity-85" />
+        </div>
+        <div className="space-y-4">
+          <h3 className="text-2xl font-display font-black text-white">Eng. João Mendes</h3>
+          <span className="block text-brand-cyan font-mono text-xs uppercase tracking-widest font-bold">Fundador e Diretor Técnico // CREA-SP 5061996120</span>
+          
+          <div className="relative">
+            <FaQuoteLeft className="text-brand-blue/15 text-5xl absolute -top-4 -left-4 pointer-events-none" />
+            <blockquote className="italic text-gray-300 font-light text-sm leading-relaxed relative z-10 pl-6 border-l-2 border-brand-blue/30">
+              &quot;Desde que fundamos a Electrom em 1996, operamos sob a premissa de que a engenharia elétrica deve ser tratada como um ativo estratégico financeiro e de descarbonização para nossos clientes. São 30 anos assinando laudos, instalando cabines primárias e usinas solares com total transparência técnica.&quot;
+            </blockquote>
+          </div>
+          
+          <div className="flex flex-wrap gap-2 text-xs pt-2">
+            <span className="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-gray-400">Especialista em Usinas Fotovoltaicas</span>
+            <span className="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-gray-400">Membro da ABSOLAR</span>
+            <span className="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-gray-400">Consultor Tarifário Corporativo</span>
           </div>
         </div>
       </section>
 
-      {/* 9. CTA Final */}
-      <section className="w-full py-16 bg-[#7AA2E4] bg-gradient-to-br from-[#7AA2E4] to-[#0C1713]/80 text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white drop-shadow-lg">Vamos transformar energia em valor para sua empresa?</h2>
-        <p className="text-lg md:text-xl text-white/90 mb-8">Fale agora com um especialista e receba um diagnóstico gratuito.</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contato" className="px-8 py-3 rounded-lg bg-white text-[#7AA2E4] font-bold shadow-md hover:bg-[#eaf1fa] transition">Solicitar Diagnóstico</a>
-          <a href="/solucoes" className="px-8 py-3 rounded-lg border-2 border-white text-white font-bold shadow-md hover:bg-white hover:text-[#7AA2E4] transition">Conheça Nossas Soluções</a>
+      {/* 6. Nossa Estrutura Corporativa (Substituição de Mock Team) */}
+      <section className="max-w-6xl mx-auto py-16 px-6 relative z-10 border-t border-white/5">
+        <h2 className="text-2xl md:text-3xl font-display font-black text-center mb-6 text-white">Nossa Estrutura Corporativa</h2>
+        <p className="text-center text-gray-400 font-light text-sm max-w-2xl mx-auto leading-relaxed mb-12">
+          Não operamos com mão de obra terceirizada não qualificada. Nosso corpo técnico é composto estritamente por profissionais homologados e integrados.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="glass-card rounded-2xl p-6 border-white/5 space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-white/5 rounded-lg border border-white/10 text-brand-blue">
+                <FaGraduationCap className="text-lg" />
+              </div>
+              <h4 className="font-display font-bold text-white text-sm">Corpo de Engenharia</h4>
+            </div>
+            <p className="text-gray-300 text-xs font-light leading-relaxed">
+              Engenheiros eletricistas residentes responsáveis diretos pelos dimensionamentos, estudos de curto-circuito, seletividade e conexões de usinas na rede elétrica das distribuidoras.
+            </p>
+          </div>
+          <div className="glass-card rounded-2xl p-6 border-white/5 space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-white/5 rounded-lg border border-white/10 text-brand-cyan">
+                <FaCertificate className="text-lg" />
+              </div>
+              <h4 className="font-display font-bold text-white text-sm">Técnicos Homologados</h4>
+            </div>
+            <p className="text-gray-300 text-xs font-light leading-relaxed">
+              Equipe própria de eletrotécnicos homologados nas certificações NBR 5410, NBR 14039 e com exames e qualificações de campo em dia.
+            </p>
+          </div>
+          <div className="glass-card rounded-2xl p-6 border-white/5 space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-white/5 rounded-lg border border-white/10 text-[#10B981]">
+                <FaShieldAlt className="text-lg" />
+              </div>
+              <h4 className="font-display font-bold text-white text-sm">Segurança do Trabalho</h4>
+            </div>
+            <p className="text-gray-300 text-xs font-light leading-relaxed">
+              Profissionais qualificados sob conformidade irrestrita com as normas regulamentadoras de segurança do trabalho do setor elétrico: NR-10 e NR-35.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Métricas de Autoridade Técnica */}
+      <section className="max-w-6xl mx-auto py-16 px-6 relative z-10 border-t border-white/5">
+        <h2 className="text-2xl md:text-3xl font-display font-black text-center mb-12 text-white">Nosso Diferencial Técnico</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
+          <div className="glass-card rounded-2xl p-6 border-white/5">
+            <span className="block text-3xl font-display font-black text-brand-blue">{companyData.metrics.yearsOfExperience.value}</span>
+            <span className="block text-gray-400 text-xs font-light mt-1">Anos de experiência técnica</span>
+          </div>
+          <div className="glass-card rounded-2xl p-6 border-white/5">
+            <span className="block text-3xl font-display font-black text-brand-cyan">{companyData.totalProjects}+</span>
+            <span className="block text-gray-400 text-xs font-light mt-1">Projetos elétricos entregues</span>
+          </div>
+          <div className="glass-card rounded-2xl p-6 border-white/5">
+            <span className="block text-3xl font-display font-black text-brand-blue">{companyData.totalObras}+</span>
+            <span className="block text-gray-400 text-xs font-light mt-1">Obras físicas homologadas</span>
+          </div>
+          <div className="glass-card rounded-2xl p-6 border-white/5">
+            <span className="block text-3xl font-display font-black text-brand-cyan">{companyData.metrics.clientsServed.value}+</span>
+            <span className="block text-gray-400 text-xs font-light mt-1">Clientes corporativos atendidos</span>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. CTA Final */}
+      <section className="w-full py-20 bg-brand-blue/5 border-t border-white/5 text-center relative z-10">
+        <div className="max-w-4xl mx-auto px-6 space-y-6">
+          <h2 className="text-3xl md:text-4xl font-display font-black text-white">
+            Vamos transformar a infraestrutura energética da sua empresa?
+          </h2>
+          <p className="text-gray-400 font-light text-base md:text-lg max-w-xl mx-auto">
+            Fale diretamente com nossa diretoria técnica e solicite um estudo preliminar sem custos.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+            <a href="/contato" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
+              Solicitar Diagnóstico
+            </a>
+            <a href="/solucoes" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
+              Entenda Nossas Soluções
+            </a>
+          </div>
         </div>
       </section>
     </div>
   );
-} 
+}
+
+// Subcomponente de ícone em falta para evitar importações incorretas
+const FaUserTie = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.2c-9.5-3.3-19.4-5-29.4-5h-12.8c-16.7 8.3-35.3 13-53.6 13s-37-4.7-53.6-13h-12.8c-10 0-19.9 1.7-29.4 5L3.5 391.2C1.2 392 0 394.1 0 396.4v76.2c0 21.8 17.7 39.5 39.5 39.5h369c21.8 0 39.5-17.7 39.5-39.5v-76.2c0-2.3-1.2-4.4-3.5-5.2l-124.7-103z"></path>
+  </svg>
+);

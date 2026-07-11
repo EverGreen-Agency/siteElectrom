@@ -2,7 +2,28 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost', 'electrom.eng.br']
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+      {
+        protocol: 'https',
+        hostname: 'electrom.eng.br',
+      },
+      {
+        protocol: 'https',
+        hostname: 'wp.electrom.eng.br',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.wordpress.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'secure.gravatar.com',
+      }
+    ]
   },
   async headers() {
     return [

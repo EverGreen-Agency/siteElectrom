@@ -1,0 +1,4190 @@
+[
+  {
+    "city": "São Paulo",
+    "state": "SP",
+    "totalWorks": 177,
+    "categories": {
+      "Solar": 15,
+      "Elétrica": 6,
+      "Caldeiraria": 113,
+      "Hidráulica": 1,
+      "Outros": 42
+    },
+    "notableWorks": [
+      {
+        "client": "Simétrica Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 17,34 m; V = 54.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Ricardo Pappa Proj. e Constr. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 14,81 m; V = 34.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Racional Engenharia S/A",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 7,38 m; V = 16.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.55052,
+      -46.633308
+    ]
+  },
+  {
+    "city": "Suzano",
+    "state": "SP",
+    "totalWorks": 18,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 16,
+      "Hidráulica": 1,
+      "Outros": 1
+    },
+    "notableWorks": [
+      {
+        "client": "Proenc Proj. Eng. Const. e Incorp. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 12,30 m; V = 15.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Consibra Construtora e Inc. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 10,00 m; V = 21.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Consibra Construtora e Inc. Ltda.",
+        "project": "serralheria",
+        "description": "",
+        "category": "Outros"
+      }
+    ],
+    "coords": [
+      -23.54222,
+      -46.31139
+    ]
+  },
+  {
+    "city": "São Bernardo do Campo",
+    "state": "SP",
+    "totalWorks": 12,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 12,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Luis F. da Silva Planejamento S/C Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Construtora Gambardella Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 7,50 m;  V = 11.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Con Serv Construções e Serv. Eng. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 15,00 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.69389,
+      -46.565
+    ]
+  },
+  {
+    "city": "Sorocaba",
+    "state": "SP",
+    "totalWorks": 11,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 11,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Engelux Comercial e Construtora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 25,00 m; V = 41.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Construtora Presidente S/A",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 24,70 m; V = 41.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Construtora Sorocaba Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 17,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.50167,
+      -47.45806
+    ]
+  },
+  {
+    "city": "Osasco",
+    "state": "SP",
+    "totalWorks": 9,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 9,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 20,00 m; V = 40.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 7,50 m; V = 20.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5325,
+      -46.79167
+    ]
+  },
+  {
+    "city": "Ribeirão Preto",
+    "state": "SP",
+    "totalWorks": 9,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 9,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Cima Eng. e Empreendimentos Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,80 m; H = 14,68 m; V = 54.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -21.1775,
+      -47.81028
+    ]
+  },
+  {
+    "city": "Presidente Prudente",
+    "state": "SP",
+    "totalWorks": 9,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 9,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Frederico Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 5,10 m; V = 10.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Redondo Gerenc. de Obras Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 5,00 m; V = 10.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Redondo Gerenc. de Obras Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 7,50 m; V = 20.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -22.1225,
+      -51.38889
+    ]
+  },
+  {
+    "city": "Campinas",
+    "state": "SP",
+    "totalWorks": 8,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 8,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Sorocaba Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 10,00 m; V = 20.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Construtora Lune Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 15,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Lello Construtora e Incorporadora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 17,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -22.90583,
+      -47.06083
+    ]
+  },
+  {
+    "city": "Santo André",
+    "state": "SP",
+    "totalWorks": 8,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 8,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Impec Construção e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,78 m; H = 20,00 m; V = 37.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Con Serv Construções e Serv. Eng. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,78 m; H = 20,00 m; V = 37.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Quadritec Construções e Empr. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,78 m; H = 20,00 m; V = 37.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.66667,
+      -46.53333
+    ]
+  },
+  {
+    "city": "Jundiaí",
+    "state": "SP",
+    "totalWorks": 8,
+    "categories": {
+      "Solar": 5,
+      "Elétrica": 1,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 1
+    },
+    "notableWorks": [
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Nelson Takahashi",
+        "project": "4,725 kWp / 5 kW",
+        "description": "inversor PHB; módulo Jinko; telhado",
+        "category": "Solar"
+      },
+      {
+        "client": "Reynaldo Camargo",
+        "project": "4,550 kWp / 5,0 kW",
+        "description": "inversor PHB, módulo Jinko, telhado",
+        "category": "Solar"
+      }
+    ],
+    "coords": [
+      -23.18639,
+      -46.88417
+    ]
+  },
+  {
+    "city": "Barueri",
+    "state": "SP",
+    "totalWorks": 7,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 6,
+      "Hidráulica": 1,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Tecnovias Terraplenagem Pav. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 15,00 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Sobrena Soc. Bras. de Constr. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 10,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Sobrena Soc. Bras. de Constr. Ltda.",
+        "project": "sist. de trat. de efluentes",
+        "description": "6 sumidouros",
+        "category": "Hidráulica"
+      }
+    ],
+    "coords": [
+      -23.51111,
+      -46.87639
+    ]
+  },
+  {
+    "city": "Itapecerica da Serra",
+    "state": "SP",
+    "totalWorks": 7,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 4,
+      "Hidráulica": 3,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Farmacap Indústria e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 22,20 m; V = 34.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Farmacap Indústria e Comércio Ltda.",
+        "project": "instalação hidráulica",
+        "description": "",
+        "category": "Hidráulica"
+      },
+      {
+        "client": "Stil Serviços de Eletricidade Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,78 m; V = 5.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.71694,
+      -46.84889
+    ]
+  },
+  {
+    "city": "Mogi das Cruzes",
+    "state": "SP",
+    "totalWorks": 7,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 7,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Lello Construtora e Incorporadora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 20,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Lello Construtora e Incorporadora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 17,50 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Teledutos Construções Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 1,78 m; H = 7,50 m; V = 5.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.52278,
+      -46.18833
+    ]
+  },
+  {
+    "city": "Guarulhos",
+    "state": "SP",
+    "totalWorks": 6,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 6,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Simioni & Viesti Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 22,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Construtora Lune Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 12,50 m; V = 26.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Construfab Eng. e Construções Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 6,25 m; V = 20.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.46278,
+      -46.53333
+    ]
+  },
+  {
+    "city": "Franca",
+    "state": "SP",
+    "totalWorks": 5,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 5,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "TCC Tropical Construções e Com. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 10,00 m; V = 10.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "TCC Tropical Construções e Com. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 12,50 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Confil Construtora Figueiredo Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 12,50 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -20.53861,
+      -47.40083
+    ]
+  },
+  {
+    "city": "São José do Rio Preto",
+    "state": "SP",
+    "totalWorks": 4,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 4,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Vel Construtora e Incorporadora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 27,50 m; V = 50.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -20.81139,
+      -49.37583
+    ]
+  },
+  {
+    "city": "Curitiba",
+    "state": "PR",
+    "totalWorks": 4,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 4,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Equipamentos Londrina Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,44 m; V = 10.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -25.4284,
+      -49.2733
+    ]
+  },
+  {
+    "city": "Taubaté",
+    "state": "SP",
+    "totalWorks": 4,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 4,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "FMM Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m; H = 24,50 m; V = 115.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "FMM Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m; H = 24,50 m; V = 115.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.02639,
+      -45.55528
+    ]
+  },
+  {
+    "city": "Diadema",
+    "state": "SP",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 3,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "AJM Sociedade Construtora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 22,20 m; V = 70.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Engelux Comercial e Construtora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 20,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Tarumã Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 17,50 m; V = 35.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.68611,
+      -46.62333
+    ]
+  },
+  {
+    "city": "Itaquaquecetuba",
+    "state": "SP",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 3,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Simioni & Viesti Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 22,50 m; V = 45.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Construtora Chaia Ltda.",
+        "project": "reservatório apoiado",
+        "description": "D = 3,20 m; V = 53.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Construtora Croma Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 30.000 l       ",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.48611,
+      -46.34833
+    ]
+  },
+  {
+    "city": "Porto Alegre",
+    "state": "RS",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 3,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,78 m; V = 18.500 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,78 m; V = 13.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -30.0346,
+      -51.2177
+    ]
+  },
+  {
+    "city": "Tatuí",
+    "state": "SP",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 3,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Sorocaba Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m; H = 15,30 m; V = 36.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,78 m; H = 2,70 m; V = 8.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,50 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.35556,
+      -47.84889
+    ]
+  },
+  {
+    "city": "Cuiabá",
+    "state": "MT",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 3,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Habra Engenharia Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Habra Engenharia Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -15.601,
+      -56.097
+    ]
+  },
+  {
+    "city": "Taboão da Serra",
+    "state": "SP",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 3,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Rota 116 Centro Automotivo Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Profac Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Construtora Martur Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.60639,
+      -46.78389
+    ]
+  },
+  {
+    "city": "Jacupiranga",
+    "state": "SP",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 3,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Auto Posto JB 4 Irmãos Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,78 m; H = 20,00 m; V = 64.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Auto Posto JB 4 Irmãos Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,80 m; H = 26,25 m; V = 100.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Auto Posto JB 4 Irmãos Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,80 m; H = 26,25 m; V = 100.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -24.69389,
+      -48.00194
+    ]
+  },
+  {
+    "city": "Uberaba",
+    "state": "MG",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 3,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Moleda Construções Gerais Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -19.74861,
+      -47.93056
+    ]
+  },
+  {
+    "city": "Bragança Paulista",
+    "state": "SP",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 2,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Teledutos Construções Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 15,00 m; V = 38.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "8 Thom Participações",
+        "project": "16,95 kWp / 15,0 kW",
+        "description": "inversor PHB, módulo Jinko, solo",
+        "category": "Solar"
+      },
+      {
+        "client": "8 Thom Participações",
+        "project": "6,90 kWp",
+        "description": "módulo Jinko",
+        "category": "Solar"
+      }
+    ],
+    "coords": [
+      -22.95194,
+      -46.54139
+    ]
+  },
+  {
+    "city": "Ferraz de Vasconcelos",
+    "state": "SP",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 3,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "S. Figueiredo Construtora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "S. Figueiredo Construtora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m;  H = 12,50 m; V = 26.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 5,00 m; V = 10.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.54083,
+      -46.36861
+    ]
+  },
+  {
+    "city": "São Sebastião",
+    "state": "SP",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 3,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construgar Constr. e Incoporadora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,00 m; V = 21.500 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Volpp Construtora Ltda.",
+        "project": "reservatório apoiado",
+        "description": "D = 2,50 m; H = 10,00 m; V = 38.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Volpp Construtora Ltda.",
+        "project": "reservatório apoiado",
+        "description": "D = 2,50 m; H = 10,00 m; V = 38.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.76,
+      -45.40972
+    ]
+  },
+  {
+    "city": "Ourinhos",
+    "state": "SP",
+    "totalWorks": 3,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 3,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Atlântica Constr. Com. e Serv. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Atlântica Constr. Com. e Serv. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Ecco Natura Construções Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,50 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -22.97889,
+      -49.87083
+    ]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "state": "RJ",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "RPB Engenharia Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "SM 21 Engenharia e Construção Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,80 m; H = 17,50 m; V = 81.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -22.906847,
+      -43.172896
+    ]
+  },
+  {
+    "city": "Belo Horizonte",
+    "state": "MG",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Moleda Construções Gerais Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,44 m; V = 10.000 l; Qtde. = 2 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Moleda Construções Gerais Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,44 m; V = 10.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -19.917299,
+      -43.934559
+    ]
+  },
+  {
+    "city": "Piedade",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Braspan Comercial e Construtora Ltda.",
+        "project": "reservatório apoiado",
+        "description": "D = 1,37 m;  V = 9.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "L. Annunziatta & Cia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 1,80 m; H = 7,50 m; V = 15.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Guaratinguetá",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Engelux Comercial e Construtora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 12,50 m; V = 20.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Deko Indústria e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 15,00 m; V = 40.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Itatiba",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 1,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Lune Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Richard Stubing",
+        "project": "3,39 kWp / 3,0 kW",
+        "description": "inversor PHB, módulo Jinko, telhado",
+        "category": "Solar"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Porto Feliz",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 1,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Tarumã Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 14,80 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Kong Li",
+        "project": "6,6 kWp / 5 kW",
+        "description": "inversor PHB; módulo Jinko; telhado",
+        "category": "Solar"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Bofete",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Tarumã Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 14,80 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Cerquilho",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Sorocaba Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 15,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 9,85 m; V = 25.500 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Vinhedo",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 1,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Duoflex Indústria e Comércio Ltda.",
+        "project": "reservatório apoiado",
+        "description": "D = 2,02 m; V = 48.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Donizete de Jesus Barbosa",
+        "project": "5,500 kWp / 5 kW",
+        "description": "inversor PHB; módulo JA Solar; telhado",
+        "category": "Solar"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Blumenau",
+    "state": "SC",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -27.5954,
+      -48.548
+    ]
+  },
+  {
+    "city": "Piracicaba",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "S. Engenharia e Construções Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 2,50 m; V = 5.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Guarujá",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Procemium Construtora Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,78 m; V = 13.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Bauen Construção Civil Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 7,50 m; V = 19.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Embu-Guaçu",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 1,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 5,00 m; V = 10.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Smart Fit Embu Guaçu",
+        "project": "145,2 kWp / 100,0 kW",
+        "description": "inversor PHB, módulo DMEGC, telhado",
+        "category": "Solar"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Pariquera-Açu",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Auto Posto Búfalo do Vale Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m;  H = 15,00 m; V = 48.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Auto Posto Búfalo do Vale Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,50 m; H = 20,00 m; V = 60.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Jacareí",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Simioni & Viesti Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,78 m; H = 2,70 m; V = 8.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Construtora Simioni & Viesti Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 2,50 m; V = 5.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "São José dos Campos",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 1
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Moraes Dantas Ltda.",
+        "project": "exaustores",
+        "description": "D = 3,20 m; H = 17,64 m; Qtde. = 2 un.",
+        "category": "Outros"
+      },
+      {
+        "client": "Stemmi Eng. e Constr. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 20,00 m; V = 57.500 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Embu das Artes",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 2,60 m; V = 5.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "SDMO - Maquigeral",
+        "project": "tanques de salmoura",
+        "description": "D = 2,50 m; H = 2,60 m; Qtde. = 3 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Franco da Rocha",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m; H = 2,70 m; V = 10.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m; H = 7,70 m; V = 25.500 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Itu",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 1,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Trieste Participações e Empr. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 5,00 m; V = 8.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Blog7 Serviços e Participações Ltda.",
+        "project": "52,26 kWp / 50 kW",
+        "description": "inversor PHB; módulo Jinko; telhado",
+        "category": "Solar"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Areiópolis",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Atlântica Constr. Com. e Serv. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 40.000 l       ",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Atlântica Constr. Com. e Serv. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Tapiraí",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 5,00 m; V = 10.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "L & T Empreen. e Const. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 15,00 m; V = 35.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Santa Maria da Serra",
+    "state": "SP",
+    "totalWorks": 2,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 2,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "RDE Construções Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,25 m; H = 15,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      },
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Florianópolis",
+    "state": "SC",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -27.5954,
+      -48.548
+    ]
+  },
+  {
+    "city": "Goiânia",
+    "state": "GO",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Habra Engenharia Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -16.6869,
+      -49.2648
+    ]
+  },
+  {
+    "city": "Vitória",
+    "state": "ES",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "RPB Engenharia Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -20.3155,
+      -40.3128
+    ]
+  },
+  {
+    "city": "Salvador",
+    "state": "BA",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Habra Engenharia Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -12.9704,
+      -38.5124
+    ]
+  },
+  {
+    "city": "Brasília",
+    "state": "DF",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Instaladora Mecânica São Marco Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,78 m; V = 13.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -15.7801,
+      -47.9292
+    ]
+  },
+  {
+    "city": "Castanhal",
+    "state": "PA",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 0,
+      "Hidráulica": 0,
+      "Outros": 1
+    },
+    "notableWorks": [
+      {
+        "client": "Posto Marapar Ltda.",
+        "project": "separador água/óleo",
+        "description": "D = 1,37 m; V = 2.000 l; Qtde. = 1 un.",
+        "category": "Outros"
+      }
+    ],
+    "coords": [
+      -1.2961,
+      -47.9242
+    ]
+  },
+  {
+    "city": "Fortaleza",
+    "state": "CE",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -3.7319,
+      -38.5267
+    ]
+  },
+  {
+    "city": "Formosa",
+    "state": "GO",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Instaladora Mecânica São Marco Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -15.5342,
+      -47.3344
+    ]
+  },
+  {
+    "city": "Brotas de Macaúba",
+    "state": "BA",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 1,
+      "Elétrica": 0,
+      "Caldeiraria": 0,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Antonio Francisco dos Santos",
+        "project": "4,95 kWp / 4,2 kW",
+        "description": "inversor Growatt, módulo SUNOVA, telhado",
+        "category": "Solar"
+      }
+    ],
+    "coords": [
+      -12.2039,
+      -42.6378
+    ]
+  },
+  {
+    "city": "Jandira",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Fundesp Fundações Especiais Ltda.",
+        "project": "reservatório apoiado",
+        "description": "D = 2,26 m;  V = 9.000 l; Qtde. = 4 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Bertioga",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 0,
+      "Hidráulica": 0,
+      "Outros": 1
+    },
+    "notableWorks": [
+      {
+        "client": "Sobloco Construtora S/A",
+        "project": "torre de carga",
+        "description": "D = 2,02 m; H = 10,50 m; Qtde. = 2 un.",
+        "category": "Outros"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Resende",
+    "state": "RJ",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 0,
+      "Hidráulica": 0,
+      "Outros": 1
+    },
+    "notableWorks": [
+      {
+        "client": "Indústrias Químicas Resende S/A",
+        "project": "lavador de gases",
+        "description": "D = 1,78 m; H = 8,50 m; Qtde. = 1 un.",
+        "category": "Outros"
+      }
+    ],
+    "coords": [
+      -22.9068,
+      -43.1729
+    ]
+  },
+  {
+    "city": "Ribeirão Pires",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Engelux Comercial e Construtora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 20,00 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Batatais",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "TCC Tropical Construções e Com. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 12,50 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Ipuã",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "TCC Tropical Construções e Com. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,78 m; H = 10,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Guará",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "TCC Tropical Construções e Com. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,78 m; H = 10,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Sarapuí",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Sorocaba Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 14,80 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Cabreúva",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Sorocaba Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 14,80 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Itararé",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Sorocaba Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 17,50 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Santana do Parnaíba",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Gouveia Franco Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 15,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Araçariguama",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Tarumã Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 14,80 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "São Roque",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Tarumã Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 14,80 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Tiete",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Sorocaba Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 20,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Jaú",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Tarumã Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,02 m; H = 14,80 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Mogi Guaçu",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Lune Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 15,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Mongaguá",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Sorocaba Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 15,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Pradópolis",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "ECR Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 10,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Jabuticabal",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "ECR Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 12,50 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Poá",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Sorocaba Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,78 m; H = 20,00 m; V = 29.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Arujá",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Sorocaba Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,78 m; H = 20,00 m; V = 29.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Cajamar",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Simioni & Viesti Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 20,00 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Araraquara",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Spreader Cons. Comécio e Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Canoas",
+    "state": "RS",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,78 m; V = 18.500 l; Qtde. = 2 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -30.0346,
+      -51.2177
+    ]
+  },
+  {
+    "city": "São José dos Pinhais",
+    "state": "PR",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -25.4284,
+      -49.2733
+    ]
+  },
+  {
+    "city": "Araçatuba",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Praia Grande",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Bauen Construção Civil Ltda.",
+        "project": "reservatório apoiado",
+        "description": "D = 2,44 m; V = 18.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Caxias do Sul",
+    "state": "RS",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,78 m; V = 13.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -30.0346,
+      -51.2177
+    ]
+  },
+  {
+    "city": "Santos",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Ferreira & Mesquita Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Mirassol",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Vel Construtora e Incorporadora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 27,50 m; V = 50.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Cananéia",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Simioni & Viesti Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 20,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Novo Hamburgo",
+    "state": "RS",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -30.0346,
+      -51.2177
+    ]
+  },
+  {
+    "city": "Rio das Pedras",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "L. Annunziata & Cia. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m; H = 12,50 m; V = 32.900 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Cachoeiro de Itapemirim",
+    "state": "ES",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "RPB Engenharia Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -20.3155,
+      -40.3128
+    ]
+  },
+  {
+    "city": "Mirante do Paranapanema",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "FM Rodrigues & Cia. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 20,00 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Campos",
+    "state": "RJ",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "RPB Engenharia Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,78 m; V = 13.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -22.9068,
+      -43.1729
+    ]
+  },
+  {
+    "city": "São José",
+    "state": "SC",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -27.5954,
+      -48.548
+    ]
+  },
+  {
+    "city": "Registro",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 0,
+      "Hidráulica": 1,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Simioni & Viesti Ltda.",
+        "project": "est. elevatória de esgoto",
+        "description": "D = 2,26 m; H = 5,00 m; Qtde. = 1 un.",
+        "category": "Hidráulica"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Cachoeirinha",
+    "state": "RS",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -30.0346,
+      -51.2177
+    ]
+  },
+  {
+    "city": "Potim",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Conspen Constr. e Proj. Eng. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 20,00 m; V = 37.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Ilha Comprida",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 0,
+      "Hidráulica": 1,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Parâmetro Saneamento e Constr. Ltda.",
+        "project": "est. elevatória de esgoto",
+        "description": "D = 2,44 m; H = 7,50 m; Qtde. =1 un.",
+        "category": "Hidráulica"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Criciúma",
+    "state": "SC",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -27.5954,
+      -48.548
+    ]
+  },
+  {
+    "city": "Ponta Grossa",
+    "state": "PR",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 0,
+      "Hidráulica": 0,
+      "Outros": 1
+    },
+    "notableWorks": [
+      {
+        "client": "Equipamentos Londrina Ltda.",
+        "project": "separador água/óleo",
+        "description": "D = 1,37 m; V = 2.000 l; Qtde. = 1 un.",
+        "category": "Outros"
+      }
+    ],
+    "coords": [
+      -25.4284,
+      -49.2733
+    ]
+  },
+  {
+    "city": "Paranaguá",
+    "state": "PR",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 0,
+      "Hidráulica": 1,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Spreader Construtora Com. Rep. Ltda.",
+        "project": "sist. trat. de efluentes",
+        "description": "2 fossas sépticas e 1 filtro anaeróbico",
+        "category": "Hidráulica"
+      }
+    ],
+    "coords": [
+      -25.4284,
+      -49.2733
+    ]
+  },
+  {
+    "city": "Nova Friburgo",
+    "state": "RJ",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Transportadora Rio Itaipu",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 20,00 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -22.9068,
+      -43.1729
+    ]
+  },
+  {
+    "city": "Caçapava",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "N. Padovani Gomes & Cia. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 1,37 m; H = 7,50 m; V = 6.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Campo Bom",
+    "state": "RS",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Johanna C. Brouwen & Cia. Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,78 m; V = 13.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -30.0346,
+      -51.2177
+    ]
+  },
+  {
+    "city": "Uberlândia",
+    "state": "MG",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Cond. Rede Six Suite Hot. Uberlândia",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 27,50 m; V = 75.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -19.9173,
+      -43.9346
+    ]
+  },
+  {
+    "city": "Jardinópolis",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Cond. Rede Six Suite Hot. Jardinópolis",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 27,50 m; V = 75.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Ipatinga",
+    "state": "MG",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Moleda Construções Gerais Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 2,44 m; V = 10.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -19.9173,
+      -43.9346
+    ]
+  },
+  {
+    "city": "Monte Mor",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "ZM Montagens Manut. Serv. e Loc. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,80 m; H = 12,25 m; V = 51.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Pirapora do Bom Jesus",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Profac Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 1,78 m; H = 20,00 m; V = 20.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Francisco Morato",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Profac Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 20,00 m; V = 27.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Peruibe",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Reynaldo Lenci Filho",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 12,30 m; V = 10.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Sertãozinho",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Cima Eng. e Empreendimentos Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,80 m; H = 14,68 m; V = 54.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Hortolândia",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Moro Construções Civis Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m; H = 25,20 m; V = 28.500 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Mauá",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Colméia Engenharia",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 8,96 m; V = 26.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Mairinque",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Sorocaba S/A",
+        "project": "reservatório elevado",
+        "description": "D = 2,26 m; H = 15,00 m; V = 35.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Santana de Parnaiba",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "NR Engenharia Ltda.",
+        "project": "reservatório enterrado",
+        "description": "D = 1,37 m; V = 3.000 l; Qtde. = 1 un.",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Ubatuba",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Citycon Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 13,75 m; V = 45.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "São J. dos Campos",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Ferreira Rocha Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 15,00 m; V = 42.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Santa Rosa do Viterbo",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Conspen Constr. e Proj. Eng. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 11,40 m; V = 25.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Birigui",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Projete Construtora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 10,00 m; V = 16.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Pedregulho",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "S. Figueiredo Construtora Ltda.",
+        "project": "reservatório elevado",
+        "description": "",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Estrela do Norte",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Frederico Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 6,30 m; V = 15.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Buritama",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Redondo Gerenc. de Obras Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,00 m; V = 26.400 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Rifaina",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Conspen Constr. e Proj. Eng. Ltda.",
+        "project": "reservatório elevado",
+        "description": "",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Tanguá",
+    "state": "RJ",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Pharcon Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 10,00 m; V = 10.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -22.9068,
+      -43.1729
+    ]
+  },
+  {
+    "city": "Santa Cruz da Conceição",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Landa Engenharia Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "São Joaquim da Barra",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "S. Figueiredo Construtora Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 7,50 m; V = 20.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Tijucas",
+    "state": "SC",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Simplex S/A",
+        "project": "reservatório elevado",
+        "description": "D = 2,80 m; H = 20,00 m; V = 50.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -27.5954,
+      -48.548
+    ]
+  },
+  {
+    "city": "Rancharia",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Redondo Gerenc. de Obras Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m; H = 12,75 m; V = 50.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Ibitinga",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "RDE Construções Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 25,00 m; V = 35.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Nova Odessa",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Fontanella Transportes",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 40.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Extrema",
+    "state": "MG",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Force Line Ind Com C E Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m; H = 32,50 m; V = 180.500 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -19.9173,
+      -43.9346
+    ]
+  },
+  {
+    "city": "Valinhos",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "L & T Empreen. e Const. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,25 m; H = 7,50 m; V = 16.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Santana da Ponte Pensa",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Trapézio",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m; H = 10,20 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Santa Cruz das Palmeiras",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "RDE Construções Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,80 m; H = 10,00 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Cambé",
+    "state": "PR",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Horus Engenharia Ltda.",
+        "project": "reservatório apoiado",
+        "description": "D = 3,20 m; H = 7,50 m; V = 50.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -25.4284,
+      -49.2733
+    ]
+  },
+  {
+    "city": "Jaraguá do Sul",
+    "state": "SC",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "L M Gets",
+        "project": "reservatório elevado",
+        "description": "D = 3,20 m; H = 33,00 m; V = 142.100 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -27.5954,
+      -48.548
+    ]
+  },
+  {
+    "city": "Duartina",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Simioni & Viesti Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 6,25 m; V = 15.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Pardinho",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Torre de Pedra",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,44 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Promissão",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Labore Serviços e Construções Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,25 m; H = 10,00 m; V = 8.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Avaré",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Ecco Natura Construções Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,50 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Taquarivaí",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Portal do Vale Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,50 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Porangaba",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Panobra Engenharia e Comércio Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,50 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Iaras",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Construtora Portal do Vale Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,50 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Bauru",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Atlântica Constr. Com. e Serv. Ltda.",
+        "project": "reservatório elevado",
+        "description": "D = 2,50 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Clementina",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "RB Engenharia",
+        "project": "reservatório elevado",
+        "description": "D = 2,50 m; H = 10,00 m; V = 20.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Tietê",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "RDE Engenharia",
+        "project": "reservatório elevado",
+        "description": "D = 2,50 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Buri",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 0,
+      "Elétrica": 0,
+      "Caldeiraria": 1,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "JB Engenharia",
+        "project": "reservatório elevado",
+        "description": "D = 2,50 m; H = 12,50 m; V = 30.000 l",
+        "category": "Caldeiraria"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  },
+  {
+    "city": "Campo Limpo Paulista",
+    "state": "SP",
+    "totalWorks": 1,
+    "categories": {
+      "Solar": 1,
+      "Elétrica": 0,
+      "Caldeiraria": 0,
+      "Hidráulica": 0,
+      "Outros": 0
+    },
+    "notableWorks": [
+      {
+        "client": "Escola Patelli",
+        "project": "6,5 kWp / 5 kW",
+        "description": "inversor PHB; módulo Jinko; telhado",
+        "category": "Solar"
+      }
+    ],
+    "coords": [
+      -23.5489,
+      -46.6388
+    ]
+  }
+]

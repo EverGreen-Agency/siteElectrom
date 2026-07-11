@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="transparent"/>
+  <!-- ENEL Concept - Curvas e Espectro Luminoso -->
+  <path d="M15 25 C 15 15, 25 15, 25 25 C 25 35, 35 35, 35 25" fill="none" stroke="#E1251B" stroke-width="2.5"/>
+  <circle cx="15" cy="25" r="3" fill="#D3007C"/>
+  <circle cx="25" cy="25" r="3" fill="#FF5E00"/>
+  <circle cx="35" cy="25" r="3" fill="#00A0E9"/>
+  <!-- Typo -->
+  <text x="48" y="29" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">enel</text>
+  <text x="48" y="39" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#7AA2E4" letter-spacing="1">DISTRIBUIDORA</text>
+</svg>

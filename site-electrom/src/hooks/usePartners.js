@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import partnersConfig from '../data/partners.json'
+import { wordpressService } from '../services/wordpress'
 
-// Este hook será expandido para integrar com WordPress CMS no futuro
 export const usePartners = (options = {}) => {
   const [partners, setPartners] = useState([])
   const [loading, setLoading] = useState(true)
@@ -11,58 +11,77 @@ export const usePartners = (options = {}) => {
     filterByCategory = null,
     filterByType = null,
     sortByPriority = true,
-    useCMS = false // Flag para usar CMS no futuro
+    useCMS = false
   } = options
 
-  useEffect(() => {
-    const fetchPartners = async () => {
-      try {
-        setLoading(true)
+  // Definindo fetchPartners fora do useEffect com useCallback para evitar bugs de referência léxica
+  const fetchPartners = useCallback(async () => {
+    try {
+      setLoading(true)
+      let partnersData = []
 
-        let partnersData
-
-        if (useCMS) {
-          // TODO: Implementar conexão com WordPress CMS
-          // partnersData = await fetchFromWordPress();
-          console.log('CMS integration not implemented yet. Using local data.')
-          partnersData = partnersConfig.partners
+      if (useCMS) {
+        console.log('Buscando parceiros do WordPress CMS...')
+        const wpPartners = await wordpressService.getPartners()
+        
+        if (wpPartners && wpPartners.length > 0) {
+          // Camada de Tradução (Anti-Corruption Layer)
+          partnersData = wpPartners.map(wp => ({
+            id: wp.id,
+            name: wp.title?.rendered || 'Parceiro',
+            logo: wp._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/images/partners/placeholder.png',
+            type: wp.acf?.partner_type || 'regular',
+            category: wp.acf?.partner_category || 'technology',
+            priority: Number(wp.acf?.priority) || 10,
+            link: wp.acf?.website_url || '',
+            linkType: wp.acf?.link_type || 'none',
+            description: wp.acf?.description || ''
+          }))
+          console.log(`Sucesso: ${partnersData.length} parceiros importados do WordPress.`)
         } else {
-          // Usar dados locais do JSON
+          console.warn('Nenhum parceiro retornado pelo CMS ou erro de conexão. Utilizando fallback local.')
           partnersData = partnersConfig.partners
         }
-
-        // Aplicar filtros
-        let filteredPartners = [...partnersData]
-
-        if (filterByCategory) {
-          filteredPartners = filteredPartners.filter(
-            partner => partner.category === filterByCategory
-          )
-        }
-
-        if (filterByType) {
-          filteredPartners = filteredPartners.filter(
-            partner => partner.type === filterByType
-          )
-        }
-
-        // Ordenar por prioridade se solicitado
-        if (sortByPriority) {
-          filteredPartners.sort((a, b) => a.priority - b.priority)
-        }
-
-        setPartners(filteredPartners)
-        setError(null)
-      } catch (err) {
-        setError(err.message)
-        console.error('Error fetching partners:', err)
-      } finally {
-        setLoading(false)
+      } else {
+        // Usar dados locais do JSON
+        partnersData = partnersConfig.partners
       }
-    }
 
-    fetchPartners()
+      // Aplicar filtros
+      let filteredPartners = [...partnersData]
+
+      if (filterByCategory) {
+        filteredPartners = filteredPartners.filter(
+          partner => partner.category === filterByCategory
+        )
+      }
+
+      if (filterByType) {
+        filteredPartners = filteredPartners.filter(
+          partner => partner.type === filterByType
+        )
+      }
+
+      // Ordenar por prioridade se solicitado
+      if (sortByPriority) {
+        filteredPartners.sort((a, b) => (a.priority || 0) - (b.priority || 0))
+      }
+
+      setPartners(filteredPartners)
+      setError(null)
+    } catch (err) {
+      setError(err.message)
+      console.error('Erro ao buscar parceiros. Usando dados locais como fallback de contingência:', err)
+      // Fallback em caso de erro catastrófico
+      setPartners(partnersConfig.partners)
+    } finally {
+      setLoading(false)
+    }
   }, [filterByCategory, filterByType, sortByPriority, useCMS])
+
+  useEffect(() => {
+    fetchPartners()
+  }, [fetchPartners])
 
   // Função para adicionar/atualizar parceiro (futura integração CMS)
   const updatePartner = async (partnerId, updates) => {
@@ -91,7 +110,7 @@ export const usePartners = (options = {}) => {
     // Adicionar aos dados locais (apenas para desenvolvimento)
     const partnerWithId = {
       ...newPartner,
-      id: Math.max(...partners.map(p => p.id)) + 1
+      id: Math.max(...partners.map(p => p.id), 0) + 1
     }
     setPartners(prevPartners => [...prevPartners, partnerWithId])
   }
@@ -102,28 +121,9 @@ export const usePartners = (options = {}) => {
     error,
     updatePartner,
     addPartner,
-    refresh: () => fetchPartners()
+    refresh: fetchPartners
   }
 }
 
-/* 
-TODO: Função helper para futura integração com WordPress
-Será utilizada quando a integração WordPress for implementada
-
-const fetchFromWordPress = async () => {
-  const WP_API_URL = process.env.NEXT_PUBLIC_WP_API_URL || 'https://your-wp-site.com/wp-json/wp/v2';
-  
-  try {
-    const response = await fetch(`${WP_API_URL}/partners`);
-    if (!response.ok) {
-      throw new Error('Failed to fetch from WordPress');
-    }
-    return await response.json();
-  } catch (error) {
-    console.error('WordPress fetch error:', error);
-    throw error;
-  }
-};
-*/
-
 export default usePartners
+

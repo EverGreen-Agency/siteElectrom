@@ -1,68 +1,139 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaLeaf, FaChartLine, FaIndustry, FaHandshake, FaSolarPanel, FaUsers, FaShieldAlt, FaCoins, FaCertificate, FaChartPie, FaClipboardCheck, FaFileAlt, FaWhatsapp } from 'react-icons/fa';
+import { FaLeaf, FaChartLine, FaIndustry, FaSolarPanel, FaUsers, FaShieldAlt, FaCoins, FaCertificate, FaChartPie, FaClipboardCheck, FaFileAlt, FaWhatsapp, FaTree, FaCloudDownloadAlt, FaQuoteLeft } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
+import { companyData } from '../../data/companyData';
 
 export default function SustentabilidadePage() {
+  const odsItems = [
+    {
+      title: "ODS 7 – Energia Limpa e Acessível",
+      description: "Implantação de sistemas de minigeração solar e eficiência corporativa em larga escala no mercado nacional.",
+      icon: <FaSolarPanel className="text-3xl text-brand-blue" />
+    },
+    {
+      title: "ODS 9 – Indústria, Inovação e Infraestrutura",
+      description: "Projetos elétricos com laudo técnico e integração IoT de telemetria, promovendo infraestrutura industrial resiliente.",
+      icon: <FaIndustry className="text-3xl text-brand-cyan" />
+    },
+    {
+      title: "ODS 12 – Consumo e Produção Responsáveis",
+      description: "Auditoria termoativa de perdas e dimensionamento correto de cargas para mitigar desperdício energético B2B.",
+      icon: <FaChartLine className="text-3xl text-brand-blue" />
+    },
+    {
+      title: "ODS 13 – Ação contra a Mudança Global do Clima",
+      description: "Neutralização de toneladas de carbono através de matrizes limpas e transição fotovoltaica acelerada.",
+      icon: <FaLeaf className="text-3xl text-brand-cyan" />
+    }
+  ];
+
+  const esgItems = [
+    {
+      title: "E (Ambiental)",
+      description: "Usinas solares integradas, auditoria tarifária de reativos, retrofit elétrico e neutralização de gases com suporte técnico.",
+      icon: <FaLeaf className="text-4xl text-[#10B981]" />
+    },
+    {
+      title: "S (Social)",
+      description: "Corpo técnico próprio com qualificações constantes, segurança do trabalho NR-10/NR-35 rigorosa e impacto em comunidades locais.",
+      icon: <FaUsers className="text-4xl text-brand-blue" />
+    },
+    {
+      title: "G (Governança)",
+      description: "Código de conduta profissional rigoroso, emissão obrigatória de ART por engenheiros residentes e conformidade do CREA.",
+      icon: <FaShieldAlt className="text-4xl text-brand-cyan" />
+    }
+  ];
+
   return (
-    <div className="bg-[#0C1713] min-h-screen text-white">
+    <div className="bg-brand-dark min-h-screen text-white relative overflow-hidden pb-20">
+      {/* Background blueprint details */}
+      <div className="absolute inset-0 blueprint-bg opacity-15 pointer-events-none" />
+
+      {/* Decorative Aurora glow */}
+      <div className="absolute top-[12%] right-[-10%] w-[50vw] h-[50vw] rounded-full mix-blend-screen filter blur-[150px] opacity-10 bg-brand-cyan pointer-events-none" />
+
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden z-10">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/solar-panels.jpg"
-            alt="Painéis Solares"
+            src="/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg"
+            alt="Painéis Solares - Usina Cipó Guaçu"
             fill
-            className="object-cover opacity-40"
+            className="object-cover opacity-20"
+            priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0C1713]/80 to-[#0C1713]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#020504]/90 via-brand-dark/95 to-brand-dark" />
         </div>
         
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 text-center max-w-4xl mx-auto px-4"
+          className="relative z-10 text-center max-w-4xl mx-auto px-6 space-y-6"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Energia com Propósito: Sustentabilidade em Cada Projeto
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit mx-auto">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_#7AA2E4]" />
+            <span className="text-[10px] font-mono tracking-widest uppercase text-brand-blue font-bold">
+              Descarbonização & ESG
+            </span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-display font-black leading-tight text-white max-w-3xl mx-auto">
+            Energia com Propósito: Impacto Mensurável e Real
           </h1>
-          <p className="text-xl md:text-2xl text-[#7AA2E4] mb-8">
-            A Electrom une engenharia, inovação e compromisso ambiental para entregar soluções com impacto mensurável.
+          <p className="text-base md:text-lg text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+            A Electrom combina alta engenharia, inovação de matrizes limpas e compromisso ambiental real para desenhar soluções sustentáveis economicamente viáveis.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#impacto" className="px-8 py-3 bg-[#7AA2E4] text-white font-bold rounded-lg hover:bg-[#5e8fd1] transition">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+            <Link href="#impacto" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
               Conheça nosso impacto
             </Link>
-            <Link href="/contato" className="px-8 py-3 border-2 border-[#7AA2E4] text-[#7AA2E4] font-bold rounded-lg hover:bg-[#7AA2E4] hover:text-white transition">
-              Solicite Diagnóstico Sustentável
+            <Link href="/contato" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
+              Solicitar Diagnóstico ESG
             </Link>
           </div>
         </motion.div>
       </section>
 
       {/* Impacto Ambiental em Números */}
-      <section id="impacto" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Impacto Ambiental em Números</h2>
+      <section id="impacto" className="py-20 px-6 relative z-10 border-t border-white/5">
+        <div className="max-w-6xl mx-auto space-y-12">
+          <div className="text-center max-w-xl mx-auto">
+            <span className="text-[10px] font-mono tracking-widest text-brand-cyan uppercase font-bold">Métricas Consolidadas</span>
+            <h2 className="text-2xl md:text-3xl font-display font-black text-white mt-1">Impacto Ecológico Auditado</h2>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <FaSolarPanel className="text-4xl text-[#7AA2E4]" />, value: "250 GWh", label: "Energia limpa gerada" },
-              { icon: <FaLeaf className="text-4xl text-[#7AA2E4]" />, value: "180 mil", label: "Toneladas de CO₂ evitadas" },
-              { icon: <FaChartLine className="text-4xl text-[#7AA2E4]" />, value: "35%", label: "Redução média no consumo" },
+              { 
+                icon: <FaSolarPanel className="text-4xl text-brand-blue" />, 
+                value: `${companyData.metrics.renewableEnergy.prefix}${companyData.metrics.renewableEnergy.value}${companyData.metrics.renewableEnergy.suffix}`, 
+                label: companyData.metrics.renewableEnergy.label 
+              },
+              { 
+                icon: <FaCloudDownloadAlt className="text-4xl text-brand-cyan" />, 
+                value: `${companyData.metrics.co2Avoided.value}${companyData.metrics.co2Avoided.suffix}`, 
+                label: companyData.metrics.co2Avoided.label 
+              },
+              { 
+                icon: <FaTree className="text-4xl text-[#10B981]" />, 
+                value: `${companyData.metrics.treesSaved.value}${companyData.metrics.treesSaved.suffix}`, 
+                label: companyData.metrics.treesSaved.label 
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white/10 rounded-xl p-8 text-center"
+                className="glass-card rounded-2xl p-8 text-center border-white/5 hover:border-white/10 transition-all"
               >
-                <div className="mb-4">{item.icon}</div>
-                <div className="text-3xl font-bold mb-2">{item.value}</div>
-                <div className="text-[#7AA2E4]">{item.label}</div>
+                <div className="mb-4 flex justify-center">{item.icon}</div>
+                <div className="text-3xl font-display font-black mb-1 text-white">{item.value}</div>
+                <div className="text-gray-400 text-xs font-light">{item.label}</div>
               </motion.div>
             ))}
           </div>
@@ -70,43 +141,26 @@ export default function SustentabilidadePage() {
       </section>
 
       {/* ODS da ONU */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">ODS da ONU: Nosso Compromisso Global</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "ODS 7 – Energia Limpa e Acessível",
-                description: "Implantação de geração solar e eficiência em larga escala",
-                icon: <FaSolarPanel className="text-3xl text-[#7AA2E4]" />
-              },
-              {
-                title: "ODS 9 – Indústria, Inovação e Infraestrutura",
-                description: "Projetos técnicos sob medida com inovação",
-                icon: <FaIndustry className="text-3xl text-[#7AA2E4]" />
-              },
-              {
-                title: "ODS 12 – Consumo e Produção Responsáveis",
-                description: "Redução de desperdícios e consumo inteligente",
-                icon: <FaChartLine className="text-3xl text-[#7AA2E4]" />
-              },
-              {
-                title: "ODS 13 – Ação contra a Mudança Global do Clima",
-                description: "Evitamos milhares de toneladas de CO₂ com nossos projetos",
-                icon: <FaLeaf className="text-3xl text-[#7AA2E4]" />
-              }
-            ].map((ods, index) => (
+      <section className="py-20 px-6 relative z-10 border-t border-white/5">
+        <div className="max-w-6xl mx-auto space-y-12">
+          <div className="text-center max-w-xl mx-auto">
+            <span className="text-[10px] font-mono tracking-widest text-brand-blue uppercase font-bold">Compromisso Global</span>
+            <h2 className="text-2xl md:text-3xl font-display font-black text-white mt-1">Alinhamento ODS da ONU</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {odsItems.map((ods, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-white/10 rounded-xl p-6 flex items-start gap-4"
+                className="glass-card rounded-2xl p-6 flex items-start gap-4 border-white/5"
               >
-                <div className="flex-shrink-0">{ods.icon}</div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{ods.title}</h3>
-                  <p className="text-white/80">{ods.description}</p>
+                <div className="flex-shrink-0 p-3 bg-white/5 rounded-xl border border-white/10">{ods.icon}</div>
+                <div className="space-y-1">
+                  <h3 className="text-base font-display font-bold text-white">{ods.title}</h3>
+                  <p className="text-gray-400 text-xs font-light leading-relaxed">{ods.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -115,37 +169,29 @@ export default function SustentabilidadePage() {
       </section>
 
       {/* ESG na Prática */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">ESG na Prática: Não é discurso, é processo</h2>
+      <section className="py-20 px-6 relative z-10 border-t border-white/5">
+        <div className="max-w-6xl mx-auto space-y-12">
+          <div className="text-center max-w-xl mx-auto">
+            <span className="text-[10px] font-mono tracking-widest text-brand-cyan uppercase font-bold">Framework de Sustentabilidade</span>
+            <h2 className="text-2xl md:text-3xl font-display font-black text-white mt-1">ESG Aplicado na Alta Engenharia</h2>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "E (Ambiental)",
-                description: "Diagnóstico energético, energia solar, projetos com impacto validado.",
-                icon: <FaLeaf className="text-4xl text-[#7AA2E4]" />
-              },
-              {
-                title: "S (Social)",
-                description: "Capacitação da equipe técnica, diversidade, parcerias comunitárias.",
-                icon: <FaUsers className="text-4xl text-[#7AA2E4]" />
-              },
-              {
-                title: "G (Governança)",
-                description: "Conformidade legal, ARTs, laudos e código de conduta profissional.",
-                icon: <FaShieldAlt className="text-4xl text-[#7AA2E4]" />
-              }
-            ].map((esg, index) => (
+            {esgItems.map((esg, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white/10 rounded-xl p-8 text-center"
+                className="glass-card rounded-2xl p-8 text-center border-white/5 flex flex-col justify-between"
               >
-                <div className="mb-4">{esg.icon}</div>
-                <h3 className="text-xl font-bold mb-4">{esg.title}</h3>
-                <p className="text-white/80">{esg.description}</p>
+                <div>
+                  <div className="mb-4 flex justify-center">
+                    <div className="p-3 bg-white/5 rounded-xl border border-white/10">{esg.icon}</div>
+                  </div>
+                  <h3 className="text-lg font-display font-bold text-white mb-3">{esg.title}</h3>
+                  <p className="text-gray-400 text-xs font-light leading-relaxed">{esg.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -153,27 +199,30 @@ export default function SustentabilidadePage() {
       </section>
 
       {/* Créditos de Carbono */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Créditos de Carbono e Valorização Ambiental</h2>
-          <p className="text-xl text-center mb-12">Transformamos economia de energia em ativos ambientais.</p>
+      <section className="py-20 px-6 relative z-10 border-t border-white/5">
+        <div className="max-w-6xl mx-auto space-y-12">
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="text-[10px] font-mono tracking-widest text-brand-blue uppercase font-bold">Ativos Verdes</span>
+            <h2 className="text-2xl md:text-3xl font-display font-black text-white mt-1">Créditos de Carbono & Monetização</h2>
+            <p className="text-gray-400 font-light text-sm mt-2">Mapeamos, certificamos e viabilizamos a conversão de economia energética em ativos negociáveis.</p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                title: "Redução de emissões",
-                description: "Cada projeto evita CO₂ com base técnica e pode ser convertido em créditos",
-                icon: <FaChartLine className="text-3xl text-[#7AA2E4]" />
+                title: "Redução com Lastro Técnico",
+                description: "Projetos de minigeração solar reduzem emissões com base nas metodologias oficiais de cálculo do GHG Protocol.",
+                icon: <FaChartLine className="text-3xl text-brand-blue" />
               },
               {
-                title: "Certificação e Registro",
-                description: "Parcerias com plataformas certificadoras e registradoras reconhecidas",
-                icon: <FaCertificate className="text-3xl text-[#7AA2E4]" />
+                title: "Auditoria & Registro",
+                description: "Assessoria no rastreamento e registro de créditos junto a certificadoras nacionais e internacionais voluntárias.",
+                icon: <FaCertificate className="text-3xl text-brand-cyan" />
               },
               {
-                title: "Monetização e ESG",
-                description: "Uso dos créditos para compensação de emissões ou venda no mercado voluntário",
-                icon: <FaCoins className="text-3xl text-[#7AA2E4]" />
+                title: "Monetização B2B",
+                description: "Monetização de excedentes energéticos e créditos gerados para negociação em mercados ou compensação interna.",
+                icon: <FaCoins className="text-3xl text-[#10B981]" />
               }
             ].map((item, index) => (
               <motion.div
@@ -181,56 +230,63 @@ export default function SustentabilidadePage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white/10 rounded-xl p-6"
+                className="glass-card rounded-2xl p-6 border-white/5 space-y-3"
               >
-                <div className="mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-white/80">{item.description}</p>
+                <div className="mb-4 p-3 bg-white/5 rounded-xl border border-white/10 w-fit">{item.icon}</div>
+                <h3 className="text-base font-display font-bold text-white">{item.title}</h3>
+                <p className="text-gray-400 text-xs font-light leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>
 
-          <div className="bg-white/10 rounded-xl p-8 text-center mb-12">
-            <p className="text-xl italic mb-4">"Geramos 410 créditos de carbono em 18 meses com apoio da Electrom."</p>
-            <p className="text-[#7AA2E4] font-semibold">— Gerente de Sustentabilidade, Agro SP</p>
+          <div className="glass-card rounded-2xl p-8 text-center max-w-3xl mx-auto border-white/5 relative overflow-hidden">
+            <FaQuoteLeft className="text-brand-blue/15 text-5xl absolute top-6 left-6 pointer-events-none" />
+            <p className="text-base italic text-gray-200 font-light leading-relaxed max-w-xl mx-auto relative z-10">
+              &quot;Geramos 410 créditos de carbono em 18 meses com auditoria e dimensionamento sustentável fornecidos pela Electrom.&quot;
+            </p>
+            <span className="block text-brand-blue font-bold font-mono text-xs mt-3 uppercase tracking-wider">— Gestão de ESG, Agro SP</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contato" className="px-8 py-3 bg-[#7AA2E4] text-white font-bold rounded-lg hover:bg-[#5e8fd1] transition">
-              Quero avaliar meu projeto
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <Link href="/contato" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
+              Avaliar Meu Projeto
             </Link>
-            <Link href="/contato" className="px-8 py-3 border-2 border-[#7AA2E4] text-[#7AA2E4] font-bold rounded-lg hover:bg-[#7AA2E4] hover:text-white transition">
+            <a href={`https://wa.me/${companyData.whatsappNumber}?text=${encodeURIComponent(companyData.whatsappMessage)}`} target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider flex items-center justify-center gap-2">
               Falar com Especialista ESG
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Sustentabilidade Incorporada */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Sustentabilidade Incorporada ao Projeto</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <section className="py-20 px-6 relative z-10 border-t border-white/5">
+        <div className="max-w-6xl mx-auto space-y-12">
+          <div className="text-center max-w-xl mx-auto">
+            <span className="text-[10px] font-mono tracking-widest text-brand-cyan uppercase font-bold">Engenharia Nativa</span>
+            <h2 className="text-2xl md:text-3xl font-display font-black text-white mt-1">Integração do Ciclo de Sustentabilidade</h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Diagnóstico Técnico",
-                description: "Estimativa de impacto ambiental",
-                icon: <FaClipboardCheck className="text-3xl text-[#7AA2E4]" />
+                title: "Dimensionamento",
+                description: "Mapeamento rigoroso de emissões evitadas nas faturas.",
+                icon: <FaClipboardCheck className="text-3xl text-brand-blue" />
               },
               {
-                title: "Análise de Retorno",
-                description: "Energético + ambiental",
-                icon: <FaChartPie className="text-3xl text-[#7AA2E4]" />
+                title: "Estudo de Viabilidade",
+                description: "Equilíbrio entre retorno financeiro e mitigação de reativos.",
+                icon: <FaChartPie className="text-3xl text-brand-cyan" />
               },
               {
-                title: "Relatório de Impacto",
-                description: "Para uso em ESG",
-                icon: <FaFileAlt className="text-3xl text-[#7AA2E4]" />
+                title: "Laudo & Emissões",
+                description: "Emissão de relatórios estruturados de impacto para uso em balanços ESG.",
+                icon: <FaFileAlt className="text-3xl text-brand-blue" />
               },
               {
-                title: "Certificação",
-                description: "Possibilidade de créditos de carbono",
-                icon: <FaCertificate className="text-3xl text-[#7AA2E4]" />
+                title: "Certificados Verdes",
+                description: "Homologação para obtenção de I-RECs ou créditos de carbono voluntários.",
+                icon: <FaCertificate className="text-3xl text-brand-cyan" />
               }
             ].map((step, index) => (
               <motion.div
@@ -238,11 +294,13 @@ export default function SustentabilidadePage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white/10 rounded-xl p-6 text-center"
+                className="glass-card rounded-2xl p-6 text-center border-white/5 space-y-3"
               >
-                <div className="mb-4">{step.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-white/80">{step.description}</p>
+                <div className="mb-4 flex justify-center">
+                  <div className="p-3.5 bg-white/5 rounded-xl border border-white/10">{step.icon}</div>
+                </div>
+                <h3 className="text-sm font-display font-bold text-white">{step.title}</h3>
+                <p className="text-gray-400 text-xs font-light leading-relaxed">{step.description}</p>
               </motion.div>
             ))}
           </div>
@@ -250,18 +308,22 @@ export default function SustentabilidadePage() {
       </section>
 
       {/* Depoimentos */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Depoimentos e Reconhecimento</h2>
+      <section className="py-20 px-6 relative z-10 border-t border-white/5">
+        <div className="max-w-6xl mx-auto space-y-12">
+          <div className="text-center max-w-xl mx-auto">
+            <span className="text-[10px] font-mono tracking-widest text-brand-blue uppercase font-bold">Validação de Mercado</span>
+            <h2 className="text-2xl md:text-3xl font-display font-black text-white mt-1">Reconhecimento Corporativo</h2>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                quote: "Além de economia, conseguimos inserir os dados dos projetos da Electrom no nosso relatório de sustentabilidade anual.",
-                author: "Diretora de ESG, Grupo Industrial MG"
+                quote: "Além do retorno financeiro imediato da usina fotovoltaica, conseguimos lastrear os dados da Electrom em nosso Balanço de Sustentabilidade anual de forma auditável.",
+                author: "Diretoria de ESG, Grupo Metalúrgico SP"
               },
               {
-                quote: "Ajudou não só no financeiro, mas na reputação da empresa com investidores.",
-                author: "CEO, Startup Energia Verde"
+                quote: "A modernização da cabine primária e o diagnóstico de reativos reduziram perdas físicas de rede e ajudaram na obtenção de certificação verde com investidores.",
+                author: "Gerência de Operações, Hub Logístico B2B"
               }
             ].map((depoimento, index) => (
               <motion.div
@@ -269,10 +331,10 @@ export default function SustentabilidadePage() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-white/10 rounded-xl p-8"
+                className="glass-card rounded-2xl p-8 border-white/5 flex flex-col justify-between"
               >
-                <p className="text-xl italic mb-4">"{depoimento.quote}"</p>
-                <p className="text-[#7AA2E4] font-semibold">— {depoimento.author}</p>
+                <p className="text-sm italic text-gray-300 font-light leading-relaxed">&quot;{depoimento.quote}&quot;</p>
+                <p className="text-brand-blue font-bold font-mono text-xs mt-4 uppercase tracking-wider">— {depoimento.author}</p>
               </motion.div>
             ))}
           </div>
@@ -280,25 +342,25 @@ export default function SustentabilidadePage() {
       </section>
 
       {/* CTA Final */}
-      <section className="py-20 px-4 bg-gradient-to-br from-[#7AA2E4] to-[#0C1713]/80">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Faça sua energia valer mais
+      <section className="w-full py-20 bg-brand-blue/5 border-t border-white/5 text-center relative z-10 mt-12">
+        <div className="max-w-4xl mx-auto px-6 space-y-6">
+          <h2 className="text-3xl md:text-4xl font-display font-black text-white">
+            Faça sua energia valer valor ambiental real
           </h2>
-          <p className="text-xl mb-8">
-            Sustentabilidade não é custo. É investimento com retorno triplo: econômico, ambiental e reputacional. Fale com nossos engenheiros e receba um diagnóstico com cálculo de impacto e viabilidade de certificação.
+          <p className="text-gray-400 font-light text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+            Sustentabilidade industrial não é custo. É eficiência mensurável com retorno econômico direto. Fale com nossos engenheiros de descarbonização.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contato" className="px-8 py-3 bg-white text-[#7AA2E4] font-bold rounded-lg hover:bg-[#eaf1fa] transition">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+            <Link href="/contato" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
               Solicitar Diagnóstico Sustentável
             </Link>
-            <Link href="/contato" className="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#7AA2E4] transition flex items-center justify-center gap-2">
-              <FaWhatsapp className="text-xl" />
-              Falar com Engenheiro no WhatsApp
-            </Link>
+            <a href={`https://wa.me/${companyData.whatsappNumber}?text=${encodeURIComponent(companyData.whatsappMessage)}`} target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+              <FaWhatsapp className="text-lg" />
+              Falar no WhatsApp
+            </a>
           </div>
         </div>
       </section>
     </div>
   );
-} 
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="transparent"/>
+  <!-- Hoymiles - Microinverter Gate -->
+  <path d="M15 18 H 35 V 32 H 15 Z" fill="none" stroke="#FF6B00" stroke-width="2"/>
+  <path d="M20 18 V 32 M30 18 V 32 M15 25 H 35" stroke="#FF6B00" stroke-width="1.5"/>
+  <circle cx="25" cy="25" r="3" fill="#FFFFFF"/>
+  <!-- Typo -->
+  <text x="44" y="27" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">hoymiles</text>
+  <text x="44" y="38" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#7AA2E4" letter-spacing="1.5">OPEN ENERGY</text>
+</svg>

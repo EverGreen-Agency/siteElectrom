@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="transparent"/>
+  <!-- PHB - Solar Wave concept -->
+  <path d="M15 15 H 35 V 35 H 15 Z" fill="none" stroke="#0072C6" stroke-width="2"/>
+  <path d="M19 25 C24 20, 26 30, 31 25" stroke="#00A2E8" stroke-width="2.5" fill="none"/>
+  <circle cx="19" cy="25" r="2" fill="#0072C6"/>
+  <circle cx="31" cy="25" r="2" fill="#00A2E8"/>
+  <!-- Typo -->
+  <text x="44" y="27" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" letter-spacing="1">PHB</text>
+  <text x="44" y="38" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#7AA2E4" letter-spacing="0.5">SOLAR BRASIL</text>
+</svg>

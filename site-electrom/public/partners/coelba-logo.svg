@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="transparent"/>
+  <!-- Neoenergia Coelba - Green/Blue Drops -->
+  <path d="M18 32 C12 28, 12 20, 18 16 C20 18, 22 24, 18 32 Z" fill="#00A859"/>
+  <path d="M28 32 C22 28, 22 20, 28 16 C30 18, 32 24, 28 32 Z" fill="#005CA9"/>
+  <circle cx="23" cy="22" r="3" fill="#8DC63F"/>
+  <!-- Typo -->
+  <text x="38" y="27" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">COELBA</text>
+  <text x="38" y="38" font-family="'Inter', sans-serif" font-size="7" font-weight="700" fill="#7AA2E4" letter-spacing="0.5">NEOENERGIA</text>
+</svg>

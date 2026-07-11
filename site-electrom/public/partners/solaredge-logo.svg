@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="transparent"/>
+  <!-- SolarEdge Triangle Symbol Concept -->
+  <path d="M12 35 L 26 15 L 40 35 Z" fill="none" stroke="#E05B13" stroke-width="2"/>
+  <path d="M18 35 L 26 23 L 34 35 Z" fill="#E05B13"/>
+  <line x1="12" y1="35" x2="40" y2="35" stroke="#E05B13" stroke-width="3"/>
+  <!-- Typo -->
+  <text x="48" y="27" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">solaredge</text>
+  <text x="48" y="38" font-family="'Inter', sans-serif" font-size="8" font-weight="600" fill="#7AA2E4" letter-spacing="1">INVERTERS &amp; TECH</text>
+</svg>
