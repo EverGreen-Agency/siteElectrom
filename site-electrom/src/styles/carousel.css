@@ -1,0 +1,30 @@
+/* Infinite scroll animation for partners carousel */
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-infinite {
+  animation: scroll-infinite 30s linear infinite;
+}
+
+.animate-scroll-infinite:hover {
+  animation-play-state: paused;
+}
+
+/* Responsive speeds */
+@media (max-width: 768px) {
+  .animate-scroll-infinite {
+    animation-duration: 25s; /* Faster on mobile */
+  }
+}
+
+@media (min-width: 1024px) {
+  .animate-scroll-infinite {
+    animation-duration: 35s; /* Slower on desktop */
+  }
+} 
