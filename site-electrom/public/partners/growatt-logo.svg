@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="transparent"/>
+  <!-- Growatt - Green Leaf Node -->
+  <path d="M15 35 C15 25, 25 15, 25 15 C25 15, 35 25, 35 35 Z" fill="#75B025"/>
+  <path d="M25 15 V 35" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="25" cy="22" r="2.5" fill="#FFFFFF"/>
+  <!-- Typo -->
+  <text x="44" y="27" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">Growatt</text>
+  <text x="44" y="38" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#7AA2E4" letter-spacing="1">NEW ENERGY</text>
+</svg>

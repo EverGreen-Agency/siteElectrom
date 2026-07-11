@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="transparent"/>
+  <!-- Intelbras - Green Tech Waves -->
+  <path d="M15 25 C20 18, 30 18, 35 25" stroke="#00A34E" stroke-width="2.5" fill="none"/>
+  <path d="M18 29 C22 24, 28 24, 32 29" stroke="#00A34E" stroke-width="1.5" fill="none"/>
+  <circle cx="26" cy="21" r="3" fill="#00A34E"/>
+  <!-- Typo -->
+  <text x="44" y="27" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">intelbras</text>
+  <text x="44" y="38" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#7AA2E4" letter-spacing="0.5">SOLAR</text>
+</svg>

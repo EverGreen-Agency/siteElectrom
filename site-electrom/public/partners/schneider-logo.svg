@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="transparent"/>
+  <!-- Schneider Green Symbol Concept -->
+  <path d="M12 18 C 12 18, 16 12, 24 12 C 32 12, 36 18, 36 18" fill="none" stroke="#3DCD58" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="24" cy="28" r="6" fill="#3DCD58"/>
+  <!-- Typo -->
+  <text x="48" y="27" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="800" fill="#3DCD58">Schneider</text>
+  <text x="48" y="38" font-family="'Inter', sans-serif" font-size="8" font-weight="600" fill="#7AA2E4" letter-spacing="1">E L E C T R I C</text>
+</svg>

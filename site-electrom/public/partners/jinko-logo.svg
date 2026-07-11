@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="transparent"/>
+  <!-- Jinko Solar - Red/Orange Sunburst Arc -->
+  <path d="M15 32 A 12 12 0 0 1 35 22" stroke="#FF5E00" stroke-width="3" fill="none"/>
+  <path d="M20 35 A 12 12 0 0 1 35 27" stroke="#E1251B" stroke-width="2" fill="none"/>
+  <circle cx="35" cy="22" r="2.5" fill="#FF5E00"/>
+  <!-- Typo -->
+  <text x="44" y="27" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">Jinko</text>
+  <text x="44" y="38" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#7AA2E4" letter-spacing="1">SOLAR</text>
+</svg>

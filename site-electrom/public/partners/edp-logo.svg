@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="transparent"/>
+  <!-- EDP - Red Circle Concept -->
+  <circle cx="25" cy="25" r="12" fill="none" stroke="#ED1C24" stroke-width="2.5"/>
+  <path d="M25 17 A8 8 0 0 1 33 25" stroke="#ED1C24" stroke-width="2" fill="none"/>
+  <circle cx="25" cy="25" r="4" fill="#ED1C24"/>
+  <!-- Typo -->
+  <text x="48" y="29" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">edp</text>
+  <text x="48" y="39" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#7AA2E4" letter-spacing="1.5">RENOVÁVEIS</text>
+</svg>
