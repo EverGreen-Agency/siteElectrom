@@ -13,7 +13,7 @@
     "framer-motion": "^12.10.4",
     "keen-slider": "^6.8.6",
     "leaflet": "^1.9.4",
-    "next": "^15.3.2",
+    "next": "15.3.8",
     "react": "^19.1.0",
     "react-countup": "^6.5.3",
     "react-dom": "^19.1.0",
