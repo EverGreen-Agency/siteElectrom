@@ -9,7 +9,7 @@ const services = [
     id: 1,
     title: 'Sistemas Fotovoltaicos',
     description:
-      'Geração de energia limpa sob medida. Planejamento, engenharia e instalação de usinas solares industriais de alto rendimento.',
+      'Geração de energia limpa sob medida. Planejamento, engenharia e instalação de usinas fotovoltaicas de alto rendimento.',
     features: [
       'Dimensionamento técnico de alta precisão',
       'Análise de payback e viabilidade regulatória',
@@ -17,7 +17,7 @@ const services = [
       'Homologação completa junto à concessionária'
     ],
     testimonial:
-      'A Electrom implantou nossa usina solar com agilidade impecável. Tivemos retorno do investimento em tempo recorde.',
+      'A Elect ROM implantou nossa usina solar com agilidade e acabamento impecável. Tivemos retorno do investimento em tempo recorde.',
     glowColor: 'bg-yellow-500',
     image: '/obras/Paineis.jpeg',
     cta: 'Simular Economia Solar',
@@ -31,15 +31,15 @@ const services = [
     id: 2,
     title: 'Gerenciamento de Obras',
     description:
-      'Gestão técnica ponta a ponta. Garantimos rigor operacional, cumprimento de cronograma e conformidade normativa.',
+      'Gestão técnica ponta a ponta de instalações elétricas, civis e utilidades industriais. Garantimos rigor operacional, cumprimento de cronograma e conformidade.',
     features: [
-      'Planejamento de suprimentos e execução',
+      'Planejamento e coordenação de execução de utilidades',
+      'Fiscalização de montagens civis, elétricas e estruturas',
       'Engenheiros residentes especializados no local',
-      'Rígidos protocolos de segurança e qualidade',
-      'As-Built detalhado e documentação de entrega'
+      'Rigor técnico, documentação As-Built e termos de entrega'
     ],
     testimonial:
-      'O rigor metodológico da Electrom superou nossas expectativas. O projeto correu perfeitamente dentro do cronograma.',
+      'O rigor metodológico e a fiscalização da Electrom superaram nossas expectativas. As obras de infraestrutura e utilidades rodaram sob total controle.',
     glowColor: 'bg-blue-500',
     image: '/obras/Estrutura.jpeg',
     cta: 'Consultar Nossas Obras',
@@ -51,23 +51,24 @@ const services = [
   },
   {
     id: 3,
-    title: 'Instalações Hidráulicas',
+    title: 'Conservação de Energia / Eficiência Energética',
     description:
-      'Infraestrutura hidráulica industrial robusta. Otimização de sistemas de bombeamento e combate a incêndios.',
+      'Diagnósticos térmicos, termografia infravermelha de painéis elétricos e estratégias de eficiência para mitigação de desperdícios de energia e conservação.',
     features: [
-      'Projetos de captação e recalque industrial',
-      'Redes de incêndio sob rígidas normas (corpo de bombeiros)',
-      'Dimensionamento de fluídos sob pressão',
-      'Estações de tratamento e reuso de água'
+      'Auditorias energéticas industriais completas',
+      'Análise termográfica preventiva de painéis e motores',
+      'Adequação e correção de fator de potência',
+      'Projetos de conservação térmica e redução de perdas'
     ],
     testimonial:
-      'Redesenhamos toda a hidráulica da nossa planta de processamento com a Electrom. Consumo estabilizado e zero vazamentos.',
+      'Os estudos de eficiência energética e termografia nas plantas reduziram drasticamente nossas perdas térmicas e elétricas.',
     glowColor: 'bg-emerald-500',
     image: '/obras/Obras/Imagem6.png',
-    cta: 'Falar com Hidráulicos',
+    imageLabel: 'Subestação de Eficiência Energética da Duratex - Botucatu',
+    cta: 'Solicitar Estudo de Eficiência',
     icon: (
-      <svg className="w-8 h-8 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+      <svg className="w-8 h-8 text-[#10B981]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     )
   },
@@ -85,7 +86,7 @@ const services = [
     testimonial:
       'A transição para nossa nova subestação de média tensão foi executada sem nenhuma interrupção em nossa linha de montagem.',
     glowColor: 'bg-cyan-500',
-    image: '/obras/EstruturaTensao.jpeg',
+    image: '/obras/QuadroDistribuicao.png',
     cta: 'Solicitar Projeto Elétrico',
     icon: (
       <svg className="w-8 h-8 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -97,11 +98,11 @@ const services = [
     id: 5,
     title: 'Autossuficiência Energética',
     description:
-      'Estruturas híbridas and armazenamento inteligente para independência total da rede pública de energia.',
+      'Estruturas híbridas e armazenamento inteligente para independência total da rede pública de energia.',
     features: [
       'Sistemas solares com baterias (off-grid / hybrid)',
-      'Gerenciamento automático de pico de consumo',
-      'Fontes complementares acopladas de biomassa',
+      'Integração com aquecedor solar térmico',
+      'Sistemas de aquecimento a gás acoplados',
       'Monitoramento dinâmico IoT 24 horas por dia'
     ],
     testimonial:
@@ -283,13 +284,13 @@ const ServiceSlideDesktop = ({ service, idx, totalSections, scrollYProgress }) =
                 src={service.image} 
                 alt={service.title}
                 fill
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                className={`object-cover group-hover:scale-105 transition-transform duration-700 ${service.imagePosition || 'object-center'}`}
               />
             </motion.div>
             
             {/* Technical details overlay on image */}
             <div className="absolute top-4 left-4 glass-card px-3 py-1 rounded text-[10px] uppercase font-mono tracking-widest border-white/10">
-              REGISTRO REAL DE OBRA
+              {service.imageLabel || 'REGISTRO REAL DE OBRA'}
             </div>
             
             <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm text-gray-300 px-3 py-1.5 rounded-md text-[11px] font-mono tracking-wider">
@@ -466,10 +467,10 @@ export default function ServicesHorizontalScroll() {
                   src={service.image} 
                   alt={service.title}
                   fill
-                  className="object-cover object-center"
+                  className={`object-cover ${service.imagePosition || 'object-center'}`}
                 />
                 <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-gray-300 px-2 py-0.5 rounded text-[8px] uppercase font-mono tracking-widest border border-white/5">
-                  REGISTRO REAL
+                  {service.imageLabel || 'REGISTRO REAL'}
                 </div>
               </div>
 

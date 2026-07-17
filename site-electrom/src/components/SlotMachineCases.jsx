@@ -3,140 +3,14 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
-
-// Real documented projects derived from public/obras directories
-const casesData = [
-  {
-    id: 1,
-    title: 'Usina Solar Cipó Guaçu (Carlos Augusto)',
-    category: 'Solar',
-    location: 'Cipó Guaçu, SP',
-    metrics: { power: '32.16 kWp', economy: 'R$ 22.000 / ano', status: 'Ativo' },
-    description: 'Engenharia completa, homologação e instalação de usina de minigeração distribuída em solo (32,16 kWp), com inversor PHB e módulos Jinko.',
-    featured: false,
-    coverImage: '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg',
-    images: [
-      '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg',
-      '/obras/UsinaCipoGuacu/IMG_20190713_162528919_HDR.jpg',
-      '/obras/UsinaCipoGuacu/IMG_20190713_162554101_HDR.jpg',
-      '/obras/UsinaCipoGuacu/IMG_20190714_113242711_HDR.jpg'
-    ]
-  },
-  {
-    id: 2,
-    title: 'Smart Fit Embu Guaçu - Usina Solar Comercial',
-    category: 'Solar',
-    location: 'Embu Guaçu, SP',
-    metrics: { power: '145.2 kWp', economy: 'R$ 180.000 / ano', status: 'Ativo' },
-    description: 'Dimensionamento, homologação e comissionamento de usina comercial fotovoltaica sobre telhado (145,2 kWp) com inversores PHB e módulos DMEGC de alta performance.',
-    featured: true,
-    coverImage: '/obras/Paineis.jpeg',
-    images: [
-      '/obras/Paineis.jpeg',
-      '/obras/Obras/Imagem6.png'
-    ]
-  },
-  {
-    id: 3,
-    title: 'Instalação Solar Escola Patelli',
-    category: 'Solar',
-    location: 'Campo Limpo Paulista, SP',
-    metrics: { power: '6.5 kWp', economy: 'R$ 6.000 / ano', status: 'Ativo' },
-    description: 'Instalação fotovoltaica sobre telhado para instituição de ensino, utilizando inversor PHB de 5 kW e módulos Jinko.',
-    featured: false,
-    coverImage: '/obras/EscolaPatelliFotovoltaica/WP_20180203_11_56_04_Pro.jpg',
-    images: [
-      '/obras/EscolaPatelliFotovoltaica/WP_20180203_11_56_04_Pro.jpg',
-      '/obras/EscolaPatelliFotovoltaica/IMG-20180202-WA0028.jpg',
-      '/obras/EscolaPatelliFotovoltaica/IMG-20180418-WA0017.jpg',
-      '/obras/EscolaPatelliFotovoltaica/WP_20180203_11_57_01_Pro.jpg',
-      '/obras/EscolaPatelliFotovoltaica/WP_20180203_15_00_08_Pro.jpg'
-    ]
-  },
-  {
-    id: 4,
-    title: 'Residencial Recanto - Soluções Integradas',
-    category: 'Solar',
-    location: 'São Paulo, SP',
-    metrics: { power: '17.68 kWp', economy: 'R$ 15.000 / ano', status: 'Ativo' },
-    description: 'Implantação de gerador solar fotovoltaico de 17,68 kWp em laje para a residência de Rodolfo Henrique Fischer, integrada à modernização completa de quadros de distribuição geral, bombas de hidro e iluminação de jardim.',
-    featured: false,
-    coverImage: '/obras/ObraRecantoFotovoltaica/IMG_20181205_173826509_HDR.jpg',
-    images: [
-      '/obras/ObraRecantoFotovoltaica/IMG_20181205_173826509_HDR.jpg',
-      '/obras/ObraRecantoFotovoltaica/Ala Oeste baixo.jpg',
-      '/obras/ObraRecantoFotovoltaica/IMG_20181205_173843383_HDR.jpg',
-      '/obras/ObraRecantoFotovoltaica/IMG_20190308_091007933.jpg'
-    ]
-  },
-  {
-    id: 5,
-    title: 'Cabine de Pintura EMBRAER - Gestão de Obra',
-    category: 'Subestações',
-    location: 'São José dos Campos, SP',
-    metrics: { power: '750 kVA', economy: 'Rede Dedicada', status: 'Ativo' },
-    description: 'Gestão de obra elétrica especializada para a cabine de pintura de aeronaves da EMBRAER, garantindo conformidade, segurança operacional e robustez técnica.',
-    featured: true,
-    coverImage: '/obras/Obras/Imagem1.png',
-    images: [
-      '/obras/Obras/Imagem1.png',
-      '/obras/Obras/Imagem11.jpg'
-    ]
-  },
-  {
-    id: 6,
-    title: 'Eficiência Energética - Grupo Duratex',
-    category: 'Consultoria',
-    location: 'Itapetininga, SP',
-    metrics: { power: 'Diagnóstico', economy: 'R$ 120.000 / ano', status: 'Concluído' },
-    description: 'Estudos de conservação de energia, termografia preventiva e adequações de quadros de potência industrial nas plantas da Duratex.',
-    featured: false,
-    coverImage: '/obras/Obras/Imagem8.png',
-    images: [
-      '/obras/Obras/Imagem8.png',
-      '/obras/Obras/Imagem9.png',
-      '/obras/Obras/Imagem10.png'
-    ]
-  },
-  {
-    id: 7,
-    title: 'Reservatórios de Grande Porte - Legado e Hidráulica',
-    category: 'Hidráulica',
-    location: 'Bertioga e São Paulo, SP',
-    metrics: { power: '105.000 L', economy: 'Reservação Segura', status: 'Ativo' },
-    description: 'Projetos civis e hidráulicos de reservatórios elevados industriais de grande porte e sistemas de saneamento para a Cinemateca de SP (40.000 L) e a Riviera de São Lourenço (65.000 L).',
-    featured: false,
-    coverImage: '/obras/Obras/WP_20180404_12_32_22_Pro.jpg',
-    images: [
-      '/obras/Obras/WP_20180404_12_32_22_Pro.jpg',
-      '/obras/Obras/1996-016-04-3.jpg',
-      '/obras/Obras/1996-004-03-3.jpg'
-    ]
-  },
-  {
-    id: 8,
-    title: 'Eletroposto Residencial Inteligente',
-    category: 'Mobilidade',
-    location: 'São Paulo, SP',
-    metrics: { power: '2 Carregadores EV', economy: 'Mobilidade Elétrica', status: 'Ativo' },
-    description: 'Implantação completa de infraestrutura elétrica dedicada e tomadas de carregamento inteligente para veículos elétricos (EV) com dispositivos de proteção no Condomínio Recanto.',
-    featured: false,
-    coverImage: '/obras/CarregadorEletrico/CarregadorEletrico.jpeg',
-    video: '/obras/CarregadorEletrico/Eletroposto.mp4',
-    images: [
-      '/obras/CarregadorEletrico/CarregadorEletrico.jpeg',
-      '/obras/CarregadorEletrico/CarregadorEletrico2.jpeg',
-      '/obras/CarregadorEletrico/CarregadorEletrico3.jpeg'
-    ]
-  }
-]
+import { casesData } from '../data/companyData'
 
 export default function SlotMachineCases() {
   const [selectedCategory, setSelectedCategory] = useState('Todos')
   const [activeCase, setActiveCase] = useState(null)
   const [activeImgIdx, setActiveImgIdx] = useState(0)
 
-  const categories = ['Todos', 'Solar', 'Subestações', 'Mobilidade', 'Hidráulica', 'Consultoria']
+  const categories = ['Todos', 'Solar', 'Subestações', 'Gerenciamento de Obras', 'Eficiência Energética', 'Autossuficiência', 'Mobilidade', 'Consultoria']
 
   const filteredCases = selectedCategory === 'Todos'
     ? casesData
@@ -272,18 +146,14 @@ export default function SlotMachineCases() {
                   {/* Grid metrics details */}
                   <div className="border-t border-white/5 pt-4">
                     <div className="grid grid-cols-3 gap-2 text-center bg-black/35 rounded-xl p-3 border border-white/5">
-                      <div>
-                        <div className="text-[10px] text-gray-400 font-mono uppercase">Potência</div>
-                        <div className="text-xs font-semibold text-white mt-1">{project.metrics.power}</div>
-                      </div>
-                      <div>
-                        <div className="text-[10px] text-gray-400 font-mono uppercase">Economia</div>
-                        <div className="text-xs font-semibold text-brand-cyan mt-1">{project.metrics.economy}</div>
-                      </div>
-                      <div>
-                        <div className="text-[10px] text-gray-400 font-mono uppercase">Status</div>
-                        <div className="text-xs font-semibold text-brand-gold mt-1">{project.metrics.status}</div>
-                      </div>
+                      {project.metrics.map((metric, mIdx) => (
+                        <div key={mIdx}>
+                          <div className="text-[10px] text-gray-400 font-mono uppercase">{metric.label}</div>
+                          <div className={`text-xs font-semibold mt-1 ${mIdx === 1 ? 'text-brand-cyan' : mIdx === 2 ? 'text-brand-gold' : 'text-white'}`}>
+                            {metric.value}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                     
                     <button 
@@ -370,11 +240,15 @@ export default function SlotMachineCases() {
                 
                 {/* Tech specifications details at bottom-left */}
                 <div className="absolute bottom-4 left-4 glass-card px-4 py-3 rounded-lg border-white/10 max-w-xs md:max-w-md hidden sm:block z-10">
-                  <div className="grid grid-cols-2 gap-2 text-xs font-mono">
-                    <span className="text-gray-400">Potência instalada:</span>
-                    <span className="text-white font-bold">{activeCase.metrics.power}</span>
-                    <span className="text-gray-400">Economia real:</span>
-                    <span className="text-brand-cyan font-bold">{activeCase.metrics.economy}</span>
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs font-mono">
+                    {activeCase.metrics.map((metric, mIdx) => (
+                      <React.Fragment key={mIdx}>
+                        <span className="text-gray-400">{metric.label}:</span>
+                        <span className={mIdx === 1 ? 'text-brand-cyan font-bold' : 'text-white font-bold'}>
+                          {metric.value}
+                        </span>
+                      </React.Fragment>
+                    ))}
                     <span className="text-gray-400">Localização:</span>
                     <span className="text-white">{activeCase.location}</span>
                   </div>
