@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import "../styles/carousel.css";
 import Navbar from "@/components/Navbar";
@@ -7,12 +7,6 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
   display: "swap",
 });
 
@@ -34,7 +28,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Electrom Engenharia" }],
   openGraph: {
-    title: "Electrom Engenharia | Engenharia das Energias",
+    title: "Electrom Engenharia | Engenharia de Energia",
     description: "Mais de 25 anos de solidez e inovação. Projetos elétricos industriais e usinas solares de alta performance.",
     url: "https://electrom.eng.br",
     siteName: "Electrom Engenharia",
@@ -100,7 +94,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="pt-BR" className={`${inter.variable}`}>
       <body className="font-sans antialiased text-brand-white bg-brand-petrol" suppressHydrationWarning={true}>
         <script
           type="application/ld+json"

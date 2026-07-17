@@ -16,7 +16,7 @@ const milestones = [
   {
     year: '2003',
     title: 'Expansão Nacional',
-    description: 'A empresa atinge a expressiva marca histórica de 317 obras de infraestrutura elétrica e hidráulica entregues e ativas em todo o território nacional.',
+    description: 'A empresa atinge a expressiva marca histórica de 317 obras de infraestrutura elétrica e gerenciamento de obras civis/industriais entregues em todo o território nacional.',
     image: '/obras/Obras/WP_20180404_12_32_22_Pro.jpg',
     tag: 'Crescimento'
   },
@@ -30,7 +30,7 @@ const milestones = [
   {
     year: '2012',
     title: 'Infraestrutura Urbana de Grande Porte',
-    description: 'Marca de 384 obras concluídas, destacando-se a implantação de redes hidráulicas e reservatórios elevados para o Hospital do Mandaqui (saneamento) e a Cinemateca de SP.',
+    description: 'Marca de 384 obras concluídas, destacando-se o gerenciamento de obras de reservatórios elevados e infraestrutura urbana para o Hospital do Mandaqui e a Cinemateca de SP.',
     image: '/obras/Obras/1996-004-03-3.jpg',
     tag: 'Infraestrutura'
   },
@@ -84,7 +84,7 @@ export default function AboutStrip() {
             </span>
           </div>
           <blockquote className="text-2xl md:text-3xl font-display font-extrabold text-white leading-relaxed mb-6">
-            “Engenharia das Energias é nosso compromisso definitivo em combinar <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">sustentabilidade, alta performance e inovação</span> para viabilizar o amanhã.”
+            “Engenharia de Energia é nosso compromisso definitivo em combinar <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">sustentabilidade, alta performance e inovação</span> para viabilizar o amanhã.”
           </blockquote>
           <p className="text-gray-400 font-light text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
             A Electrom Engenharia desenvolve soluções de alta engenharia para empresas brasileiras que demandam redução drástica de perdas, eficiência absoluta e conformidade regulatória sólida.

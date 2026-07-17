@@ -61,7 +61,7 @@ export default function HeroSection() {
       >
         <Image
           src="/HeroO1.png"
-          alt="Electrom Engenharia - Engenharia das Energias"
+          alt="Electrom Engenharia - Engenharia de Energia"
           fill
           className="object-cover md:object-contain object-right"
           priority
@@ -100,7 +100,7 @@ export default function HeroSection() {
             {/* Segunda linha isolada na máscara */}
             <div className="overflow-hidden pt-1 pb-2">
               <motion.div variants={maskItem} className="bg-gradient-to-r from-brand-blue via-brand-cyan to-white bg-clip-text text-transparent">
-                DAS ENERGIAS
+                DE ENERGIA
               </motion.div>
             </div>
           </h1>

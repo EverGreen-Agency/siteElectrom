@@ -1,121 +1,29 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaIndustry, FaStore, FaHome, FaHospital, FaSchool, FaBuilding, FaArrowRight, FaArrowUp, FaArrowDown } from 'react-icons/fa';
+import { FaSun, FaBolt, FaWrench, FaShieldAlt, FaBatteryFull, FaCar, FaFileInvoiceDollar, FaBuilding, FaArrowRight, FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
+import { casesData } from '../../data/companyData';
 
 const CasesPage = () => {
-  const [activeSegment, setActiveSegment] = useState<string>('todos');
+  const [activeSegment, setActiveSegment] = useState<string>('Todos');
 
   const segmentos = [
-    { id: 'todos', icone: <FaBuilding className="text-sm" />, nome: 'Todos' },
-    { id: 'industrial', icone: <FaIndustry className="text-sm" />, nome: 'Industrial' },
-    { id: 'comercial', icone: <FaStore className="text-sm" />, nome: 'Comercial' },
-    { id: 'residencial', icone: <FaHome className="text-sm" />, nome: 'Residencial' },
-    { id: 'saude', icone: <FaHospital className="text-sm" />, nome: 'Saúde' },
-    { id: 'educacao', icone: <FaSchool className="text-sm" />, nome: 'Educação' }
+    { id: 'Todos', icone: <FaBuilding className="text-sm" />, nome: 'Todos' },
+    { id: 'Solar', icone: <FaSun className="text-sm" />, nome: 'Solar' },
+    { id: 'Subestações', icone: <FaBolt className="text-sm" />, nome: 'Subestações' },
+    { id: 'Gerenciamento de Obras', icone: <FaWrench className="text-sm" />, nome: 'Gerenciamento' },
+    { id: 'Eficiência Energética', icone: <FaShieldAlt className="text-sm" />, nome: 'Eficiência' },
+    { id: 'Autossuficiência', icone: <FaBatteryFull className="text-sm" />, nome: 'Autossuficiência' },
+    { id: 'Mobilidade', icone: <FaCar className="text-sm" />, nome: 'Mobilidade' },
+    { id: 'Consultoria', icone: <FaFileInvoiceDollar className="text-sm" />, nome: 'Consultoria' }
   ];
 
-  const cases = [
-    {
-      id: 1,
-      titulo: 'Usina Solar Cipó Guaçu (Carlos Augusto)',
-      segmento: 'industrial',
-      descricao: 'Engenharia completa, homologação e instalação de usina de minigeração distribuída em solo (32,16 kWp) para autoconsumo remoto com sistema de rastreamento tracker.',
-      antes: {
-        consumo: '4.500 kWh/mês',
-        custo: 'R$ 3.600/mês',
-        impacto: 'Custo tarifário residencial elevado em unidades integradas.'
-      },
-      depois: {
-        consumo: '150 kWh/mês',
-        custo: 'R$ 120/mês',
-        impacto: '96% de redução de custo com compensação ativa e estabilidade.'
-      },
-      resultados: [
-        'Economia anual: R$ 41.760',
-        'Redução: 32 toneladas de CO2/ano',
-        'Payback real: 4,0 anos',
-        'ROI técnico: 25% ao ano'
-      ],
-      imagem: '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg'
-    },
-    {
-      id: 2,
-      titulo: 'Smart Fit Embu Guaçu - Usina Solar Comercial',
-      segmento: 'comercial',
-      descricao: 'Dimensionamento, homologação e comissionamento de usina comercial fotovoltaica sobre telhado (145,2 kWp) com inversores PHB e módulos DMEGC de alta performance.',
-      antes: {
-        consumo: '22.000 kWh/mês',
-        custo: 'R$ 17.600/mês',
-        impacto: 'Altas despesas com climatização e iluminação contínuas.'
-      },
-      depois: {
-        consumo: '3.000 kWh/mês',
-        custo: 'R$ 2.400/mês',
-        impacto: 'Autonomia energética ativa e drástica redução da tarifa de ponta.'
-      },
-      resultados: [
-        'Economia anual: R$ 182.400',
-        'Redução: 145 toneladas de CO2/ano',
-        'Payback real: 3,2 anos',
-        'Selo ESG & Reconhecimento de Marca'
-      ],
-      imagem: '/obras/Paineis.jpeg'
-    },
-    {
-      id: 3,
-      titulo: 'Escola Patelli - Transição Fotovoltaica',
-      segmento: 'educacao',
-      descricao: 'Dimensionamento e instalação de gerador fotovoltaico em telhado (6,5 kWp) integrado à subestação distribuidora escolar e sistema de monitoramento pedagógico.',
-      antes: {
-        consumo: '1.200 kWh/mês',
-        custo: 'R$ 960/mês',
-        impacto: 'Demanda de energia flutuante durante o horário letivo diurno.'
-      },
-      depois: {
-        consumo: '400 kWh/mês',
-        custo: 'R$ 320/mês',
-        impacto: 'Autossuficiência diurna e redução de 66% na conta escolar.'
-      },
-      resultados: [
-        'Economia anual: R$ 7.680',
-        'Redução: 6,5 toneladas de CO2/ano',
-        'Payback real: 4,5 anos',
-        'Integração pedagógica e sustentável'
-      ],
-      imagem: '/obras/EscolaPatelliFotovoltaica/IMG-20180202-WA0028.jpg'
-    },
-    {
-      id: 4,
-      titulo: 'Residencial Recanto - Soluções Energéticas Integradas',
-      segmento: 'residencial',
-      descricao: 'Modernização completa integrada: gerador fotovoltaico em laje (17,68 kWp), quadros elétricos de distribuição, automação e infraestrutura para carregadores veiculares.',
-      antes: {
-        consumo: '3.500 kWh/mês',
-        custo: 'R$ 2.800/mês',
-        impacto: 'Risco técnico por quadros antigos e elevado consumo em bombas/lazer.'
-      },
-      depois: {
-        consumo: '1.100 kWh/mês',
-        custo: 'R$ 880/mês',
-        impacto: 'Conformidade e segurança técnica com autossuficiência parcial.'
-      },
-      resultados: [
-        'Economia anual: R$ 23.040',
-        'Redução: 17,6 toneladas de CO2/ano',
-        'Payback real: 4,1 anos',
-        'Segurança elétrica e infraestrutura EV'
-      ],
-      imagem: '/obras/ObraRecantoFotovoltaica/IMG_20181205_173826509_HDR.jpg'
-    }
-  ];
-
-  const casesFiltrados = activeSegment === 'todos' 
-    ? cases 
-    : cases.filter(case_ => case_.segmento === activeSegment);
+  const casesFiltrados = activeSegment === 'Todos' 
+    ? casesData 
+    : casesData.filter(case_ => case_.category === activeSegment);
 
   const container = {
     hidden: {},
@@ -198,15 +106,15 @@ const CasesPage = () => {
                 {/* Imagem */}
                 <div className="relative lg:w-1/2 h-64 lg:min-h-[440px] bg-brand-dark/50 border-b lg:border-b-0 lg:border-r border-white/5">
                   <Image
-                    src={case_.imagem}
-                    alt={case_.titulo}
+                    src={case_.coverImage}
+                    alt={case_.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover opacity-85 hover:opacity-100 transition-opacity duration-300"
                     loading="lazy"
                   />
                   <span className="absolute top-4 left-4 bg-brand-blue text-brand-petrol text-[10px] font-mono font-bold px-3 py-1 rounded-full shadow-lg uppercase tracking-widest">
-                    {segmentos.find(s => s.id === case_.segmento)?.nome}
+                    {case_.category}
                   </span>
                 </div>
 
@@ -214,8 +122,8 @@ const CasesPage = () => {
                 <div className="flex-1 p-8 md:p-10 flex flex-col justify-between space-y-6">
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2 leading-tight">{case_.titulo}</h3>
-                      <p className="text-gray-400 font-light text-xs md:text-sm leading-relaxed">{case_.descricao}</p>
+                      <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2 leading-tight">{case_.title}</h3>
+                      <p className="text-gray-400 font-light text-xs md:text-sm leading-relaxed">{case_.description}</p>
                     </div>
 
                     {/* Comparação Antes/Depois */}

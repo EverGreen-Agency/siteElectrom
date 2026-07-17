@@ -24,10 +24,10 @@ module.exports = {
         text: '#FFFFFF',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'Helvetica', 'Arial', 'sans-serif'],
-        display: ['var(--font-space-grotesk)', 'Helvetica', 'Arial', 'sans-serif'],
-        primary: ['var(--font-inter)', 'Helvetica', 'Arial', 'sans-serif'],
-        secondary: ['var(--font-space-grotesk)', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['"Helvetica Neue"', 'Helvetica', 'var(--font-inter)', 'Arial', 'sans-serif'],
+        display: ['"Helvetica Neue"', 'Helvetica', 'var(--font-inter)', 'Arial', 'sans-serif'],
+        primary: ['"Helvetica Neue"', 'Helvetica', 'var(--font-inter)', 'Arial', 'sans-serif'],
+        secondary: ['"Helvetica Neue"', 'Helvetica', 'var(--font-inter)', 'Arial', 'sans-serif'],
       },
       animation: {
         'shimmer': 'shimmer 2.5s infinite linear',

@@ -180,7 +180,7 @@ const ContactCTA = () => {
             {/* Brand Manifesto Quote */}
             <div className="p-5 bg-brand-blue/5 border-l-2 border-brand-blue rounded-r-xl max-w-lg">
               <p className="text-xs text-brand-blue font-semibold tracking-wide italic leading-relaxed">
-                &quot;Electrom Engenharia: Engenharia das Energias — Sustentabilidade, Eficiência e Inovação para um Futuro Energético Consciente.&quot;
+                &quot;Electrom Engenharia: Engenharia de Energia — Sustentabilidade, Eficiência e Inovação para um Futuro Energético Consciente.&quot;
               </p>
             </div>
 
