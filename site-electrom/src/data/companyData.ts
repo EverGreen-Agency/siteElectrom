@@ -44,7 +44,7 @@ export interface CompanyInfo {
 }
 
 export const companyData: CompanyInfo = {
-  name: 'Electrom Engenharia',
+  name: 'ElectROM Engenharia',
   slogan: 'Engenharia de Energia',
   tagline: 'Sustentabilidade, Eficiência e Inovação para um Futuro Energético Consciente.',
   experienceYears: 30, // Fundação em 1996, em 2026 completa 30 anos
@@ -54,9 +54,9 @@ export const companyData: CompanyInfo = {
   totalClients: 1800,
   economyGeneratedMillions: 50, // Updated from 120 to match "mais de R$50.000.000,00"
   whatsappNumber: '5511999620930', // Telefone comercial oficial unificado
-  whatsappMessage: 'Olá! Gostaria de falar com a equipe de engenharia da Electrom.',
+  whatsappMessage: 'Olá! Gostaria de falar com a equipe de engenharia da ElectROM.',
   phone: '(11) 3230-1996',
-  email: 'contato@electrom.eng.br',
+  email: 'contato@ElectROM.eng.br',
   address: {
     street: 'Av. Paulista, 1000 - Bela Vista',
     neighborhood: 'Bela Vista',
@@ -65,8 +65,8 @@ export const companyData: CompanyInfo = {
     zipCode: '01310-100',
   },
   social: {
-    linkedin: 'https://linkedin.com/company/electrom-engenharia',
-    instagram: 'https://www.instagram.com/electromeng/',
+    linkedin: 'https://linkedin.com/company/ElectROM-engenharia',
+    instagram: 'https://www.instagram.com/ElectROMeng/',
   },
   metrics: {
     yearsOfExperience: {

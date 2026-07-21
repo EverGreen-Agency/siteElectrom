@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Diagnóstico Técnico & Contato | Electrom Engenharia',
+  title: 'Diagnóstico Técnico & Contato | ElectROM Engenharia',
   description: 'Fale com nossa equipe técnica de engenharia. Solicite uma avaliação gratuita de consumo de energia e viabilidade de usinas fotovoltaicas.',
   alternates: {
-    canonical: 'https://electrom.eng.br/contato',
+    canonical: 'https://ElectROM.eng.br/contato',
   },
 };
 

@@ -38,8 +38,8 @@ export async function POST(request: Request) {
             'Authorization': `Bearer ${resendKey}`,
           },
           body: JSON.stringify({
-            from: 'Electrom Engenharia <onboarding@resend.dev>', // Substituir pelo domínio verificado em produção
-            to: ['contato@electrom.eng.br'],
+            from: 'ElectROM Engenharia <onboarding@resend.dev>', // Substituir pelo domínio verificado em produção
+            to: ['contato@ElectROM.eng.br'],
             subject: `Novo Lead de Diagnóstico: ${assunto} - ${nome}`,
             html: `
               <h2>Novo Lead de Diagnóstico Energético</h2>

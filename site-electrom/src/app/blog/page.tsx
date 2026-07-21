@@ -89,7 +89,7 @@ const mapWordPressPostToLocal = (wp: WordPressPost): Post => {
   }
 
   const imagem = wp._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg';
-  const autor = wp._embedded?.['author']?.[0]?.name || 'Electrom';
+  const autor = wp._embedded?.['author']?.[0]?.name || 'ElectROM';
 
   let categoria = 'sustentabilidade';
   if (wp._embedded?.['wp:term'] && wp._embedded?.['wp:term']?.[0]) {

@@ -6,8 +6,8 @@ const solutions = [
   {
     title: 'Energia Solar',
     headline: 'Geração própria sob medida',
-    description: 'Engenharia completa de usinas fotovoltaicas industriais e comerciais, conectando sua empresa diretamente à economia renovável.',
-    bullets: ['Usinas sobre telhados e solo', 'Estudos de viabilidade regulatória', 'Garantia de performance homologada', 'Projetos Turnkey (EPC) integrados'],
+    description: 'Engenharia completa de usinas fotovoltaicas industriais, comerciais e residênciais, conectando seu estabelecimento diretamente à economia renovável.',
+    bullets: ['Usinas sobre telhados e solo', 'Estudos de viabilidade', 'Garantia de performance', 'Projetos Turnkey (EPC) integrados'],
     color: 'from-brand-gold to-brand-amber',
     icon: (
       <svg className="w-6 h-6 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -17,8 +17,8 @@ const solutions = [
   },
   {
     title: 'Eficiência Energética',
-    headline: 'Redução drástica de desperdícios',
-    description: 'Auditorias completas para identificação de gargalos de consumo, otimização de máquinas e mitigação de perdas térmicas.',
+    headline: 'Redução de desperdícios',
+    description: 'Auditorias completas para identificação de gargalos de consumo, otimização e mitigação de perdas térmicas.',
     bullets: ['Retrofit de iluminação em LED', 'Substituição por motores IE4/IE5', 'Gestão ativa de energia reativa', 'Adequações e correções térmicas'],
     color: 'from-brand-blue to-[#4f80cf]',
     icon: (
@@ -31,8 +31,8 @@ const solutions = [
   {
     title: 'Projetos Elétricos',
     headline: 'Estabilidade e conformidade',
-    description: 'Engenharia de alta tensão, montagem de subestações blindadas e elaboração de malhas de aterramento seguras.',
-    bullets: ['Subestações aéreas e abrigadas', 'Estudos de curto-circuito (seletividade)', 'Sistemas SPDA de proteção de descargas', 'Laudos técnicos de conformidade NR-10'],
+    description: 'Engenharia elétrica para montagem de subestações blindadas e elaboração de malhas de aterramento seguras.',
+    bullets: ['Cabines primárias', 'Estudos de curto-circuito (seletividade)', 'Sistemas SPDA de proteção de descargas', 'Laudos técnicos de conformidade NR-10'],
     color: 'from-brand-cyan to-[#00c8ff]',
     icon: (
       <svg className="w-6 h-6 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -43,8 +43,8 @@ const solutions = [
   {
     title: 'Consultoria Estratégica',
     headline: 'Energia como ativo financeiro',
-    description: 'Gestão tarifária avançada e assessoria jurídica completa para migração segura de indústrias ao Mercado Livre de Energia.',
-    bullets: ['Migração ao Mercado Livre (ACL)', 'Gestão ativa de contratos de PPAs', 'Planejamento e inventários de ESG', 'Auditoria contínua de faturas técnicas'],
+    description: 'Gestão tarifária para migração segura da sua empresa ao Mercado Livre de Energia.',
+    bullets: ['Migração ao Mercado Livre (ACL)', 'Gestão ativa de contratos de PPAs', 'Planejamento e inventários de ESG', 'Auditoria contínua de faturas'],
     color: 'from-brand-blue to-brand-cyan',
     icon: (
       <svg className="w-6 h-6 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -75,7 +75,7 @@ export default function SolutionsGrid() {
             Nossas Soluções de Energia
           </h2>
           <p className="text-gray-400 font-light text-base md:text-lg">
-            Combinamos engenharia de ponta e planejamento financeiro para reduzir custos, mitigar riscos regulatórios e descarbonizar sua empresa de ponta a ponta.
+            Combinamos engenharia de ponta e planejamento financeiro para reduzir custos, mitigar riscos e descarbonizar sua empresa de ponta a ponta.
           </p>
         </div>
 

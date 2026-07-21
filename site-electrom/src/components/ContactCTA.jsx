@@ -180,7 +180,7 @@ const ContactCTA = () => {
             {/* Brand Manifesto Quote */}
             <div className="p-5 bg-brand-blue/5 border-l-2 border-brand-blue rounded-r-xl max-w-lg">
               <p className="text-xs text-brand-blue font-semibold tracking-wide italic leading-relaxed">
-                &quot;Electrom Engenharia: Engenharia de Energia — Sustentabilidade, Eficiência e Inovação para um Futuro Energético Consciente.&quot;
+                &quot;ElectROM Engenharia: Engenharia de Energia — Sustentabilidade, Eficiência e Inovação para um Futuro Energético Consciente.&quot;
               </p>
             </div>
 
@@ -443,7 +443,7 @@ const ContactCTA = () => {
                         className="mt-1 h-3.5 w-3.5 rounded border-white/10 bg-black/40 text-brand-blue focus:ring-brand-blue/60 focus:ring-offset-brand-dark cursor-pointer"
                       />
                       <label htmlFor="lgpd" className="text-[9px] text-gray-400 font-light leading-relaxed">
-                        Autorizo a Electrom a processar meus dados sob criptografia segura para fins de formatação do estudo de viabilidade energética técnica e comercial em conformidade estrita com a <a href="/legal" className="text-brand-blue hover:underline font-normal">Política de Privacidade (LGPD)</a>.
+                        Autorizo a ElectROM a processar meus dados sob criptografia segura para fins de formatação do estudo de viabilidade energética técnica e comercial em conformidade estrita com a <a href="/legal" className="text-brand-blue hover:underline font-normal">Política de Privacidade (LGPD)</a>.
                       </label>
                     </div>
 

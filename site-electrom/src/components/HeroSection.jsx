@@ -61,7 +61,7 @@ export default function HeroSection() {
       >
         <Image
           src="/HeroO1.png"
-          alt="Electrom Engenharia - Engenharia de Energia"
+          alt="ElectROM Engenharia - Engenharia de Energia"
           fill
           className="object-cover md:object-contain object-right"
           priority
@@ -107,7 +107,7 @@ export default function HeroSection() {
 
           {/* Subtitle refinado de Storytelling Técnico */}
           <motion.p variants={fadeItem} className="text-base md:text-lg text-gray-300 mb-10 max-w-2xl font-light leading-relaxed border-l-2 border-brand-blue/30 pl-4">
-            Há mais de <span className="font-mono text-brand-cyan font-bold">30 ANOS</span> transformando demandas complexas de <span className="text-white font-medium">subestações, alta tensão e usinas solares</span> em autonomia energética, segurança normativa e economia de escala para indústrias de alta performance.
+            Há mais de <span className="font-mono text-brand-cyan font-bold">30 ANOS</span> transformando demandas complexas de energia, segurança e economia de escala para indústrias de alta performance.
           </motion.p>
 
           <motion.div variants={fadeItem} className="flex flex-col sm:flex-row gap-4">

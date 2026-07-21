@@ -173,13 +173,13 @@ export default function SolucoesPage() {
 
       {/* Comparativo com o mercado */}
       <section className="max-w-4xl mx-auto px-6 py-12 relative z-10 border-t border-white/5">
-        <h2 className="text-2xl md:text-3xl font-display font-black text-center mb-8 text-white">Por que a Electrom?</h2>
+        <h2 className="text-2xl md:text-3xl font-display font-black text-center mb-8 text-white">Por que a ElectROM?</h2>
         <div className="overflow-x-auto glass-card rounded-2xl border-white/5 shadow-2xl">
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-white/10 bg-white/5 text-xs font-mono font-bold uppercase tracking-widest text-brand-blue">
                 <th className="py-4 px-6">Diferenciais Técnicos</th>
-                <th className="py-4 px-6 text-center">Electrom</th>
+                <th className="py-4 px-6 text-center">ElectROM</th>
                 <th className="py-4 px-6 text-center text-gray-500">Concorrência comum</th>
               </tr>
             </thead>
@@ -231,7 +231,7 @@ export default function SolucoesPage() {
         <div className="glass-card rounded-3xl p-8 lg:p-10 border-white/5 relative overflow-hidden flex flex-col items-center text-center space-y-4">
           <FaQuoteLeft className="text-brand-blue/15 text-5xl absolute top-6 left-8 pointer-events-none" />
           <p className="text-base md:text-lg text-gray-200 font-light leading-relaxed max-w-2xl relative z-10 italic">
-            &quot;A contratação da Electrom para migração da nossa planta industrial para o Mercado Livre de Energia, acoplada à instalação da usina solar comercial, reduziu nossos custos corporativos globais de forma imediata e definitiva.&quot;
+            &quot;A contratação da ElectROM para migração da nossa planta industrial para o Mercado Livre de Energia, acoplada à instalação da usina solar comercial, reduziu nossos custos corporativos globais de forma imediata e definitiva.&quot;
           </p>
           <div className="relative z-10">
             <span className="block text-brand-blue font-bold font-display text-sm">Diretoria de Operações</span>

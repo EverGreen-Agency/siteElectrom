@@ -159,7 +159,7 @@ export default function ImpactNumbers() {
         >
           <Image 
             src="/obras/UsinaCipoGuacu/IMG_20190713_162528919_HDR.jpg"
-            alt="Usina Solar Fotovoltaica Cipó Guaçu - Electrom"
+            alt="Usina Solar Fotovoltaica Cipó Guaçu - ElectROM"
             fill
             className="object-cover object-center grayscale mix-blend-luminosity"
             priority

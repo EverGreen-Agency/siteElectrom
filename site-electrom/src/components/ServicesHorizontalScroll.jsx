@@ -7,17 +7,16 @@ import Image from 'next/image'
 const services = [
   {
     id: 1,
-    title: 'Sistemas Fotovoltaicos',
-    description:
-      'Geração de energia limpa sob medida. Planejamento, engenharia e instalação de usinas fotovoltaicas de alto rendimento.',
+    title: 'Energias Renováveis',
+    description: 'Sistemas completos de energia limpa e sustentável para autonomia energética e redução de custos e impacto ambiental.',
     features: [
-      'Dimensionamento técnico de alta precisão',
-      'Análise de payback e viabilidade regulatória',
-      'Estruturas de solo, telhados e carports',
-      'Homologação completa junto à concessionária'
+      'Sistemas Fotovoltaicos',
+      'Estações de Recarga (VE)',
+      'Eólica',
+      'Biomassa',
+      'Aquecimento Solar'
     ],
-    testimonial:
-      'A Elect ROM implantou nossa usina solar com agilidade e acabamento impecável. Tivemos retorno do investimento em tempo recorde.',
+    testimonial: 'A ElectROM implantou nossa usina solar com agilidade e acabamento impecável. Tivemos retorno do investimento em tempo recorde.',
     glowColor: 'bg-yellow-500',
     image: '/obras/Paineis.jpeg',
     cta: 'Simular Economia Solar',
@@ -29,39 +28,17 @@ const services = [
   },
   {
     id: 2,
-    title: 'Gerenciamento de Obras',
-    description:
-      'Gestão técnica ponta a ponta de instalações elétricas, civis e utilidades industriais. Garantimos rigor operacional, cumprimento de cronograma e conformidade.',
+    title: 'Engenharia de Energias',
+    description: 'Soluções especializadas em conservação e eficiência energética para otimizar o consumo e reduzir impactos ambientais.',
     features: [
-      'Planejamento e coordenação de execução de utilidades',
-      'Fiscalização de montagens civis, elétricas e estruturas',
-      'Engenheiros residentes especializados no local',
-      'Rigor técnico, documentação As-Built e termos de entrega'
+      { text: 'Conservação energética', tooltip: 'Diagnóstico e otimização para reduzir o desperdício elétrico sem afetar a produção.' },
+      { text: 'Eficiência energética', tooltip: 'Implementação de tecnologias avançadas para maximizar o rendimento com o menor consumo possível.' },
+      { text: 'Controle de emissões', tooltip: 'Estratégias de monitoramento e redução da pegada de carbono, alinhadas às diretrizes ESG.' },
+      'Auditorias energéticas industriais',
+      'Análise termográfica preventiva',
+      'Projetos de conservação térmica'
     ],
-    testimonial:
-      'O rigor metodológico e a fiscalização da Electrom superaram nossas expectativas. As obras de infraestrutura e utilidades rodaram sob total controle.',
-    glowColor: 'bg-blue-500',
-    image: '/obras/Estrutura.jpeg',
-    cta: 'Consultar Nossas Obras',
-    icon: (
-      <svg className="w-8 h-8 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-      </svg>
-    )
-  },
-  {
-    id: 3,
-    title: 'Conservação de Energia / Eficiência Energética',
-    description:
-      'Diagnósticos térmicos, termografia infravermelha de painéis elétricos e estratégias de eficiência para mitigação de desperdícios de energia e conservação.',
-    features: [
-      'Auditorias energéticas industriais completas',
-      'Análise termográfica preventiva de painéis e motores',
-      'Adequação e correção de fator de potência',
-      'Projetos de conservação térmica e redução de perdas'
-    ],
-    testimonial:
-      'Os estudos de eficiência energética e termografia nas plantas reduziram drasticamente nossas perdas térmicas e elétricas.',
+    testimonial: 'Os estudos de eficiência energética e termografia nas plantas reduziram drasticamente nossas perdas térmicas e elétricas.',
     glowColor: 'bg-emerald-500',
     image: '/obras/Obras/Imagem6.png',
     imageLabel: 'Subestação de Eficiência Energética da Duratex - Botucatu',
@@ -73,18 +50,36 @@ const services = [
     )
   },
   {
+    id: 3,
+    title: 'Consultoria de Energia',
+    description: 'Diagnósticos energéticos e estratégias personalizadas para otimização de consumo e redução de custos.',
+    features: [
+      'Auditoria de faturas e identificação de anomalias',
+      'Migração segura para o Mercado Livre de Energia',
+      'Redução de perdas elétricas reativas indesejadas',
+      'Análise de viabilidade para geração distribuída'
+    ],
+    testimonial: 'A consultoria nos guiou com maestria rumo ao mercado livre de energia, gerando uma redução mensal imediata de 32%.',
+    glowColor: 'bg-orange-500',
+    image: '/obras/Obras/Imagem10.png',
+    cta: 'Agendar Análise Gratuita',
+    icon: (
+      <svg className="w-8 h-8 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
+      </svg>
+    )
+  },
+  {
     id: 4,
     title: 'Média e Baixa Tensão',
-    description:
-      'Sistemas elétricos complexos e subestações industriais. Garantia de confiabilidade energética e proteção de ativos.',
+    description: 'Sistemas elétricos complexos e subestações industriais. Garantia de confiabilidade energética e proteção de ativos.',
     features: [
       'Subestações de entrada de energia (cabine primária)',
       'Painéis elétricos inteligentes e de comando central',
       'Sistemas de proteção contra surtos e SPDA',
       'Laudos de conformidade técnica NBR 5410/14039'
     ],
-    testimonial:
-      'A transição para nossa nova subestação de média tensão foi executada sem nenhuma interrupção em nossa linha de montagem.',
+    testimonial: 'A transição para nossa nova subestação de média tensão foi executada sem nenhuma interrupção em nossa linha de montagem.',
     glowColor: 'bg-cyan-500',
     image: '/obras/QuadroDistribuicao.png',
     cta: 'Solicitar Projeto Elétrico',
@@ -96,68 +91,25 @@ const services = [
   },
   {
     id: 5,
-    title: 'Autossuficiência Energética',
-    description:
-      'Estruturas híbridas e armazenamento inteligente para independência total da rede pública de energia.',
+    title: 'Gerenciamento de Obras',
+    description: 'Gestão técnica ponta a ponta de instalações elétricas, civis e utilidades industriais. Garantimos rigor operacional, cumprimento de cronograma e conformidade.',
     features: [
-      'Sistemas solares com baterias (off-grid / hybrid)',
-      'Integração com aquecedor solar térmico',
-      'Sistemas de aquecimento a gás acoplados',
-      'Monitoramento dinâmico IoT 24 horas por dia'
+      'Planejamento e coordenação de execução de utilidades',
+      'Fiscalização de montagens civis, elétricas e estruturas',
+      'Engenheiros residentes especializados no local',
+      'Rigor técnico, documentação As-Built e termos de entrega',
+      'Gestão de contrato',
+      'Gestão de equipe',
+      'Gestão de materiais',
+      'Segurança patrimonial e pessoal'
     ],
-    testimonial:
-      'Garantimos 100% de estabilidade de produção com a implementação da autonomia elétrica híbrida da Electrom Engenharia.',
-    glowColor: 'bg-green-600',
-    image: '/obras/ObraRecantoFotovoltaica/IMG_20181205_173826509_HDR.jpg',
-    cta: 'Conhecer Projetos Híbridos',
-    icon: (
-      <svg className="w-8 h-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
-      </svg>
-    )
-  },
-  {
-    id: 6,
-    title: 'Consultoria Tarifária',
-    description:
-      'Diagnósticos e estratégias inteligentes para otimização extrema do consumo e migração para o Mercado Livre.',
-    features: [
-      'Auditoria de faturas e identificação de anomalias',
-      'Migração segura para o Mercado Livre de Energia',
-      'Redução de perdas elétricas reativas indesejadas',
-      'Análise de viabilidade para geração distribuída'
-    ],
-    testimonial:
-      'A consultoria nos guiou com maestria rumo ao mercado livre de energia, gerando uma redução mensal imediata de 32%.',
-    glowColor: 'bg-orange-500',
-    image: '/obras/Obras/Imagem10.png',
-    cta: 'Agendar Análise Gratuita',
+    testimonial: 'O rigor metodológico e a fiscalização da ElectROM superaram nossas expectativas. As obras de infraestrutura e utilidades rodaram sob total controle.',
+    glowColor: 'bg-blue-500',
+    image: '/obras/Estrutura.jpeg',
+    cta: 'Consultar Nossas Obras',
     icon: (
       <svg className="w-8 h-8 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
-      </svg>
-    )
-  },
-  {
-    id: 7,
-    title: 'Estações de Recarga (VE)',
-    description:
-      'Infraestrutura completa e de alta performance para mobilidade elétrica. Instalação e homologação de carregadores rápidos (Wallbox) inteligentes para empresas, frotas corporativas, condomínios e residências.',
-    features: [
-      'Dimensionamento de carga e demanda predial',
-      'Instalação de carregadores rápidos e inteligentes',
-      'Sistemas integrados de controle de acesso e rateio',
-      'Laudos de conformidade técnica e proteção SPDA'
-    ],
-    testimonial:
-      'Estruturamos os postos de recarga de nossa frota e do condomínio com a Electrom. Projeto impecável, seguro e totalmente homologado.',
-    glowColor: 'bg-teal-500',
-    image: '/obras/CarregadorEletrico/CarregadorEletrico.jpeg',
-    cta: 'Orçar Posto de Recarga',
-    icon: (
-      <svg className="w-8 h-8 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
       </svg>
     )
   }
@@ -250,16 +202,39 @@ const ServiceSlideDesktop = ({ service, idx, totalSections, scrollYProgress }) =
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            {service.features.map((feature, featureIdx) => (
-              <motion.li
-                key={featureIdx}
-                variants={staggerItem}
-                className="flex items-start text-gray-300 text-sm gap-2"
-              >
-                <span className="w-1.5 h-1.5 bg-brand-cyan rounded-full mt-1.5 flex-shrink-0 shadow-[0_0_8px_#00F0FF]"></span>
-                <span>{feature}</span>
-              </motion.li>
-            ))}
+            {service.features.map((feature, featureIdx) => {
+              const isObj = typeof feature === 'object' && feature !== null;
+              const text = isObj ? feature.text : feature;
+              const tooltip = isObj ? feature.tooltip : null;
+
+              return (
+                <motion.li
+                  key={featureIdx}
+                  variants={staggerItem}
+                  className="flex items-start text-gray-300 text-sm gap-2"
+                >
+                  <span className="w-1.5 h-1.5 bg-brand-cyan rounded-full mt-1.5 flex-shrink-0 shadow-[0_0_8px_#00F0FF]"></span>
+                  {tooltip ? (
+                    <div className="relative group flex items-center gap-1.5 cursor-help">
+                      <span className="border-b border-dashed border-gray-500 hover:text-white transition-colors">
+                        {text}
+                      </span>
+                      <svg className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-cyan transition-colors mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      {/* Tooltip balão */}
+                      <div className="absolute left-0 bottom-full mb-2 w-64 p-3 bg-gray-900 border border-brand-cyan/30 rounded-lg shadow-xl text-xs text-gray-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pointer-events-none transform translate-y-2 group-hover:translate-y-0">
+                        {tooltip}
+                        {/* Seta do balão */}
+                        <div className="absolute top-full left-4 w-2 h-2 bg-gray-900 border-b border-r border-brand-cyan/30 transform rotate-45 -translate-y-1"></div>
+                      </div>
+                    </div>
+                  ) : (
+                    <span>{text}</span>
+                  )}
+                </motion.li>
+              );
+            })}
           </motion.ul>
 
           <button className="px-6 py-3.5 rounded-lg text-sm font-bold tracking-wide text-brand-petrol bg-brand-blue hover:bg-brand-blue/95 hover:shadow-lg hover:shadow-brand-blue/20 transition-all active:scale-95 inline-flex items-center gap-2">
@@ -449,16 +424,39 @@ export default function ServicesHorizontalScroll() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}
               >
-                {service.features.map((feature, featureIdx) => (
-                  <motion.li
-                    key={featureIdx}
-                    variants={staggerItem}
-                    className="flex items-start text-gray-300 text-xs gap-2"
-                  >
-                    <span className="w-1.5 h-1.5 bg-brand-cyan rounded-full mt-1.5 flex-shrink-0 shadow-[0_0_8px_#00F0FF]"></span>
-                    <span>{feature}</span>
-                  </motion.li>
-                ))}
+                {service.features.map((feature, featureIdx) => {
+              const isObj = typeof feature === 'object' && feature !== null;
+              const text = isObj ? feature.text : feature;
+              const tooltip = isObj ? feature.tooltip : null;
+
+              return (
+                <motion.li
+                  key={featureIdx}
+                  variants={staggerItem}
+                  className="flex items-start text-gray-300 text-sm gap-2"
+                >
+                  <span className="w-1.5 h-1.5 bg-brand-cyan rounded-full mt-1.5 flex-shrink-0 shadow-[0_0_8px_#00F0FF]"></span>
+                  {tooltip ? (
+                    <div className="relative group flex items-center gap-1.5 cursor-help">
+                      <span className="border-b border-dashed border-gray-500 hover:text-white transition-colors">
+                        {text}
+                      </span>
+                      <svg className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-cyan transition-colors mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      {/* Tooltip balão */}
+                      <div className="absolute left-0 bottom-full mb-2 w-64 p-3 bg-gray-900 border border-brand-cyan/30 rounded-lg shadow-xl text-xs text-gray-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pointer-events-none transform translate-y-2 group-hover:translate-y-0">
+                        {tooltip}
+                        {/* Seta do balão */}
+                        <div className="absolute top-full left-4 w-2 h-2 bg-gray-900 border-b border-r border-brand-cyan/30 transform rotate-45 -translate-y-1"></div>
+                      </div>
+                    </div>
+                  ) : (
+                    <span>{text}</span>
+                  )}
+                </motion.li>
+              );
+            })}
               </motion.ul>
 
               {/* Photo Display Card */}

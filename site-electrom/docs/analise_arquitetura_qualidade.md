@@ -1,6 +1,6 @@
 # 📊 Relatório de Análise de Arquitetura, Qualidade de Software e Integração CMS
 
-**Projeto:** Electrom Engenharia (site-electrom)  
+**Projeto:** ElectROM Engenharia (site-ElectROM)  
 **Autor:** Antigravity (AI Coding Assistant)  
 **Data:** 31 de Maio de 2026  
 **Status:** Concluído  
@@ -9,7 +9,7 @@
 
 ## 🎯 1. Introdução e Objetivo
 
-Este relatório apresenta uma análise crítica e abrangente da arquitetura de software, qualidade de código e conformidade com padrões de engenharia modernos do **Site Electrom**, construído sobre o framework **Next.js** (App Router).
+Este relatório apresenta uma análise crítica e abrangente da arquitetura de software, qualidade de código e conformidade com padrões de engenharia modernos do **Site ElectROM**, construído sobre o framework **Next.js** (App Router).
 
 O objetivo principal é identificar gargalos de arquitetura, inconsistências de design e débitos técnicos, além de propor soluções estruturadas e sustentáveis fundamentadas em **Engenharia de Software** e **Referencial Teórico** consagrado. Focamos em transitar o sistema de um estado semi-mockado para uma arquitetura híbrida de produção altamente desacoplada e escalável (Headless CMS com WordPress).
 
@@ -66,7 +66,7 @@ Após uma varredura completa nas principais pastas (`src/app`, `src/components`,
 *   **Impacto:** Se o WordPress for ativado nas variáveis de ambiente (`NEXT_PUBLIC_ENABLE_CMS=true`), o carrossel continuará exibindo os dados estáticos do JSON porque o hook `usePartners` não está conectado a ele. Isto viola o **SRP** e cria código morto/inútil no repositório.
 
 #### ❌ Inconsistência 2: Mocks no Blog (`src/app/blog/page.tsx`)
-*   **O Problema:** O arquivo de serviço `src/services/wordpress.ts` possui implementações avançadas para consumo de Posts de blog e Posts de autoridade da API oficial da Electrom (`https://wp.electrom.eng.br/wp-json/wp/v2`). No entanto, a página `/blog` (`src/app/blog/page.tsx`) está **100% mockada** no código:
+*   **O Problema:** O arquivo de serviço `src/services/wordpress.ts` possui implementações avançadas para consumo de Posts de blog e Posts de autoridade da API oficial da ElectROM (`https://wp.ElectROM.eng.br/wp-json/wp/v2`). No entanto, a página `/blog` (`src/app/blog/page.tsx`) está **100% mockada** no código:
     ```typescript
     // Dados mockados (serão substituídos pela API do WordPress)
     const posts: Post[] = [ { id: 1, titulo: '...', ... } ];
@@ -121,10 +121,10 @@ Remover o carregamento desnecessário da fonte `Inter` ou incluí-la corretament
 Com foco em **qualidade de software, agilidade e segurança**, recomendamos a execução ordenada das seguintes tarefas de refatoração de código:
 
 ### 📝 Passo 1: Desacoplamento do Carrossel de Parceiros
-Alterar o arquivo [PartnersCarousel.jsx](file:///c:/Users/gusta/Downloads/siteElectrom/site-electrom/src/components/PartnersCarousel.jsx) para utilizar o hook [usePartners.js](file:///c:/Users/gusta/Downloads/siteElectrom/site-electrom/src/hooks/usePartners.js) e implementar a chamada dinâmica a partir da lógica do Hook, mantendo o fallback local ativo de forma transparente.
+Alterar o arquivo [PartnersCarousel.jsx](file:///c:/Users/gusta/Downloads/siteElectROM/site-ElectROM/src/components/PartnersCarousel.jsx) para utilizar o hook [usePartners.js](file:///c:/Users/gusta/Downloads/siteElectROM/site-ElectROM/src/hooks/usePartners.js) e implementar a chamada dinâmica a partir da lógica do Hook, mantendo o fallback local ativo de forma transparente.
 
 ### 📝 Passo 2: Dinamizar a Página de Blog
-Atualizar o arquivo [page.tsx do blog](file:///c:/Users/gusta/Downloads/siteElectrom/site-electrom/src/app/blog/page.tsx) para buscar dados através do `wordpressService.getPosts` ou `wordpressService.getAutoridadePosts`. Como se trata de um componente cliente (`'use client'`), devemos gerenciar estados de `loading`, `error` e renderização de esqueleto (*Skeleton Loading*).
+Atualizar o arquivo [page.tsx do blog](file:///c:/Users/gusta/Downloads/siteElectROM/site-ElectROM/src/app/blog/page.tsx) para buscar dados através do `wordpressService.getPosts` ou `wordpressService.getAutoridadePosts`. Como se trata de um componente cliente (`'use client'`), devemos gerenciar estados de `loading`, `error` e renderização de esqueleto (*Skeleton Loading*).
 
 ### 📝 Passo 3: Limpeza de Tipografia e Configuração
 Harmonizar o `globals.css` e o `tailwind.config.js` para garantir que apenas as fontes efetivamente utilizadas sejam baixadas e aplicadas de forma consistente.

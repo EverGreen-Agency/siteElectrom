@@ -11,10 +11,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Electrom Engenharia | Engenharia Elétrica, Subestações & Energia Solar",
+  title: "ElectROM Engenharia | Engenharia Elétrica, Subestações & Energia Solar",
   description: "Soluções de alta performance em engenharia elétrica industrial, subestações, eficiência energética e energia solar. Mais de 25 anos de experiência transformando inovação em economia sustentável.",
   alternates: {
-    canonical: "https://electrom.eng.br",
+    canonical: "https://ElectROM.eng.br",
   },
   keywords: [
     "engenharia elétrica",
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     "projetos elétricos",
     "São Paulo",
     "SP",
-    "Electrom Engenharia"
+    "ElectROM Engenharia"
   ],
-  authors: [{ name: "Electrom Engenharia" }],
+  authors: [{ name: "ElectROM Engenharia" }],
   openGraph: {
-    title: "Electrom Engenharia | Engenharia de Energia",
+    title: "ElectROM Engenharia | Engenharia de Energia",
     description: "Mais de 25 anos de solidez e inovação. Projetos elétricos industriais e usinas solares de alta performance.",
-    url: "https://electrom.eng.br",
-    siteName: "Electrom Engenharia",
+    url: "https://ElectROM.eng.br",
+    siteName: "ElectROM Engenharia",
     locale: "pt_BR",
     type: "website",
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: "/ElectROM - Horizontal.png",
         width: 1200,
         height: 630,
-        alt: "Electrom Engenharia - Soluções Energéticas",
+        alt: "ElectROM Engenharia - Soluções Energéticas",
       },
     ],
   },
@@ -51,10 +51,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Electrom Engenharia",
-  "image": "https://electrom.eng.br/ElectROM%20-%20Horizontal.png",
-  "@id": "https://electrom.eng.br/#localbusiness",
-  "url": "https://electrom.eng.br",
+  "name": "ElectROM Engenharia",
+  "image": "https://ElectROM.eng.br/ElectROM%20-%20Horizontal.png",
+  "@id": "https://ElectROM.eng.br/#localbusiness",
+  "url": "https://ElectROM.eng.br",
   "telephone": "+551132301996",
   "priceRange": "$$$",
   "address": {
@@ -83,8 +83,8 @@ const jsonLd = {
     "closes": "18:00"
   },
   "sameAs": [
-    "https://linkedin.com/company/electrom-engenharia",
-    "https://www.instagram.com/electromeng/"
+    "https://linkedin.com/company/ElectROM-engenharia",
+    "https://www.instagram.com/ElectROMeng/"
   ]
 };
 

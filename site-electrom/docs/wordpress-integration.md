@@ -2,7 +2,7 @@
 
 ## 📋 Visão Geral
 
-A integração WordPress permitirá que a equipe da Electrom gerencie os parceiros através de uma interface amigável, sem necessidade de alterar código. Os dados serão consumidos via REST API do WordPress.
+A integração WordPress permitirá que a equipe da ElectROM gerencie os parceiros através de uma interface amigável, sem necessidade de alterar código. Os dados serão consumidos via REST API do WordPress.
 
 ---
 
@@ -77,7 +77,7 @@ DELETE /wp-json/wp/v2/partners/{id} (autenticado)
 
 ### **2. Variáveis de Ambiente (.env.local)**
 ```env
-NEXT_PUBLIC_WP_API_URL=https://blog.electrom.com.br/wp-json/wp/v2
+NEXT_PUBLIC_WP_API_URL=https://blog.ElectROM.com.br/wp-json/wp/v2
 WP_API_USERNAME=admin_user
 WP_API_PASSWORD=secure_password
 NEXT_PUBLIC_ENABLE_CMS=true
@@ -155,7 +155,7 @@ WordPress CMS → REST API → usePartners → PartnersCarousel
 
 ## 🔐 Considerações de Segurança
 
-- **CORS:** Configurado apenas para domínios da Electrom
+- **CORS:** Configurado apenas para domínios da ElectROM
 - **Rate Limiting:** Evitar spam na API
 - **Autenticação:** JWT para operações de escrita
 - **Validação:** Sanitização de dados de entrada

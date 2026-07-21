@@ -1,7 +1,7 @@
 import axios, { AxiosResponse, AxiosError, InternalAxiosRequestConfig } from 'axios';
 
 // URL da API do WordPress
-const WORDPRESS_API_URL = 'https://wp.electrom.eng.br/wp-json/wp/v2';
+const WORDPRESS_API_URL = 'https://wp.ElectROM.eng.br/wp-json/wp/v2';
 
 // Configuração do axios
 const api = axios.create({

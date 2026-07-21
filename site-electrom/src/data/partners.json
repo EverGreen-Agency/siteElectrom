@@ -7,7 +7,7 @@
       "type": "utility",
       "link": "https://www.enel.com.br/",
       "linkType": "external",
-      "description": "Concessionária de energia elétrica atuante em São Paulo, com diversos projetos da Electrom homologados com sucesso.",
+      "description": "Concessionária de energia elétrica atuante em São Paulo, com diversos projetos da ElectROM homologados com sucesso.",
       "category": "concessionaire",
       "priority": 1
     },
@@ -18,7 +18,7 @@
       "type": "utility",
       "link": "https://www.cpfl.com.br/",
       "linkType": "external",
-      "description": "Uma das maiores distribuidoras do país, onde a Electrom possui obras e projetos de engenharia industrial homologados.",
+      "description": "Uma das maiores distribuidoras do país, onde a ElectROM possui obras e projetos de engenharia industrial homologados.",
       "category": "concessionaire",
       "priority": 1
     },
@@ -29,7 +29,7 @@
       "type": "utility",
       "link": "https://www.cpfl.com.br/",
       "linkType": "external",
-      "description": "Distribuidora do grupo CPFL que atende o interior e litoral paulista, com projetos de geração distribuída homologados pela Electrom.",
+      "description": "Distribuidora do grupo CPFL que atende o interior e litoral paulista, com projetos de geração distribuída homologados pela ElectROM.",
       "category": "concessionaire",
       "priority": 1
     },
@@ -40,7 +40,7 @@
       "type": "utility",
       "link": "https://www.neoenergia.com/paginas/default.aspx",
       "linkType": "external",
-      "description": "Companhia de Eletricidade do Estado da Bahia (Neoenergia), com conexões e homologações de plantas efetuadas pela Electrom.",
+      "description": "Companhia de Eletricidade do Estado da Bahia (Neoenergia), com conexões e homologações de plantas efetuadas pela ElectROM.",
       "category": "concessionaire",
       "priority": 2
     },
@@ -51,7 +51,7 @@
       "type": "utility",
       "link": "https://www.energisa.com.br/",
       "linkType": "external",
-      "description": "Grande grupo privado do setor elétrico nacional, com projetos e obras integradas de forma homologada pela Electrom.",
+      "description": "Grande grupo privado do setor elétrico nacional, com projetos e obras integradas de forma homologada pela ElectROM.",
       "category": "concessionaire",
       "priority": 2
     },
@@ -73,7 +73,7 @@
       "type": "utility",
       "link": "https://www.neoenergia.com/paginas/default.aspx",
       "linkType": "external",
-      "description": "Distribuidora da Neoenergia que atende cidades paulistas e sul-mato-grossenses, homologada com projetos industriais e comerciais da Electrom.",
+      "description": "Distribuidora da Neoenergia que atende cidades paulistas e sul-mato-grossenses, homologada com projetos industriais e comerciais da ElectROM.",
       "category": "concessionaire",
       "priority": 2
     },
@@ -84,7 +84,7 @@
       "type": "hardware",
       "link": "https://www.jinkosolar.com/",
       "linkType": "external",
-      "description": "Líder global na fabricação de módulos fotovoltaicos de altíssima eficiência, integrada aos projetos de geração solar da Electrom.",
+      "description": "Líder global na fabricação de módulos fotovoltaicos de altíssima eficiência, integrada aos projetos de geração solar da ElectROM.",
       "category": "equipment",
       "priority": 2
     },

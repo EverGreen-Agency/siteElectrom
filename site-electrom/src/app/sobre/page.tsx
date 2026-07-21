@@ -7,8 +7,8 @@ export default function SobrePage() {
   const milestones = [
     {
       year: '1996',
-      title: 'Fundação da Electrom',
-      desc: 'Nascimento da Electrom em São Paulo, focada em gestão de obras e laudos técnicos de engenharia elétrica e mecânica.'
+      title: 'Fundação da ElectROM',
+      desc: 'Nascimento da ElectROM em São Paulo, focada em gestão de obras e laudos técnicos de engenharia elétrica e mecânica.'
     },
     {
       year: '2005',
@@ -153,7 +153,7 @@ export default function SobrePage() {
           <div className="relative">
             <FaQuoteLeft className="text-brand-blue/15 text-5xl absolute -top-4 -left-4 pointer-events-none" />
             <blockquote className="italic text-gray-300 font-light text-sm leading-relaxed relative z-10 pl-6 border-l-2 border-brand-blue/30">
-              &quot;Desde que fundamos a Electrom em 1996, operamos sob a premissa de que a engenharia elétrica deve ser tratada como um ativo estratégico financeiro e de descarbonização para nossos clientes. São 30 anos assinando laudos, instalando cabines primárias e usinas solares com total transparência técnica.&quot;
+              &quot;Desde que fundamos a ElectROM em 1996, operamos sob a premissa de que a engenharia elétrica deve ser tratada como um ativo estratégico financeiro e de descarbonização para nossos clientes. São 30 anos assinando laudos, instalando cabines primárias e usinas solares com total transparência técnica.&quot;
             </blockquote>
           </div>
           

@@ -8,8 +8,8 @@ import { companyData } from '../data/companyData';
 const milestones = [
   {
     year: '1996',
-    title: 'Fundação da Electrom',
-    description: 'Nascimento da Electrom em São Paulo, inicialmente focada em gestão de obras e laudos técnicos em engenharia elétrica e mecânica de saneamento, além de representação comercial.',
+    title: 'Fundação da ElectROM',
+    description: 'Nascimento da ElectROM em São Paulo, inicialmente focada em gestão de obras e laudos técnicos em engenharia elétrica e mecânica de saneamento, além de representação comercial.',
     image: '/obras/Obras/1996-016-04-3.jpg',
     tag: 'Fundação'
   },
@@ -87,7 +87,7 @@ export default function AboutStrip() {
             “Engenharia de Energia é nosso compromisso definitivo em combinar <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">sustentabilidade, alta performance e inovação</span> para viabilizar o amanhã.”
           </blockquote>
           <p className="text-gray-400 font-light text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-            A Electrom Engenharia desenvolve soluções de alta engenharia para empresas brasileiras que demandam redução drástica de perdas, eficiência absoluta e conformidade regulatória sólida.
+            A ElectROM Engenharia desenvolve soluções de alta engenharia para empresas brasileiras que demandam redução drástica de perdas, eficiência absoluta e conformidade regulatória sólida.
           </p>
         </div>
 

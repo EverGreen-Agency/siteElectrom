@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Compromisso de Sustentabilidade & ESG | Electrom Engenharia',
+  title: 'Compromisso de Sustentabilidade & ESG | ElectROM Engenharia',
   description: 'Projetos desenhados sob a ótica ESG. Conheça as métricas ambientais que norteiam nossas obras industriais e sistemas fotovoltaicos.',
   alternates: {
-    canonical: 'https://electrom.eng.br/sustentabilidade',
+    canonical: 'https://ElectROM.eng.br/sustentabilidade',
   },
 };
 
