@@ -1,12 +1,22 @@
 "use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const solutions = [
+export interface SolutionItem {
+  title: string;
+  headline: string;
+  description: string;
+  bullets: string[];
+  color: string;
+  icon: React.ReactNode;
+}
+
+const solutions: SolutionItem[] = [
   {
     title: 'Energia Solar',
     headline: 'Geração própria sob medida',
-    description: 'Engenharia completa de usinas fotovoltaicas industriais, comerciais e residênciais, conectando seu estabelecimento diretamente à economia renovável.',
+    description: 'Engenharia completa de usinas fotovoltaicas industriais, comerciais e residenciais, conectando seu estabelecimento à economia renovável.',
     bullets: ['Usinas sobre telhados e solo', 'Estudos de viabilidade', 'Garantia de performance', 'Projetos Turnkey (EPC) integrados'],
     color: 'from-brand-gold to-brand-amber',
     icon: (
@@ -57,29 +67,24 @@ const solutions = [
 export default function SolutionsGrid() {
   return (
     <section id="solucoes" className="w-full py-24 bg-brand-dark border-t border-white/5 relative overflow-hidden">
-      
-      {/* Background blueprint details */}
       <div className="absolute inset-0 blueprint-bg opacity-15 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-        
-        {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan shadow-[0_0_8px_#00F0FF]" />
-            <span className="text-[10px] font-mono tracking-widest uppercase text-brand-cyan font-bold">
+            <span className="text-[10px] font-mono tracking-widest uppercase text-brand-cyan font-semibold">
               Inteligência e Engenharia
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-black leading-tight text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-display font-bold leading-tight text-white mb-4">
             Nossas Soluções de Energia
           </h2>
-          <p className="text-gray-400 font-light text-base md:text-lg">
+          <p className="text-gray-400 font-normal text-base md:text-lg">
             Combinamos engenharia de ponta e planejamento financeiro para reduzir custos, mitigar riscos e descarbonizar sua empresa de ponta a ponta.
           </p>
         </div>
 
-        {/* Asymmetrical / Highly interactive Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {solutions.map((sol, idx) => (
             <motion.div
@@ -90,63 +95,49 @@ export default function SolutionsGrid() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: idx * 0.12 }}
             >
-              {/* Electric border effect on card hover */}
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 electric-border pointer-events-none" />
               
               <div>
-                {/* Header card: Icon + Border glow */}
                 <div className="p-3 rounded-xl bg-white/5 border border-white/10 w-fit mb-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/5 to-white/0" />
                   {sol.icon}
                 </div>
 
-                <span className="text-xs font-mono font-bold tracking-wider text-brand-blue uppercase">
+                <span className="text-xs font-mono font-semibold tracking-wider text-brand-blue uppercase">
                   {sol.title}
                 </span>
                 
-                <h3 className="text-lg md:text-xl font-display font-bold text-white mt-2 mb-3">
+                <h3 className="text-xl font-bold text-white mt-1 mb-3 leading-snug">
                   {sol.headline}
                 </h3>
                 
-                <p className="text-xs text-gray-400 font-light leading-relaxed mb-6">
+                <p className="text-gray-400 text-xs font-normal leading-relaxed mb-6">
                   {sol.description}
                 </p>
-              </div>
 
-              {/* Bullet list of deliverables */}
-              <div className="border-t border-white/5 pt-4">
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-6">
                   {sol.bullets.map((b, i) => (
-                    <li key={i} className="text-[11px] text-gray-300 flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan mt-1.5 flex-shrink-0" />
+                    <li key={i} className="flex items-center text-xs text-gray-300 font-normal gap-2">
+                      <span className="w-1 h-1 rounded-full bg-brand-cyan flex-shrink-0" />
                       <span>{b}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
+              <a 
+                href="#contato" 
+                className="w-full py-2.5 rounded-lg border border-white/10 bg-white/5 hover:bg-brand-blue hover:text-brand-petrol text-xs font-semibold text-white tracking-wider uppercase transition-all flex items-center justify-center gap-2 group-hover:border-brand-blue/30"
+              >
+                Saiba Mais
+                <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
             </motion.div>
           ))}
         </div>
-
-        {/* Dynamic bottom CTA button */}
-        <div className="flex justify-center mt-16">
-          <motion.a 
-            href="/solucoes" 
-            className="px-8 py-4 rounded-lg bg-brand-blue text-brand-petrol font-bold text-center tracking-wide shadow-lg hover:shadow-brand-blue/20 transition-all flex items-center gap-2.5 cursor-pointer"
-            whileHover={{ scale: 1.03, boxShadow: '0 0 25px rgba(122, 162, 228, 0.4)' }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Entenda Como Funcionam Nossas Soluções
-            <svg className="w-4 h-4 text-brand-petrol" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </motion.a>
-        </div>
-
       </div>
-
     </section>
   );
 }
- 

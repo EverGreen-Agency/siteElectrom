@@ -13,7 +13,6 @@ export interface CompanyInfo {
   experienceYears: number;
   foundedYear: number;
   totalProjects: number;
-  totalObras: number;
   totalClients: number;
   economyGeneratedMillions: number;
   whatsappNumber: string;
@@ -49,14 +48,13 @@ export const companyData: CompanyInfo = {
   tagline: 'Sustentabilidade, Eficiência e Inovação para um Futuro Energético Consciente.',
   experienceYears: 30, // Fundação em 1996, em 2026 completa 30 anos
   foundedYear: 1996,
-  totalProjects: 800,
-  totalObras: 550, // Updated to match the analyzed spreadsheet rows
+  totalProjects: 550, // Updated to match the analyzed spreadsheet rows
   totalClients: 1800,
   economyGeneratedMillions: 50, // Updated from 120 to match "mais de R$50.000.000,00"
   whatsappNumber: '5511999620930', // Telefone comercial oficial unificado
   whatsappMessage: 'Olá! Gostaria de falar com a equipe de engenharia da ElectROM.',
-  phone: '(11) 3230-1996',
-  email: 'contato@ElectROM.eng.br',
+  phone: '(11) 99962-0930',
+  email: 'comercial@ElectROM.eng.br',
   address: {
     street: 'Av. Paulista, 1000 - Bela Vista',
     neighborhood: 'Bela Vista',
@@ -81,7 +79,7 @@ export const companyData: CompanyInfo = {
       prefix: '',
       suffix: '+',
       label: 'Projetos Entregues',
-      sublabel: 'Obras homologadas e ativas no país',
+      sublabel: 'Projetos homologados e ativos no país',
     },
     economyGenerated: {
       value: 50, // Updated to match the spreadsheet
@@ -95,19 +93,19 @@ export const companyData: CompanyInfo = {
       prefix: '',
       suffix: '+',
       label: 'Clientes Atendidos',
-      sublabel: 'Empresas industriais, comerciais e públicas',
+      sublabel: 'Empresas industriais, comerciais, condomínios, residências e instituições públicas e privadas',
     },
     fuelSaved: {
       value: 96000,
       prefix: '',
-      suffix: ' t',
+      suffix: ' toneladas',
       label: 'Combustível Economizado',
-      sublabel: 'Preservação de recursos térmicos industriais',
+      sublabel: 'Preservação de recursos ambientais',
     },
     co2Avoided: {
       value: 38000,
       prefix: '',
-      suffix: ' t',
+      suffix: ' toneladas',
       label: 'CO₂ Evitado',
       sublabel: 'Toneladas de carbono neutralizadas no meio ambiente',
     },
@@ -167,10 +165,10 @@ export const casesData: ProjectCase[] = [
     location: 'Cipó Guaçu, SP',
     metrics: [
       { label: 'Potência', value: '32.16 kWp' },
-      { label: 'Economia', value: 'R$ 22.000 / ano' },
+      { label: 'Economia', value: 'R$ 35.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
-    description: 'Engenharia completa, homologação e instalação de usina de minigeração distribuída em solo (32,16 kWp), com inversor PHB e módulos Jinko.',
+    description: 'Engenharia completa, homologação e instalação de usina de microgeração distribuída em solo (32,16 kWp), com inversor PHB e módulos Jinko.',
     featured: false,
     coverImage: '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg',
     images: [

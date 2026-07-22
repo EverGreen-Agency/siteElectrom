@@ -2,10 +2,29 @@ import { useState, useEffect, useCallback } from 'react'
 import partnersConfig from '../data/partners.json'
 import { wordpressService } from '../services/wordpress'
 
-export const usePartners = (options = {}) => {
-  const [partners, setPartners] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+export interface Partner {
+  id: number
+  name: string
+  logo: string
+  type: string
+  category: string
+  priority: number
+  link: string
+  linkType: 'external' | 'internal' | 'modal' | 'none' | string
+  description: string
+}
+
+export interface UsePartnersOptions {
+  filterByCategory?: string | null
+  filterByType?: string | null
+  sortByPriority?: boolean
+  useCMS?: boolean
+}
+
+export const usePartners = (options: UsePartnersOptions = {}) => {
+  const [partners, setPartners] = useState<Partner[]>([])
+  const [loading, setLoading] = useState<boolean>(true)
+  const [error, setError] = useState<string | null>(null)
 
   const {
     filterByCategory = null,
@@ -14,19 +33,16 @@ export const usePartners = (options = {}) => {
     useCMS = false
   } = options
 
-  // Definindo fetchPartners fora do useEffect com useCallback para evitar bugs de referência léxica
   const fetchPartners = useCallback(async () => {
     try {
       setLoading(true)
-      let partnersData = []
+      let partnersData: Partner[] = []
 
       if (useCMS) {
-        console.log('Buscando parceiros do WordPress CMS...')
         const wpPartners = await wordpressService.getPartners()
         
         if (wpPartners && wpPartners.length > 0) {
-          // Camada de Tradução (Anti-Corruption Layer)
-          partnersData = wpPartners.map(wp => ({
+          partnersData = wpPartners.map((wp: any) => ({
             id: wp.id,
             name: wp.title?.rendered || 'Parceiro',
             logo: wp._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/images/partners/placeholder.png',
@@ -37,17 +53,13 @@ export const usePartners = (options = {}) => {
             linkType: wp.acf?.link_type || 'none',
             description: wp.acf?.description || ''
           }))
-          console.log(`Sucesso: ${partnersData.length} parceiros importados do WordPress.`)
         } else {
-          console.warn('Nenhum parceiro retornado pelo CMS ou erro de conexão. Utilizando fallback local.')
-          partnersData = partnersConfig.partners
+          partnersData = partnersConfig.partners as Partner[]
         }
       } else {
-        // Usar dados locais do JSON
-        partnersData = partnersConfig.partners
+        partnersData = partnersConfig.partners as Partner[]
       }
 
-      // Aplicar filtros
       let filteredPartners = [...partnersData]
 
       if (filterByCategory) {
@@ -62,18 +74,15 @@ export const usePartners = (options = {}) => {
         )
       }
 
-      // Ordenar por prioridade se solicitado
       if (sortByPriority) {
         filteredPartners.sort((a, b) => (a.priority || 0) - (b.priority || 0))
       }
 
       setPartners(filteredPartners)
       setError(null)
-    } catch (err) {
-      setError(err.message)
-      console.error('Erro ao buscar parceiros. Usando dados locais como fallback de contingência:', err)
-      // Fallback em caso de erro catastrófico
-      setPartners(partnersConfig.partners)
+    } catch (err: any) {
+      setError(err.message || 'Error fetching partners')
+      setPartners(partnersConfig.partners as Partner[])
     } finally {
       setLoading(false)
     }
@@ -83,15 +92,12 @@ export const usePartners = (options = {}) => {
     fetchPartners()
   }, [fetchPartners])
 
-  // Função para adicionar/atualizar parceiro (futura integração CMS)
-  const updatePartner = async (partnerId, updates) => {
+  const updatePartner = async (partnerId: number, updates: Partial<Partner>) => {
     if (useCMS) {
-      // TODO: Implementar atualização via WordPress API
       console.log('CMS update not implemented yet')
       return
     }
 
-    // Atualizar dados locais (apenas para desenvolvimento)
     setPartners(prevPartners =>
       prevPartners.map(partner =>
         partner.id === partnerId ? { ...partner, ...updates } : partner
@@ -99,16 +105,13 @@ export const usePartners = (options = {}) => {
     )
   }
 
-  // Função para adicionar novo parceiro (futura integração CMS)
-  const addPartner = async newPartner => {
+  const addPartner = async (newPartner: Omit<Partner, 'id'>) => {
     if (useCMS) {
-      // TODO: Implementar adição via WordPress API
       console.log('CMS add not implemented yet')
       return
     }
 
-    // Adicionar aos dados locais (apenas para desenvolvimento)
-    const partnerWithId = {
+    const partnerWithId: Partner = {
       ...newPartner,
       id: Math.max(...partners.map(p => p.id), 0) + 1
     }
@@ -126,4 +129,3 @@ export const usePartners = (options = {}) => {
 }
 
 export default usePartners
-
