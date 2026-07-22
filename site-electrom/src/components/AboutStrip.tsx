@@ -52,7 +52,7 @@ const milestones: MilestoneItem[] = [
   {
     year: '2019',
     title: 'Usinas Fotovoltaicas de Minigeração',
-    description: 'Homologação e comissionamento de usinas solares de autoconsumo remoto e comerciais de alta tensão, como o gerador de 52 kWp para BLOG7 - Villa Botânica em Itu/SP.',
+    description: 'Homologação e comissionamento de usinas solares de autoconsumo remoto e comerciais de média e baixa tensão, como o gerador de 52 kWp para BLOG7 - Villa Botânica em Itu/SP.',
     image: '/obras/ObraRecantoFotovoltaica/IMG_20190308_091007933.jpg',
     tag: 'Usinas Solares'
   },

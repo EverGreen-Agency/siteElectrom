@@ -73,7 +73,7 @@ export default function HeroSection() {
           <motion.div variants={fadeItem} className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg bg-white/5 border border-brand-blue/20 w-fit mb-6">
             <span className="w-2 h-2 rounded-full bg-brand-cyan shadow-[0_0_10px_#00F0FF] animate-pulse" />
             <span className="text-[10px] font-mono tracking-[0.18em] uppercase text-brand-blue font-semibold">
-              ESPECIFICAÇÃO: ALTA TENSÃO &amp; SOLAR
+              ESPECIFICAÇÃO: MÉDIA TENSÃO &amp; SOLAR
             </span>
           </motion.div>
 

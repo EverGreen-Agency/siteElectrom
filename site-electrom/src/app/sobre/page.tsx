@@ -75,7 +75,7 @@ export default function SobrePage() {
             <FaBolt className="text-2xl" />
           </div>
           <h3 className="font-display font-bold text-lg mb-2 text-white">Visão</h3>
-          <p className="text-gray-300 text-sm font-light leading-relaxed">Ser a referência definitiva como &quot;Engenharia de Energia&quot;, unindo excelência de alta tensão e transição solar corporativa.</p>
+          <p className="text-gray-300 text-sm font-light leading-relaxed">Ser a referência definitiva como &quot;Engenharia de Energia&quot;, unindo excelência em média e baixa tensão à transição solar corporativa.</p>
         </div>
         <div className="glass-card rounded-2xl p-8 flex flex-col items-center text-center border-white/5 shadow-xl hover:border-white/10 transition-all">
           <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-[#10B981] mb-4">

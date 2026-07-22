@@ -335,7 +335,7 @@ const ContactCTA: React.FC = () => {
                   >
                     <option value="Solar">Energia Solar Fotovoltaica</option>
                     <option value="Mercado Livre">Mercado Livre de Energia</option>
-                    <option value="Subestacao">Média / Alta Tensão & Subestações</option>
+                    <option value="Subestacao">Média & Baixa Tensão / Subestações</option>
                     <option value="Eficiencia">Eficiência Energética Industrial</option>
                     <option value="Obras">Gerenciamento de Obras</option>
                   </select>

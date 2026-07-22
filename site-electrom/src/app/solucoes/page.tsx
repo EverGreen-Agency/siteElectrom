@@ -34,7 +34,7 @@ const solucoes = [
   {
     id: 'projetos-eletricos',
     icone: <FaBolt className="text-4xl text-brand-blue" />,
-    titulo: 'Alta Tensão & Infraestrutura',
+    titulo: 'Média & Baixa Tensão',
     subtitulo: 'Segurança regulatória e máxima confiabilidade em instalações industriais complexas.',
     detalhes: [
       'Projetos, montagem e manutenção de cabines primárias e subestações',

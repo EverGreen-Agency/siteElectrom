@@ -14,7 +14,7 @@ module.exports = {
           white: '#FFFFFF', // Branco Puro
           dark: '#060C0A', // Fundo mais escuro para contrastes
           gold: '#FFB800', // Energy Gold (Dourado de energia solar)
-          cyan: '#00F0FF', // Electric Cyan (Azul elétrico de alta tensão)
+          cyan: '#00F0FF', // Electric Cyan (Azul elétrico de média e baixa tensão)
           amber: '#FF7A00', // Solar Amber
         },
         // Mapeamentos para facilidade de uso
