@@ -128,7 +128,7 @@ export default function BlogPreview() {
     async function loadPosts() {
       try {
         setLoading(true)
-        const wpPosts = await wordpressService.getRecentPosts(3)
+        const wpPosts = await wordpressService.getPosts(1, 3)
         if (wpPosts && wpPosts.length > 0) {
           const formattedPosts: BlogPost[] = wpPosts.map((wp: any, idx: number) => ({
             id: wp.id,

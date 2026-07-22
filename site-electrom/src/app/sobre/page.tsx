@@ -222,7 +222,7 @@ export default function SobrePage() {
             <span className="block text-gray-400 text-xs font-light mt-1">Projetos elétricos entregues</span>
           </div>
           <div className="glass-card rounded-2xl p-6 border-white/5">
-            <span className="block text-3xl font-display font-black text-brand-blue">{companyData.totalObras}+</span>
+            <span className="block text-3xl font-display font-black text-brand-blue">{companyData.totalProjects}+</span>
             <span className="block text-gray-400 text-xs font-light mt-1">Obras físicas homologadas</span>
           </div>
           <div className="glass-card rounded-2xl p-6 border-white/5">

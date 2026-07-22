@@ -3,11 +3,11 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
-import { casesData, WorkCase } from '../data/companyData'
+import { casesData, ProjectCase } from '../data/companyData'
 
 export default function SlotMachineCases() {
   const [selectedCategory, setSelectedCategory] = useState<string>('Todos')
-  const [activeCase, setActiveCase] = useState<WorkCase | null>(null)
+  const [activeCase, setActiveCase] = useState<ProjectCase | null>(null)
   const [activeImgIdx, setActiveImgIdx] = useState<number>(0)
 
   const categories = ['Todos', 'Solar', 'Subestações', 'Gerenciamento de Obras', 'Eficiência Energética', 'Autossuficiência', 'Mobilidade', 'Consultoria']
@@ -16,7 +16,7 @@ export default function SlotMachineCases() {
     ? casesData
     : casesData.filter(c => c.category === selectedCategory)
 
-  const handleOpenLightbox = (project: WorkCase, imgIdx = 0) => {
+  const handleOpenLightbox = (project: ProjectCase, imgIdx = 0) => {
     setActiveCase(project)
     setActiveImgIdx(imgIdx)
   }

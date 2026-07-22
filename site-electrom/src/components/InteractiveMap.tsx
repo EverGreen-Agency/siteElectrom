@@ -6,7 +6,8 @@ import 'leaflet/dist/leaflet.css';
 export interface WorkCityData {
   city: string;
   state: string;
-  count: number;
+  totalWorks?: number;
+  count?: number;
   coords: [number, number];
 }
 
@@ -42,7 +43,7 @@ export default function InteractiveMap() {
 
         const hqCoords: [number, number] = [-23.55052, -46.633308];
 
-        (worksData as WorkCityData[]).forEach(city => {
+        (worksData as unknown as WorkCityData[]).forEach(city => {
           const isHQ = city.city === 'São Paulo' && city.state === 'SP';
           if (!isHQ && city.coords && city.coords.length === 2) {
             L.polyline([hqCoords, city.coords], {
@@ -54,11 +55,12 @@ export default function InteractiveMap() {
           }
         });
 
-        (worksData as WorkCityData[]).forEach(city => {
+        (worksData as unknown as WorkCityData[]).forEach(city => {
           if (!city.coords || city.coords.length !== 2) return;
 
           const isHQ = city.city === 'São Paulo' && city.state === 'SP';
-          const radius = isHQ ? 12 : Math.min(4 + Math.sqrt(city.count) * 2, 10);
+          const projectCount = city.totalWorks || city.count || 1;
+          const radius = isHQ ? 12 : Math.min(4 + Math.sqrt(projectCount) * 2, 10);
           const color = isHQ ? '#7AA2E4' : '#00F0FF';
 
           const marker = L.circleMarker(city.coords, {
@@ -72,7 +74,7 @@ export default function InteractiveMap() {
           const popupContent = `
             <div style="font-family: monospace; padding: 4px;">
               <strong style="color: #ffffff; font-size: 13px;">${city.city} - ${city.state}</strong><br/>
-              <span style="color: #7AA2E4; font-size: 11px;">${city.count} ${city.count === 1 ? 'projeto registrado' : 'projetos registrados'}</span>
+              <span style="color: #7AA2E4; font-size: 11px;">${projectCount} ${projectCount === 1 ? 'projeto registrado' : 'projetos registrados'}</span>
               ${isHQ ? '<br/><span style="color: #00F0FF; font-size: 10px; font-weight: bold;">SEDE OPERACIONAL ELECTROM</span>' : ''}
             </div>
           `;
