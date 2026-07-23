@@ -89,7 +89,7 @@ export default function AboutStrip() {
             </span>
           </div>
           <blockquote className="text-2xl md:text-3xl font-display font-bold text-white leading-relaxed mb-6">
-            “Engenharia de Energia é nosso compromisso definitivo em combinar <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">sustentabilidade, alta performance e inovação</span> para viabilizar o amanhã.”
+            “Engenharia de Energias é nosso compromisso definitivo em combinar <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">sustentabilidade, alta performance e inovação</span> para viabilizar o amanhã.”
           </blockquote>
           <p className="text-gray-400 font-normal text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
             A ElectROM Engenharia desenvolve soluções de alta engenharia para empresas brasileiras que demandam redução drástica de perdas, eficiência absoluta e conformidade regulatória sólida.

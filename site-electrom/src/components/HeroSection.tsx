@@ -53,7 +53,7 @@ export default function HeroSection() {
       >
         <Image
           src="/HeroO1.png"
-          alt="ElectROM Engenharia - Engenharia de Energia"
+          alt="ElectROM Engenharia - Engenharia de Energias"
           fill
           className="object-cover md:object-contain object-right"
           priority

@@ -190,8 +190,8 @@ export default function ImpactNumbers() {
           <h2 className="text-3xl md:text-5xl font-display font-bold leading-tight text-white">
             Nosso Impacto em Números
           </h2>
-          <p className="text-gray-400 font-normal text-base md:text-lg leading-relaxed max-w-3xl mx-auto text-balance">
-            Mais do que executar projetos de engenharia, construímos ativos sustentáveis sólidos e geramos eficiência financeira e operacional para grandes empresas em todo o território nacional.
+          <p className="text-gray-400 font-normal text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+            Mais do que executar projetos de engenharia, construímos ativos sustentáveis sólidos e geramos eficiência financeira e operacional para as maiores empresas do&nbsp;país.
           </p>
         </div>
 

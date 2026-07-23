@@ -165,7 +165,7 @@ export default function BlogPreview() {
               </span>
             </div>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white leading-tight">
-              Artigos de Engenharia de Energia
+              Artigos de Engenharia de Energias
             </h2>
           </div>
 

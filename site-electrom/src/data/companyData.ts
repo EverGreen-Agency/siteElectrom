@@ -44,7 +44,7 @@ export interface CompanyInfo {
 
 export const companyData: CompanyInfo = {
   name: 'ElectROM Engenharia',
-  slogan: 'Engenharia de Energia',
+  slogan: 'Engenharia de Energias',
   tagline: 'Sustentabilidade, Eficiência e Inovação para um Futuro Energético Consciente.',
   experienceYears: 30, // Fundação em 1996, em 2026 completa 30 anos
   foundedYear: 1996,

@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "ElectROM Engenharia | Subestações, Mercado Livre & Energia Solar",
-  description: "Engenharia de Energia para indústrias e grandes empresas: Média e Baixa Tensão, Subestações, Mercado Livre de Energia (ACL), Eficiência Energética e Usinas Fotovoltaicas. Mais de 30 anos de excelência.",
+  description: "Engenharia de Energias para indústrias e grandes empresas: Média e Baixa Tensão, Subestações, Mercado Livre de Energia (ACL), Eficiência Energética e Usinas Fotovoltaicas. Mais de 30 anos de excelência.",
   metadataBase: new URL("https://electrom.eng.br"),
   alternates: {
     canonical: "https://electrom.eng.br",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "ElectROM Engenharia" }],
   openGraph: {
-    title: "ElectROM Engenharia | Inteligência & Engenharia de Energia",
+    title: "ElectROM Engenharia | Inteligência & Engenharia de Energias",
     description: "Mais de 30 anos de solidez e inovação. Projetos elétricos industriais, subestações e transição para o Mercado Livre de Energia.",
     url: "https://electrom.eng.br",
     siteName: "ElectROM Engenharia",
@@ -112,7 +112,7 @@ const jsonLd = {
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Soluções em Engenharia de Energia",
+        "name": "Soluções em Engenharia de Energias",
         "itemListElement": [
           {
             "@type": "Offer",
