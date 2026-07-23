@@ -160,7 +160,7 @@ export const casesData: ProjectCase[] = [
   {
     id: 1,
     title: 'Usina Solar - Recanto São Luiz',
-    category: 'Solar',
+    category: 'Energias Renováveis',
     segmento: 'industrial',
     location: 'Cipó Guaçu, SP',
     metrics: [
@@ -197,7 +197,7 @@ export const casesData: ProjectCase[] = [
   {
     id: 2,
     title: 'Smart Fit Embu Guaçu - Usina Solar Comercial',
-    category: 'Solar',
+    category: 'Energias Renováveis',
     segmento: 'comercial',
     location: 'Embu Guaçu, SP',
     metrics: [
@@ -230,8 +230,8 @@ export const casesData: ProjectCase[] = [
   },
   {
     id: 3,
-    title: 'Escola Patelli - Transição Fotovoltaica',
-    category: 'Solar',
+    title: 'Escola Patelli - Transição Fotovoltaica & Tarifária',
+    category: 'Consultoria de Energia',
     segmento: 'educacao',
     location: 'Campo Limpo Paulista, SP',
     metrics: [
@@ -239,7 +239,7 @@ export const casesData: ProjectCase[] = [
       { label: 'Economia', value: 'R$ 6.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
-    description: 'Dimensionamento e instalação de gerador fotovoltaico em telhado (6,5 kWp) integrado à subestação distribuidora escolar e sistema de monitoramento pedagógico.',
+    description: 'Dimensionamento, consultoria tarifária e instalação de gerador fotovoltaico em telhado (6,5 kWp) integrado à subestação distribuidora escolar e sistema de monitoramento pedagógico.',
     featured: false,
     coverImage: '/obras/EscolaPatelliFotovoltaica/WP_20180203_11_56_04_Pro.jpg',
     images: [
@@ -268,8 +268,8 @@ export const casesData: ProjectCase[] = [
   },
   {
     id: 4,
-    title: 'Residencial Recanto - Soluções Energéticas Integradas',
-    category: 'Autossuficiência',
+    title: 'Residencial Recanto - Subestação & Distribuição',
+    category: 'Média e Baixa Tensão',
     segmento: 'residencial',
     location: 'São Paulo, SP',
     metrics: [
@@ -277,7 +277,7 @@ export const casesData: ProjectCase[] = [
       { label: 'Economia', value: 'R$ 15.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
-    description: 'Modernização completa integrada: gerador fotovoltaico em laje (17,68 kWp), quadros elétricos de distribuição, automação e infraestrutura para carregadores veiculares.',
+    description: 'Modernização completa de média e baixa tensão: gerador fotovoltaico em laje (17,68 kWp), quadros elétricos de distribuição, automação e infraestrutura para carregadores veiculares.',
     featured: false,
     coverImage: '/obras/ObraRecantoFotovoltaica/IMG_20181205_173826509_HDR.jpg',
     images: [
@@ -341,7 +341,7 @@ export const casesData: ProjectCase[] = [
   {
     id: 6,
     title: 'Eficiência Energética - Grupo Duratex',
-    category: 'Eficiência Energética',
+    category: 'Engenharia de Energias',
     segmento: 'industrial',
     location: 'Itapetininga e Botucatu, SP',
     metrics: [
@@ -414,7 +414,7 @@ export const casesData: ProjectCase[] = [
   {
     id: 8,
     title: 'Eletroposto Residencial Inteligente',
-    category: 'Mobilidade',
+    category: 'Energias Renováveis',
     segmento: 'residencial',
     location: 'São Paulo, SP',
     metrics: [
@@ -449,3 +449,4 @@ export const casesData: ProjectCase[] = [
     ]
   }
 ];
+

@@ -10,7 +10,7 @@ export default function SlotMachineCases() {
   const [activeCase, setActiveCase] = useState<ProjectCase | null>(null)
   const [activeImgIdx, setActiveImgIdx] = useState<number>(0)
 
-  const categories = ['Todos', 'Solar', 'Subestações', 'Gerenciamento de Obras', 'Eficiência Energética', 'Autossuficiência', 'Mobilidade', 'Consultoria']
+  const categories = ['Todos', 'Energias Renováveis', 'Engenharia de Energias', 'Consultoria de Energia', 'Média e Baixa Tensão', 'Gerenciamento de Obras']
 
   const filteredCases = selectedCategory === 'Todos'
     ? casesData
@@ -44,7 +44,7 @@ export default function SlotMachineCases() {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_#7AA2E4]" />
             <span className="text-[10px] font-mono tracking-widest uppercase text-brand-blue font-semibold">
-              Portfólio de Obras
+              Portfólio de Projetos
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-bold leading-tight text-white mb-4">

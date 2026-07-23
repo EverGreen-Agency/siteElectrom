@@ -14,10 +14,10 @@ export interface SolutionItem {
 
 const solutions: SolutionItem[] = [
   {
-    title: 'Energia Solar',
-    headline: 'Geração própria sob medida',
-    description: 'Engenharia completa de usinas fotovoltaicas industriais, comerciais e residenciais, conectando seu estabelecimento à economia renovável.',
-    bullets: ['Usinas sobre telhados e solo', 'Estudos de viabilidade', 'Garantia de performance', 'Projetos Turnkey (EPC) integrados'],
+    title: 'Energias Renováveis',
+    headline: 'Geração própria e energia limpa',
+    description: 'Engenharia completa de usinas fotovoltaicas industriais e comerciais, estações de carregamento veicular (VE) e autonomia energética.',
+    bullets: ['Usinas fotovoltaicas (telhado e solo)', 'Estações de recarga veicular (VE)', 'Estudos de viabilidade e geração', 'Projetos Turnkey (EPC) integrados'],
     color: 'from-brand-gold to-brand-amber',
     icon: (
       <svg className="w-6 h-6 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -26,10 +26,10 @@ const solutions: SolutionItem[] = [
     )
   },
   {
-    title: 'Eficiência Energética',
-    headline: 'Redução de desperdícios',
-    description: 'Auditorias completas para identificação de gargalos de consumo, otimização e mitigação de perdas térmicas.',
-    bullets: ['Retrofit de iluminação em LED', 'Substituição por motores IE4/IE5', 'Gestão ativa de energia reativa', 'Adequações e correções térmicas'],
+    title: 'Engenharia de Energias',
+    headline: 'Redução de perdas e eficiência',
+    description: 'Diagnósticos completos de consumo, conservação de energia e mitigação de perdas elétricas e térmicas industriais.',
+    bullets: ['Auditorias energéticas industriais', 'Análise termográfica preventiva', 'Retrofit de motores IE4/IE5 e iluminação', 'Projetos de conservação térmica'],
     color: 'from-brand-blue to-[#4f80cf]',
     icon: (
       <svg className="w-6 h-6 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,10 +39,22 @@ const solutions: SolutionItem[] = [
     )
   },
   {
-    title: 'Projetos Elétricos',
-    headline: 'Estabilidade e conformidade',
-    description: 'Engenharia elétrica para montagem de subestações blindadas e elaboração de malhas de aterramento seguras.',
-    bullets: ['Cabines primárias', 'Estudos de curto-circuito (seletividade)', 'Sistemas SPDA de proteção de descargas', 'Laudos técnicos de conformidade NR-10'],
+    title: 'Consultoria de Energia',
+    headline: 'Inteligência tarifária e mercado livre',
+    description: 'Estratégias de portabilidade para o Mercado Livre de Energia (ACL), gestão de contratos e redução drástica de custos.',
+    bullets: ['Migração ao Mercado Livre (ACL)', 'Auditoria contínua de faturas e tarifas', 'Gestão de Créditos de Carbono', 'Viabilidade para Geração Distribuída'],
+    color: 'from-brand-blue to-brand-cyan',
+    icon: (
+      <svg className="w-6 h-6 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
+      </svg>
+    )
+  },
+  {
+    title: 'Média e Baixa Tensão',
+    headline: 'Infraestrutura e conformidade',
+    description: 'Projetos elétricos complexos, montagem de subestações de entrada, cabines primárias e laudos normativos.',
+    bullets: ['Subestações e cabines primárias', 'Painéis elétricos inteligentes', 'Sistemas SPDA e proteção de surtos', 'Laudos de conformidade NBR 5410/14039'],
     color: 'from-brand-cyan to-[#00c8ff]',
     icon: (
       <svg className="w-6 h-6 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -51,17 +63,17 @@ const solutions: SolutionItem[] = [
     )
   },
   {
-    title: 'Consultoria Estratégica',
-    headline: 'Energia como ativo financeiro',
-    description: 'Gestão tarifária para migração segura da sua empresa ao Mercado Livre de Energia.',
-    bullets: ['Migração ao Mercado Livre (ACL)', 'Gestão ativa de contratos de PPAs', 'Planejamento e inventários de ESG', 'Auditoria contínua de faturas'],
-    color: 'from-brand-blue to-brand-cyan',
+    title: 'Gerenciamento de Obras',
+    headline: 'Gestão integrada de engenharia',
+    description: 'Coordenação técnica ponta a ponta de instalações elétricas, civis e utilidades com engenheiros residentes no local.',
+    bullets: ['Fiscalização civil, elétrica e estruturas', 'Planejamento e coordenação de utilidades', 'Engenheiros residentes no local', 'Documentação As-Built e termos de entrega'],
+    color: 'from-brand-blue to-brand-amber',
     icon: (
       <svg className="w-6 h-6 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
       </svg>
     )
-  },
+  }
 ];
 
 export default function SolutionsGrid() {
@@ -85,7 +97,7 @@ export default function SolutionsGrid() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {solutions.map((sol, idx) => (
             <motion.div
               key={idx}
@@ -93,7 +105,7 @@ export default function SolutionsGrid() {
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: idx * 0.12 }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
             >
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 electric-border pointer-events-none" />
               
@@ -107,7 +119,7 @@ export default function SolutionsGrid() {
                   {sol.title}
                 </span>
                 
-                <h3 className="text-xl font-bold text-white mt-1 mb-3 leading-snug">
+                <h3 className="text-lg font-bold text-white mt-1 mb-3 leading-snug">
                   {sol.headline}
                 </h3>
                 
@@ -117,8 +129,8 @@ export default function SolutionsGrid() {
 
                 <ul className="space-y-2 mb-6">
                   {sol.bullets.map((b, i) => (
-                    <li key={i} className="flex items-center text-xs text-gray-300 font-normal gap-2">
-                      <span className="w-1 h-1 rounded-full bg-brand-cyan flex-shrink-0" />
+                    <li key={i} className="flex items-start text-xs text-gray-300 font-normal gap-2">
+                      <span className="w-1 h-1 rounded-full bg-brand-cyan flex-shrink-0 mt-1" />
                       <span>{b}</span>
                     </li>
                   ))}

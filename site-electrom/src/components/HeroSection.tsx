@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useRef } from 'react'
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
+import React from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
 
 const heroStagger = {
@@ -33,25 +33,15 @@ const maskItem = {
 }
 
 export default function HeroSection() {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  const { scrollY, scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end start']
-  })
-
-  const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 20 })
+  const { scrollY } = useScroll()
 
   const bgY = useTransform(scrollY, [0, 1000], [0, 300])
-  const bgScale = useTransform(smoothProgress, [0, 1], [1, 1.1])
-  const bgOpacity = useTransform(smoothProgress, [0, 0.8, 1], [1, 0.6, 0.2])
+  const bgScale = useTransform(scrollY, [0, 1000], [1, 1.1])
+  const bgOpacity = useTransform(scrollY, [0, 800], [1, 0.3])
 
   return (
-    <section 
-      ref={containerRef}
-      className="relative flex flex-col items-center justify-center min-h-screen w-full px-6 md:px-16 bg-brand-petrol text-white overflow-hidden blueprint-bg"
-    >
-      {/* Background Media (Higgsfield Video / Image Fallback) */}
+    <section className="relative flex flex-col items-center justify-center min-h-screen w-full px-6 md:px-16 bg-brand-petrol text-white overflow-hidden blueprint-bg">
+      {/* Background Overlay */}
       <motion.div
         className="absolute inset-0 z-0 origin-center"
         style={{ 
@@ -87,7 +77,7 @@ export default function HeroSection() {
             </span>
           </motion.div>
 
-          {/* Headline */}
+          {/* Headline com tipografia elegante */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight uppercase mb-6 leading-[0.95] text-white">
             <div className="overflow-hidden pb-1">
               <motion.div variants={maskItem}>
@@ -108,20 +98,21 @@ export default function HeroSection() {
 
           <motion.div variants={fadeItem} className="flex flex-col sm:flex-row gap-4">
             <motion.a
+              whileHover={{ scale: 1.02, boxShadow: '0 0 20px rgba(122, 162, 228, 0.3)' }}
+              whileTap={{ scale: 0.98 }}
               href="#contato"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-brand-blue to-brand-cyan text-brand-petrol font-semibold text-sm tracking-wider uppercase transition-all shadow-[0_0_20px_rgba(0,240,255,0.3)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)]"
+              className="px-7 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-semibold text-center tracking-wide shadow-md transition-all text-sm md:text-base"
             >
-              Falar com Engenheiro
+              Solicitar Diagnóstico Energético
             </motion.a>
+
             <motion.a
-              href="#solucoes"
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.02, backgroundColor: 'rgba(255, 255, 255, 0.08)' }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white/5 border border-white/10 hover:border-brand-cyan/40 text-white font-semibold text-sm tracking-wider uppercase transition-all backdrop-blur-sm"
+              href="#servicos"
+              className="px-7 py-3.5 rounded-lg border border-white/20 text-white font-medium text-center tracking-wide transition-all backdrop-blur-sm text-sm md:text-base"
             >
-              Nossas Soluções
+              Conhecer Soluções
             </motion.a>
           </motion.div>
         </motion.div>
