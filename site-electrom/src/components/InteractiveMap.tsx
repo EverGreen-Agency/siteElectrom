@@ -13,7 +13,7 @@ export interface WorkCityData {
 
 export default function InteractiveMap() {
   const mapRef = useRef<HTMLDivElement | null>(null);
-  const mapInstanceRef = useRef<any>(null);
+  const mapInstanceRef = useRef<unknown>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function InteractiveMap() {
         const L = await import('leaflet');
         
         if (!mapRef.current) return;
-        if ((mapRef.current as any)._leaflet_id) return;
+        if ((mapRef.current as unknown as Record<string, unknown>)._leaflet_id) return;
 
         const map = L.map(mapRef.current, {
           center: [-22.3, -48.0],
@@ -93,8 +93,8 @@ export default function InteractiveMap() {
     initMap();
 
     return () => {
-      if (mapInstanceRef.current) {
-        mapInstanceRef.current.remove();
+      if (mapInstanceRef.current && typeof (mapInstanceRef.current as { remove?: () => void }).remove === 'function') {
+        (mapInstanceRef.current as { remove: () => void }).remove();
         mapInstanceRef.current = null;
       }
     };

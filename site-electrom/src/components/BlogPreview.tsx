@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { wordpressService } from '../services/wordpress'
+import Link from 'next/link'
+import { wordpressService, Post as WPPost } from '../services/wordpress'
 
 export interface BlogPost {
   id: number | string
@@ -67,14 +68,6 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, index }) => {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, delay: index * 0.12 }}
     >
-      {post.featured && (
-        <div className="absolute top-4 left-4 z-10">
-          <span className="bg-brand-blue text-brand-petrol text-[10px] font-mono font-semibold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
-            Destaque
-          </span>
-        </div>
-      )}
-
       <div className="relative h-52 w-full overflow-hidden">
         <Image
           src={post.img}
@@ -105,7 +98,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, index }) => {
         </div>
 
         <div className="pt-4 border-t border-white/5">
-          <a
+          <Link
             href={`/blog/${post.slug}`}
             className="inline-flex items-center gap-2 text-xs font-semibold font-mono text-brand-blue hover:text-brand-cyan transition-colors uppercase tracking-wider"
           >
@@ -113,7 +106,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, index }) => {
             <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </motion.article>
@@ -130,10 +123,10 @@ export default function BlogPreview() {
         setLoading(true)
         const wpPosts = await wordpressService.getPosts(1, 3)
         if (wpPosts && wpPosts.length > 0) {
-          const formattedPosts: BlogPost[] = wpPosts.map((wp: any, idx: number) => ({
+          const formattedPosts: BlogPost[] = wpPosts.map((wp: WPPost, idx: number) => ({
             id: wp.id,
             title: wp.title?.rendered || 'Sem título',
-            category: wp._embedded?.['wp:term']?.[0]?.[0]?.name || 'Engenharia',
+            category: (wp._embedded as { 'wp:term'?: Array<Array<{ name: string }>> })?.['wp:term']?.[0]?.[0]?.name || 'Engenharia',
             date: new Date(wp.date).toLocaleDateString('pt-BR'),
             excerpt: wp.excerpt?.rendered?.replace(/<[^>]+>/g, '').slice(0, 140) + '...' || '',
             img: wp._embedded?.['wp:featuredmedia']?.[0]?.source_url || localFallbackPosts[idx % 3].img,

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSun, FaBolt, FaWrench, FaShieldAlt, FaBatteryFull, FaCar, FaFileInvoiceDollar, FaBuilding, FaArrowRight, FaArrowUp, FaArrowDown } from 'react-icons/fa';
+import { FaSun, FaBolt, FaWrench, FaShieldAlt, FaFileInvoiceDollar, FaBuilding, FaArrowRight, FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
 import { casesData } from '../../data/companyData';

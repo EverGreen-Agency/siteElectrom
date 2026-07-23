@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import partnersConfig from '../data/partners.json'
-import { wordpressService } from '../services/wordpress'
+import { wordpressService, Partner as WPPartner } from '../services/wordpress'
 
 export interface Partner {
   id: number
@@ -42,7 +42,7 @@ export const usePartners = (options: UsePartnersOptions = {}) => {
         const wpPartners = await wordpressService.getPartners()
         
         if (wpPartners && wpPartners.length > 0) {
-          partnersData = wpPartners.map((wp: any) => ({
+          partnersData = wpPartners.map((wp: WPPartner) => ({
             id: wp.id,
             name: wp.title?.rendered || 'Parceiro',
             logo: wp._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/images/partners/placeholder.png',
@@ -80,8 +80,8 @@ export const usePartners = (options: UsePartnersOptions = {}) => {
 
       setPartners(filteredPartners)
       setError(null)
-    } catch (err: any) {
-      setError(err.message || 'Error fetching partners')
+    } catch (err: unknown) {
+      setError((err as Error).message || 'Error fetching partners')
       setPartners(partnersConfig.partners as Partner[])
     } finally {
       setLoading(false)

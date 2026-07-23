@@ -22,7 +22,7 @@ const ContactCTA: React.FC = () => {
   })
   
   const [profile, setProfile] = useState<'residencial' | 'corporativo'>('corporativo')
-  const [solution, setSolution] = useState<'solar' | 'mercado_livre'>('solar')
+  const solution = formData.projectType === 'Solar' ? 'solar' : 'mercado_livre'
   const [monthlyBill, setMonthlyBill] = useState(25000)
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -33,9 +33,9 @@ const ContactCTA: React.FC = () => {
       setFormData(prev => ({ ...prev, projectType: 'Solar' }))
     } else {
       setMonthlyBill(25000)
-      setFormData(prev => ({ ...prev, projectType: solution === 'solar' ? 'Solar' : 'Consultoria' }))
+      setFormData(prev => ({ ...prev, projectType: 'Solar' }))
     }
-  }, [profile, solution])
+  }, [profile])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
