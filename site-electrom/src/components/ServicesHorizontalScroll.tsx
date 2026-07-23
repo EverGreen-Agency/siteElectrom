@@ -307,15 +307,16 @@ export default function ServicesHorizontalScroll() {
     [0, 1],
     [0, -(totalSections - 1) * 100]
   )
+  const xTranslate = useTransform(x, value => `${value}vw`)
 
   return (
-    <section ref={containerRef} className="h-[500vh] relative bg-[#040807]" id="servicos">
+    <section ref={containerRef} className="h-auto lg:h-[500vh] relative bg-[#040807]" id="servicos">
       {/* Desktop Version */}
       <div className="hidden lg:block sticky top-0 h-screen overflow-hidden">
         <motion.div
           className="flex h-full"
           style={{
-            x: useTransform(x, value => `${value}vw`),
+            x: xTranslate,
             width: `${totalSections * 100}vw`
           }}
         >
