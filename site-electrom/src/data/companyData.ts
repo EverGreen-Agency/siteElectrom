@@ -13,7 +13,6 @@ export interface CompanyInfo {
   experienceYears: number;
   foundedYear: number;
   totalProjects: number;
-  totalObras: number;
   totalClients: number;
   economyGeneratedMillions: number;
   whatsappNumber: string;
@@ -44,19 +43,18 @@ export interface CompanyInfo {
 }
 
 export const companyData: CompanyInfo = {
-  name: 'Electrom Engenharia',
-  slogan: 'Engenharia de Energia',
+  name: 'ElectROM Engenharia',
+  slogan: 'Engenharia de Energias',
   tagline: 'Sustentabilidade, Eficiência e Inovação para um Futuro Energético Consciente.',
   experienceYears: 30, // Fundação em 1996, em 2026 completa 30 anos
   foundedYear: 1996,
-  totalProjects: 800,
-  totalObras: 550, // Updated to match the analyzed spreadsheet rows
+  totalProjects: 550, // Updated to match the analyzed spreadsheet rows
   totalClients: 1800,
   economyGeneratedMillions: 50, // Updated from 120 to match "mais de R$50.000.000,00"
   whatsappNumber: '5511999620930', // Telefone comercial oficial unificado
-  whatsappMessage: 'Olá! Gostaria de falar com a equipe de engenharia da Electrom.',
-  phone: '(11) 3230-1996',
-  email: 'contato@electrom.eng.br',
+  whatsappMessage: 'Olá! Gostaria de falar com a equipe de engenharia da ElectROM.',
+  phone: '(11) 99962-0930',
+  email: 'comercial@ElectROM.eng.br',
   address: {
     street: 'Av. Paulista, 1000 - Bela Vista',
     neighborhood: 'Bela Vista',
@@ -65,8 +63,8 @@ export const companyData: CompanyInfo = {
     zipCode: '01310-100',
   },
   social: {
-    linkedin: 'https://linkedin.com/company/electrom-engenharia',
-    instagram: 'https://www.instagram.com/electromeng/',
+    linkedin: 'https://linkedin.com/company/ElectROM-engenharia',
+    instagram: 'https://www.instagram.com/ElectROMeng/',
   },
   metrics: {
     yearsOfExperience: {
@@ -81,7 +79,7 @@ export const companyData: CompanyInfo = {
       prefix: '',
       suffix: '+',
       label: 'Projetos Entregues',
-      sublabel: 'Obras homologadas e ativas no país',
+      sublabel: 'Projetos homologados e ativos no país',
     },
     economyGenerated: {
       value: 50, // Updated to match the spreadsheet
@@ -95,19 +93,19 @@ export const companyData: CompanyInfo = {
       prefix: '',
       suffix: '+',
       label: 'Clientes Atendidos',
-      sublabel: 'Empresas industriais, comerciais e públicas',
+      sublabel: 'Empresas industriais, comerciais, condomínios, residências e instituições públicas e privadas',
     },
     fuelSaved: {
       value: 96000,
       prefix: '',
-      suffix: ' t',
+      suffix: ' toneladas',
       label: 'Combustível Economizado',
-      sublabel: 'Preservação de recursos térmicos industriais',
+      sublabel: 'Preservação de recursos ambientais',
     },
     co2Avoided: {
       value: 38000,
       prefix: '',
-      suffix: ' t',
+      suffix: ' toneladas',
       label: 'CO₂ Evitado',
       sublabel: 'Toneladas de carbono neutralizadas no meio ambiente',
     },
@@ -162,15 +160,15 @@ export const casesData: ProjectCase[] = [
   {
     id: 1,
     title: 'Usina Solar - Recanto São Luiz',
-    category: 'Solar',
+    category: 'Energias Renováveis',
     segmento: 'industrial',
     location: 'Cipó Guaçu, SP',
     metrics: [
       { label: 'Potência', value: '32.16 kWp' },
-      { label: 'Economia', value: 'R$ 22.000 / ano' },
+      { label: 'Economia', value: 'R$ 35.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
-    description: 'Engenharia completa, homologação e instalação de usina de minigeração distribuída em solo (32,16 kWp), com inversor PHB e módulos Jinko.',
+    description: 'Engenharia completa, homologação e instalação de usina de microgeração distribuída em solo (32,16 kWp), com inversor PHB e módulos Jinko.',
     featured: false,
     coverImage: '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg',
     images: [
@@ -199,7 +197,7 @@ export const casesData: ProjectCase[] = [
   {
     id: 2,
     title: 'Smart Fit Embu Guaçu - Usina Solar Comercial',
-    category: 'Solar',
+    category: 'Energias Renováveis',
     segmento: 'comercial',
     location: 'Embu Guaçu, SP',
     metrics: [
@@ -232,8 +230,8 @@ export const casesData: ProjectCase[] = [
   },
   {
     id: 3,
-    title: 'Escola Patelli - Transição Fotovoltaica',
-    category: 'Solar',
+    title: 'Escola Patelli - Transição Fotovoltaica & Tarifária',
+    category: 'Consultoria de Energia',
     segmento: 'educacao',
     location: 'Campo Limpo Paulista, SP',
     metrics: [
@@ -241,7 +239,7 @@ export const casesData: ProjectCase[] = [
       { label: 'Economia', value: 'R$ 6.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
-    description: 'Dimensionamento e instalação de gerador fotovoltaico em telhado (6,5 kWp) integrado à subestação distribuidora escolar e sistema de monitoramento pedagógico.',
+    description: 'Dimensionamento, consultoria tarifária e instalação de gerador fotovoltaico em telhado (6,5 kWp) integrado à subestação distribuidora escolar e sistema de monitoramento pedagógico.',
     featured: false,
     coverImage: '/obras/EscolaPatelliFotovoltaica/WP_20180203_11_56_04_Pro.jpg',
     images: [
@@ -270,8 +268,8 @@ export const casesData: ProjectCase[] = [
   },
   {
     id: 4,
-    title: 'Residencial Recanto - Soluções Energéticas Integradas',
-    category: 'Autossuficiência',
+    title: 'Residencial Recanto - Subestação & Distribuição',
+    category: 'Média e Baixa Tensão',
     segmento: 'residencial',
     location: 'São Paulo, SP',
     metrics: [
@@ -279,7 +277,7 @@ export const casesData: ProjectCase[] = [
       { label: 'Economia', value: 'R$ 15.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
-    description: 'Modernização completa integrada: gerador fotovoltaico em laje (17,68 kWp), quadros elétricos de distribuição, automação e infraestrutura para carregadores veiculares.',
+    description: 'Modernização completa de média e baixa tensão: gerador fotovoltaico em laje (17,68 kWp), quadros elétricos de distribuição, automação e infraestrutura para carregadores veiculares.',
     featured: false,
     coverImage: '/obras/ObraRecantoFotovoltaica/IMG_20181205_173826509_HDR.jpg',
     images: [
@@ -343,7 +341,7 @@ export const casesData: ProjectCase[] = [
   {
     id: 6,
     title: 'Eficiência Energética - Grupo Duratex',
-    category: 'Eficiência Energética',
+    category: 'Engenharia de Energias',
     segmento: 'industrial',
     location: 'Itapetininga e Botucatu, SP',
     metrics: [
@@ -416,7 +414,7 @@ export const casesData: ProjectCase[] = [
   {
     id: 8,
     title: 'Eletroposto Residencial Inteligente',
-    category: 'Mobilidade',
+    category: 'Energias Renováveis',
     segmento: 'residencial',
     location: 'São Paulo, SP',
     metrics: [
@@ -451,3 +449,4 @@ export const casesData: ProjectCase[] = [
     ]
   }
 ];
+

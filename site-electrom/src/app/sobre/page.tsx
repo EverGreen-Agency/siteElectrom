@@ -7,8 +7,8 @@ export default function SobrePage() {
   const milestones = [
     {
       year: '1996',
-      title: 'Fundação da Electrom',
-      desc: 'Nascimento da Electrom em São Paulo, focada em gestão de obras e laudos técnicos de engenharia elétrica e mecânica.'
+      title: 'Fundação da ElectROM',
+      desc: 'Nascimento da ElectROM em São Paulo, focada em gestão de obras e laudos técnicos de engenharia elétrica e mecânica.'
     },
     {
       year: '2005',
@@ -23,7 +23,7 @@ export default function SobrePage() {
     {
       year: '2025',
       title: 'Legado e Liderança',
-      desc: 'Mais de 500 obras físicas ativas entregues em todo o país e reposicionamento estratégico como "Engenharia de Energia".'
+      desc: 'Mais de 500 obras físicas ativas entregues em todo o país e reposicionamento estratégico como "Engenharia de Energias".'
     }
   ];
 
@@ -75,7 +75,7 @@ export default function SobrePage() {
             <FaBolt className="text-2xl" />
           </div>
           <h3 className="font-display font-bold text-lg mb-2 text-white">Visão</h3>
-          <p className="text-gray-300 text-sm font-light leading-relaxed">Ser a referência definitiva como &quot;Engenharia de Energia&quot;, unindo excelência de alta tensão e transição solar corporativa.</p>
+          <p className="text-gray-300 text-sm font-light leading-relaxed">Ser a referência definitiva como &quot;Engenharia de Energias&quot;, unindo excelência em média e baixa tensão à transição solar corporativa.</p>
         </div>
         <div className="glass-card rounded-2xl p-8 flex flex-col items-center text-center border-white/5 shadow-xl hover:border-white/10 transition-all">
           <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-[#10B981] mb-4">
@@ -153,7 +153,7 @@ export default function SobrePage() {
           <div className="relative">
             <FaQuoteLeft className="text-brand-blue/15 text-5xl absolute -top-4 -left-4 pointer-events-none" />
             <blockquote className="italic text-gray-300 font-light text-sm leading-relaxed relative z-10 pl-6 border-l-2 border-brand-blue/30">
-              &quot;Desde que fundamos a Electrom em 1996, operamos sob a premissa de que a engenharia elétrica deve ser tratada como um ativo estratégico financeiro e de descarbonização para nossos clientes. São 30 anos assinando laudos, instalando cabines primárias e usinas solares com total transparência técnica.&quot;
+              &quot;Desde que fundamos a ElectROM em 1996, operamos sob a premissa de que a engenharia elétrica deve ser tratada como um ativo estratégico financeiro e de descarbonização para nossos clientes. São 30 anos assinando laudos, instalando cabines primárias e usinas solares com total transparência técnica.&quot;
             </blockquote>
           </div>
           
@@ -222,7 +222,7 @@ export default function SobrePage() {
             <span className="block text-gray-400 text-xs font-light mt-1">Projetos elétricos entregues</span>
           </div>
           <div className="glass-card rounded-2xl p-6 border-white/5">
-            <span className="block text-3xl font-display font-black text-brand-blue">{companyData.totalObras}+</span>
+            <span className="block text-3xl font-display font-black text-brand-blue">{companyData.totalProjects}+</span>
             <span className="block text-gray-400 text-xs font-light mt-1">Obras físicas homologadas</span>
           </div>
           <div className="glass-card rounded-2xl p-6 border-white/5">

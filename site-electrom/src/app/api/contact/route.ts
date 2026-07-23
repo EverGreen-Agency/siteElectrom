@@ -2,34 +2,167 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
+interface LeadData {
+  id?: string;
+  timestamp: string;
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+  sentViaEmail?: boolean;
+}
+
+const getLeadsFilePath = () => path.join(process.cwd(), 'src', 'data', 'leads_received.json');
+
+function readLocalLeads(): LeadData[] {
+  try {
+    const filePath = getLeadsFilePath();
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf-8');
+      return JSON.parse(content);
+    }
+  } catch (error) {
+    console.error('Error reading local leads:', error);
+  }
+  return [];
+}
+
+function saveLocalLeads(leads: LeadData[]): void {
+  try {
+    const dataDir = path.join(process.cwd(), 'src', 'data');
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+    fs.writeFileSync(getLeadsFilePath(), JSON.stringify(leads, null, 2), 'utf-8');
+  } catch (error) {
+    console.error('Error saving local leads:', error);
+  }
+}
+
+// GET Endpoint: Export / View stored leads
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const format = searchParams.get('format');
+  const leads = readLocalLeads();
+
+  if (format === 'csv') {
+    const headers = 'ID,Timestamp,Name,Email,Phone,Subject,Message,SentViaEmail\n';
+    const rows = leads.map(l => 
+      `"${l.id || ''}","${l.timestamp}","${l.name.replace(/"/g, '""')}","${l.email}","${l.phone}","${l.subject.replace(/"/g, '""')}","${l.message.replace(/"/g, '""')}",${l.sentViaEmail ? 'Yes' : 'No'}`
+    ).join('\n');
+
+    return new Response(headers + rows, {
+      headers: {
+        'Content-Type': 'text/csv; charset=utf-8',
+        'Content-Disposition': 'attachment; filename="leads_electrom.csv"',
+      },
+    });
+  }
+
+  return NextResponse.json({
+    success: true,
+    total: leads.length,
+    leads,
+  });
+}
+
+// POST Endpoint: Receive new lead or retry pending leads
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    const { nome, email, telefone, assunto, mensagem } = body;
+    const { searchParams } = new URL(request.url);
+    const action = searchParams.get('action');
+    const resendKey = process.env.RESEND_API_KEY;
 
-    // Validação básica do lado do servidor
-    if (!nome || !email || !telefone || !assunto) {
+    // Action: Retry sending pending leads
+    if (action === 'retry') {
+      const leads = readLocalLeads();
+      const unsentLeads = leads.filter(l => !l.sentViaEmail);
+
+      if (!resendKey) {
+        return NextResponse.json({
+          success: false,
+          error: 'RESEND_API_KEY is not configured on the server.',
+          pendingCount: unsentLeads.length,
+        }, { status: 400 });
+      }
+
+      let resendSuccessCount = 0;
+
+      for (const lead of leads) {
+        if (!lead.sentViaEmail) {
+          try {
+            const response = await fetch('https://api.resend.com/emails', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${resendKey}`,
+              },
+              body: JSON.stringify({
+                from: 'ElectROM Engenharia <onboarding@resend.dev>',
+                to: ['comercial@ElectROM.eng.br'],
+                subject: `[REENVIO] Lead de Diagnóstico: ${lead.subject} - ${lead.name}`,
+                html: `
+                  <h2>Lead de Diagnóstico Energético (Reenvio)</h2>
+                  <p><strong>Data Original:</strong> ${lead.timestamp}</p>
+                  <p><strong>Nome:</strong> ${lead.name}</p>
+                  <p><strong>E-mail:</strong> ${lead.email}</p>
+                  <p><strong>Telefone/WhatsApp:</strong> ${lead.phone}</p>
+                  <p><strong>Assunto/Escopo:</strong> ${lead.subject}</p>
+                  <p><strong>Mensagem:</strong></p>
+                  <blockquote style="background: #f4f4f4; padding: 15px; border-left: 5px solid #7AA2E4;">
+                    ${lead.message.replace(/\n/g, '<br/>')}
+                  </blockquote>
+                `,
+              }),
+            });
+
+            if (response.ok) {
+              lead.sentViaEmail = true;
+              resendSuccessCount++;
+            }
+          } catch (err) {
+            console.error('Failed retry for lead:', lead.email, err);
+          }
+        }
+      }
+
+      saveLocalLeads(leads);
+
+      return NextResponse.json({
+        success: true,
+        message: `${resendSuccessCount} lead(s) reenviados com sucesso via Resend.`,
+        remainingUnsent: leads.filter(l => !l.sentViaEmail).length,
+      });
+    }
+
+    // Action: New Lead Submission
+    const body = await request.json();
+    const name = body.name || body.nome;
+    const email = body.email;
+    const phone = body.phone || body.telefone;
+    const subject = body.subject || body.assunto || 'Contato Comercial / Diagnóstico';
+    const message = body.message || body.mensagem || 'Sem mensagem adicional.';
+
+    if (!name || !email || !phone) {
       return NextResponse.json(
-        { success: false, error: 'Campos obrigatórios ausentes.' },
+        { success: false, error: 'Campos obrigatórios ausentes (nome, email, telefone).' },
         { status: 400 }
       );
     }
 
-    const leadData = {
+    const leadData: LeadData = {
+      id: `LEAD-${Date.now()}`,
       timestamp: new Date().toISOString(),
-      nome,
+      name,
       email,
-      telefone,
-      assunto,
-      mensagem: mensagem || 'Sem mensagem adicional.',
+      phone,
+      subject,
+      message,
+      sentViaEmail: false,
     };
 
-    console.log('Lead Recebido no Servidor:', leadData);
-
-    const resendKey = process.env.RESEND_API_KEY;
-
     if (resendKey) {
-      // Envio via API do Resend (Nativo via fetch)
       try {
         const response = await fetch('https://api.resend.com/emails', {
           method: 'POST',
@@ -38,62 +171,43 @@ export async function POST(request: Request) {
             'Authorization': `Bearer ${resendKey}`,
           },
           body: JSON.stringify({
-            from: 'Electrom Engenharia <onboarding@resend.dev>', // Substituir pelo domínio verificado em produção
-            to: ['contato@electrom.eng.br'],
-            subject: `Novo Lead de Diagnóstico: ${assunto} - ${nome}`,
+            from: 'ElectROM Engenharia <onboarding@resend.dev>',
+            to: ['comercial@ElectROM.eng.br'],
+            subject: `Novo Lead de Diagnóstico: ${subject} - ${name}`,
             html: `
               <h2>Novo Lead de Diagnóstico Energético</h2>
-              <p><strong>Nome:</strong> ${nome}</p>
+              <p><strong>Nome:</strong> ${name}</p>
               <p><strong>E-mail:</strong> ${email}</p>
-              <p><strong>Telefone/WhatsApp:</strong> ${telefone}</p>
-              <p><strong>Assunto/Escopo:</strong> ${assunto}</p>
-              <p><strong>Mensagem/Simulação:</strong></p>
+              <p><strong>Telefone/WhatsApp:</strong> ${phone}</p>
+              <p><strong>Assunto/Escopo:</strong> ${subject}</p>
+              <p><strong>Mensagem:</strong></p>
               <blockquote style="background: #f4f4f4; padding: 15px; border-left: 5px solid #7AA2E4;">
-                ${mensagem.replace(/\n/g, '<br/>')}
+                ${message.replace(/\n/g, '<br/>')}
               </blockquote>
             `,
           }),
         });
 
         if (response.ok) {
-          console.log('E-mail enviado com sucesso via Resend API.');
-          return NextResponse.json({ success: true, message: 'Lead enviado com sucesso!' });
+          leadData.sentViaEmail = true;
         } else {
           const errData = await response.json();
-          console.error('Falha no envio do e-mail do Resend:', errData);
-          // Fallback para persistência local se falhar o envio
+          console.error('Falha no envio via Resend:', errData);
         }
       } catch (emailErr) {
         console.error('Erro na requisição para Resend API:', emailErr);
       }
     }
 
-    // Persistência Local para Auditoria em Ambiente de Desenvolvimento (Segurança e Qualidade)
-    try {
-      const dataDir = path.join(process.cwd(), 'src', 'data');
-      if (!fs.existsSync(dataDir)) {
-        fs.mkdirSync(dataDir, { recursive: true });
-      }
-      const leadsFile = path.join(dataDir, 'leads_received.json');
-      let currentLeads = [];
-      if (fs.existsSync(leadsFile)) {
-        const fileContent = fs.readFileSync(leadsFile, 'utf-8');
-        try {
-          currentLeads = JSON.parse(fileContent);
-        } catch {
-          currentLeads = [];
-        }
-      }
-      currentLeads.push(leadData);
-      fs.writeFileSync(leadsFile, JSON.stringify(currentLeads, null, 2), 'utf-8');
-      console.log('Lead persistido localmente em src/data/leads_received.json');
-    } catch (saveErr) {
-      console.error('Erro ao persistir lead localmente:', saveErr);
-    }
+    // Always persist locally as backup / dev access
+    const currentLeads = readLocalLeads();
+    currentLeads.push(leadData);
+    saveLocalLeads(currentLeads);
 
     return NextResponse.json({
       success: true,
-      message: 'Lead recebido e salvo localmente para processamento.',
+      message: 'Lead recebido e processado com sucesso!',
+      sentViaEmail: leadData.sentViaEmail,
     });
   } catch (error) {
     console.error('Erro no processamento da rota de contato:', error);

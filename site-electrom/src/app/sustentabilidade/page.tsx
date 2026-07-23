@@ -85,7 +85,7 @@ export default function SustentabilidadePage() {
             Energia com Propósito: Impacto Mensurável e Real
           </h1>
           <p className="text-base md:text-lg text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
-            A Electrom combina alta engenharia, inovação de matrizes limpas e compromisso ambiental real para desenhar soluções sustentáveis economicamente viáveis.
+            A ElectROM combina alta engenharia, inovação de matrizes limpas e compromisso ambiental real para desenhar soluções sustentáveis economicamente viáveis.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <Link href="#impacto" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
@@ -242,7 +242,7 @@ export default function SustentabilidadePage() {
           <div className="glass-card rounded-2xl p-8 text-center max-w-3xl mx-auto border-white/5 relative overflow-hidden">
             <FaQuoteLeft className="text-brand-blue/15 text-5xl absolute top-6 left-6 pointer-events-none" />
             <p className="text-base italic text-gray-200 font-light leading-relaxed max-w-xl mx-auto relative z-10">
-              &quot;Geramos 410 créditos de carbono em 18 meses com auditoria e dimensionamento sustentável fornecidos pela Electrom.&quot;
+              &quot;Geramos 410 créditos de carbono em 18 meses com auditoria e dimensionamento sustentável fornecidos pela ElectROM.&quot;
             </p>
             <span className="block text-brand-blue font-bold font-mono text-xs mt-3 uppercase tracking-wider">— Gestão de ESG, Agro SP</span>
           </div>
@@ -318,7 +318,7 @@ export default function SustentabilidadePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                quote: "Além do retorno financeiro imediato da usina fotovoltaica, conseguimos lastrear os dados da Electrom em nosso Balanço de Sustentabilidade anual de forma auditável.",
+                quote: "Além do retorno financeiro imediato da usina fotovoltaica, conseguimos lastrear os dados da ElectROM em nosso Balanço de Sustentabilidade anual de forma auditável.",
                 author: "Diretoria de ESG, Grupo Metalúrgico SP"
               },
               {

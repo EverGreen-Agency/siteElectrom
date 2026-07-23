@@ -6,7 +6,20 @@ import CountUp from 'react-countup';
 import Image from 'next/image';
 import { companyData } from '../data/companyData';
 
-const impacts = [
+export interface ImpactMetricItem {
+  id: number;
+  value: number;
+  label: string;
+  sublabel: string;
+  prefix: string;
+  suffix: string;
+  color: string;
+  borderColor: string;
+  badge: string;
+  icon: React.ReactNode;
+}
+
+const impacts: ImpactMetricItem[] = [
   { 
     id: 1,
     value: companyData.metrics.yearsOfExperience.value, 
@@ -25,9 +38,9 @@ const impacts = [
   },
   { 
     id: 2,
-    value: companyData.totalObras, 
-    label: 'Obras Entregues', 
-    sublabel: 'Projetos elétricos, mecânicos e fotovoltaicos concluídos',
+    value: companyData.totalProjects, 
+    label: 'Projetos Entregues', 
+    sublabel: 'Projetos elétricos, civis, mecânicos e fotovoltaicos concluídos',
     prefix: '', 
     suffix: '+',
     color: 'text-brand-blue',
@@ -138,58 +151,50 @@ const impacts = [
 ];
 
 export default function ImpactNumbers() {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
   });
   
-  // O parallax move a imagem ligeiramente na vertical conforme a seção passa pela tela
   const bgY = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
 
   return (
-    <section ref={containerRef} className="relative py-28 bg-[#030706] overflow-hidden border-t border-white/5">
-      
-      {/* Background com parallax nativo e limpo */}
+    <section ref={containerRef} className="relative py-24 bg-[#030706] overflow-hidden border-t border-white/5">
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Container extra grande para não revelar o fundo durante o parallax */}
         <motion.div 
           className="absolute inset-0 w-full opacity-[0.15]"
           style={{ y: bgY, height: "130%", top: "-15%", willChange: "transform" }}
         >
           <Image 
             src="/obras/UsinaCipoGuacu/IMG_20190713_162528919_HDR.jpg"
-            alt="Usina Solar Fotovoltaica Cipó Guaçu - Electrom"
+            alt="Usina Solar Fotovoltaica Cipó Guaçu - ElectROM"
             fill
             className="object-cover object-center grayscale mix-blend-luminosity"
             priority
           />
         </motion.div>
         
-        {/* Overlay limpo para garantir legibilidade, sem a "linha dura" do degradê antigo */}
         <div className="absolute inset-0 bg-brand-petrol/40 mix-blend-multiply" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#030706] via-transparent to-[#030706]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-        
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan shadow-[0_0_8px_#00F0FF]" />
-            <span className="text-[10px] font-mono tracking-widest uppercase text-brand-cyan font-bold">
+            <span className="text-[10px] font-mono tracking-widest uppercase text-brand-cyan font-semibold">
               Métricas de Impacto
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-black leading-tight text-white">
+          <h2 className="text-3xl md:text-5xl font-display font-bold leading-tight text-white">
             Nosso Impacto em Números
           </h2>
-          <p className="text-gray-400 font-light text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-            Mais do que executar projetos de engenharia, construímos ativos sustentáveis sólidos e geramos eficiência financeira e operacional para as maiores marcas do país.
+          <p className="text-gray-400 font-normal text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+            Mais do que executar projetos de engenharia, construímos ativos sustentáveis sólidos e geramos eficiência financeira e operacional para as maiores empresas do&nbsp;país.
           </p>
         </div>
 
-        {/* Dashboard Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {impacts.map((item, idx) => (
             <motion.div 
@@ -201,9 +206,8 @@ export default function ImpactNumbers() {
               transition={{ duration: 0.5, delay: idx * 0.05 }}
               whileHover={{ y: -4, boxShadow: '0 10px 35px -10px rgba(0, 0, 0, 0.9)' }}
             >
-              {/* Card Top: Badge & Icon */}
               <div className="flex justify-between items-start">
-                <span className={`text-[9px] font-mono tracking-wider uppercase px-2 py-0.5 rounded-full border ${item.color} bg-white/5 border-white/5`}>
+                <span className={`text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded-md border ${item.color} bg-white/5 border-white/10 font-medium`}>
                   {item.badge}
                 </span>
                 <div className="text-gray-500 group-hover:text-white transition-colors duration-300">
@@ -211,9 +215,8 @@ export default function ImpactNumbers() {
                 </div>
               </div>
 
-              {/* Card Middle: Value & Name */}
-              <div className="space-y-2 mt-4">
-                <div className={`text-3xl md:text-4xl font-display font-black leading-none ${item.color}`}>
+              <div className="space-y-1.5 mt-4">
+                <div className={`text-3xl md:text-4xl font-display font-bold leading-none ${item.color}`}>
                   <CountUp 
                     end={item.value} 
                     duration={2.5} 
@@ -224,11 +227,10 @@ export default function ImpactNumbers() {
                     scrollSpyOnce
                   />
                 </div>
-                <h4 className="text-sm font-bold text-white tracking-tight">{item.label}</h4>
-                <p className="text-[11px] text-gray-400 font-light leading-snug">{item.sublabel}</p>
+                <h4 className="text-sm font-semibold text-white tracking-tight">{item.label}</h4>
+                <p className="text-[11px] text-gray-400 font-normal leading-snug">{item.sublabel}</p>
               </div>
 
-              {/* Card Bottom Decorator Line */}
               <div className="w-full bg-white/5 h-[1px] mt-4 relative overflow-hidden">
                 <motion.div 
                   className={`absolute left-0 top-0 h-full bg-gradient-to-r from-transparent via-current to-transparent ${item.color}`}
@@ -242,9 +244,7 @@ export default function ImpactNumbers() {
             </motion.div>
           ))}
         </div>
-
       </div>
-
     </section>
   );
 }

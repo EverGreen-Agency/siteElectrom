@@ -41,29 +41,29 @@ const LegalPage = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Termos de Uso</h2>
             <p className="mb-4">
-              Bem-vindo ao site da Electrom Engenharia. Ao acessar e utilizar este site, você concorda com os seguintes termos e condições:
+              Bem-vindo ao site da ElectROM Engenharia. Ao acessar e utilizar este site, você concorda com os seguintes termos e condições:
             </p>
 
             <h3 className="text-xl font-semibold mt-6 mb-3">1. Uso do Site</h3>
             <p className="mb-4">
-              O conteúdo deste site é fornecido apenas para fins informativos. A Electrom Engenharia reserva-se o direito de modificar ou descontinuar qualquer aspecto do site a qualquer momento.
+              O conteúdo deste site é fornecido apenas para fins informativos. A ElectROM Engenharia reserva-se o direito de modificar ou descontinuar qualquer aspecto do site a qualquer momento.
             </p>
 
             <h3 className="text-xl font-semibold mt-6 mb-3">2. Propriedade Intelectual</h3>
             <p className="mb-4">
-              Todo o conteúdo presente neste site, incluindo textos, imagens, logotipos e design, é propriedade da Electrom Engenharia e está protegido por leis de direitos autorais.
+              Todo o conteúdo presente neste site, incluindo textos, imagens, logotipos e design, é propriedade da ElectROM Engenharia e está protegido por leis de direitos autorais.
             </p>
 
             <h3 className="text-xl font-semibold mt-6 mb-3">3. Limitação de Responsabilidade</h3>
             <p className="mb-4">
-              A Electrom Engenharia não se responsabiliza por danos causados pelo uso ou impossibilidade de uso deste site, incluindo perdas diretas ou indiretas.
+              A ElectROM Engenharia não se responsabiliza por danos causados pelo uso ou impossibilidade de uso deste site, incluindo perdas diretas ou indiretas.
             </p>
           </div>
         ) : (
           <div>
             <h2 className="text-2xl font-semibold mb-4">Política de Privacidade</h2>
             <p className="mb-4">
-              Esta política descreve como a Electrom Engenharia coleta, usa e protege suas informações pessoais.
+              Esta política descreve como a ElectROM Engenharia coleta, usa e protege suas informações pessoais.
             </p>
 
             <h3 className="text-xl font-semibold mt-6 mb-3">1. Coleta de Informações</h3>

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSun, FaBolt, FaWrench, FaShieldAlt, FaBatteryFull, FaCar, FaFileInvoiceDollar, FaBuilding, FaArrowRight, FaArrowUp, FaArrowDown } from 'react-icons/fa';
+import { FaSun, FaBolt, FaWrench, FaShieldAlt, FaFileInvoiceDollar, FaBuilding, FaArrowRight, FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
 import { casesData } from '../../data/companyData';
@@ -12,13 +12,11 @@ const CasesPage = () => {
 
   const segmentos = [
     { id: 'Todos', icone: <FaBuilding className="text-sm" />, nome: 'Todos' },
-    { id: 'Solar', icone: <FaSun className="text-sm" />, nome: 'Solar' },
-    { id: 'Subestações', icone: <FaBolt className="text-sm" />, nome: 'Subestações' },
-    { id: 'Gerenciamento de Obras', icone: <FaWrench className="text-sm" />, nome: 'Gerenciamento' },
-    { id: 'Eficiência Energética', icone: <FaShieldAlt className="text-sm" />, nome: 'Eficiência' },
-    { id: 'Autossuficiência', icone: <FaBatteryFull className="text-sm" />, nome: 'Autossuficiência' },
-    { id: 'Mobilidade', icone: <FaCar className="text-sm" />, nome: 'Mobilidade' },
-    { id: 'Consultoria', icone: <FaFileInvoiceDollar className="text-sm" />, nome: 'Consultoria' }
+    { id: 'Energias Renováveis', icone: <FaSun className="text-sm" />, nome: 'Energias Renováveis' },
+    { id: 'Engenharia de Energias', icone: <FaShieldAlt className="text-sm" />, nome: 'Engenharia de Energias' },
+    { id: 'Consultoria de Energia', icone: <FaFileInvoiceDollar className="text-sm" />, nome: 'Consultoria de Energia' },
+    { id: 'Média e Baixa Tensão', icone: <FaBolt className="text-sm" />, nome: 'Média e Baixa Tensão' },
+    { id: 'Gerenciamento de Obras', icone: <FaWrench className="text-sm" />, nome: 'Gerenciamento de Obras' }
   ];
 
   const casesFiltrados = activeSegment === 'Todos' 
@@ -53,7 +51,7 @@ const CasesPage = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit mx-auto">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_#7AA2E4]" />
             <span className="text-[10px] font-mono tracking-widest uppercase text-brand-blue font-bold">
-              Portfólio de Obras
+              Portfólio de Projetos
             </span>
           </div>
           <h1 className="text-3xl md:text-5xl font-display font-black leading-tight text-white">

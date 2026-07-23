@@ -1,10 +1,22 @@
 "use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 import { companyData } from '../data/companyData';
 
-const metrics = [
+export interface TrustMetricItem {
+  value: number;
+  prefix: string;
+  suffix: string;
+  label: string;
+  sublabel: string;
+  colorClass: string;
+  glowClass: string;
+  icon: React.ReactNode;
+}
+
+const metrics: TrustMetricItem[] = [
   { 
     value: companyData.metrics.yearsOfExperience.value, 
     prefix: companyData.metrics.yearsOfExperience.prefix, 
@@ -52,84 +64,52 @@ const metrics = [
 export default function TrustBar() {
   return (
     <section className="w-full bg-brand-dark border-y border-white/5 relative overflow-hidden py-12">
-      {/* Blueprint grid background inside TrustBar */}
       <div className="absolute inset-0 blueprint-bg opacity-35 z-0" />
       
-      {/* Electric current dividing line at the top */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent overflow-hidden z-10">
         <div className="absolute top-0 left-0 h-full w-48 bg-gradient-to-r from-transparent via-brand-cyan to-transparent animate-shimmer" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 md:divide-x md:divide-white/10">
-          
-          {metrics.map((item, idx) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          {metrics.map((item, index) => (
             <motion.div
-              key={idx}
-              className="flex flex-col items-center md:items-start md:px-8 first:pl-0 last:pr-0 cursor-pointer group"
+              key={index}
+              className={`p-6 rounded-2xl glass-card border border-white/5 relative group transition-all duration-300 ${item.glowClass}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              
-              {/* Header: Icon + Value in Tactical split-flap frame */}
-              <div className="flex items-center gap-4 mb-4 select-none">
-                <div className={`p-2.5 rounded-lg bg-white/5 border border-white/10 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0)] ${item.glowClass}`}>
-                  <div className="group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                    {item.icon}
-                  </div>
+              <div className="flex items-center gap-5">
+                <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  {item.icon}
                 </div>
-                
-                {/* Tactical Terminal Display block */}
-                <div className={`flex items-center bg-black/50 border border-white/10 px-4 py-1.5 rounded-lg font-mono text-2xl md:text-3xl font-black shadow-inner transition-all duration-300 relative overflow-hidden ${item.glowClass}`}>
-                  
-                  {/* Tech scanline CRT grid overlay */}
-                  <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[size:100%_4px,6px_100%] opacity-15 pointer-events-none z-0" />
-                  
-                  {/* Micro sweep shimmer hover reflection */}
-                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out z-10 pointer-events-none" />
 
-                  <span className={`${item.colorClass} tracking-tight select-none relative z-10`}>
+                <div>
+                  <div className={`text-3xl md:text-4xl font-display font-bold leading-none ${item.colorClass}`}>
                     <CountUp 
                       end={item.value} 
                       duration={2.5} 
+                      separator="." 
                       prefix={item.prefix} 
                       suffix={item.suffix} 
                       enableScrollSpy
                       scrollSpyOnce
                     />
-                  </span>
-                  
-                  {/* Digital blinking cursor */}
-                  <span className={`w-2 h-4 ml-1.5 bg-current ${item.colorClass} animate-[pulse_1s_infinite] opacity-60 rounded-[1px] relative z-10`} />
+                  </div>
+                  <div className="text-sm font-semibold text-white mt-1 tracking-tight">
+                    {item.label}
+                  </div>
+                  <div className="text-xs text-gray-400 font-normal mt-0.5">
+                    {item.sublabel}
+                  </div>
                 </div>
               </div>
-
-              {/* Labels with pristine typographies */}
-              <div className="text-center md:text-left">
-                <h4 className="text-base font-display font-semibold text-white tracking-wide uppercase transition-colors duration-300 group-hover:text-white">
-                  {item.label}
-                </h4>
-                <p className="text-xs text-gray-400 mt-1 font-light max-w-[250px] transition-colors duration-300 group-hover:text-gray-300">
-                  {item.sublabel}
-                </p>
-              </div>
-
             </motion.div>
           ))}
-
         </div>
       </div>
-
-      {/* Electric current dividing line at the bottom */}
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent overflow-hidden z-10">
-        <div className="absolute bottom-0 left-0 h-full w-48 bg-gradient-to-r from-transparent via-brand-cyan to-transparent animate-shimmer [animation-delay:2s]" />
-      </div>
-
     </section>
   );
 }
-
- 

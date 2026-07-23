@@ -47,7 +47,7 @@ const Navbar = () => {
               <div className="absolute -inset-2 bg-brand-blue/10 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <Image
                 src="/ElectROM - Horizontal.png"
-                alt="Electrom Logo"
+                alt="ElectROM Logo"
                 width={180}
                 height={45}
                 className="h-10 w-auto relative z-10 transition-transform duration-300 group-hover:scale-[1.02]"
