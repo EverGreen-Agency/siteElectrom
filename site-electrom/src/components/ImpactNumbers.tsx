@@ -190,8 +190,8 @@ export default function ImpactNumbers() {
           <h2 className="text-3xl md:text-5xl font-display font-bold leading-tight text-white">
             Nosso Impacto em Números
           </h2>
-          <p className="text-gray-400 font-normal text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-            Mais do que executar projetos de engenharia, construímos ativos sustentáveis sólidos e geramos eficiência financeira e operacional para as maiores empresas do país.
+          <p className="text-gray-400 font-normal text-base md:text-lg leading-relaxed max-w-3xl mx-auto text-balance">
+            Mais do que executar projetos de engenharia, construímos ativos sustentáveis sólidos e geramos eficiência financeira e operacional para grandes empresas em todo o território nacional.
           </p>
         </div>
 
@@ -207,7 +207,7 @@ export default function ImpactNumbers() {
               whileHover={{ y: -4, boxShadow: '0 10px 35px -10px rgba(0, 0, 0, 0.9)' }}
             >
               <div className="flex justify-between items-start">
-                <span className={`text-[9px] font-mono tracking-wider uppercase px-2 py-0.5 rounded-full border ${item.color} bg-white/5 border-white/5 font-semibold`}>
+                <span className={`text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded-md border ${item.color} bg-white/5 border-white/10 font-medium`}>
                   {item.badge}
                 </span>
                 <div className="text-gray-500 group-hover:text-white transition-colors duration-300">
@@ -215,7 +215,7 @@ export default function ImpactNumbers() {
                 </div>
               </div>
 
-              <div className="space-y-2 mt-4">
+              <div className="space-y-1.5 mt-4">
                 <div className={`text-3xl md:text-4xl font-display font-bold leading-none ${item.color}`}>
                   <CountUp 
                     end={item.value} 

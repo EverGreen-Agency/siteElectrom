@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ElectROM.eng.br';
+  const baseUrl = 'https://electrom.eng.br';
   const routes = [
     '',
     '/sobre',

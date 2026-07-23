@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://ElectROM.eng.br/sitemap.xml',
+    sitemap: 'https://electrom.eng.br/sitemap.xml',
   };
 }
