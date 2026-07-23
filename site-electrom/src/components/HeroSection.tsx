@@ -86,14 +86,14 @@ export default function HeroSection() {
             </div>
             <div className="overflow-hidden pt-1 pb-2">
               <motion.div variants={maskItem} className="bg-gradient-to-r from-brand-blue via-brand-cyan to-white bg-clip-text text-transparent">
-                DE ENERGIA
+                DE ENERGIAS
               </motion.div>
             </div>
           </h1>
 
-          {/* Subtitle */}
-          <motion.p variants={fadeItem} className="text-base md:text-lg text-gray-300 mb-10 max-w-2xl font-normal leading-relaxed border-l-2 border-brand-blue/30 pl-4">
-            Há 30 anos transformando demandas complexas de energia, segurança e economia de escala para indústrias de alta performance.
+          {/* Subtitle com destaque de 30 ANOS e borda lateral */}
+          <motion.p variants={fadeItem} className="text-base md:text-lg text-gray-300 mb-10 max-w-2xl font-normal leading-relaxed border-l-2 border-brand-blue/50 pl-4">
+            Há mais de <span className="font-mono text-brand-cyan font-bold">30</span> <span className="text-brand-cyan font-bold tracking-wider">ANOS</span> transformando demandas complexas de <strong className="text-white font-semibold">subestações, média e baixa tensão e usinas solares</strong> em autonomia energética, segurança normativa e economia de escala para indústrias de alta performance.
           </motion.p>
 
           <motion.div variants={fadeItem} className="flex flex-col sm:flex-row gap-4">
