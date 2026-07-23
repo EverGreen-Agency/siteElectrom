@@ -24,7 +24,7 @@ const milestones: MilestoneItem[] = [
   {
     year: '2003',
     title: 'Expansão Nacional',
-    description: 'A empresa atinge a expressiva marca histórica de 317 projetos de infraestrutura elétrica e gerenciamento civil/industrial entregues em todo o território nacional.',
+    description: 'A empresa atinge a expressiva marca histórica de 317 obras de infraestrutura elétrica e gerenciamento de obras civis/industriais entregues em todo o território nacional.',
     image: '/obras/Obras/WP_20180404_12_32_22_Pro.jpg',
     tag: 'Crescimento'
   },
@@ -38,7 +38,7 @@ const milestones: MilestoneItem[] = [
   {
     year: '2012',
     title: 'Infraestrutura Urbana de Grande Porte',
-    description: 'Marca de 384 projetos concluídos, destacando-se o gerenciamento de obras de reservatórios elevados e infraestrutura urbana para o Hospital do Mandaqui e a Cinemateca de SP.',
+    description: 'Marca de 384 obras concluídas, destacando-se o gerenciamento de obras de reservatórios elevados e infraestrutura urbana para o Hospital do Mandaqui e a Cinemateca de SP.',
     image: '/obras/Obras/1996-004-03-3.jpg',
     tag: 'Infraestrutura'
   },
@@ -66,7 +66,7 @@ const milestones: MilestoneItem[] = [
   {
     year: '2025',
     title: 'Pioneirismo das Energias',
-    description: 'Homologação da usina solar comercial de 145,2 kWp para a academia SmartFit Embu Guaçu/SP, consolidando o legado com mais de 500 projetos de engenharia entregues.',
+    description: 'Homologação da usina solar comercial de 145,2 kWp para a academia SmartFit Embu Guaçu/SP, consolidando o legado com mais de 500 obras de engenharia entregues.',
     image: '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg',
     tag: 'Liderança de Mercado'
   }
