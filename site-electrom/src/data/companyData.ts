@@ -165,7 +165,7 @@ export const casesData: ProjectCase[] = [
     location: 'Cipó Guaçu, SP',
     metrics: [
       { label: 'Potência', value: '32.16 kWp' },
-      { label: 'Economia', value: 'R$ 35.000 / ano' },
+      { label: 'Economia', value: 'R$ 36.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
     description: 'Engenharia completa, homologação e instalação de usina de microgeração distribuída em solo (32,16 kWp), com inversor PHB e módulos Jinko.',
@@ -196,13 +196,13 @@ export const casesData: ProjectCase[] = [
   },
   {
     id: 2,
-    title: 'Smart Fit Embu Guaçu - Usina Solar Comercial',
+    title: 'Usina José Simões - Smart Fit Embu Guaçu',
     category: 'Energias Renováveis',
     segmento: 'comercial',
     location: 'Embu Guaçu, SP',
     metrics: [
       { label: 'Potência', value: '145.2 kWp' },
-      { label: 'Economia', value: 'R$ 180.000 / ano' },
+      { label: 'Economia', value: 'R$ 130.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
     description: 'Dimensionamento, homologação e comissionamento de usina comercial fotovoltaica sobre telhado (145,2 kWp) com inversores PHB e módulos DMEGC de alta performance.',
@@ -228,7 +228,7 @@ export const casesData: ProjectCase[] = [
       'Selo ESG & Reconhecimento de Marca'
     ]
   },
-  {
+  /* {
     id: 3,
     title: 'Escola Patelli - Transição Fotovoltaica & Tarifária',
     category: 'Consultoria de Energia',
@@ -265,8 +265,8 @@ export const casesData: ProjectCase[] = [
       'Payback real: 4,5 anos',
       'Integração pedagógica e sustentável'
     ]
-  },
-  {
+  }, */
+  /*{
     id: 4,
     title: 'Residencial Recanto - Subestação & Distribuição',
     category: 'Média e Baixa Tensão',
@@ -302,7 +302,7 @@ export const casesData: ProjectCase[] = [
       'Payback real: 4,1 anos',
       'Segurança elétrica e infraestrutura EV'
     ]
-  },
+  },*/
   {
     id: 5,
     title: 'Cabine de Pintura EMBRAER - Gestão de Obra',
@@ -375,7 +375,7 @@ export const casesData: ProjectCase[] = [
       'Laudo técnico de conformidade'
     ]
   },
-  {
+  /*{
     id: 7,
     title: 'Reservatórios de Grande Porte - Gerenciamento de Obras',
     category: 'Gerenciamento de Obras',
@@ -410,8 +410,8 @@ export const casesData: ProjectCase[] = [
       'Estruturas elevadas estáveis',
       'Conformidade com normas de saneamento'
     ]
-  },
-  {
+  },*/
+  /*{
     id: 8,
     title: 'Eletroposto Residencial Inteligente',
     category: 'Energias Renováveis',
@@ -447,6 +447,6 @@ export const casesData: ProjectCase[] = [
       'Medição individualizada de carga',
       'Rateio seguro entre usuários'
     ]
-  }
+  }*/
 ];
 

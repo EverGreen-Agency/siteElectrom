@@ -33,11 +33,12 @@ const services: ServiceItem[] = [
       { text: 'Estações de Recarga (VE)', tooltip: 'Infraestrutura corporativa e comercial para carregamento de veículos elétricos de alta performance.' },
       'Eólica',
       'Biomassa',
-      'Aquecimento Solar'
+      'Aquecimento Solar',
+      'Armazenamento de Energia'
     ],
-    testimonial: 'A ElectROM implantou nossa usina solar com agilidade e acabamento impecável. Tivemos retorno do investimento em tempo recorde.',
+    testimonial: 'A ElectROM implantou nossa usina solar com agilidade e acabamento impecável. Tivemos rápido retorno do investimento.',
     glowColor: 'bg-yellow-500',
-    image: '/obras/Paineis.jpeg',
+    image: '/obras/Paineis-recortada.jpeg',
     cta: 'Simular Economia Solar',
     icon: (
       <svg className="w-7 h-7 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -79,9 +80,10 @@ const services: ServiceItem[] = [
       { text: 'Gestão de Créditos de Carbono', tooltip: 'Monetização e certificação de compensação de carbono gerado pelas suas matrizes limpas.' },
       'Redução de perdas reativas indesejadas'
     ],
-    testimonial: 'A consultoria nos guiou com maestria rumo ao mercado livre de energia, gerando uma redução mensal imediata de 32%.',
+    testimonial: 'Realizamos a migração de nossa Matrix energética empregando diversos combustíveis com tranquilidade, mantendo alto rendimento, baixas emissões e custos.',
     glowColor: 'bg-orange-500',
     image: '/obras/Obras/Imagem10.png',
+    imageLabel: 'ADM - Rondonópolis',
     cta: 'Agendar Análise Gratuita',
     icon: (
       <svg className="w-7 h-7 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -95,13 +97,14 @@ const services: ServiceItem[] = [
     description: 'Sistemas elétricos complexos e subestações industriais. Garantia de confiabilidade energética e proteção de ativos.',
     features: [
       { text: 'Subestações (Cabine Primária)', tooltip: 'Entrada de energia em alta/média tensão que reduz o custo por kWh pago à concessionária.' },
-      'Painéis elétricos inteligentes e de comando central',
+      'Painéis de distribuição.',
       { text: 'Sistemas SPDA & Proteção de Surtos', tooltip: 'Proteção contra descargas atmosféricas e transientes para blindar equipamentos sensíveis.' },
       { text: 'Laudos de conformidade NBR 5410/14039', tooltip: 'Documentação jurídica e técnica para conformidade com normas regulamentadoras e seguradoras.' }
     ],
-    testimonial: 'A transição para nossa nova subestação de média tensão foi executada sem nenhuma interrupção em nossa linha de montagem.',
+    testimonial: 'A transição para nossa nova subestação de média tensão foi executada sem nenhuma interrupção.',
     glowColor: 'bg-cyan-500',
     image: '/obras/QuadroDistribuicao.png',
+    imageLabel: 'Usina Recanto São Luiz',
     cta: 'Solicitar Projeto Elétrico',
     icon: (
       <svg className="w-7 h-7 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,9 +124,10 @@ const services: ServiceItem[] = [
       'Gestão de contrato, equipe e materiais',
       'Segurança patrimonial e pessoal'
     ],
-    testimonial: 'O rigor metodológico e a fiscalização da ElectROM superaram nossas expectativas. Os projetos rodaram sob total controle.',
+    testimonial: 'O gerenciamento e fiscalização rigorosos na obra das torres de exaustão possibilitou o cumprimento do prazo em prazo menor, superando nossas expectativas. – EINSENMANN DO BRASIL.',
     glowColor: 'bg-blue-500',
     image: '/obras/Estrutura.jpeg',
+    imageLabel: 'Cabine de Pintura da Embraer – São José dos Campos',
     cta: 'Consultar Nossos Projetos',
     icon: (
       <svg className="w-7 h-7 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -161,16 +165,6 @@ interface SlideProps {
 }
 
 const ServiceSlideDesktop: React.FC<SlideProps> = ({ service, idx, totalSections, scrollYProgress }) => {
-  const imageX = useTransform(
-    scrollYProgress,
-    [
-      (idx - 1) / (totalSections - 1),
-      idx / (totalSections - 1),
-      (idx + 1) / (totalSections - 1)
-    ],
-    ['20%', '0%', '-20%']
-  )
-
   return (
     <div className="flex-shrink-0 w-[100vw] h-full bg-[#040807] flex items-center relative overflow-hidden">
       <div className={`absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full mix-blend-screen filter blur-[140px] opacity-15 ${service.glowColor} pointer-events-none`} />
@@ -259,17 +253,14 @@ const ServiceSlideDesktop: React.FC<SlideProps> = ({ service, idx, totalSections
         {/* Right Column: Image with Parallax & Testimonial */}
         <div className="space-y-6 lg:col-span-6 flex flex-col justify-center">
           <div className="relative aspect-[16/10] w-full rounded-2xl border border-white/10 overflow-hidden shadow-2xl group electric-border">
-            <motion.div 
-              className="absolute top-0 bottom-0 -left-[20%] -right-[20%] w-[140%]"
-              style={{ x: imageX, willChange: "transform" }}
-            >
+            <div className="absolute inset-0 w-full h-full">
               <Image 
                 src={service.image} 
                 alt={service.title}
                 fill
                 className={`object-cover group-hover:scale-105 transition-transform duration-700 ${service.imagePosition || 'object-center'}`}
               />
-            </motion.div>
+            </div>
             
             <div className="absolute top-4 left-4 glass-card px-3 py-1 rounded text-[10px] uppercase font-mono tracking-widest border-white/10">
               {service.imageLabel || 'REGISTRO REAL DE PROJETO'}
@@ -354,7 +345,7 @@ export default function ServicesHorizontalScroll() {
 
             <p className="text-sm text-gray-300 font-normal leading-relaxed">{service.description}</p>
 
-            <div className="relative aspect-video w-full rounded-xl overflow-hidden border border-white/10">
+            <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden border border-white/10">
               <Image src={service.image} alt={service.title} fill className="object-cover" />
             </div>
 
