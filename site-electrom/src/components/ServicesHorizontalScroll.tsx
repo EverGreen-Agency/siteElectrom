@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useRef } from 'react'
-import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
 
 export interface FeatureItem {
@@ -163,12 +163,9 @@ const staggerItem = {
 
 interface SlideProps {
   service: ServiceItem
-  idx: number
-  totalSections: number
-  scrollYProgress: MotionValue<number>
 }
 
-const ServiceSlideDesktop: React.FC<SlideProps> = ({ service, idx, totalSections, scrollYProgress }) => {
+const ServiceSlideDesktop: React.FC<SlideProps> = ({ service }) => {
   return (
     <div className="flex-shrink-0 w-[100vw] h-full bg-[#040807] flex items-center relative overflow-hidden">
       <div className={`absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full mix-blend-screen filter blur-[140px] opacity-15 ${service.glowColor} pointer-events-none`} />
@@ -315,13 +312,10 @@ export default function ServicesHorizontalScroll() {
             width: `${totalSections * 100}vw`
           }}
         >
-          {services.map((service, idx) => (
+          {services.map((service) => (
             <ServiceSlideDesktop 
               key={service.id} 
               service={service} 
-              idx={idx} 
-              totalSections={totalSections} 
-              scrollYProgress={scrollYProgress} 
             />
           ))}
         </motion.div>
