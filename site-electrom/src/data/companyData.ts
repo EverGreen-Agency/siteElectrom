@@ -141,6 +141,7 @@ export interface ProjectCase {
   description: string;
   featured: boolean;
   coverImage: string;
+  coverOrientation?: 'vertical' | 'horizontal';
   images: string[];
   video?: string;
   antes: {
@@ -209,7 +210,9 @@ export const casesData: ProjectCase[] = [
     featured: true,
     coverImage: '/obras/SmartFitSolar.png',
     images: [
-      '/obras/SmartFitSolar.png'
+      '/obras/SmartFitSolar.png',
+      '/obras/SmartFitSolar_lateral.png',
+      '/obras/SmartFitSolar_inversores.png',
     ],
     antes: {
       consumo: '22.000 kWh/mês',
@@ -316,9 +319,9 @@ export const casesData: ProjectCase[] = [
     ],
     description: 'Obra do sistema de exaustão da cabine de pintura de aeronaves da EMBRAER.',
     featured: true,
-    coverImage: '/obras/Obras/Imagem1.png',
+    coverImage: '/obras/gerenciamento-de-obras.png',
     images: [
-      '/obras/Obras/Imagem1.png',
+      '/obras/gerenciamento-de-obras.png',
       '/obras/Obras/Imagem11.jpg'
     ],
     antes: {
@@ -388,11 +391,10 @@ export const casesData: ProjectCase[] = [
     ],
     description: 'Gerenciamento, fiscalização e execução civil de reservatórios elevados industriais de grande porte e sistemas de saneamento para a Riviera de São Lourenço (56.000 L).',
     featured: false,
-    coverImage: '/obras/Obras/WP_20180404_12_32_22_Pro.jpg',
+    coverImage: '/obras/Obras/RivieraSaoLourenco.jpg',
+    coverOrientation: 'vertical',
     images: [
-      '/obras/Obras/WP_20180404_12_32_22_Pro.jpg',
-      '/obras/Obras/1996-016-04-3.jpg',
-      '/obras/Obras/1996-004-03-3.jpg'
+      '/obras/Obras/RivieraSaoLourenco.jpg'
     ],
     antes: {
       consumo: 'N/A',
@@ -461,9 +463,9 @@ export const casesData: ProjectCase[] = [
     ],
     description: 'Projeto de Eficiência Energética com foco na redução no consumo de combustível e das emissões atmosféricas na unidade da Cargill.',
     featured: false,
-    coverImage: '/obras/cargill.png',
+    coverImage: '/obras/CargillAgricola.png',
     images: [
-      '/obras/cargill.png'
+      '/obras/CargillAgricola.png'
     ],
     antes: {
       consumo: '-',

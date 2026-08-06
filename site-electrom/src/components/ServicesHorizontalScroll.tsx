@@ -39,7 +39,7 @@ const services: ServiceItem[] = [
     ],
     testimonial: 'A ElectROM implantou nossa usina solar com agilidade e acabamento impecável. Tivemos rápido retorno do investimento.',
     glowColor: 'bg-yellow-500',
-    image: '/obras/Paineis-recortada.jpeg',
+    image: '/obras/Paineis-recortada.png',
     cta: 'Simular Economia Solar',
     icon: (
       <svg className="w-7 h-7 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,7 +62,7 @@ const services: ServiceItem[] = [
     ],
     testimonial: 'Redução significativa de consumo de combustível e emissões.',
     glowColor: 'bg-emerald-500',
-    image: '/obras/Obras/Imagem6.png',
+    image: '/obras/engenharia-das-energias.png',
     imageLabel: 'Gerador de vapor e aquecedor de fluido térmico – Duratex Itapetininga',
     cta: 'Solicitar Estudo de Eficiência',
     icon: (
@@ -85,7 +85,7 @@ const services: ServiceItem[] = [
     ],
     testimonial: 'Realizamos a migração de nossa Matrix energética empregando diversos combustíveis com tranquilidade, mantendo alto rendimento, baixas emissões e custos.',
     glowColor: 'bg-orange-500',
-    image: '/obras/Obras/Imagem10.png',
+    image: '/obras/consultoria-de-energia.png',
     imageLabel: 'ADM - Rondonópolis',
     cta: 'Agendar Análise Gratuita',
     icon: (
@@ -130,7 +130,7 @@ const services: ServiceItem[] = [
     ],
     testimonial: 'O gerenciamento e fiscalização rigorosos na obra das torres de exaustão possibilitou a sua conclusão em prazo menor, superando nossas expectativas. – EINSENMANN DO BRASIL.',
     glowColor: 'bg-blue-500',
-    image: '/obras/Estrutura.jpeg',
+    image: '/obras/gerenciamento-de-obras.png',
     imageLabel: 'Cabine de Pintura da Embraer – São José dos Campos',
     cta: 'Consultar Nossos Projetos',
     icon: (
