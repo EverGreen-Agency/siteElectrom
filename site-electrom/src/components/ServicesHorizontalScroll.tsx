@@ -21,6 +21,7 @@ export interface ServiceItem {
   imageLabel?: string
   cta: string
   icon: React.ReactNode
+  imageOrientation?: 'vertical' | 'horizontal'
 }
 
 const services: ServiceItem[] = [
@@ -44,7 +45,8 @@ const services: ServiceItem[] = [
       <svg className="w-7 h-7 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
       </svg>
-    )
+    ),
+    imageOrientation: 'vertical'
   },
   {
     id: 2,
@@ -111,7 +113,8 @@ const services: ServiceItem[] = [
       <svg className="w-7 h-7 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
-    )
+    ),
+    imageOrientation: 'vertical'
   },
   {
     id: 5,
@@ -253,7 +256,7 @@ const ServiceSlideDesktop: React.FC<SlideProps> = ({ service, idx, totalSections
 
         {/* Right Column: Image with Parallax & Testimonial */}
         <div className="space-y-6 lg:col-span-6 flex flex-col justify-center">
-          <div className="relative aspect-[16/10] w-full rounded-2xl border border-white/10 overflow-hidden shadow-2xl group electric-border">
+          <div className={`relative ${service.imageOrientation === 'vertical' ? 'aspect-[10/16] max-w-[340px] mx-auto' : 'aspect-[16/10]'} w-full rounded-2xl border border-white/10 overflow-hidden shadow-2xl group electric-border`}>
             <div className="absolute inset-0 w-full h-full">
               <Image 
                 src={service.image} 
@@ -346,7 +349,7 @@ export default function ServicesHorizontalScroll() {
 
             <p className="text-sm text-gray-300 font-normal leading-relaxed">{service.description}</p>
 
-            <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden border border-white/10">
+            <div className={`relative ${service.imageOrientation === 'vertical' ? 'aspect-[10/16]' : 'aspect-[16/10]'} w-full rounded-xl overflow-hidden border border-white/10`}>
               <Image src={service.image} alt={service.title} fill className="object-cover" />
             </div>
 
