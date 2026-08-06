@@ -141,6 +141,7 @@ export interface ProjectCase {
   description: string;
   featured: boolean;
   coverImage: string;
+  coverOrientation?: 'vertical' | 'horizontal';
   images: string[];
   video?: string;
   antes: {
@@ -165,7 +166,7 @@ export const casesData: ProjectCase[] = [
     location: 'Cipó Guaçu, SP',
     metrics: [
       { label: 'Potência', value: '32.16 kWp' },
-      { label: 'Economia', value: 'R$ 35.000 / ano' },
+      { label: 'Economia', value: 'R$ 36.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
     description: 'Engenharia completa, homologação e instalação de usina de microgeração distribuída em solo (32,16 kWp), com inversor PHB e módulos Jinko.',
@@ -196,20 +197,22 @@ export const casesData: ProjectCase[] = [
   },
   {
     id: 2,
-    title: 'Smart Fit Embu Guaçu - Usina Solar Comercial',
+    title: 'Usina José Simões - Smart Fit Embu Guaçu',
     category: 'Energias Renováveis',
     segmento: 'comercial',
     location: 'Embu Guaçu, SP',
     metrics: [
       { label: 'Potência', value: '145.2 kWp' },
-      { label: 'Economia', value: 'R$ 180.000 / ano' },
+      { label: 'Economia', value: 'R$ 130.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
-    description: 'Dimensionamento, homologação e comissionamento de usina comercial fotovoltaica sobre telhado (145,2 kWp) com inversores PHB e módulos DMEGC de alta performance.',
+    description: 'Dimensionamento, homologação e comissionamento de usina comercial fotovoltaica sobre telhado (145,2 kWp) com inversores PHB e módulos DMEGC de alta performance. Elevada produção e recuperação do investimento de acordo com o projeto.',
     featured: true,
     coverImage: '/obras/SmartFitSolar.png',
     images: [
-      '/obras/SmartFitSolar.png'
+      '/obras/SmartFitSolar.png',
+      '/obras/SmartFitSolar_lateral.png',
+      '/obras/SmartFitSolar_inversores.png',
     ],
     antes: {
       consumo: '22.000 kWh/mês',
@@ -228,7 +231,7 @@ export const casesData: ProjectCase[] = [
       'Selo ESG & Reconhecimento de Marca'
     ]
   },
-  {
+  /* {
     id: 3,
     title: 'Escola Patelli - Transição Fotovoltaica & Tarifária',
     category: 'Consultoria de Energia',
@@ -265,8 +268,8 @@ export const casesData: ProjectCase[] = [
       'Payback real: 4,5 anos',
       'Integração pedagógica e sustentável'
     ]
-  },
-  {
+  }, */
+  /*{
     id: 4,
     title: 'Residencial Recanto - Subestação & Distribuição',
     category: 'Média e Baixa Tensão',
@@ -302,10 +305,10 @@ export const casesData: ProjectCase[] = [
       'Payback real: 4,1 anos',
       'Segurança elétrica e infraestrutura EV'
     ]
-  },
+  },*/
   {
     id: 5,
-    title: 'Cabine de Pintura EMBRAER - Gestão de Obra',
+    title: 'Cabine de Pintura EMBRAER',
     category: 'Gerenciamento de Obras',
     segmento: 'industrial',
     location: 'São José dos Campos, SP',
@@ -314,11 +317,11 @@ export const casesData: ProjectCase[] = [
       { label: 'Garantia', value: 'Zero Partículas' },
       { label: 'Status', value: 'Concluído' }
     ],
-    description: 'Gestão e fiscalização de obra elétrica e civil especializada no sistema de ventilação e exaustão da cabine de pintura de aeronaves da EMBRAER, garantindo estabilidade do fluxo de ar e filtragem absoluta de poeira nas fuselagens.',
+    description: 'Obra do sistema de exaustão da cabine de pintura de aeronaves da EMBRAER.',
     featured: true,
-    coverImage: '/obras/Obras/Imagem1.png',
+    coverImage: '/obras/gerenciamento-de-obras.png',
     images: [
-      '/obras/Obras/Imagem1.png',
+      '/obras/gerenciamento-de-obras.png',
       '/obras/Obras/Imagem11.jpg'
     ],
     antes: {
@@ -338,7 +341,7 @@ export const casesData: ProjectCase[] = [
       'Conformidade com normas de segurança'
     ]
   },
-  {
+  /*{
     id: 6,
     title: 'Eficiência Energética - Grupo Duratex',
     category: 'Engenharia de Energias',
@@ -374,25 +377,24 @@ export const casesData: ProjectCase[] = [
       'Eliminação de paradas na linha',
       'Laudo técnico de conformidade'
     ]
-  },
+  },*/
   {
     id: 7,
-    title: 'Reservatórios de Grande Porte - Gerenciamento de Obras',
+    title: 'Reservatórios de Grande Porte - Riviera São Lourenço',
     category: 'Gerenciamento de Obras',
     segmento: 'industrial',
-    location: 'Bertioga e São Paulo, SP',
+    location: 'Bertioga, SP',
     metrics: [
-      { label: 'Volume', value: '105.000 L' },
       { label: 'Escopo', value: 'Fiscalização Civil' },
+      { label: 'Volume', value: '56.000 L' },
       { label: 'Status', value: 'Ativo' }
     ],
-    description: 'Gerenciamento, fiscalização e execução civil de reservatórios elevados industriais de grande porte e sistemas de saneamento para a Cinemateca de SP (40.000 L) e a Riviera de São Lourenço (65.000 L).',
+    description: 'Gerenciamento, fiscalização e execução civil de reservatórios elevados industriais de grande porte e sistemas de saneamento para a Riviera de São Lourenço (56.000 L).',
     featured: false,
-    coverImage: '/obras/Obras/WP_20180404_12_32_22_Pro.jpg',
+    coverImage: '/obras/Obras/RivieraSaoLourenco.jpg',
+    coverOrientation: 'vertical',
     images: [
-      '/obras/Obras/WP_20180404_12_32_22_Pro.jpg',
-      '/obras/Obras/1996-016-04-3.jpg',
-      '/obras/Obras/1996-004-03-3.jpg'
+      '/obras/Obras/RivieraSaoLourenco.jpg'
     ],
     antes: {
       consumo: 'N/A',
@@ -411,7 +413,7 @@ export const casesData: ProjectCase[] = [
       'Conformidade com normas de saneamento'
     ]
   },
-  {
+  /*{
     id: 8,
     title: 'Eletroposto Residencial Inteligente',
     category: 'Energias Renováveis',
@@ -447,6 +449,38 @@ export const casesData: ProjectCase[] = [
       'Medição individualizada de carga',
       'Rateio seguro entre usuários'
     ]
+  }*/
+  {
+    id: 9,
+    title: 'Cargill Agrícola',
+    category: 'Engenharia de Energias',
+    segmento: 'industrial',
+    location: 'Mairinque, SP',
+    metrics: [
+      { label: 'Escopo', value: 'Eficiência Energética' },
+      { label: 'Economia', value: '1.600 t de combustível' },
+      { label: 'Status', value: 'Concluído' }
+    ],
+    description: 'Projeto de Eficiência Energética com foco na redução no consumo de combustível e das emissões atmosféricas na unidade da Cargill.',
+    featured: false,
+    coverImage: '/obras/CargillAgricola.png',
+    images: [
+      '/obras/CargillAgricola.png'
+    ],
+    antes: {
+      consumo: '-',
+      custo: '-',
+      impacto: 'Alto consumo de combustíveis fósseis/biomassa e emissões atmosféricas proporcionais ao processo.'
+    },
+    depois: {
+      consumo: 'Otimizado',
+      custo: 'Reduzido',
+      impacto: 'Redução drástica no consumo de combustível e mitigação das emissões.'
+    },
+    resultados: [
+      '1.600 toneladas de combustível economizado',
+      'Redução significativa das emissões atmosféricas',
+      'Eficiência Energética industrial aprimorada'
+    ]
   }
 ];
-

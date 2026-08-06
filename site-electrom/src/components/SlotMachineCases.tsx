@@ -90,7 +90,7 @@ export default function SlotMachineCases() {
                   project.featured ? 'md:col-span-2 lg:col-span-2' : ''
                 }`}
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className={`relative ${project.coverOrientation === 'vertical' ? 'aspect-[10/16]' : 'aspect-[16/10]'} overflow-hidden`}>
                   <Image
                     src={project.coverImage}
                     alt={project.title}
