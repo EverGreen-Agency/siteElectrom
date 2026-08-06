@@ -205,7 +205,7 @@ export const casesData: ProjectCase[] = [
       { label: 'Economia', value: 'R$ 130.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
-    description: 'Dimensionamento, homologação e comissionamento de usina comercial fotovoltaica sobre telhado (145,2 kWp) com inversores PHB e módulos DMEGC de alta performance.',
+    description: 'Dimensionamento, homologação e comissionamento de usina comercial fotovoltaica sobre telhado (145,2 kWp) com inversores PHB e módulos DMEGC de alta performance. Elevada produção e recuperação do investimento de acordo com o projeto.',
     featured: true,
     coverImage: '/obras/SmartFitSolar.png',
     images: [
@@ -305,7 +305,7 @@ export const casesData: ProjectCase[] = [
   },*/
   {
     id: 5,
-    title: 'Cabine de Pintura EMBRAER - Gestão de Obra',
+    title: 'Cabine de Pintura EMBRAER',
     category: 'Gerenciamento de Obras',
     segmento: 'industrial',
     location: 'São José dos Campos, SP',
@@ -314,7 +314,7 @@ export const casesData: ProjectCase[] = [
       { label: 'Garantia', value: 'Zero Partículas' },
       { label: 'Status', value: 'Concluído' }
     ],
-    description: 'Gestão e fiscalização de obra elétrica e civil especializada no sistema de ventilação e exaustão da cabine de pintura de aeronaves da EMBRAER, garantindo estabilidade do fluxo de ar e filtragem absoluta de poeira nas fuselagens.',
+    description: 'Obra do sistema de exaustão da cabine de pintura de aeronaves da EMBRAER.',
     featured: true,
     coverImage: '/obras/Obras/Imagem1.png',
     images: [
@@ -338,7 +338,7 @@ export const casesData: ProjectCase[] = [
       'Conformidade com normas de segurança'
     ]
   },
-  {
+  /*{
     id: 6,
     title: 'Eficiência Energética - Grupo Duratex',
     category: 'Engenharia de Energias',
@@ -374,19 +374,19 @@ export const casesData: ProjectCase[] = [
       'Eliminação de paradas na linha',
       'Laudo técnico de conformidade'
     ]
-  },
-  /*{
+  },*/
+  {
     id: 7,
-    title: 'Reservatórios de Grande Porte - Gerenciamento de Obras',
+    title: 'Reservatórios de Grande Porte - Riviera São Lourenço',
     category: 'Gerenciamento de Obras',
     segmento: 'industrial',
-    location: 'Bertioga e São Paulo, SP',
+    location: 'Bertioga, SP',
     metrics: [
-      { label: 'Volume', value: '105.000 L' },
       { label: 'Escopo', value: 'Fiscalização Civil' },
+      { label: 'Volume', value: '56.000 L' },
       { label: 'Status', value: 'Ativo' }
     ],
-    description: 'Gerenciamento, fiscalização e execução civil de reservatórios elevados industriais de grande porte e sistemas de saneamento para a Cinemateca de SP (40.000 L) e a Riviera de São Lourenço (65.000 L).',
+    description: 'Gerenciamento, fiscalização e execução civil de reservatórios elevados industriais de grande porte e sistemas de saneamento para a Riviera de São Lourenço (56.000 L).',
     featured: false,
     coverImage: '/obras/Obras/WP_20180404_12_32_22_Pro.jpg',
     images: [
@@ -410,7 +410,7 @@ export const casesData: ProjectCase[] = [
       'Estruturas elevadas estáveis',
       'Conformidade com normas de saneamento'
     ]
-  },*/
+  },
   /*{
     id: 8,
     title: 'Eletroposto Residencial Inteligente',
@@ -448,5 +448,37 @@ export const casesData: ProjectCase[] = [
       'Rateio seguro entre usuários'
     ]
   }*/
+  {
+    id: 9,
+    title: 'Cargill Agrícola',
+    category: 'Engenharia de Energias',
+    segmento: 'industrial',
+    location: 'Mairinque, SP',
+    metrics: [
+      { label: 'Escopo', value: 'Eficiência Energética' },
+      { label: 'Economia', value: '1.600 t de combustível' },
+      { label: 'Status', value: 'Concluído' }
+    ],
+    description: 'Projeto de Eficiência Energética com foco na redução no consumo de combustível e das emissões atmosféricas na unidade da Cargill.',
+    featured: false,
+    coverImage: '/obras/cargill.png',
+    images: [
+      '/obras/cargill.png'
+    ],
+    antes: {
+      consumo: '-',
+      custo: '-',
+      impacto: 'Alto consumo de combustíveis fósseis/biomassa e emissões atmosféricas proporcionais ao processo.'
+    },
+    depois: {
+      consumo: 'Otimizado',
+      custo: 'Reduzido',
+      impacto: 'Redução drástica no consumo de combustível e mitigação das emissões.'
+    },
+    resultados: [
+      '1.600 toneladas de combustível economizado',
+      'Redução significativa das emissões atmosféricas',
+      'Eficiência Energética industrial aprimorada'
+    ]
+  }
 ];
-

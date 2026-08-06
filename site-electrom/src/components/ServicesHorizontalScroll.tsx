@@ -27,7 +27,7 @@ const services: ServiceItem[] = [
   {
     id: 1,
     title: 'Energias Renováveis',
-    description: 'Sistemas completos de energia limpa e sustentável para autonomia energética e redução de custos e impacto ambiental.',
+    description: 'Sistemas completos de energia limpa, sustentável para autonomia energética, redução de custos e impacto ambiental.',
     features: [
       { text: 'Sistemas Fotovoltaicos', tooltip: 'Projetos dimensionados para máxima geração e integração com a estrutura predial ou em solo.' },
       { text: 'Estações de Recarga (VE)', tooltip: 'Infraestrutura corporativa e comercial para carregamento de veículos elétricos de alta performance.' },
@@ -58,10 +58,10 @@ const services: ServiceItem[] = [
       'Análise termográfica preventiva',
       'Projetos de conservação térmica'
     ],
-    testimonial: 'Os estudos de eficiência energética e termografia nas plantas reduziram drasticamente nossas perdas térmicas e elétricas.',
+    testimonial: 'Redução significativa de consumo de combustível e emissões.',
     glowColor: 'bg-emerald-500',
     image: '/obras/Obras/Imagem6.png',
-    imageLabel: 'Subestação de Eficiência Energética da Duratex - Botucatu',
+    imageLabel: 'Gerador de vapor e aquecedor de fluido térmico – Duratex Itapetininga',
     cta: 'Solicitar Estudo de Eficiência',
     icon: (
       <svg className="w-7 h-7 text-[#10B981]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -78,7 +78,8 @@ const services: ServiceItem[] = [
       { text: 'Migração para o Mercado Livre de Energia', tooltip: 'Transição estratégica da concessionária padrão para compra de energia no mercado livre (ACL) com tarifas reduzidas.' },
       { text: 'Geração Distribuída (GD)', tooltip: 'Modelagem financeira para abatimento de contas em múltiplas unidades consumidores.' },
       { text: 'Gestão de Créditos de Carbono', tooltip: 'Monetização e certificação de compensação de carbono gerado pelas suas matrizes limpas.' },
-      'Redução de perdas reativas indesejadas'
+      'Redução de perdas reativas indesejadas',
+      'Mudança de matriz energética',
     ],
     testimonial: 'Realizamos a migração de nossa Matrix energética empregando diversos combustíveis com tranquilidade, mantendo alto rendimento, baixas emissões e custos.',
     glowColor: 'bg-orange-500',
@@ -94,14 +95,14 @@ const services: ServiceItem[] = [
   {
     id: 4,
     title: 'Média e Baixa Tensão',
-    description: 'Sistemas elétricos complexos e subestações industriais. Garantia de confiabilidade energética e proteção de ativos.',
+    description: 'Sistemas elétricos complexos. Garantia de confiabilidade energética e proteção de ativos.',
     features: [
-      { text: 'Subestações (Cabine Primária)', tooltip: 'Entrada de energia em alta/média tensão que reduz o custo por kWh pago à concessionária.' },
-      'Painéis de distribuição.',
+      { text: 'Cabine Primária', tooltip: 'Entrada de energia em alta/média tensão que reduz o custo por kWh pago à concessionária.' },
+      'Painéis de distribuição',
       { text: 'Sistemas SPDA & Proteção de Surtos', tooltip: 'Proteção contra descargas atmosféricas e transientes para blindar equipamentos sensíveis.' },
-      { text: 'Laudos de conformidade NBR 5410/14039', tooltip: 'Documentação jurídica e técnica para conformidade com normas regulamentadoras e seguradoras.' }
+      { text: 'Laudos de conformidade NBR 5410/14039', tooltip: 'Documentação técnica para conformidade com normas regulamentadoras e seguradoras.' }
     ],
-    testimonial: 'A transição para nossa nova subestação de média tensão foi executada sem nenhuma interrupção.',
+    testimonial: 'A transição para nossa nova cabine de média tensão foi executada sem nenhuma interrupção.',
     glowColor: 'bg-cyan-500',
     image: '/obras/QuadroDistribuicao.png',
     imageLabel: 'Usina Recanto São Luiz',
@@ -124,7 +125,7 @@ const services: ServiceItem[] = [
       'Gestão de contrato, equipe e materiais',
       'Segurança patrimonial e pessoal'
     ],
-    testimonial: 'O gerenciamento e fiscalização rigorosos na obra das torres de exaustão possibilitou o cumprimento do prazo em prazo menor, superando nossas expectativas. – EINSENMANN DO BRASIL.',
+    testimonial: 'O gerenciamento e fiscalização rigorosos na obra das torres de exaustão possibilitou a sua conclusão em prazo menor, superando nossas expectativas. – EINSENMANN DO BRASIL.',
     glowColor: 'bg-blue-500',
     image: '/obras/Estrutura.jpeg',
     imageLabel: 'Cabine de Pintura da Embraer – São José dos Campos',

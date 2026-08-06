@@ -93,7 +93,7 @@ export default function HeroSection() {
 
           {/* Subtitle com destaque de 30 ANOS e borda lateral */}
           <motion.p variants={fadeItem} className="text-base md:text-lg text-gray-300 mb-10 max-w-2xl font-normal leading-relaxed border-l-2 border-brand-blue/50 pl-4">
-            Há mais de <span className="font-mono text-brand-cyan font-bold">30</span> <span className="text-brand-cyan font-bold tracking-wider">ANOS</span> transformando demandas complexas de <strong className="text-white font-semibold">subestações, média e baixa tensão e usinas solares</strong> em autonomia energética, segurança normativa e economia de escala para indústrias de alta performance.
+            Há mais de <span className="font-mono text-brand-cyan font-bold">30</span> <span className="text-brand-cyan font-bold tracking-wider">ANOS</span> transformando demandas complexas de <strong className="text-white font-semibold">média e baixa tensão e usinas solares</strong> em autonomia energética, segurança e economia de escala para indústrias de alta performance.
           </motion.p>
 
           <motion.div variants={fadeItem} className="flex flex-col sm:flex-row gap-4">
