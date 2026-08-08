@@ -45,7 +45,7 @@ export interface CompanyInfo {
 export const companyData: CompanyInfo = {
   name: 'ElectROM Engenharia',
   slogan: 'Engenharia de Energias',
-  tagline: 'Sustentabilidade, Eficiência e Inovação para um Futuro Energético Consciente.',
+  tagline: 'Sustentabilidade, Eficiência e Inovação para um Futuro Energético\u00A0Consciente.',
   experienceYears: 30, // Fundação em 1996, em 2026 completa 30 anos
   foundedYear: 1996,
   totalProjects: 550, // Updated to match the analyzed spreadsheet rows
@@ -56,11 +56,11 @@ export const companyData: CompanyInfo = {
   phone: '(11) 99962-0930',
   email: 'comercial@ElectROM.eng.br',
   address: {
-    street: 'Av. Paulista, 1000 - Bela Vista',
-    neighborhood: 'Bela Vista',
+    street: 'São Paulo',
+    neighborhood: '',
     city: 'São Paulo',
     state: 'SP',
-    zipCode: '01310-100',
+    zipCode: '',
   },
   social: {
     linkedin: 'https://linkedin.com/company/ElectROM-engenharia',
@@ -242,7 +242,7 @@ export const casesData: ProjectCase[] = [
       { label: 'Economia', value: 'R$ 6.000 / ano' },
       { label: 'Status', value: 'Ativo' }
     ],
-    description: 'Dimensionamento, consultoria tarifária e instalação de gerador fotovoltaico em telhado (6,5 kWp) integrado à subestação distribuidora escolar e sistema de monitoramento pedagógico.',
+    description: 'Dimensionamento, consultoria tarifária e instalação de gerador fotovoltaico em telhado (6,5 kWp) integrado ao quadro de entrada escolar e sistema de monitoramento pedagógico.',
     featured: false,
     coverImage: '/obras/EscolaPatelliFotovoltaica/WP_20180203_11_56_04_Pro.jpg',
     images: [
@@ -271,7 +271,7 @@ export const casesData: ProjectCase[] = [
   }, */
   /*{
     id: 4,
-    title: 'Residencial Recanto - Subestação & Distribuição',
+    title: 'Residencial Recanto - Cabine Primária & Distribuição',
     category: 'Média e Baixa Tensão',
     segmento: 'residencial',
     location: 'São Paulo, SP',

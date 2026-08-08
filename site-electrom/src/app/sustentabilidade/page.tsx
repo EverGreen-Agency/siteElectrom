@@ -49,7 +49,7 @@ export default function SustentabilidadePage() {
   ];
 
   return (
-    <div className="bg-brand-dark min-h-screen text-white relative overflow-hidden pb-20">
+    <div className="bg-brand-petrol min-h-screen text-white relative overflow-hidden pb-20">
       {/* Background blueprint details */}
       <div className="absolute inset-0 blueprint-bg opacity-15 pointer-events-none" />
 
@@ -66,7 +66,7 @@ export default function SustentabilidadePage() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#020504]/90 via-brand-dark/95 to-brand-dark" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#020504]/90 via-brand-petrol/95 to-brand-petrol" />
         </div>
         
         <motion.div 
@@ -81,8 +81,11 @@ export default function SustentabilidadePage() {
               Descarbonização & ESG
             </span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-display font-black leading-tight text-white max-w-3xl mx-auto">
-            Energia com Propósito: Impacto Mensurável e Real
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight uppercase mb-6 leading-[0.95] text-white max-w-4xl mx-auto text-balance">
+            Energia com Propósito:{' '}
+            <span className="bg-gradient-to-r from-brand-blue via-brand-cyan to-white bg-clip-text text-transparent">
+              Impacto Mensurável e&nbsp;Real
+            </span>
           </h1>
           <p className="text-base md:text-lg text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
             A ElectROM combina alta engenharia, inovação de matrizes limpas e compromisso ambiental real para desenhar soluções sustentáveis economicamente viáveis.
@@ -110,17 +113,17 @@ export default function SustentabilidadePage() {
             {[
               { 
                 icon: <FaSolarPanel className="text-4xl text-brand-blue" />, 
-                value: `${companyData.metrics.renewableEnergy.prefix}${companyData.metrics.renewableEnergy.value}${companyData.metrics.renewableEnergy.suffix}`, 
+                value: `${companyData.metrics.renewableEnergy.prefix}${companyData.metrics.renewableEnergy.value.toLocaleString('pt-BR')}${companyData.metrics.renewableEnergy.suffix}`, 
                 label: companyData.metrics.renewableEnergy.label 
               },
               { 
                 icon: <FaCloudDownloadAlt className="text-4xl text-brand-cyan" />, 
-                value: `${companyData.metrics.co2Avoided.value}${companyData.metrics.co2Avoided.suffix}`, 
+                value: `${companyData.metrics.co2Avoided.value.toLocaleString('pt-BR')}${companyData.metrics.co2Avoided.suffix}`, 
                 label: companyData.metrics.co2Avoided.label 
               },
               { 
                 icon: <FaTree className="text-4xl text-[#10B981]" />, 
-                value: `${companyData.metrics.treesSaved.value}${companyData.metrics.treesSaved.suffix}`, 
+                value: `${companyData.metrics.treesSaved.value.toLocaleString('pt-BR')}${companyData.metrics.treesSaved.suffix}`, 
                 label: companyData.metrics.treesSaved.label 
               },
             ].map((item, index) => (
@@ -183,14 +186,15 @@ export default function SustentabilidadePage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="glass-card rounded-2xl p-8 text-center border-white/5 flex flex-col justify-between"
+                className="glass-card rounded-2xl p-6 border-white/5 space-y-4"
               >
-                <div>
-                  <div className="mb-4 flex justify-center">
-                    <div className="p-3 bg-white/5 rounded-xl border border-white/10">{esg.icon}</div>
-                  </div>
-                  <h3 className="text-lg font-display font-bold text-white mb-3">{esg.title}</h3>
-                  <p className="text-gray-400 text-xs font-light leading-relaxed">{esg.description}</p>
+                <div className="flex items-center gap-3">
+                  <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-brand-blue">{esg.icon}</div>
+                  <h3 className="text-lg font-display font-bold text-white">{esg.title}</h3>
+                </div>
+                <p className="text-gray-400 text-xs font-light leading-relaxed">{esg.description}</p>
+                <div className="pt-2 border-t border-white/5">
+                  <span className="text-[10px] font-mono text-brand-cyan uppercase tracking-wider font-semibold">{esg.detail}</span>
                 </div>
               </motion.div>
             ))}
@@ -198,65 +202,7 @@ export default function SustentabilidadePage() {
         </div>
       </section>
 
-      {/* Créditos de Carbono */}
-      <section className="py-20 px-6 relative z-10 border-t border-white/5">
-        <div className="max-w-6xl mx-auto space-y-12">
-          <div className="text-center max-w-2xl mx-auto">
-            <span className="text-[10px] font-mono tracking-widest text-brand-blue uppercase font-bold">Ativos Verdes</span>
-            <h2 className="text-2xl md:text-3xl font-display font-black text-white mt-1">Créditos de Carbono & Monetização</h2>
-            <p className="text-gray-400 font-light text-sm mt-2">Mapeamos, certificamos e viabilizamos a conversão de economia energética em ativos negociáveis.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Redução com Lastro Técnico",
-                description: "Projetos de minigeração solar reduzem emissões com base nas metodologias oficiais de cálculo do GHG Protocol.",
-                icon: <FaChartLine className="text-3xl text-brand-blue" />
-              },
-              {
-                title: "Auditoria & Registro",
-                description: "Assessoria no rastreamento e registro de créditos junto a certificadoras nacionais e internacionais voluntárias.",
-                icon: <FaCertificate className="text-3xl text-brand-cyan" />
-              },
-              {
-                title: "Monetização B2B",
-                description: "Monetização de excedentes energéticos e créditos gerados para negociação em mercados ou compensação interna.",
-                icon: <FaCoins className="text-3xl text-[#10B981]" />
-              }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="glass-card rounded-2xl p-6 border-white/5 space-y-3"
-              >
-                <div className="mb-4 p-3 bg-white/5 rounded-xl border border-white/10 w-fit">{item.icon}</div>
-                <h3 className="text-base font-display font-bold text-white">{item.title}</h3>
-                <p className="text-gray-400 text-xs font-light leading-relaxed">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="glass-card rounded-2xl p-8 text-center max-w-3xl mx-auto border-white/5 relative overflow-hidden">
-            <FaQuoteLeft className="text-brand-blue/15 text-5xl absolute top-6 left-6 pointer-events-none" />
-            <p className="text-base italic text-gray-200 font-light leading-relaxed max-w-xl mx-auto relative z-10">
-              &quot;Geramos 410 créditos de carbono em 18 meses com auditoria e dimensionamento sustentável fornecidos pela ElectROM.&quot;
-            </p>
-            <span className="block text-brand-blue font-bold font-mono text-xs mt-3 uppercase tracking-wider">— Gestão de ESG, Agro SP</span>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Link href="/contato" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
-              Avaliar Meu Projeto
-            </Link>
-            <a href={`https://wa.me/${companyData.whatsappNumber}?text=${encodeURIComponent(companyData.whatsappMessage)}`} target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider flex items-center justify-center gap-2">
-              Falar com Especialista ESG
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* Ocultado temporariamente por solicitacao do usuario: Seção de Créditos de Carbono & Monetização */}
 
       {/* Sustentabilidade Incorporada */}
       <section className="py-20 px-6 relative z-10 border-t border-white/5">
@@ -342,7 +288,7 @@ export default function SustentabilidadePage() {
       </section>
 
       {/* CTA Final */}
-      <section className="w-full py-20 bg-brand-blue/5 border-t border-white/5 text-center relative z-10 mt-12">
+      <section className="w-full pt-16 pb-12 bg-brand-blue/5 border-t border-white/5 text-center relative z-10 mt-8">
         <div className="max-w-4xl mx-auto px-6 space-y-6">
           <h2 className="text-3xl md:text-4xl font-display font-black text-white">
             Faça sua energia valer valor ambiental real

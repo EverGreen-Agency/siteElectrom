@@ -17,58 +17,58 @@ const milestones: MilestoneItem[] = [
   {
     year: '1996',
     title: 'Fundação da ElectROM',
-    description: 'Nascimento da ElectROM em São Paulo, inicialmente focada em gestão de obras e laudos técnicos em engenharia elétrica e mecânica de saneamento, além de representação comercial.',
+    description: 'Nascimento da ElectROM em São Paulo, focada em gestão de obras e laudos técnicos em engenharia elétrica e mecânica.',
     image: '/obras/Obras/1996-016-04-3.jpg',
     tag: 'Fundação'
   },
   {
-    year: '2003',
-    title: 'Expansão Nacional',
-    description: 'A empresa atinge a expressiva marca histórica de 317 obras de infraestrutura elétrica e gerenciamento de obras civis/industriais entregues em todo o território nacional.',
-    image: '/obras/Obras/WP_20180404_12_32_22_Pro.jpg',
-    tag: 'Crescimento'
-  },
-  {
-    year: '2005',
-    title: 'Gestão e Conservação de Energia',
-    description: 'Início dos serviços de eficiência e conservação energética industrial, incluindo contratos com multinacionais como Duratex, Avon e Votorantim Celulose.',
+    year: 'Fev/2000',
+    title: 'Consultoria & Eficiência Energética',
+    description: 'Início das atividades de consultoria em conservação de energia e eficiência energética.',
     image: '/obras/Obras/Imagem13.png',
     tag: 'Eficiência Energética'
   },
   {
-    year: '2012',
-    title: 'Infraestrutura Urbana de Grande Porte',
-    description: 'Marca de 384 obras concluídas, destacando-se o gerenciamento de obras de reservatórios elevados e infraestrutura urbana para o Hospital do Mandaqui e a Cinemateca de SP.',
+    year: 'Dez/2001',
+    title: '275 Obras Entregues',
+    description: 'Totalizadas 275 obras entregues pelo país.',
+    image: '/obras/Obras/WP_20180404_12_32_22_Pro.jpg',
+    tag: 'Expansão'
+  },
+  {
+    year: 'Set/2005',
+    title: 'Especialidades Químicas',
+    description: 'Início da distribuição de especialidades químicas, atendendo à indústria eletroeletrônica, eletromecânica e automobilística.',
+    image: '/obras/engenharia-das-energias.png',
+    tag: 'Diversificação'
+  },
+  {
+    year: 'Dez/2009',
+    title: 'Obra nº 359',
+    description: 'Entrega da obra nº 359, em São Joaquim da Barra (SP).',
     image: '/obras/Obras/1996-004-03-3.jpg',
     tag: 'Infraestrutura'
   },
   {
-    year: '2016',
-    title: 'Certificação e Transição Solar',
-    description: 'Obtenção das certificações oficiais LGL Solar e PHB Eletrônica, iniciando oficialmente a divisão de projetos e instalação de Usinas Fotovoltaicas comerciais.',
+    year: 'Set/2015',
+    title: '1.800 Clientes Atendidos',
+    description: 'Totalizado atendimento de 1.800 clientes para especificação e fornecimento de especialidades químicas.',
+    image: '/obras/consultoria-de-energia.png',
+    tag: 'Relacionamento'
+  },
+  {
+    year: 'Dez/2016',
+    title: 'Início em Energia Solar',
+    description: 'Início das atividades e dos primeiros projetos para energia solar.',
     image: '/obras/EscolaPatelliFotovoltaica/WP_20180203_11_56_04_Pro.jpg',
-    tag: 'Transição Energética'
+    tag: 'Energia Solar'
   },
   {
-    year: '2019',
-    title: 'Usinas Fotovoltaicas de Minigeração',
-    description: 'Homologação e comissionamento de usinas solares de autoconsumo remoto e comerciais de média e baixa tensão, como o gerador de 52 kWp para BLOG7 - Villa Botânica em Itu/SP.',
-    image: '/obras/ObraRecantoFotovoltaica/IMG_20190308_091007933.jpg',
-    tag: 'Usinas Solares'
-  },
-  {
-    year: '2021',
-    title: 'Mobilidade Elétrica e Redes Escolares',
-    description: 'Instalação dos primeiros carregadores veiculares de alta potência (e-mobility) e a modernização de padrões de entrada elétrica em grandes colégios estaduais.',
-    image: '/obras/CarregadorEletrico/CarregadorEletrico.jpeg',
-    tag: 'Inovação & Smart Cities'
-  },
-  {
-    year: '2025',
-    title: 'Pioneirismo das Energias',
-    description: 'Homologação da usina solar comercial de 145,2 kWp para a academia SmartFit Embu Guaçu/SP, consolidando o legado com mais de 500 obras de engenharia entregues.',
+    year: 'Out/2017',
+    title: 'Primeira Obra Solar Homologada',
+    description: 'Primeira obra homologada na Escola Tatelli, em Campo Limpo Paulista (SP).',
     image: '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg',
-    tag: 'Liderança de Mercado'
+    tag: 'Homologação Solar'
   }
 ];
 

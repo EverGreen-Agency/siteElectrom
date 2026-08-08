@@ -7,11 +7,10 @@ import ImpactNumbers from "../components/ImpactNumbers";
 import BlogPreview from "../components/BlogPreview";
 import PartnersCarousel from "../components/PartnersCarousel";
 import ContactCTA from "../components/ContactCTA";
-import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-brand-dark">
+    <div className="min-h-screen bg-brand-petrol">
       <HeroSection />
       <TrustBar />
       <SolutionsGrid />
@@ -21,8 +20,7 @@ export default function Home() {
       <BlogPreview />
       <PartnersCarousel />
       <ContactCTA />
-      <Footer />
-    </main>
+    </div>
   );
 }
 

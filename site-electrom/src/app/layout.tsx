@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import "../styles/carousel.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,15 +12,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ElectROM Engenharia | Subestações, Mercado Livre & Energia Solar",
-  description: "Engenharia de Energias para indústrias e grandes empresas: Média e Baixa Tensão, Subestações, Mercado Livre de Energia (ACL), Eficiência Energética e Usinas Fotovoltaicas. Mais de 30 anos de excelência.",
+  title: "ElectROM Engenharia | Cabines Primárias, Mercado Livre & Energia Solar",
+  description: "Engenharia de Energias para indústrias e grandes empresas: Média e Baixa Tensão, Cabines Primárias, Mercado Livre de Energia (ACL), Eficiência Energética e Usinas Fotovoltaicas. Mais de 30 anos de excelência.",
   metadataBase: new URL("https://electrom.eng.br"),
   alternates: {
     canonical: "https://electrom.eng.br",
   },
   keywords: [
     "engenharia elétrica",
-    "subestação de média tensão",
+    "cabine primária de média tensão",
     "mercado livre de energia",
     "gerenciamento de obras elétricas",
     "energia solar industrial",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   authors: [{ name: "ElectROM Engenharia" }],
   openGraph: {
     title: "ElectROM Engenharia | Inteligência & Engenharia de Energias",
-    description: "Mais de 30 anos de solidez e inovação. Projetos elétricos industriais, subestações e transição para o Mercado Livre de Energia.",
+    description: "Mais de 30 anos de solidez e inovação. Projetos elétricos industriais, cabines primárias e transição para o Mercado Livre de Energia.",
     url: "https://electrom.eng.br",
     siteName: "ElectROM Engenharia",
     locale: "pt_BR",
@@ -85,10 +86,9 @@ const jsonLd = {
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Av. Paulista, 1000 - Bela Vista",
+        "streetAddress": "São Paulo",
         "addressLocality": "São Paulo",
         "addressRegion": "SP",
-        "postalCode": "01310-100",
         "addressCountry": "BR"
       },
       "geo": {
@@ -104,7 +104,7 @@ const jsonLd = {
       },
       "knowsAbout": [
         "Média e Baixa Tensão",
-        "Subestações e Cabines Primárias",
+        "Cabines Primárias e Proteção de Surtos",
         "Mercado Livre de Energia (ACL)",
         "Energias Renováveis e Usinas Fotovoltaicas",
         "Eficiência Energética Industrial",
@@ -143,7 +143,7 @@ const jsonLd = {
             "itemOffered": {
               "@type": "Service",
               "name": "Média e Baixa Tensão",
-              "description": "Projetos elétricos complexos, montagem de subestações de entrada, cabines primárias e laudos normativos NBR 5410/14039."
+              "description": "Projetos elétricos complexos, montagem de cabines primárias, quadros de distribuição e laudos normativos NBR 5410/14039."
             }
           },
           {
@@ -176,6 +176,7 @@ export default function RootLayout({
         <main className="pt-16">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

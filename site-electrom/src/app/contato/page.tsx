@@ -56,7 +56,7 @@ const ContactPage = () => {
   const whatsappLink = `https://wa.me/${companyData.whatsappNumber}?text=${encodeURIComponent(companyData.whatsappMessage)}`;
 
   return (
-    <div className="min-h-screen w-full bg-brand-dark text-white relative overflow-hidden pb-20">
+    <div className="min-h-screen w-full bg-brand-petrol text-white relative overflow-hidden pb-20">
       {/* Background blueprint details */}
       <div className="absolute inset-0 blueprint-bg opacity-15 pointer-events-none" />
 
@@ -71,10 +71,13 @@ const ContactPage = () => {
               Central de Atendimento
             </span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-display font-black leading-tight text-white">
-            Fale com Especialistas em Engenharia
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight uppercase mb-6 leading-[0.95] text-white max-w-4xl mx-auto text-balance">
+            Fale com Especialistas em{' '}
+            <span className="bg-gradient-to-r from-brand-blue via-brand-cyan to-white bg-clip-text text-transparent">
+              Engenharia
+            </span>
           </h1>
-          <p className="text-base md:text-lg text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-gray-400 font-light max-w-2xl mx-auto leading-relaxed text-balance">
             Mais de {companyData.experienceYears} anos de know-how e projetos entregues. Receba uma avaliação técnica gratuita e otimize seus custos de energia.
           </p>
         </header>
@@ -152,8 +155,8 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <span className="block text-xs font-mono text-gray-400 uppercase">Sede Corporativa</span>
-                  <span className="block text-white text-xs leading-normal mt-0.5">
-                    {companyData.address.street}<br />{companyData.address.city} - {companyData.address.state}, {companyData.address.zipCode}
+                  <span className="block text-white text-sm font-medium leading-normal mt-0.5">
+                    {companyData.address.city} - {companyData.address.state}
                   </span>
                 </div>
               </div>
@@ -260,7 +263,7 @@ const ContactPage = () => {
                       >
                         <option value="" className="bg-brand-petrol">Selecione o escopo</option>
                         <option value="Solar" className="bg-brand-petrol">Energia Solar Fotovoltaica</option>
-                        <option value="Eletrica" className="bg-brand-petrol">Projetos de Instalações &amp; Subestações</option>
+                        <option value="Eletrica" className="bg-brand-petrol">Projetos de Instalações &amp; Cabines Primárias</option>
                         <option value="Eficiencia" className="bg-brand-petrol">Eficiência Energética</option>
                         <option value="Consultoria" className="bg-brand-petrol">Consultoria Tarifária &amp; Mercado Livre</option>
                         <option value="Outro" className="bg-brand-petrol">Outro assunto</option>
