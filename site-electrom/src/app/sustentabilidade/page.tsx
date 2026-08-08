@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaLeaf, FaChartLine, FaIndustry, FaSolarPanel, FaUsers, FaShieldAlt, FaCoins, FaCertificate, FaChartPie, FaClipboardCheck, FaFileAlt, FaWhatsapp, FaTree, FaCloudDownloadAlt, FaQuoteLeft } from 'react-icons/fa';
+import { FaLeaf, FaChartLine, FaIndustry, FaSolarPanel, FaUsers, FaShieldAlt, FaCertificate, FaChartPie, FaClipboardCheck, FaFileAlt, FaWhatsapp, FaTree, FaCloudDownloadAlt } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 import { companyData } from '../../data/companyData';
@@ -193,9 +193,6 @@ export default function SustentabilidadePage() {
                   <h3 className="text-lg font-display font-bold text-white">{esg.title}</h3>
                 </div>
                 <p className="text-gray-400 text-xs font-light leading-relaxed">{esg.description}</p>
-                <div className="pt-2 border-t border-white/5">
-                  <span className="text-[10px] font-mono text-brand-cyan uppercase tracking-wider font-semibold">{esg.detail}</span>
-                </div>
               </motion.div>
             ))}
           </div>
