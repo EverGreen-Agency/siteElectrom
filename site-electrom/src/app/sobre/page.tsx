@@ -8,27 +8,47 @@ export default function SobrePage() {
     {
       year: '1996',
       title: 'Fundação da ElectROM',
-      desc: 'Nascimento da ElectROM em São Paulo, focada em gestão de obras e laudos técnicos de engenharia elétrica e mecânica.'
+      desc: 'Nascimento da ElectROM em São Paulo, focada em gestão de obras projetadas e laudos técnicos de engenharia elétrica e mecânica.'
     },
     {
-      year: '2005',
-      title: 'Eficiência Energética Industrial',
-      desc: 'Início dos contratos corporativos de eficiência e conservação de energia com grandes grupos industriais nacionais.'
+      year: 'Fev/2000',
+      title: 'Consultoria & Eficiência Energética',
+      desc: 'Início das atividades de consultoria em conservação de energia e eficiência energética.'
     },
     {
-      year: '2016',
-      title: 'Divisão Solar Fotovoltaica',
-      desc: 'Homologação e estruturação da divisão de projetos, dimensionamento e instalação de usinas solares de minigeração.'
+      year: 'Dez/2001',
+      title: '275 Obras Entregues',
+      desc: 'Totalizadas 275 obras entregues pelo país.'
     },
     {
-      year: '2025',
-      title: 'Legado e Liderança',
-      desc: 'Mais de 500 obras físicas ativas entregues em todo o país e reposicionamento estratégico como "Engenharia de Energias".'
+      year: 'Set/2005',
+      title: 'Especialidades Químicas',
+      desc: 'Início da distribuição de especialidades químicas, atendendo à indústria eletroeletrônica, eletromecânica e automobilística.'
+    },
+    {
+      year: 'Dez/2009',
+      title: 'Obra nº 359',
+      desc: 'Entrega da obra nº 359, em São Joaquim da Barra (SP).'
+    },
+    {
+      year: 'Set/2015',
+      title: '1.800 Clientes Atendidos',
+      desc: 'Totalizado atendimento de 1.800 clientes para especificação e fornecimento de especialidades químicas.'
+    },
+    {
+      year: 'Dez/2016',
+      title: 'Início em Energia Solar',
+      desc: 'Início das atividades e dos primeiros projetos para energia solar.'
+    },
+    {
+      year: 'Out/2017',
+      title: 'Primeira Obra Solar Homologada',
+      desc: 'Primeira obra homologada na Escola Tatelli, em Campo Limpo Paulista (SP).'
     }
   ];
 
   return (
-    <div className="bg-brand-dark min-h-screen text-white relative overflow-hidden">
+    <div className="bg-brand-petrol min-h-screen text-white relative overflow-hidden">
       {/* Background blueprint details */}
       <div className="absolute inset-0 blueprint-bg opacity-15 pointer-events-none" />
 
@@ -44,8 +64,11 @@ export default function SobrePage() {
               Quem Somos & Legado
             </span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-display font-black leading-tight drop-shadow-lg text-white">
-            {companyData.experienceYears} Anos de Engenharia com Propósito
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight uppercase mb-6 leading-[0.95] text-white max-w-4xl mx-auto text-balance">
+            {companyData.experienceYears} Anos de Engenharia{' '}
+            <span className="bg-gradient-to-r from-brand-blue via-brand-cyan to-white bg-clip-text text-transparent">
+              com Propósito
+            </span>
           </h1>
           <p className="text-xl text-brand-blue font-medium max-w-2xl mx-auto leading-relaxed">
             {companyData.tagline}
@@ -122,45 +145,41 @@ export default function SobrePage() {
               <FaRecycle className="text-xl" />
             </div>
             <h4 className="font-display font-bold text-sm text-white mb-2">Impacto Ecológico</h4>
-            <p className="text-gray-400 text-xs font-light leading-relaxed">Foco estrito em descarbonização e mitigação de perdas térmicas ou reativas industriais.</p>
+            <p className="text-gray-400 text-xs font-light leading-relaxed">Foco estrito em descarbonização e mitigação de perdas térmicas industriais.</p>
           </div>
           <div className="glass-card rounded-2xl p-6 flex flex-col items-center text-center border-white/5">
             <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-brand-blue mb-3">
               <FaLightbulb className="text-xl" />
             </div>
             <h4 className="font-display font-bold text-sm text-white mb-2">Inovação e IoT</h4>
-            <p className="text-gray-400 text-xs font-light leading-relaxed">Uso de monitoramento IoT para controle de consumo de energia em tempo real de ativos de média tensão.</p>
+            <p className="text-gray-400 text-xs font-light leading-relaxed">Uso de monitoramento IoT para controle de consumo de energia em tempo real de ativos.</p>
           </div>
           <div className="glass-card rounded-2xl p-6 flex flex-col items-center text-center border-white/5">
             <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-brand-cyan mb-3">
               <FaHandshake className="text-xl" />
             </div>
             <h4 className="font-display font-bold text-sm text-white mb-2">Responsabilidade Civil</h4>
-            <p className="text-gray-400 text-xs font-light leading-relaxed">Projetos com emissão rigorosa de ART e conformidade de engenharia sob regulação do CREA.</p>
+            <p className="text-gray-400 text-xs font-light leading-relaxed">Projetos com emissão de ART e conformidade de engenharia sob regulação da ABNT.</p>
           </div>
         </div>
       </section>
 
       {/* 5. Diretoria Técnica Real */}
       <section className="max-w-4xl mx-auto py-16 px-6 flex flex-col md:flex-row items-center gap-10 relative z-10 border-t border-white/5">
-        <div className="flex-shrink-0 w-40 h-40 rounded-full overflow-hidden border-4 border-brand-blue shadow-lg relative bg-brand-petrol/60 flex items-center justify-center">
+        <div className="flex-shrink-0 w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-brand-blue shadow-lg relative bg-brand-petrol/60 flex items-center justify-center">
           <FaUserTie className="text-6xl text-brand-blue opacity-85" />
         </div>
-        <div className="space-y-4">
-          <h3 className="text-2xl font-display font-black text-white">Eng. João Mendes</h3>
-          <span className="block text-brand-cyan font-mono text-xs uppercase tracking-widest font-bold">Fundador e Diretor Técnico // CREA-SP 5061996120</span>
-          
-          <div className="relative">
-            <FaQuoteLeft className="text-brand-blue/15 text-5xl absolute -top-4 -left-4 pointer-events-none" />
-            <blockquote className="italic text-gray-300 font-light text-sm leading-relaxed relative z-10 pl-6 border-l-2 border-brand-blue/30">
-              &quot;Desde que fundamos a ElectROM em 1996, operamos sob a premissa de que a engenharia elétrica deve ser tratada como um ativo estratégico financeiro e de descarbonização para nossos clientes. São 30 anos assinando laudos, instalando cabines primárias e usinas solares com total transparência técnica.&quot;
-            </blockquote>
+        <div className="space-y-3 flex-1">
+          <div>
+            <h3 className="text-2xl font-display font-black text-white">Eng. Rubens O. de Mattos</h3>
+            <span className="block text-brand-cyan font-mono text-xs uppercase tracking-widest font-bold mt-1">Fundador e Diretor Técnico // CREA-SP</span>
           </div>
           
-          <div className="flex flex-wrap gap-2 text-xs pt-2">
-            <span className="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-gray-400">Especialista em Usinas Fotovoltaicas</span>
-            <span className="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-gray-400">Membro da ABSOLAR</span>
-            <span className="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-gray-400">Consultor Tarifário Corporativo</span>
+          <div className="relative pt-2">
+            <FaQuoteLeft className="text-brand-blue/20 text-3xl absolute -top-1 -left-2 pointer-events-none" />
+            <blockquote className="italic text-gray-200 font-light text-sm md:text-base leading-relaxed relative z-10 pl-6 border-l-2 border-brand-blue/40">
+              &quot;A Electrom é a realização do desejo de tornar a engenharia acessível a todos, através de tecnologias que convertam os recursos naturais renováveis em benefício sustentável, com investimento de rápido retorno.&quot;
+            </blockquote>
           </div>
         </div>
       </section>
@@ -210,24 +229,20 @@ export default function SobrePage() {
       </section>
 
       {/* 7. Métricas de Autoridade Técnica */}
-      <section className="max-w-6xl mx-auto py-16 px-6 relative z-10 border-t border-white/5">
-        <h2 className="text-2xl md:text-3xl font-display font-black text-center mb-12 text-white">Nosso Diferencial Técnico</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
-          <div className="glass-card rounded-2xl p-6 border-white/5">
-            <span className="block text-3xl font-display font-black text-brand-blue">{companyData.metrics.yearsOfExperience.value}</span>
-            <span className="block text-gray-400 text-xs font-light mt-1">Anos de experiência técnica</span>
+      <section className="max-w-5xl mx-auto py-16 px-6 relative z-10 border-t border-white/5">
+        <h2 className="text-2xl md:text-3xl font-display font-black text-center mb-12 text-white">Nosso Diferencial em Números</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center max-w-4xl mx-auto">
+          <div className="glass-card rounded-2xl p-6 border-white/5 space-y-1">
+            <span className="block text-4xl font-display font-black text-brand-blue">{companyData.metrics.yearsOfExperience.value}</span>
+            <span className="block text-gray-400 text-xs font-light">Anos de Experiência Técnica</span>
           </div>
-          <div className="glass-card rounded-2xl p-6 border-white/5">
-            <span className="block text-3xl font-display font-black text-brand-cyan">{companyData.totalProjects}+</span>
-            <span className="block text-gray-400 text-xs font-light mt-1">Projetos elétricos entregues</span>
+          <div className="glass-card rounded-2xl p-6 border-white/5 space-y-1">
+            <span className="block text-4xl font-display font-black text-brand-cyan">{companyData.totalProjects}+</span>
+            <span className="block text-gray-400 text-xs font-light">Obras Homologadas no País</span>
           </div>
-          <div className="glass-card rounded-2xl p-6 border-white/5">
-            <span className="block text-3xl font-display font-black text-brand-blue">{companyData.totalProjects}+</span>
-            <span className="block text-gray-400 text-xs font-light mt-1">Obras físicas homologadas</span>
-          </div>
-          <div className="glass-card rounded-2xl p-6 border-white/5">
-            <span className="block text-3xl font-display font-black text-brand-cyan">{companyData.metrics.clientsServed.value}+</span>
-            <span className="block text-gray-400 text-xs font-light mt-1">Clientes corporativos atendidos</span>
+          <div className="glass-card rounded-2xl p-6 border-white/5 space-y-1">
+            <span className="block text-4xl font-display font-black text-[#10B981]">{companyData.metrics.clientsServed.value.toLocaleString('pt-BR')}+</span>
+            <span className="block text-gray-400 text-xs font-light">Clientes Atendidos</span>
           </div>
         </div>
       </section>

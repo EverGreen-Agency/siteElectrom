@@ -104,7 +104,7 @@ const services: ServiceItem[] = [
       { text: 'Sistemas SPDA & Proteção de Surtos', tooltip: 'Proteção contra descargas atmosféricas e transientes para blindar equipamentos sensíveis.' },
       { text: 'Laudos de conformidade NBR 5410/14039', tooltip: 'Documentação técnica para conformidade com normas regulamentadoras e seguradoras.' }
     ],
-    testimonial: 'A transição para nossa nova cabine de média tensão foi executada sem nenhuma interrupção.',
+    testimonial: 'A transição para nossos novos quadros de distribuição foi executada sem nenhuma interrupção.',
     glowColor: 'bg-cyan-500',
     image: '/obras/QuadroDistribuicao.png',
     imageLabel: 'Usina Recanto São Luiz',
@@ -173,11 +173,11 @@ const ServiceSlideDesktop: React.FC<SlideProps> = ({ service }) => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#040807]/80 to-[#040807] pointer-events-none" />
       <div className="absolute inset-0 blueprint-bg opacity-10 pointer-events-none mix-blend-overlay" />
 
-      <div className="container mx-auto px-6 md:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center h-full relative z-10 pt-8 lg:pt-0">
+      <div className="container mx-auto px-6 md:px-16 grid grid-cols-1 lg:grid-cols-12 gap-6 xl:gap-12 items-center h-full relative z-10 pt-20 pb-6 lg:py-0">
         {/* Left Column */}
-        <div className="space-y-6 lg:col-span-6">
+        <div className="space-y-4 xl:space-y-6 lg:col-span-6">
           <div className="flex items-center gap-4">
-            <div className="p-3 rounded-xl bg-white/5 border border-white/10 w-fit shadow-md flex-shrink-0 text-brand-cyan">
+            <div className="p-2.5 xl:p-3 rounded-xl bg-white/5 border border-white/10 w-fit shadow-md flex-shrink-0 text-brand-cyan">
               {service.icon}
             </div>
             <div className="flex flex-col">
@@ -190,20 +190,20 @@ const ServiceSlideDesktop: React.FC<SlideProps> = ({ service }) => {
             </div>
           </div>
 
-          <h3 className="text-3xl md:text-4xl font-display font-bold leading-tight text-white flex items-center gap-4 flex-wrap">
-            <span className="text-transparent font-mono text-3xl md:text-5xl select-none" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.3)' }}>
+          <h3 className="text-2xl xl:text-4xl font-display font-bold leading-tight text-white flex items-center gap-3 xl:gap-4 flex-wrap">
+            <span className="text-transparent font-mono text-2xl xl:text-5xl select-none" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.3)' }}>
               0{service.id}
             </span>
             <span>{service.title}</span>
           </h3>
 
-          <p className="text-base font-normal text-gray-300 leading-relaxed max-w-xl">
+          <p className="text-sm xl:text-base font-normal text-gray-300 leading-relaxed max-w-xl">
             {service.description}
           </p>
 
           {/* Staggered Features List */}
           <motion.ul 
-            className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl pt-2"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 xl:gap-3 max-w-xl pt-1"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -218,9 +218,9 @@ const ServiceSlideDesktop: React.FC<SlideProps> = ({ service }) => {
                 <motion.li
                   key={featureIdx}
                   variants={staggerItem}
-                  className="flex items-start text-gray-300 text-sm gap-2"
+                  className="flex items-start text-gray-300 text-xs xl:text-sm gap-2"
                 >
-                  <span className="w-1.5 h-1.5 bg-brand-cyan rounded-full mt-2 flex-shrink-0 shadow-[0_0_8px_#00F0FF]"></span>
+                  <span className="w-1.5 h-1.5 bg-brand-cyan rounded-full mt-1.5 flex-shrink-0 shadow-[0_0_8px_#00F0FF]"></span>
                   {tooltip ? (
                     <div className="relative group flex items-center gap-1.5 cursor-help">
                       <span className="border-b border-dashed border-gray-400 hover:text-white transition-colors">
@@ -243,7 +243,7 @@ const ServiceSlideDesktop: React.FC<SlideProps> = ({ service }) => {
             })}
           </motion.ul>
 
-          <button className="px-6 py-3 rounded-lg text-sm font-semibold tracking-wide text-brand-petrol bg-brand-blue hover:bg-brand-blue/95 hover:shadow-lg hover:shadow-brand-blue/20 transition-all active:scale-95 inline-flex items-center gap-2">
+          <button className="px-5 py-2.5 xl:px-6 xl:py-3 rounded-lg text-xs xl:text-sm font-semibold tracking-wide text-brand-petrol bg-brand-blue hover:bg-brand-blue/95 hover:shadow-lg hover:shadow-brand-blue/20 transition-all active:scale-95 inline-flex items-center gap-2">
             {service.cta}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -252,8 +252,8 @@ const ServiceSlideDesktop: React.FC<SlideProps> = ({ service }) => {
         </div>
 
         {/* Right Column: Image with Parallax & Testimonial */}
-        <div className="space-y-6 lg:col-span-6 flex flex-col justify-center">
-          <div className={`relative ${service.imageOrientation === 'vertical' ? 'aspect-[10/16] max-w-[340px] mx-auto' : 'aspect-[16/10]'} w-full rounded-2xl border border-white/10 overflow-hidden shadow-2xl group electric-border`}>
+        <div className="space-y-3 xl:space-y-5 lg:col-span-6 flex flex-col justify-center items-center">
+          <div className={`relative ${service.imageOrientation === 'vertical' ? 'aspect-[10/16] max-w-[190px] sm:max-w-[210px] lg:max-w-[230px] xl:max-w-[280px] 2xl:max-w-[320px]' : 'aspect-[16/10] max-w-[380px] lg:max-w-[440px] xl:max-w-[500px]'} w-full rounded-2xl border border-white/10 overflow-hidden shadow-2xl group electric-border mx-auto`}>
             <div className="absolute inset-0 w-full h-full">
               <Image 
                 src={service.image} 
@@ -263,17 +263,17 @@ const ServiceSlideDesktop: React.FC<SlideProps> = ({ service }) => {
               />
             </div>
             
-            <div className="absolute top-4 left-4 glass-card px-3 py-1 rounded text-[10px] uppercase font-mono tracking-widest border-white/10">
+            <div className="absolute top-2.5 left-2.5 xl:top-3 xl:left-3 glass-card px-2 py-0.5 rounded text-[8px] xl:text-[9px] uppercase font-mono tracking-widest border-white/10 z-10">
               {service.imageLabel || 'REGISTRO REAL DE PROJETO'}
             </div>
           </div>
 
           {/* Testimonial Quote */}
           {service.testimonial && (
-            <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 backdrop-blur-md relative overflow-hidden">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl text-brand-cyan/40 font-serif leading-none">“</span>
-                <p className="text-xs md:text-sm text-gray-300 font-normal italic leading-relaxed">
+            <div className={`p-3 xl:p-4 rounded-xl bg-white/[0.03] border border-white/10 backdrop-blur-md relative overflow-hidden w-full ${service.imageOrientation === 'vertical' ? 'max-w-[230px] xl:max-w-[280px] 2xl:max-w-[320px]' : 'max-w-[380px] lg:max-w-[440px] xl:max-w-[500px]'} mx-auto`}>
+              <div className="flex items-start gap-2">
+                <span className="text-lg xl:text-xl text-brand-cyan/40 font-serif leading-none">“</span>
+                <p className="text-[11px] xl:text-xs text-gray-300 font-normal italic leading-relaxed">
                   {service.testimonial}
                 </p>
               </div>

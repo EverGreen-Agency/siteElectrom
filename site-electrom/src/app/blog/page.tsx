@@ -23,28 +23,28 @@ const postsFallback: Post[] = [
     titulo: 'Como a Energia Solar está Transformando o Setor Industrial',
     resumo: 'Descubra como empresas estão reduzindo custos e impactos ambientais com sistemas fotovoltaicos.',
     data: '15/03/2024',
-    autor: 'João Silva',
-    categoria: 'energia-solar',
+    autor: 'Equipe ElectROM',
+    categoria: 'energias-renovaveis',
     imagem: '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg',
     slug: 'energia-solar-setor-industrial'
   },
   {
     id: 2,
-    titulo: '5 Tendências em Eficiência Energética para 2024',
-    resumo: 'Conheça as principais tendências que estão revolucionando a gestão de energia nas empresas.',
+    titulo: '5 Tendências em Eficiência Energética para a Indústria',
+    resumo: 'Conheça as principais estratégias de conservação energética e retrofit de motores elétricos.',
     data: '10/03/2024',
-    autor: 'Maria Santos',
-    categoria: 'eficiencia',
+    autor: 'Equipe ElectROM',
+    categoria: 'engenharia-de-energias',
     imagem: '/obras/Obras/Imagem6.png',
     slug: 'tendencias-eficiencia-energetica-2024'
   },
   {
     id: 3,
-    titulo: 'Sustentabilidade: O Futuro da Energia',
-    resumo: 'Análise sobre como as práticas sustentáveis estão moldando o futuro do setor energético.',
+    titulo: 'Migração para o Mercado Livre de Energia: Guia Prático ACL',
+    resumo: 'Análise detalhada sobre como migrar sua empresa para o ambiente de contratação livre e reduzir custos tarifários.',
     data: '05/03/2024',
-    autor: 'Pedro Costa',
-    categoria: 'sustentabilidade',
+    autor: 'Equipe ElectROM',
+    categoria: 'consultoria-de-energia',
     imagem: '/obras/Obras/Imagem10.png',
     slug: 'sustentabilidade-futuro-energia'
   }
@@ -127,10 +127,11 @@ const BlogPage = () => {
 
   const categorias = [
     { id: 'todos', nome: 'Todos' },
-    { id: 'energia-solar', nome: 'Energia Solar' },
-    { id: 'eficiencia', nome: 'Eficiência' },
-    { id: 'sustentabilidade', nome: 'Sustentabilidade' },
-    { id: 'inovacao', nome: 'Inovação' }
+    { id: 'energias-renovaveis', nome: 'Energias Renováveis' },
+    { id: 'engenharia-de-energias', nome: 'Engenharia de Energias' },
+    { id: 'consultoria-de-energia', nome: 'Consultoria de Energia' },
+    { id: 'media-e-baixa-tensao', nome: 'Média e Baixa Tensão' },
+    { id: 'gerenciamento-de-obras', nome: 'Gerenciamento de Obras' }
   ];
 
   useEffect(() => {
@@ -199,7 +200,7 @@ const BlogPage = () => {
   });
 
   return (
-    <div className="bg-brand-dark min-h-screen text-white relative overflow-hidden">
+    <div className="bg-brand-petrol min-h-screen text-white relative overflow-hidden">
       {/* Background blueprint details */}
       <div className="absolute inset-0 blueprint-bg opacity-15 pointer-events-none" />
 
@@ -215,8 +216,11 @@ const BlogPage = () => {
               Insights & Artigos
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-display font-black leading-tight text-white">
-            Blog da Engenharia
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight uppercase mb-6 leading-[0.95] text-white max-w-4xl mx-auto text-balance">
+            Blog da{' '}
+            <span className="bg-gradient-to-r from-brand-blue via-brand-cyan to-white bg-clip-text text-transparent">
+              Engenharia
+            </span>
           </h1>
           <p className="text-gray-400 font-light text-base md:text-lg max-w-2xl mx-auto">
             Notícias técnicas, inovações e artigos especializados sobre regulação e eficiência energética industrial.

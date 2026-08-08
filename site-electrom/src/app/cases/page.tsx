@@ -38,7 +38,7 @@ const CasesPage = () => {
   };
 
   return (
-    <div className="bg-brand-dark min-h-screen w-full text-white pb-20 relative overflow-hidden">
+    <div className="bg-brand-petrol min-h-screen w-full text-white pb-20 relative overflow-hidden">
       {/* Background blueprint details */}
       <div className="absolute inset-0 blueprint-bg opacity-15 pointer-events-none" />
 
@@ -54,17 +54,20 @@ const CasesPage = () => {
               Portfólio de Projetos
             </span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-display font-black leading-tight text-white">
-            Cases de Sucesso &amp; ROI
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight uppercase mb-6 leading-[0.95] text-white max-w-4xl mx-auto text-balance">
+            Cases de Sucesso{' '}
+            <span className="bg-gradient-to-r from-brand-blue via-brand-cyan to-white bg-clip-text text-transparent">
+              &amp; ROI
+            </span>
           </h1>
-          <p className="text-base md:text-lg text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-gray-400 font-light max-w-2xl mx-auto leading-relaxed text-balance">
             Resultados corporativos reais, documentados e quantificados sob auditorias de redução de custos de energia.
           </p>
         </header>
 
         {/* Filtro de Segmentos */}
         <motion.div 
-          className="flex flex-wrap justify-center gap-2.5 mb-12 border-b border-white/5 pb-8"
+          className="flex flex-nowrap justify-start lg:justify-center items-center gap-2 lg:gap-2.5 mb-12 border-b border-white/5 pb-8 overflow-x-auto max-w-full no-scrollbar"
           initial="hidden"
           animate="show"
           variants={container}
@@ -74,7 +77,7 @@ const CasesPage = () => {
               key={segmento.id}
               onClick={() => setActiveSegment(segmento.id)}
               variants={item}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer
+              className={`flex items-center gap-1.5 lg:gap-2 px-3.5 lg:px-4 py-2 rounded-full font-mono text-[11px] lg:text-xs font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer whitespace-nowrap flex-shrink-0
                 ${activeSegment === segmento.id
                   ? 'bg-brand-blue border-brand-blue text-brand-petrol shadow-lg shadow-brand-blue/20 scale-105'
                   : 'bg-white/5 border-white/5 text-gray-400 hover:border-white/20 hover:text-white'}

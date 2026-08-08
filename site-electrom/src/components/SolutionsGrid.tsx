@@ -53,8 +53,8 @@ const solutions: SolutionItem[] = [
   {
     title: 'Média e Baixa Tensão',
     headline: 'Infraestrutura e conformidade',
-    description: 'Projetos elétricos complexos, montagem de subestações de entrada, cabines primárias e laudos normativos.',
-    bullets: ['Subestações e cabines primárias', 'Painéis elétricos inteligentes', 'Sistemas SPDA e proteção de surtos', 'Laudos de conformidade NBR 5410/14039'],
+    description: 'Projetos elétricos complexos, montagem de entrada, cabines primárias e laudos normativos.',
+    bullets: ['Cabines primárias', 'Painéis elétricos inteligentes', 'Sistemas SPDA e proteção de surtos', 'Laudos de conformidade NBR 5410/14039'],
     color: 'from-brand-cyan to-[#00c8ff]',
     icon: (
       <svg className="w-6 h-6 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -97,11 +97,11 @@ export default function SolutionsGrid() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
           {solutions.map((sol, idx) => (
             <motion.div
               key={idx}
-              className="glass-card glass-card-hover rounded-2xl p-6 border-white/5 flex flex-col justify-between relative group hover:-translate-y-1.5"
+              className={`glass-card glass-card-hover rounded-2xl p-6 border-white/5 flex flex-col justify-between relative group hover:-translate-y-1.5 ${idx === 4 ? 'md:col-span-2 xl:col-span-1 max-w-2xl md:max-w-none mx-auto w-full' : ''}`}
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
