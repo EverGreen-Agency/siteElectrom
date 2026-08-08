@@ -43,7 +43,7 @@ export default function SobrePage() {
     {
       year: 'Out/2017',
       title: 'Primeira Obra Solar Homologada',
-      desc: 'Primeira obra homologada na Escola Tatelli, em Campo Limpo Paulista (SP).'
+      desc: 'Primeira obra homologada na Escola Patelli, em Campo Limpo Paulista (SP).'
     },
     {
       year: 'Dez/2020',
@@ -54,11 +54,6 @@ export default function SobrePage() {
       year: 'Jul/2021',
       title: 'Carregadores Veiculares',
       desc: 'Instalação dos primeiros carregadores veiculares.'
-    },
-    {
-      year: 'Nov/2023',
-      title: 'Expansão',
-      desc: '(trecho ilegível na imagem).'
     },
     {
       year: 'Fev/2025',
