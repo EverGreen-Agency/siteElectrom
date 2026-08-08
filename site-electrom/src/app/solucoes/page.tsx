@@ -1,7 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaSolarPanel, FaBolt, FaLightbulb, FaChartLine, FaWrench, FaArrowRight, FaCheckCircle, FaClipboardList, FaCogs, FaUserTie, FaBalanceScale, FaQuoteLeft } from 'react-icons/fa';
 import Link from 'next/link';
 import { companyData } from '../../data/companyData';
