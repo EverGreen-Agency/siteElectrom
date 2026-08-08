@@ -193,9 +193,6 @@ export default function SustentabilidadePage() {
                   <h3 className="text-lg font-display font-bold text-white">{esg.title}</h3>
                 </div>
                 <p className="text-gray-400 text-xs font-light leading-relaxed">{esg.description}</p>
-                <div className="pt-2 border-t border-white/5">
-                  <span className="text-[10px] font-mono text-brand-cyan uppercase tracking-wider font-semibold">{esg.detail}</span>
-                </div>
               </motion.div>
             ))}
           </div>
