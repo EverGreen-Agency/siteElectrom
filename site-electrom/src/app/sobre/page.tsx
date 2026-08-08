@@ -43,7 +43,22 @@ export default function SobrePage() {
     {
       year: 'Out/2017',
       title: 'Primeira Obra Solar Homologada',
-      desc: 'Primeira obra homologada na Escola Tatelli, em Campo Limpo Paulista (SP).'
+      desc: 'Primeira obra homologada na Escola Patelli, em Campo Limpo Paulista (SP).'
+    },
+    {
+      year: 'Dez/2020',
+      title: 'Obra nº 430',
+      desc: 'Entrega da obra de número 430.'
+    },
+    {
+      year: 'Jul/2021',
+      title: 'Carregadores Veiculares',
+      desc: 'Instalação dos primeiros carregadores veiculares.'
+    },
+    {
+      year: 'Fev/2025',
+      title: 'Smart Fit Embu-Guaçu',
+      desc: 'Homologação da instalação fotovoltaica da academia Smart Fit, em Embu-Guaçu (SP).'
     }
   ];
 
