@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { FaLeaf, FaChartLine, FaIndustry, FaSolarPanel, FaUsers, FaShieldAlt, FaCertificate, FaChartPie, FaClipboardCheck, FaFileAlt, FaWhatsapp, FaTree, FaCloudDownloadAlt } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 import { companyData } from '../../data/companyData';
 
 export default function SustentabilidadePage() {
