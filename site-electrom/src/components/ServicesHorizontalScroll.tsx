@@ -83,7 +83,7 @@ const services: ServiceItem[] = [
       'Redução de perdas reativas indesejadas',
       'Mudança de matriz energética',
     ],
-    testimonial: 'Realizamos a migração de nossa Matrix energética empregando diversos combustíveis com tranquilidade, mantendo alto rendimento, baixas emissões e custos.',
+    testimonial: 'Realizamos a migração de nossa matriz energética empregando diversos combustíveis com tranquilidade, mantendo alto rendimento, baixas emissões e custos.',
     glowColor: 'bg-orange-500',
     image: '/obras/consultoria-de-energia.png',
     imageLabel: 'ADM - Rondonópolis',

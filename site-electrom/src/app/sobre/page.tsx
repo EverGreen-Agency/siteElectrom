@@ -1,67 +1,9 @@
-'use client';
-
-import { FaBolt, FaLeaf, FaLightbulb, FaHandshake, FaSearch, FaRecycle, FaQuoteLeft, FaGraduationCap, FaCertificate, FaShieldAlt } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaBolt, FaLeaf, FaLightbulb, FaHandshake, FaSearch, FaRecycle, FaQuoteLeft, FaQuoteRight, FaGraduationCap, FaCertificate, FaShieldAlt } from 'react-icons/fa';
 import { companyData } from '../../data/companyData';
+import Timeline from '../../components/Timeline';
 
 export default function SobrePage() {
-  const milestones = [
-    {
-      year: '1996',
-      title: 'Fundação da ElectROM',
-      desc: 'Nascimento da ElectROM em São Paulo, focada em gestão de obras projetadas e laudos técnicos de engenharia elétrica e mecânica.'
-    },
-    {
-      year: 'Fev/2000',
-      title: 'Consultoria & Eficiência Energética',
-      desc: 'Início das atividades de consultoria em conservação de energia e eficiência energética.'
-    },
-    {
-      year: 'Dez/2001',
-      title: '275 Obras Entregues',
-      desc: 'Totalizadas 275 obras entregues pelo país.'
-    },
-    {
-      year: 'Set/2005',
-      title: 'Especialidades Químicas',
-      desc: 'Início da distribuição de especialidades químicas, atendendo à indústria eletroeletrônica, eletromecânica e automobilística.'
-    },
-    {
-      year: 'Dez/2009',
-      title: 'Obra nº 359',
-      desc: 'Entrega da obra nº 359, em São Joaquim da Barra (SP).'
-    },
-    {
-      year: 'Set/2015',
-      title: '1.800 Clientes Atendidos',
-      desc: 'Totalizado atendimento de 1.800 clientes para especificação e fornecimento de especialidades químicas.'
-    },
-    {
-      year: 'Dez/2016',
-      title: 'Início em Energia Solar',
-      desc: 'Início das atividades e dos primeiros projetos para energia solar.'
-    },
-    {
-      year: 'Out/2017',
-      title: 'Primeira Obra Solar Homologada',
-      desc: 'Primeira obra homologada na Escola Patelli, em Campo Limpo Paulista (SP).'
-    },
-    {
-      year: 'Dez/2020',
-      title: 'Obra nº 430',
-      desc: 'Entrega da obra de número 430.'
-    },
-    {
-      year: 'Jul/2021',
-      title: 'Carregadores Veiculares',
-      desc: 'Instalação dos primeiros carregadores veiculares.'
-    },
-    {
-      year: 'Fev/2025',
-      title: 'Smart Fit Embu-Guaçu',
-      desc: 'Homologação da instalação fotovoltaica da academia Smart Fit, em Embu-Guaçu (SP).'
-    }
-  ];
-
   return (
     <div className="bg-brand-petrol min-h-screen text-white relative overflow-hidden">
       {/* Background blueprint details */}
@@ -89,12 +31,12 @@ export default function SobrePage() {
             {companyData.tagline}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <a href="/solucoes" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-sm">
+            <Link href="/solucoes" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-sm">
               Conheça Nossas Soluções
-            </a>
-            <a href="/contato" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-sm">
+            </Link>
+            <Link href="/contato" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-sm">
               Fale com um Especialista
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -127,21 +69,7 @@ export default function SobrePage() {
       {/* 3. Linha do Tempo Unificada */}
       <section className="max-w-5xl mx-auto py-16 px-6 relative z-10">
         <h2 className="text-2xl md:text-3xl font-display font-black text-center mb-12 text-white">Nossa Jornada Histórica</h2>
-        
-        <div className="relative border-l-2 border-white/10 pl-6 ml-4 space-y-12">
-          {milestones.map((m, idx) => (
-            <div key={idx} className="relative">
-              {/* Dot indicator */}
-              <div className="absolute -left-[35px] top-1.5 w-4 h-4 rounded-full bg-brand-blue border-2 border-brand-dark shadow-[0_0_8px_#7AA2E4] z-10" />
-              
-              <div className="glass-card rounded-2xl p-6 border-white/5 space-y-2">
-                <span className="text-brand-cyan font-mono font-bold text-sm">{m.year}</span>
-                <h4 className="font-display font-bold text-lg text-white">{m.title}</h4>
-                <p className="text-gray-300 text-xs font-light leading-relaxed">{m.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Timeline />
       </section>
 
       {/* 4. Valores que nos movem */}
@@ -191,9 +119,10 @@ export default function SobrePage() {
           </div>
           
           <div className="relative pt-2">
-            <FaQuoteLeft className="text-brand-blue/20 text-3xl absolute -top-1 -left-2 pointer-events-none" />
+            <FaQuoteLeft className="text-brand-blue/30 text-lg absolute top-0 -left-1 pointer-events-none" />
             <blockquote className="italic text-gray-200 font-light text-sm md:text-base leading-relaxed relative z-10 pl-6 border-l-2 border-brand-blue/40">
-              &quot;A Electrom é a realização do desejo de tornar a engenharia acessível a todos, através de tecnologias que convertam os recursos naturais renováveis em benefício sustentável, com investimento de rápido retorno.&quot;
+              A Electrom é a realização do desejo de tornar a engenharia acessível a todos, através de tecnologias que convertam os recursos naturais renováveis em benefício sustentável, com investimento de rápido retorno.
+              <FaQuoteRight className="text-brand-blue/30 text-sm inline ml-1 align-middle" />
             </blockquote>
           </div>
         </div>
@@ -272,12 +201,12 @@ export default function SobrePage() {
             Fale diretamente com nossa diretoria técnica e solicite um estudo preliminar sem custos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-            <a href="/contato" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
+            <Link href="/contato" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
               Solicitar Diagnóstico
-            </a>
-            <a href="/solucoes" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
+            </Link>
+            <Link href="/solucoes" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
               Entenda Nossas Soluções
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -13,7 +13,7 @@ const api = axios.create({
     }
 });
 
-// Interceptor para adicionar informações de debug
+// Interceptor para adicionar headers e timestamp
 api.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
     // Garante que a URL não contenha 'certificado' para endpoints de autoridade
@@ -28,40 +28,30 @@ api.interceptors.request.use(
       _: timestamp
     };
     
-    console.log('Fazendo requisição para:', {
-      url: `${config.baseURL}${config.url}`,
-      method: config.method,
-      headers: config.headers,
-      params: config.params
-    });
-    
     return config;
   },
   (error: AxiosError) => {
-    console.error('Erro na configuração da requisição:', error);
     return Promise.reject(error);
   }
 );
 
 // Interceptor para tratar erros
 api.interceptors.response.use(
-    (response: AxiosResponse) => response,
-    async (error: AxiosError) => {
-        if (error.code === 'ERR_NETWORK') {
-            // Tenta novamente sem _embed
-            const config = error.config;
-            if (config?.params?._embed) {
-                delete config.params._embed;
-                try {
-                    return await axios(config);
-                } catch (retryError) {
-                    console.error('Erro na segunda tentativa:', retryError);
-                    throw retryError;
-                }
-            }
+  (response: AxiosResponse) => response,
+  async (error: AxiosError) => {
+    if (error.code === 'ERR_NETWORK') {
+      const config = error.config;
+      if (config?.params?._embed) {
+        delete config.params._embed;
+        try {
+          return await axios(config);
+        } catch {
+          // Silent fallback
         }
-        throw error;
+      }
     }
+    return Promise.reject(error);
+  }
 );
 
 export interface Post {
@@ -212,7 +202,7 @@ export const wordpressService = {
     }
   },
 
-  // Buscar um post específico
+  // Buscar um post específico por ID
   async getPost(id: number): Promise<Post | null> {
     try {
       const response = await api.get(`/posts/${id}`, {
@@ -227,40 +217,55 @@ export const wordpressService = {
     }
   },
 
+  // Buscar um post específico por SLUG
+  async getPostBySlug(slug: string): Promise<Post | null> {
+    try {
+      const response = await api.get('/posts', {
+        params: {
+          slug: slug,
+          _embed: true
+        }
+      });
+      if (Array.isArray(response.data) && response.data.length > 0) {
+        return response.data[0];
+      }
+      return null;
+    } catch {
+      // Falha silenciosa para fallback local imediato
+      return null;
+    }
+  },
+
+  // Buscar um post de autoridade por SLUG (compatibilidade)
+  async getAutoridadePostBySlug(slug: string): Promise<AutoridadePost | null> {
+    try {
+      const response = await api.get('/autoridade', {
+        params: {
+          slug: slug,
+          _embed: true
+        }
+      });
+      if (Array.isArray(response.data) && response.data.length > 0) {
+        return response.data[0];
+      }
+      return null;
+    } catch {
+      // Falha silenciosa para fallback local imediato
+      return null;
+    }
+  },
+
   // Buscar certificados
   async getCertificates(): Promise<Certificate[]> {
     try {
-      console.log('Tentando buscar certificados...');
-      
-      // Tentar primeiro a rota padrão
-      try {
-        const response = await api.get('/certificado', {
-          params: {
-            per_page: 100,
-            _embed: true
-          }
-        });
-        console.log('Resposta da API:', response.data);
-        return response.data;
-      } catch {
-        console.log('Tentando rota alternativa...');
-        // Se falhar, tentar sem _embed
-        const response = await api.get('/certificado', {
-          params: {
-            per_page: 100
-          }
-        });
-        return response.data;
-      }
-    } catch (error) {
-      const err = error as AxiosError;
-      console.error('Erro detalhado:', {
-        message: err.message,
-        response: err.response?.data,
-        status: err.response?.status,
-        headers: err.response?.headers,
-        url: WORDPRESS_API_URL
+      const response = await api.get('/certificado', {
+        params: {
+          per_page: 100,
+          _embed: true
+        }
       });
+      return response.data || [];
+    } catch {
       return [];
     }
   },
@@ -268,16 +273,14 @@ export const wordpressService = {
   // Buscar parceiros cadastrados no WordPress Headless
   async getPartners(): Promise<Partner[]> {
     try {
-      console.log('Buscando parceiros do WordPress...');
       const response = await api.get('/partners', {
         params: {
           per_page: 100,
           _embed: true
         }
       });
-      return response.data;
-    } catch (error) {
-      console.error('Erro ao buscar parceiros do WordPress:', error);
+      return response.data || [];
+    } catch {
       return [];
     }
   },
@@ -285,7 +288,6 @@ export const wordpressService = {
   // Buscar posts de autoridade com paginação
   async getAutoridadePosts(page = 1, perPage = 10): Promise<AutoridadePost[]> {
     try {
-      // Primeira tentativa com _embed
       const response = await api.get('/autoridade', {
         params: {
           page,
@@ -293,39 +295,22 @@ export const wordpressService = {
           _embed: true
         }
       });
-      return response.data;
-    } catch (error) {
-      console.error('Erro ao buscar posts de autoridade:', error);
-      
-      // Se falhar, tenta sem _embed
-      try {
-        const response = await api.get('/autoridade', {
-          params: {
-            page,
-            per_page: perPage
-          }
-        });
-        return response.data;
-      } catch (retryError) {
-        console.error('Erro na segunda tentativa:', retryError);
-        return [];
-      }
+      return response.data || [];
+    } catch {
+      return [];
     }
   },
 
   // Buscar um post específico de autoridade
   async getAutoridadePost(id: number): Promise<AutoridadePost | null> {
     try {
-      console.log(`Buscando post de autoridade ${id}...`);
       const response = await api.get(`/autoridade/${id}`, {
         params: {
           _embed: true
         }
       });
-      console.log('Post de autoridade encontrado:', response.data.id);
-      return response.data;
-    } catch (error) {
-      console.error(`Erro ao buscar post de autoridade ${id}:`, error);
+      return response.data || null;
+    } catch {
       return null;
     }
   },
@@ -334,10 +319,8 @@ export const wordpressService = {
   async testAPI(): Promise<boolean> {
     try {
       const response = await api.get('');
-      console.log('API WordPress disponível:', response.status === 200);
       return response.status === 200;
-    } catch (error) {
-      console.error('API WordPress não disponível:', error);
+    } catch {
       return false;
     }
   }

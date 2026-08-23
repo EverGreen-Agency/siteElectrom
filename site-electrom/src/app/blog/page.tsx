@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaSearch, FaCalendarAlt, FaUser, FaTag, FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image';
+import Link from 'next/link';
 import { wordpressService } from '../../services/wordpress';
+import { blogPostsData } from '../../data/blogPosts';
 
 interface Post {
-  id: number;
+  id: number | string;
   titulo: string;
   resumo: string;
   data: string;
@@ -17,38 +19,16 @@ interface Post {
   slug: string;
 }
 
-const postsFallback: Post[] = [
-  {
-    id: 1,
-    titulo: 'Como a Energia Solar está Transformando o Setor Industrial',
-    resumo: 'Descubra como empresas estão reduzindo custos e impactos ambientais com sistemas fotovoltaicos.',
-    data: '15/03/2024',
-    autor: 'Equipe ElectROM',
-    categoria: 'energias-renovaveis',
-    imagem: '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg',
-    slug: 'energia-solar-setor-industrial'
-  },
-  {
-    id: 2,
-    titulo: '5 Tendências em Eficiência Energética para a Indústria',
-    resumo: 'Conheça as principais estratégias de conservação energética e retrofit de motores elétricos.',
-    data: '10/03/2024',
-    autor: 'Equipe ElectROM',
-    categoria: 'engenharia-de-energias',
-    imagem: '/obras/Obras/Imagem6.png',
-    slug: 'tendencias-eficiencia-energetica-2024'
-  },
-  {
-    id: 3,
-    titulo: 'Migração para o Mercado Livre de Energia: Guia Prático ACL',
-    resumo: 'Análise detalhada sobre como migrar sua empresa para o ambiente de contratação livre e reduzir custos tarifários.',
-    data: '05/03/2024',
-    autor: 'Equipe ElectROM',
-    categoria: 'consultoria-de-energia',
-    imagem: '/obras/Obras/Imagem10.png',
-    slug: 'sustentabilidade-futuro-energia'
-  }
-];
+const postsFallback: Post[] = blogPostsData.map(item => ({
+  id: item.id,
+  titulo: item.title,
+  resumo: item.excerpt,
+  data: item.date,
+  autor: item.author.name,
+  categoria: item.category.id,
+  imagem: item.image,
+  slug: item.slug
+}));
 
 interface WordPressPost {
   id: number;
@@ -117,8 +97,8 @@ const mapWordPressPostToLocal = (wp: WordPressPost): Post => {
 };
 
 const BlogPage = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState<Post[]>(postsFallback);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('todos');
@@ -137,19 +117,19 @@ const BlogPage = () => {
   useEffect(() => {
     const carregarPosts = async () => {
       try {
-        setLoading(true);
         const postsWP = await wordpressService.getPosts(1, 20);
         
         if (postsWP && postsWP.length > 0) {
           const postsMapeados = postsWP.map(mapWordPressPostToLocal);
-          setPosts(postsMapeados);
+          // Mescla posts do WP com o acervo técnico local sem duplicar slugs
+          const existingSlugs = new Set(postsMapeados.map(p => p.slug));
+          const complementaryFallback = postsFallback.filter(p => !existingSlugs.has(p.slug));
+          setPosts([...postsMapeados, ...complementaryFallback]);
           setError(null);
         } else {
           setPosts(postsFallback);
         }
-      } catch (err) {
-        console.error('Erro na conexão com o CMS WordPress:', err);
-        setError('Não foi possível conectar ao CMS. Exibindo contingência local.');
+      } catch {
         setPosts(postsFallback);
       } finally {
         setLoading(false);
@@ -248,7 +228,7 @@ const BlogPage = () => {
                 <button
                   key={categoria.id}
                   onClick={() => setSelectedCategory(categoria.id)}
-                  className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all ${
+                  className={`px-4 py-2 rounded-full text-xs font-sans font-medium uppercase tracking-wider transition-all ${
                     selectedCategory === categoria.id
                       ? 'bg-brand-blue text-brand-petrol shadow-lg shadow-brand-blue/20'
                       : 'bg-white/5 text-gray-400 border border-white/5 hover:border-white/20 hover:text-white'
@@ -324,9 +304,9 @@ const BlogPage = () => {
 
                     {/* Title */}
                     <h2 className="text-lg md:text-xl font-display font-bold text-white group-hover:text-brand-blue transition-colors duration-300 line-clamp-2 leading-tight">
-                      <a href={`/blog/${post.slug}`} className="hover:text-brand-blue transition-colors">
+                      <Link href={`/blog/${post.slug}`} className="hover:text-brand-blue transition-colors">
                         {post.titulo}
-                      </a>
+                      </Link>
                     </h2>
                     
                     {/* Excerpt */}
@@ -342,13 +322,13 @@ const BlogPage = () => {
                     <FaTag className="mr-1 text-xs text-brand-cyan" />
                     {categorias.find(cat => cat.id === post.categoria)?.nome || 'Energia'}
                   </span>
-                  <a
+                  <Link
                     href={`/blog/${post.slug}`}
                     className="flex items-center text-brand-blue hover:text-brand-cyan font-bold font-mono text-xs tracking-wider uppercase transition-all duration-300 gap-1.5"
                   >
                     Ler Artigo
                     <FaArrowRight className="text-xs transform group-hover:translate-x-1 transition-transform" />
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}

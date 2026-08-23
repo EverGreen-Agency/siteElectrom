@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { companyData } from '../data/companyData';
 import dynamic from 'next/dynamic';
@@ -166,9 +167,9 @@ export default function Footer() {
           <div className="text-center md:text-right font-mono text-[10px] text-gray-500 space-y-1">
             <div>© {currentYear} ELECTROM ENGENHARIA LTDA. CNPJ ATIVO.</div>
             <div className="flex justify-center md:justify-end gap-3 text-gray-400">
-              <a href="/legal/privacidade" className="hover:text-brand-blue">Privacidade</a>
+              <Link href="/legal/privacidade" className="hover:text-brand-blue transition-colors">Privacidade</Link>
               <span>•</span>
-              <a href="/legal/termos" className="hover:text-brand-blue">Termos</a>
+              <Link href="/legal/termos" className="hover:text-brand-blue transition-colors">Termos</Link>
             </div>
           </div>
         </motion.div>

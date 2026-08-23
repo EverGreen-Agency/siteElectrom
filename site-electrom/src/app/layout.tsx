@@ -166,7 +166,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable}`}>
+    <html lang="pt-BR" className={`${inter.variable}`} suppressHydrationWarning={true}>
       <body className="font-sans antialiased text-brand-white bg-brand-petrol" suppressHydrationWarning={true}>
         <script
           type="application/ld+json"

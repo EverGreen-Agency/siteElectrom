@@ -41,8 +41,8 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center group relative">
+          <div className="flex items-center flex-shrink-0">
+            <Link href="/" className="flex items-center group relative mr-4">
               {/* Subtle backglow effect on logo hover */}
               <div className="absolute -inset-2 bg-brand-blue/10 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <Image
@@ -50,19 +50,19 @@ const Navbar = () => {
                 alt="ElectROM Logo"
                 width={180}
                 height={45}
-                className="h-10 w-auto relative z-10 transition-transform duration-300 group-hover:scale-[1.02]"
+                className="h-9 sm:h-10 w-auto relative z-10 transition-transform duration-300 group-hover:scale-[1.02]"
                 priority
               />
             </Link>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Desktop Menu - visible on lg (1024px+) to avoid collisions on intermediate screens */}
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative text-gray-300 hover:text-white px-2 py-1 text-sm font-medium transition-colors duration-300 group"
+                className="relative text-gray-300 hover:text-white px-2 py-1 text-xs xl:text-sm font-medium transition-colors duration-300 group whitespace-nowrap"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-blue transition-all duration-300 transform -translate-x-1/2 group-hover:w-full" />
@@ -72,14 +72,14 @@ const Navbar = () => {
             {/* CTA Button */}
             <Link
               href="/contato"
-              className="ml-4 px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold text-brand-petrol bg-brand-blue hover:bg-brand-blue/90 hover:shadow-lg hover:shadow-brand-blue/20 transition-all duration-300 animate-pulse-slow cursor-pointer"
+              className="ml-2 xl:ml-4 px-4 xl:px-5 py-2.5 rounded-full text-[11px] xl:text-xs uppercase tracking-wider font-semibold text-brand-petrol bg-brand-blue hover:bg-brand-blue/90 hover:shadow-lg hover:shadow-brand-blue/20 transition-all duration-300 animate-pulse-slow cursor-pointer whitespace-nowrap"
             >
               Diagnóstico Gratuito
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile/Tablet menu button - visible on < lg */}
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-brand-blue hover:bg-white/5 focus:outline-none transition-colors"
@@ -121,9 +121,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu with glassmorphism */}
+      {/* Mobile/Tablet Menu with glassmorphism */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-brand-petrol/95 backdrop-blur-xl border-b border-white/10 animate-fade-in shadow-2xl">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-brand-petrol/95 backdrop-blur-xl border-b border-white/10 animate-fade-in shadow-2xl">
           <div className="px-4 pt-2 pb-6 space-y-2 sm:px-6">
             {menuItems.map((item) => (
               <Link
