@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { wordpressService, Post as WPPost } from '../services/wordpress'
+import { blogPostsData } from '../data/blogPosts'
 
 export interface BlogPost {
   id: number | string
@@ -18,41 +19,17 @@ export interface BlogPost {
   slug: string
 }
 
-const localFallbackPosts: BlogPost[] = [
-  {
-    id: 1,
-    title: 'Como Reduzir Custos com Energia Solar na Indústria',
-    category: 'Energia Solar',
-    date: '10/06/2024',
-    excerpt: 'Descubra estratégias práticas para maximizar a economia de energia em grandes plantas fabris com minigeração solar e payback acelerado.',
-    img: '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg',
-    readTime: '5 min',
-    featured: true,
-    slug: 'como-reduzir-custos-com-energia-solar'
-  },
-  {
-    id: 2,
-    title: 'Eficiência Energética: Principais Tendências Industriais',
-    category: 'Eficiência',
-    date: '02/06/2024',
-    excerpt: 'Explore inovações tecnológicas como motores IE4/IE5 e inversores de frequência inteligentes que estão liderando a descarbonização industrial.',
-    img: '/obras/Obras/Imagem6.png',
-    readTime: '7 min',
-    featured: false,
-    slug: 'eficiencia-energetica-tendencias'
-  },
-  {
-    id: 3,
-    title: 'Mercado Livre de Energia: Guia Prático de Migração',
-    category: 'Mercado Livre',
-    date: '28/05/2024',
-    excerpt: 'Entenda os requisitos regulatórios obrigatórios e as vantagens financeiras da portabilidade para o Ambiente de Contratação Livre (ACL).',
-    img: '/obras/Obras/Imagem10.png',
-    readTime: '6 min',
-    featured: false,
-    slug: 'mercado-livre-guia-migracao'
-  }
-];
+const localFallbackPosts: BlogPost[] = blogPostsData.slice(0, 3).map((item, idx) => ({
+  id: item.id,
+  title: item.title,
+  category: item.category.name,
+  date: item.date,
+  excerpt: item.excerpt,
+  img: item.image,
+  readTime: item.readTime,
+  featured: idx === 0,
+  slug: item.slug
+}));
 
 interface BlogCardProps {
   post: BlogPost
@@ -115,31 +92,37 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, index }) => {
 
 export default function BlogPreview() {
   const [posts, setPosts] = useState<BlogPost[]>(localFallbackPosts)
-  const [loading, setLoading] = useState<boolean>(true)
+  const [loading, setLoading] = useState<boolean>(false)
 
   useEffect(() => {
     async function loadPosts() {
       try {
-        setLoading(true)
         const wpPosts = await wordpressService.getPosts(1, 3)
         if (wpPosts && wpPosts.length > 0) {
           const formattedPosts: BlogPost[] = wpPosts.map((wp: WPPost, idx: number) => ({
             id: wp.id,
             title: wp.title?.rendered || 'Sem título',
             category: (wp._embedded as { 'wp:term'?: Array<Array<{ name: string }>> })?.['wp:term']?.[0]?.[0]?.name || 'Engenharia',
-            date: new Date(wp.date).toLocaleDateString('pt-BR'),
+            date: wp.date ? new Date(wp.date).toLocaleDateString('pt-BR') : 'Recente',
             excerpt: wp.excerpt?.rendered?.replace(/<[^>]+>/g, '').slice(0, 140) + '...' || '',
-            img: wp._embedded?.['wp:featuredmedia']?.[0]?.source_url || localFallbackPosts[idx % 3].img,
+            img: wp._embedded?.['wp:featuredmedia']?.[0]?.source_url || localFallbackPosts[idx % localFallbackPosts.length].img,
             readTime: '5 min',
             featured: idx === 0,
             slug: wp.slug || '#'
           }))
-          setPosts(formattedPosts)
+          
+          // Complementa com posts locais até completar 3 posts
+          const existingSlugs = new Set(formattedPosts.map(p => p.slug));
+          const complementary = localFallbackPosts.filter(p => !existingSlugs.has(p.slug));
+          const combined = [...formattedPosts, ...complementary].slice(0, 3);
+          setPosts(combined);
+        } else {
+          setPosts(localFallbackPosts);
         }
-      } catch (err) {
-        console.error('Erro ao buscar posts do WordPress. Mantendo fallback local.', err)
+      } catch {
+        setPosts(localFallbackPosts);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
     }
 
@@ -162,7 +145,7 @@ export default function BlogPreview() {
             </h2>
           </div>
 
-          <a
+          <Link
             href="/blog"
             className="px-6 py-3 rounded-lg border border-white/10 text-xs font-semibold font-mono tracking-wider uppercase text-white hover:bg-white/5 hover:border-brand-blue/30 transition-all flex items-center gap-2"
           >
@@ -170,7 +153,7 @@ export default function BlogPreview() {
             <svg className="w-4 h-4 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </a>
+          </Link>
         </div>
 
         {loading ? (

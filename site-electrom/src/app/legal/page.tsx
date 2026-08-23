@@ -1,104 +1,140 @@
 'use client';
 
 import { useState } from 'react';
+import { FaShieldAlt, FaFileContract, FaLock, FaCheckCircle } from 'react-icons/fa';
 
 const LegalPage = () => {
   const [activeTab, setActiveTab] = useState<'termos' | 'privacidade'>('termos');
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Informações Legais</h1>
+    <div className="bg-brand-petrol min-h-screen text-white relative overflow-hidden py-16 px-6">
+      {/* Background blueprint details */}
+      <div className="absolute inset-0 blueprint-bg opacity-15 pointer-events-none" />
 
-      {/* Tabs */}
-      <div className="border-b border-gray-200 mb-8">
-        <nav className="-mb-px flex space-x-8">
+      {/* Decorative Aurora glow */}
+      <div className="absolute top-[10%] right-[-10%] w-[50vw] h-[50vw] rounded-full mix-blend-screen filter blur-[160px] opacity-10 bg-brand-blue pointer-events-none" />
+
+      <div className="max-w-4xl mx-auto relative z-10 space-y-8">
+        {/* Header */}
+        <div className="text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit mx-auto">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_#7AA2E4]" />
+            <span className="text-[10px] font-mono tracking-widest uppercase text-brand-blue font-bold">
+              Conformidade &amp; Governança
+            </span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-display font-extrabold text-white">
+            Informações Legais &amp; Privacidade
+          </h1>
+          <p className="text-gray-400 text-sm md:text-base font-light max-w-xl mx-auto">
+            Transparência jurídica, termos de utilização e diretrizes de proteção de dados (LGPD) da ElectROM Engenharia.
+          </p>
+        </div>
+
+        {/* Tabs */}
+        <div className="flex justify-center border-b border-white/10 pb-4 gap-4">
           <button
             onClick={() => setActiveTab('termos')}
-            className={`${
+            className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all cursor-pointer ${
               activeTab === 'termos'
-                ? 'border-blue-600 text-blue-600'
-                : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-            } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm`}
+                ? 'bg-brand-blue text-brand-petrol shadow-lg shadow-brand-blue/20'
+                : 'bg-white/5 text-gray-400 border border-white/5 hover:border-white/20 hover:text-white'
+            }`}
           >
+            <FaFileContract className="text-sm" />
             Termos de Uso
           </button>
           <button
             onClick={() => setActiveTab('privacidade')}
-            className={`${
+            className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all cursor-pointer ${
               activeTab === 'privacidade'
-                ? 'border-blue-600 text-blue-600'
-                : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-            } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm`}
+                ? 'bg-brand-blue text-brand-petrol shadow-lg shadow-brand-blue/20'
+                : 'bg-white/5 text-gray-400 border border-white/5 hover:border-white/20 hover:text-white'
+            }`}
           >
-            Política de Privacidade
+            <FaShieldAlt className="text-sm" />
+            Política de Privacidade (LGPD)
           </button>
-        </nav>
-      </div>
+        </div>
 
-      {/* Conteúdo */}
-      <div className="prose prose-blue max-w-none">
-        {activeTab === 'termos' ? (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">Termos de Uso</h2>
-            <p className="mb-4">
-              Bem-vindo ao site da ElectROM Engenharia. Ao acessar e utilizar este site, você concorda com os seguintes termos e condições:
-            </p>
+        {/* Content Card */}
+        <div className="glass-card rounded-3xl p-8 md:p-12 border-white/5 space-y-8 leading-relaxed text-gray-300 font-light text-sm md:text-base">
+          {activeTab === 'termos' ? (
+            <div className="space-y-6">
+              <div className="border-b border-white/5 pb-4">
+                <h2 className="text-2xl font-display font-bold text-white mb-2">Termos de Uso do Portal</h2>
+                <span className="text-xs font-mono text-brand-cyan">Última atualização: 2025 // Versão 1.2</span>
+              </div>
+              <p>
+                Bem-vindo ao portal institucional da <strong className="text-white">ElectROM Engenharia</strong>. Ao navegar e utilizar este site, você concorda expressamente com os termos e condições descritos a seguir:
+              </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">1. Uso do Site</h3>
-            <p className="mb-4">
-              O conteúdo deste site é fornecido apenas para fins informativos. A ElectROM Engenharia reserva-se o direito de modificar ou descontinuar qualquer aspecto do site a qualquer momento.
-            </p>
+              <div className="space-y-3">
+                <h3 className="text-lg font-display font-bold text-white flex items-center gap-2">
+                  <span className="text-brand-blue text-xs font-mono">01.</span> Uso Informativo e de Diagnóstico
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  O conteúdo deste site destina-se a fins informativos e à solicitação de diagnósticos de engenharia energética. A ElectROM reserva-se o direito de atualizar dados técnicos, portfólios e serviços sem aviso prévio.
+                </p>
+              </div>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">2. Propriedade Intelectual</h3>
-            <p className="mb-4">
-              Todo o conteúdo presente neste site, incluindo textos, imagens, logotipos e design, é propriedade da ElectROM Engenharia e está protegido por leis de direitos autorais.
-            </p>
+              <div className="space-y-3">
+                <h3 className="text-lg font-display font-bold text-white flex items-center gap-2">
+                  <span className="text-brand-blue text-xs font-mono">02.</span> Propriedade Intelectual
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  Textos, fotografias de obras, marcas, logotipos, diagramas conceituais e a identidade visual são de titularidade exclusiva da ElectROM Engenharia e estão protegidos pela legislação de direitos autorais e propriedade industrial.
+                </p>
+              </div>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">3. Limitação de Responsabilidade</h3>
-            <p className="mb-4">
-              A ElectROM Engenharia não se responsabiliza por danos causados pelo uso ou impossibilidade de uso deste site, incluindo perdas diretas ou indiretas.
-            </p>
-          </div>
-        ) : (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">Política de Privacidade</h2>
-            <p className="mb-4">
-              Esta política descreve como a ElectROM Engenharia coleta, usa e protege suas informações pessoais.
-            </p>
+              <div className="space-y-3">
+                <h3 className="text-lg font-display font-bold text-white flex items-center gap-2">
+                  <span className="text-brand-blue text-xs font-mono">03.</span> Limitação de Responsabilidade
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  Estimativas financeiras e simulações preliminares de payback exibidas no site possuem caráter indicativo e dependem de vistoria técnica e aprovação de concessionária local para formalização contratual.
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="space-y-6">
+              <div className="border-b border-white/5 pb-4">
+                <h2 className="text-2xl font-display font-bold text-white mb-2">Política de Privacidade &amp; LGPD</h2>
+                <span className="text-xs font-mono text-brand-cyan">Conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</span>
+              </div>
+              <p>
+                A ElectROM Engenharia tem o compromisso de resguardar a privacidade e a segurança dos dados fornecidos por clientes, parceiros e visitantes corporativos.
+              </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">1. Coleta de Informações</h3>
-            <p className="mb-4">
-              Podemos coletar informações como nome, e-mail e telefone quando você preenche formulários em nosso site ou entra em contato conosco.
-            </p>
+              <div className="space-y-3">
+                <h3 className="text-lg font-display font-bold text-white flex items-center gap-2">
+                  <span className="text-brand-cyan text-xs font-mono">01.</span> Coleta Mínima e Finalidade
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  Coletamos apenas os dados necessários para o atendimento técnico e comercial (como nome, telefone, e-mail corporativo e histórico sumário de consumo de energia) mediante o preenchimento voluntário dos formulários de contato.
+                </p>
+              </div>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">2. Uso das Informações</h3>
-            <p className="mb-4">
-              Utilizamos suas informações para:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Responder suas solicitações</li>
-              <li>Enviar informações sobre nossos serviços</li>
-              <li>Melhorar nossa comunicação</li>
-              <li>Atender obrigações legais</li>
-            </ul>
+              <div className="space-y-3">
+                <h3 className="text-lg font-display font-bold text-white flex items-center gap-2">
+                  <span className="text-brand-cyan text-xs font-mono">02.</span> Não Compartilhamento
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  Nenhum dado pessoal ou de fatura é comercializado ou compartilhado com terceiros para fins de marketing sem autorização expressa. O uso é restrito ao dimensionamento de soluções de engenharia pela equipe própria da ElectROM.
+                </p>
+              </div>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">3. Proteção de Dados</h3>
-            <p className="mb-4">
-              Implementamos medidas de segurança para proteger suas informações pessoais contra acesso não autorizado ou alteração.
-            </p>
-
-            <h3 className="text-xl font-semibold mt-6 mb-3">4. Seus Direitos</h3>
-            <p className="mb-4">
-              Você tem direito a:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Acessar suas informações pessoais</li>
-              <li>Solicitar correções</li>
-              <li>Solicitar exclusão de dados</li>
-              <li>Retirar seu consentimento</li>
-            </ul>
-          </div>
-        )}
+              <div className="space-y-3">
+                <h3 className="text-lg font-display font-bold text-white flex items-center gap-2">
+                  <span className="text-brand-cyan text-xs font-mono">03.</span> Direitos do Titular
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  O titular poderá a qualquer momento solicitar a confirmação, correção ou exclusão dos seus dados de nossos registros entrando em contato diretamente com <strong className="text-white">comercial@electrom.eng.br</strong>.
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

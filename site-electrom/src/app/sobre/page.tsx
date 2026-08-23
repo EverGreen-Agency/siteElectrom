@@ -1,5 +1,4 @@
-'use client';
-
+import Link from 'next/link';
 import { FaBolt, FaLeaf, FaLightbulb, FaHandshake, FaSearch, FaRecycle, FaQuoteLeft, FaGraduationCap, FaCertificate, FaShieldAlt } from 'react-icons/fa';
 import { companyData } from '../../data/companyData';
 
@@ -89,12 +88,12 @@ export default function SobrePage() {
             {companyData.tagline}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <a href="/solucoes" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-sm">
+            <Link href="/solucoes" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-sm">
               Conheça Nossas Soluções
-            </a>
-            <a href="/contato" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-sm">
+            </Link>
+            <Link href="/contato" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-sm">
               Fale com um Especialista
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -272,12 +271,12 @@ export default function SobrePage() {
             Fale diretamente com nossa diretoria técnica e solicite um estudo preliminar sem custos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-            <a href="/contato" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
+            <Link href="/contato" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
               Solicitar Diagnóstico
-            </a>
-            <a href="/solucoes" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
+            </Link>
+            <Link href="/solucoes" className="px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-blue/30 text-white font-bold glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">
               Entenda Nossas Soluções
-            </a>
+            </Link>
           </div>
         </div>
       </section>

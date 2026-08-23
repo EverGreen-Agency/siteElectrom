@@ -9,6 +9,14 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'electrom.eng.br',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.electrom.eng.br',
+      },
+      {
+        protocol: 'https',
         hostname: 'ElectROM.eng.br',
       },
       {
