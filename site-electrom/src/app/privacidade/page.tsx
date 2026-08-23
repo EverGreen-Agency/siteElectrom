@@ -3,10 +3,10 @@
 import { Suspense } from 'react';
 import { LegalContent } from '../../components/LegalContent';
 
-export default function LegalPage() {
+export default function TopPrivacidadePage() {
   return (
     <Suspense fallback={<div className="bg-brand-petrol min-h-screen" />}>
-      <LegalContent />
+      <LegalContent defaultTab="privacidade" />
     </Suspense>
   );
 }

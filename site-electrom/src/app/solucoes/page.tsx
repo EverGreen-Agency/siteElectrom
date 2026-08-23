@@ -213,7 +213,7 @@ export default function SolucoesPage() {
             Qual a economia viável para sua operação&nbsp;hoje?
           </h2>
           <p className="text-gray-400 font-light text-base md:text-lg max-w-xl mx-auto leading-relaxed">
-            Nossos engenheiros desenvolvem estudos preliminares com mapeamento tarifário sob custos zero.
+            Nossos engenheiros desenvolvem estudos preliminares com mapeamento tarifário sem custo para sua empresa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <Link href="/contato" className="px-8 py-3.5 rounded-lg bg-brand-blue text-brand-petrol font-bold shadow-lg hover:shadow-brand-blue/20 transition-all hover:scale-105 active:scale-95 text-xs uppercase tracking-wider">

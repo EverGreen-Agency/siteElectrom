@@ -66,7 +66,7 @@ const milestones: MilestoneItem[] = [
   {
     year: 'Out/2017',
     title: 'Primeira Obra Solar Homologada',
-    description: 'Primeira obra homologada na Escola Tatelli, em Campo Limpo Paulista (SP).',
+    description: 'Primeira obra homologada na Escola Patelli, em Campo Limpo Paulista (SP).',
     image: '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg',
     tag: 'Homologação Solar'
   }

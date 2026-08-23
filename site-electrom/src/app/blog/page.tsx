@@ -228,7 +228,7 @@ const BlogPage = () => {
                 <button
                   key={categoria.id}
                   onClick={() => setSelectedCategory(categoria.id)}
-                  className={`px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all ${
+                  className={`px-4 py-2 rounded-full text-xs font-sans font-medium uppercase tracking-wider transition-all ${
                     selectedCategory === categoria.id
                       ? 'bg-brand-blue text-brand-petrol shadow-lg shadow-brand-blue/20'
                       : 'bg-white/5 text-gray-400 border border-white/5 hover:border-white/20 hover:text-white'

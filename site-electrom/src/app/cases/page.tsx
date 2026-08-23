@@ -77,7 +77,7 @@ const CasesPage = () => {
               key={segmento.id}
               onClick={() => setActiveSegment(segmento.id)}
               variants={item}
-              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-mono text-[11px] font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer whitespace-nowrap
+              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-sans text-xs font-medium uppercase tracking-wider transition-all duration-200 border cursor-pointer whitespace-nowrap
                 ${activeSegment === segmento.id
                   ? 'bg-brand-blue border-brand-blue text-brand-petrol shadow-lg shadow-brand-blue/20 scale-105'
                   : 'bg-white/5 border-white/5 text-gray-400 hover:border-white/20 hover:text-white'}

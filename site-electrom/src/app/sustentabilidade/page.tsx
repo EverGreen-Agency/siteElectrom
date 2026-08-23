@@ -288,7 +288,7 @@ export default function SustentabilidadePage() {
       <section className="w-full pt-16 pb-12 bg-brand-blue/5 border-t border-white/5 text-center relative z-10 mt-8">
         <div className="max-w-4xl mx-auto px-6 space-y-6">
           <h2 className="text-3xl md:text-4xl font-display font-black text-white">
-            Faça sua energia valer valor ambiental real
+            Transforme sua matriz energética em valor ambiental e econômico real
           </h2>
           <p className="text-gray-400 font-light text-base md:text-lg max-w-xl mx-auto leading-relaxed">
             Sustentabilidade industrial não é custo. É eficiência mensurável com retorno econômico direto. Fale com nossos engenheiros de descarbonização.

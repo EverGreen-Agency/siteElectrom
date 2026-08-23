@@ -1,12 +1,12 @@
 'use client';
 
 import { Suspense } from 'react';
-import { LegalContent } from '../../components/LegalContent';
+import { LegalContent } from '../../../components/LegalContent';
 
-export default function LegalPage() {
+export default function TermosSubPage() {
   return (
     <Suspense fallback={<div className="bg-brand-petrol min-h-screen" />}>
-      <LegalContent />
+      <LegalContent defaultTab="termos" />
     </Suspense>
   );
 }
