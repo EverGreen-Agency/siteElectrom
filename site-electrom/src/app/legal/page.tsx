@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaShieldAlt, FaFileContract, FaLock, FaCheckCircle } from 'react-icons/fa';
+import { FaShieldAlt, FaFileContract } from 'react-icons/fa';
 
 const LegalPage = () => {
   const [activeTab, setActiveTab] = useState<'termos' | 'privacidade'>('termos');

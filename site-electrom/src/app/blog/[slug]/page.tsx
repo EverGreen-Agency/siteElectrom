@@ -13,7 +13,7 @@ import {
   FaWhatsapp, 
   FaListUl 
 } from 'react-icons/fa';
-import { wordpressService, Post as WPPost } from '../../../services/wordpress';
+import { wordpressService } from '../../../services/wordpress';
 import { 
   getBlogPostBySlug, 
   getRelatedBlogPosts, 
