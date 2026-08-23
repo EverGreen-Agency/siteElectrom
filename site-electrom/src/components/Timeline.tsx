@@ -13,64 +13,28 @@ interface Milestone {
 }
 
 const milestones: Milestone[] = [
-  {
-    year: '1996',
-    title: 'Fundação da ElectROM',
-    desc: 'Nascimento da ElectROM em São Paulo, focada em gestão de obras projetadas e laudos técnicos de engenharia elétrica e mecânica.'
-  },
-  {
-    year: 'Fev/2000',
-    title: 'Consultoria & Eficiência Energética',
-    desc: 'Início das atividades de consultoria em conservação de energia e eficiência energética.'
-  },
-  {
-    year: 'Dez/2001',
-    title: '275 Obras Entregues',
-    desc: 'Totalizadas 275 obras entregues pelo país.'
-  },
-  {
-    year: 'Set/2005',
-    title: 'Especialidades Químicas',
-    desc: 'Início da distribuição de especialidades químicas, atendendo à indústria eletroeletrônica, eletromecânica e automobilística.'
-  },
-  {
-    year: 'Dez/2009',
-    title: 'Obra nº 359',
-    desc: 'Entrega da obra nº 359, em São Joaquim da Barra (SP).'
-  },
-  {
-    year: 'Set/2015',
-    title: '1.800 Clientes Atendidos',
-    desc: 'Totalizado atendimento de 1.800 clientes para especificação e fornecimento de especialidades químicas.'
-  },
-  {
-    year: 'Dez/2016',
-    title: 'Início em Energia Solar',
-    desc: 'Início das atividades e dos primeiros projetos para energia solar.'
-  },
+  { year: '1996', title: 'Fundacao da ElectROM', desc: 'Nascimento da ElectROM em Sao Paulo, focada em gestao de obras projetadas e laudos tecnicos de engenharia eletrica e mecanica.' },
+  { year: 'Fev/2000', title: 'Consultoria & Eficiencia Energetica', desc: 'Inicio das atividades de consultoria em conservacao de energia e eficiencia energetica.' },
+  { year: 'Dez/2001', title: '275 Obras Entregues', desc: 'Totalizadas 275 obras entregues pelo pais.' },
+  { year: 'Set/2005', title: 'Especialidades Quimicas', desc: 'Inicio da distribuicao de especialidades quimicas, atendendo a industria eletroeletronica, eletromecÃ¢nica e automobilistica.' },
+  { year: 'Dez/2009', title: 'Obra no 359', desc: 'Entrega da obra no 359, em Sao Joaquim da Barra (SP).' },
+  { year: 'Set/2015', title: '1.800 Clientes Atendidos', desc: 'Totalizado atendimento de 1.800 clientes para especificacao e fornecimento de especialidades quimicas.' },
+  { year: 'Dez/2016', title: 'Inicio em Energia Solar', desc: 'Inicio das atividades e dos primeiros projetos para energia solar.' },
   {
     year: 'Out/2017',
     title: 'Primeira Obra Solar Homologada',
     desc: 'Primeira obra homologada na Escola Patelli, em Campo Limpo Paulista (SP).',
     photo: '/obras/EscolaPatelliFotovoltaica/WP_20180203_11_56_04_Pro.jpg',
-    photoCaption: 'Escola Patelli — Campo Limpo Paulista, SP (Out/2017)'
+    photoCaption: 'Escola Patelli - Campo Limpo Paulista, SP (Out/2017)'
   },
-  {
-    year: 'Dez/2020',
-    title: 'Obra nº 430',
-    desc: 'Entrega da obra de número 430.'
-  },
-  {
-    year: 'Jul/2021',
-    title: 'Carregadores Veiculares',
-    desc: 'Instalação dos primeiros carregadores veiculares.'
-  },
+  { year: 'Dez/2020', title: 'Obra no 430', desc: 'Entrega da obra de numero 430.' },
+  { year: 'Jul/2021', title: 'Carregadores Veiculares', desc: 'Instalacao dos primeiros carregadores veiculares.' },
   {
     year: 'Fev/2025',
-    title: 'Smart Fit Embu-Guaçu',
-    desc: 'Homologação da instalação fotovoltaica da academia Smart Fit, em Embu-Guaçu (SP).',
+    title: 'Smart Fit Embu-Guacu',
+    desc: 'Homologacao da instalacao fotovoltaica da academia Smart Fit, em Embu-Guacu (SP).',
     photo: '/obras/SmartFitSolar.png',
-    photoCaption: 'Usina Solar Smart Fit — Embu-Guaçu, SP (Fev/2025)'
+    photoCaption: 'Usina Solar Smart Fit - Embu-Guacu, SP (Fev/2025)'
   }
 ];
 
