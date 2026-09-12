@@ -1,0 +1,41 @@
+# ElectROM Engenharia
+
+> Engenharia de Energias, Cabines Primárias de Média Tensão, Mercado Livre de Energia (ACL), Usinas Solares Industriais e BESS com 30 anos de excelência técnica no Brasil.
+
+## Docs
+
+- [Início](https://electrom.eng.br): Visão geral da ElectROM Engenharia, métricas de 30 anos de atuação, soluções integradas e clientes atendidos.
+- [Soluções em Engenharia](https://electrom.eng.br/solucoes): Catálogo técnico completo abrangendo Cabines Primárias, Usinas Solares Industriais, Eficiência Energética, Mercado Livre e Gerenciamento de Obras.
+- [Cases de Sucesso & Obras](https://electrom.eng.br/cases): Portfólio de projetos reais executados, incluindo Usina Smart Fit (145 kWp), Cabine de Pintura EMBRAER, Eficiência Térmica Cargill e Usinas em Solo.
+- [Sustentabilidade & ESG](https://electrom.eng.br/sustentabilidade): Alinhamento aos ODS 7, 9 e 12 da ONU, descarbonização industrial auditada, mais de 38.000 toneladas de CO₂ evitadas.
+- [Sobre a Empresa](https://electrom.eng.br/sobre): Trajetória institucional de 30 anos (fundada em 1996), equipe técnica credenciada pelo CREA-SP, rigor técnico e governança.
+- [Contato & Consultoria](https://electrom.eng.br/contato): Canal direto para orçamentos, diagnósticos de viabilidade e atendimento com engenheiros especialistas.
+- [Serviços & Matriz Técnica de Soluções](https://electrom.eng.br/servicos.md): Especificações técnicas completas, normas atendidas (NBR 5410/14039/5419, NR-10), escopo Turnkey EPC e diretrizes de contratação em Markdown puro para consumo por agentes e LLMs.
+
+## Blog & Análises Técnicas
+
+- [Autoprodução Solar, BESS e Mercado Livre de Energia: A Tríade da Blindagem Tarifária Industrial](https://electrom.eng.br/blog/autoproducao-solar-bess-mercado-livre-industria): Como indústrias reduzem até 85% do custo energético com sistemas BESS (Lei 15.269/2025) e migração ao ACL.
+- [SPDA NBR 5419 e Laudos NR-10: Blindagem Jurídica, Continuidade Operacional e Redução de Apólice](https://electrom.eng.br/blog/spda-nbr-5419-laudo-nr10-industria-seguranca): Guia prático de engenharia para inspeção de para-raios, prontuário elétrico e conformidade securitária.
+- [Energia Solar Vale a Pena em 2025? Análise Completa com Números Reais](https://electrom.eng.br/blog/energia-solar-vale-a-pena-2025-numeros-reais): Análise de payback real, tarifas após o Marco Legal da GD (Lei 14.300) e cálculo de ROI para empresas.
+- [Abertura do Mercado Livre de Energia para Baixa Tensão (2026-2028): Cronograma e Oportunidades para PMEs](https://electrom.eng.br/blog/mercado-livre-baixa-tensao-pme-cronograma-2026-2028): Cronograma regulatório de abertura para PMEs e consumidores comerciais em baixa tensão.
+- [Baterias Industriais BESS na Indústria Brasileira: Peak Shaving e Backup](https://electrom.eng.br/blog/bess-armazenamento-baterias-industria-peak-shaving): Guia técnico sobre dimensionamento de baterias para corte de ponta e estabilidade fabril.
+- [Transição para o Mercado Livre de Energia: Como Migrar sua Empresa sem Risco](https://electrom.eng.br/blog/sustentabilidade-futuro-energia): Passo a passo para migração do mercado cativo para o ambiente de contratação livre (ACL).
+
+## Key Facts
+
+- **Razão Social:** ElectROM Engenharia EIRELI
+- **Fundação:** 1996 (30 anos de atuação contínua no setor elétrico)
+- **Sede:** São Paulo, Estado de São Paulo, Brasil
+- **Projetos Entregues:** Mais de 550 projetos elétricos, de geração e utilidades homologados
+- **Economia Gerada:** Mais de R$ 50.000.000,00 poupados diretamente aos clientes
+- **Clientes Atendidos:** Mais de 1.800 clientes industriais, comerciais e institucionais
+- **Impacto ESG Auditado:** Mais de 38.000 toneladas de CO₂ evitadas, mais de 96.000 toneladas de combustível economizadas e equivalência de 20.000+ árvores preservadas
+- **Normas e Regulamentações Técnicas:** ABNT NBR 5410 (Baixa Tensão), ABNT NBR 14039 (Média Tensão), ABNT NBR 5419 (SPDA/Proteção contra Descargas Atmosféricas), NR-10 (Segurança em Instalações Elétricas), Resoluções Normativas da ANEEL, Lei nº 14.300/2022 e Lei nº 15.269/2025 (BESS).
+
+## Contact
+
+- **Website:** https://electrom.eng.br
+- **Telefone / WhatsApp:** +55 11 99962-0930
+- **E-mail Comercial:** comercial@electrom.eng.br
+- **Atendimento:** Segunda a Sexta-feira, das 08h às 18h
+- **Localização:** São Paulo - SP, Brasil
