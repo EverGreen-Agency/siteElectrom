@@ -12,7 +12,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ElectROM Engenharia | Cabines Primárias, Mercado Livre & Energia Solar",
+  title: {
+    default: "ElectROM Engenharia | Cabines Primárias, Mercado Livre & Energia Solar",
+    template: "%s | ElectROM Engenharia",
+  },
   description: "Engenharia de Energias para indústrias e grandes empresas: Média e Baixa Tensão, Cabines Primárias, Mercado Livre de Energia (ACL), Eficiência Energética e Usinas Fotovoltaicas. Mais de 30 anos de excelência.",
   metadataBase: new URL("https://electrom.eng.br"),
   alternates: {

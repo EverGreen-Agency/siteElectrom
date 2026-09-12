@@ -1,10 +1,9 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { wordpressService, Post as WPPost } from '../services/wordpress'
 import { blogPostsData } from '../data/blogPosts'
 
 export interface BlogPost {
@@ -19,7 +18,7 @@ export interface BlogPost {
   slug: string
 }
 
-const localFallbackPosts: BlogPost[] = blogPostsData.slice(0, 3).map((item, idx) => ({
+const staticPreviewPosts: BlogPost[] = blogPostsData.slice(0, 3).map((item, idx) => ({
   id: item.id,
   title: item.title,
   category: item.category.name,
@@ -91,43 +90,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, index }) => {
 }
 
 export default function BlogPreview() {
-  const [posts, setPosts] = useState<BlogPost[]>(localFallbackPosts)
-  const [loading, setLoading] = useState<boolean>(false)
-
-  useEffect(() => {
-    async function loadPosts() {
-      try {
-        const wpPosts = await wordpressService.getPosts(1, 3)
-        if (wpPosts && wpPosts.length > 0) {
-          const formattedPosts: BlogPost[] = wpPosts.map((wp: WPPost, idx: number) => ({
-            id: wp.id,
-            title: wp.title?.rendered || 'Sem título',
-            category: (wp._embedded as { 'wp:term'?: Array<Array<{ name: string }>> })?.['wp:term']?.[0]?.[0]?.name || 'Engenharia',
-            date: wp.date ? new Date(wp.date).toLocaleDateString('pt-BR') : 'Recente',
-            excerpt: wp.excerpt?.rendered?.replace(/<[^>]+>/g, '').slice(0, 140) + '...' || '',
-            img: wp._embedded?.['wp:featuredmedia']?.[0]?.source_url || localFallbackPosts[idx % localFallbackPosts.length].img,
-            readTime: '5 min',
-            featured: idx === 0,
-            slug: wp.slug || '#'
-          }))
-          
-          // Complementa com posts locais até completar 3 posts
-          const existingSlugs = new Set(formattedPosts.map(p => p.slug));
-          const complementary = localFallbackPosts.filter(p => !existingSlugs.has(p.slug));
-          const combined = [...formattedPosts, ...complementary].slice(0, 3);
-          setPosts(combined);
-        } else {
-          setPosts(localFallbackPosts);
-        }
-      } catch {
-        setPosts(localFallbackPosts);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadPosts()
-  }, [])
+  const posts = staticPreviewPosts;
 
   return (
     <section className="py-24 bg-brand-petrol border-t border-white/5 relative overflow-hidden">
@@ -156,19 +119,11 @@ export default function BlogPreview() {
           </Link>
         </div>
 
-        {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="h-[480px] rounded-2xl bg-white/5 animate-pulse" />
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {posts.map((post, idx) => (
-              <BlogCard key={post.id} post={post} index={idx} />
-            ))}
-          </div>
-        )}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {posts.map((post, idx) => (
+            <BlogCard key={post.id} post={post} index={idx} />
+          ))}
+        </div>
       </div>
     </section>
   )

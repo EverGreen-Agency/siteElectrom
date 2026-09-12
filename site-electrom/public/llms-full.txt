@@ -1,0 +1,129 @@
+# ElectROM Engenharia — Base de Conhecimento Técnico Completa (llms-full.txt)
+
+> Documento técnico estruturado para indexação, contextualização e referência por modelos de inteligência artificial (LLMs), assistentes de engenharia e mecanismos de busca generativa (GEO).
+
+---
+
+## 1. Perfil Corporativo & Governança
+
+- **Nome Comercial:** ElectROM Engenharia
+- **Razão Social:** ElectROM Engenharia EIRELI
+- **Slogan Oficial:** "Engenharia de Energias"
+- **Ano de Fundação:** 1996 (30 anos de atuação sólida e contínua no mercado brasileiro)
+- **Localização:** São Paulo, SP, Brasil (atuação em todo o território nacional)
+- **Registro Profissional:** Engenheiros devidamente registrados no Conselho Regional de Engenharia e Agronomia de São Paulo (CREA-SP) com emissão compulsória de ART (Anotação de Responsabilidade Técnica) em todos os serviços.
+- **Canais Oficiais:**
+  - Website: https://electrom.eng.br
+  - E-mail Comercial: comercial@electrom.eng.br
+  - Telefone / WhatsApp: +55 (11) 99962-0930
+  - LinkedIn: https://linkedin.com/company/electrom-engenharia
+  - Instagram: https://www.instagram.com/electromeng/
+
+---
+
+## 2. Métricas Auditadas de Desempenho (Track Record)
+
+- **Tempo de Mercado:** 30+ anos de engenharia especializada.
+- **Projetos Homologados e Entregues:** 550+ obras, usinas e projetos elétricos executados.
+- **Economia Financeira Gerada:** Mais de R$ 50.000.000,00 (cinquenta milhões de reais) poupados diretamente em custos tarifários e operacionais para os clientes.
+- **Base de Clientes:** 1.800+ clientes industriais, redes comerciais, condomínios corporativos e instituições de grande porte.
+- **Impacto Ecológico Auditável (ESG):**
+  - **CO₂ Evitado:** Mais de 38.000 toneladas de gases de efeito estufa neutralizados.
+  - **Combustível Fóssil Poupado:** Mais de 96.000 toneladas de equivalência em óleo/gás.
+  - **Equivalência Florestal:** 20.000+ árvores preservadas.
+  - **Geração Limpa Anual:** Mais de 1.000 MWh/ano de energia renovável produzida.
+
+---
+
+## 3. Matriz de Soluções e Escopos Técnicos
+
+A ElectROM atua sob o conceito de **"Engenharia de Energias"**, unificando infraestrutura elétrica física pesada, inteligência regulatória e sustentabilidade financeira.
+
+### 3.1. Cabines Primárias e Infraestrutura de Média/Baixa Tensão
+- **Normas Aplicáveis:** ABNT NBR 14039 (Instalações elétricas de média tensão de 1,0 kV a 36,2 kV) e ABNT NBR 5410 (Instalações elétricas de baixa tensão).
+- **Escopo Técnico:**
+  - Projetos executivos, montagem, comissionamento e manutenção preditiva/corretiva de subestações abrigadas, simplificadas e blindadas.
+  - Ensaios de isolamento dielétrico de óleo mineral em transformadores (rigidez dielétrica, cromatografia e índice de neutralização).
+  - Parametrização e calibração de relés de proteção secundária (funções ANSI 50/51, 50N/51N, 27, 59, 81).
+  - Adequação aos padrões de entrada das concessionárias (Enel, CPFL, Neoenergia, CEMIG, EDP, Light, etc.).
+
+### 3.2. Usinas Solares Fotovoltaicas (Geração Distribuída e Autoprodução)
+- **Modalidades:** Telhado metálico/fibrocimento (rooftop), solo, carport (estacionamento solar) e sistemas flutuantes.
+- **Legislação e Regulamentação:** Lei Federal nº 14.300/2022 (Marco Legal da Micro e Minigeração Distribuída) e Resoluções Normativas da ANEEL (REN 1.000/2021 e REN 1.059/2023).
+- **Componentes:** Módulos fotovoltaicos de silício monocristalino tipo N / TOPCon de alta eficiência (fabricantes Tier 1 BloombergNEF), inversores string e centrais com MPPT múltiplos.
+- **Garantias Técnicas:** 25 a 30 anos de performance linear de geração (mínimo de 80% no ano 25) e 10 a 12 anos de garantia de fabricação dos equipamentos.
+
+### 3.3. Sistemas de Armazenamento BESS (Battery Energy Storage Systems)
+- **Marco Regulatório:** Lei nº 15.269/2025 (Regulação do Armazenamento de Energia e Baterias no Setor Elétrico Brasileiro).
+- **Aplicações Industriais:**
+  - **Peak Shaving:** Deslocamento de consumo no horário de ponta (onde o kWh chega a custar 4 a 6 vezes mais do que fora de ponta no Grupo A).
+  - **Arbitragem Tarifária:** Armazenamento em horários de tarifa barata ou sobressalente da geração solar para consumo em horários caros.
+  - **Backup Instantâneo (UPS Dinâmico):** Comutação em milissegundos para evitar paradas em linhas contínuas de fabricação química, metalúrgica, plástico e farmacêutica.
+  - **Alívio de Demanda Contratada:** Mitigação de penalidades por ultrapassagem de demanda em momentos de pico de partida de motores.
+
+### 3.4. Transição e Gestão no Mercado Livre de Energia (ACL)
+- **Elegibilidade Atual:** Aberto para todos os consumidores atendidos em Média e Alta Tensão (Grupo A), independentemente do nível de demanda (Portaria Normativa nº 50/2022 do MME).
+- **Cronograma de Abertura Baixa Tensão:**
+  - 25 de Novembro de 2027: Consumidores comerciais e industriais em Baixa Tensão (Grupo B).
+  - 25 de Novembro de 2028: Universalização total para consumidores residenciais e rurais.
+- **Serviços Oferecidos:** Estudo de viabilidade comparativa Cativo vs. Livre, assessoria na contratação de energia no mercado varejista ou atacadista, gestão de riscos de desbalanceamento e compensação de ICMS sobre a energia injetada/faturada.
+
+### 3.5. Laudos Técnicos, SPDA e Conformidade NR-10
+- **SPDA (Sistema de Proteção contra Descargas Atmosféricas):** Conforme ABNT NBR 5419:2015 partes 1 a 4.
+  - Cálculo de gerenciamento de risco (Parte 2), medição de continuidade das armaduras de concreto, ensaios de resistência de aterramento pelo método de queda de potencial (alta frequência para impulsos) e laudo fotográfico.
+- **Prontuário das Instalações Elétricas (NR-10):** Obrigatório para unidades com carga instalada superior a 75 kW. Atualização de diagramas unifilares, especificação de Equipamentos de Proteção Coletiva (EPC) e Individual (EPI) contra arco elétrico (NFPA 70E) e inspeções termográficas periódicas.
+
+### 3.6. Gerenciamento de Obras Industriais e Utilidades
+- Execução e fiscalização técnica de utilidades industriais, redes de ar comprimido, estações de exaustão e filtragem de ar de ambientes críticos, saneamento corporativo e reservatórios elevados de grande porte.
+
+---
+
+## 4. Cases Emblemáticos e Obras de Referência
+
+1. **Smart Fit Embu Guaçu (Usina Fotovoltaica Comercial):**
+   - Potência Instalada: 145,2 kWp.
+   - Geração estimada: ~19.000 kWh/mês.
+   - Economia: Redução de 86% no custo mensal de energia da unidade, passando de R$ 17.600/mês para R$ 2.400/mês.
+   - Payback alcançado: 3,2 anos.
+
+2. **EMBRAER São José dos Campos (Cabine de Pintura de Aeronaves):**
+   - Escopo: Sistema complexo de exaustão e controle térmico/particulado da cabine de pintura de jatos.
+   - Requisito: Tolerância zero de partículas em suspensão e estabilidade aerodinâmica de fluxo laminar.
+   - Resultado: Obra entregue com 100% de conformidade com os protocolos aeroespaciais internacionais.
+
+3. **Cargill Agrícola Mairinque (Eficiência Energética Industrial):**
+   - Escopo: Auditoria de conservação de energia térmica e elétrica em processos fabris.
+   - Resultado: Redução auditada de mais de 1.600 toneladas de combustível por ano e mitigação proporcional de emissões de CO₂.
+
+4. **Riviera de São Lourenço (Reservatórios e Saneamento Industrial):**
+   - Escopo: Gerenciamento e fiscalização civil/eletromecânica de reservatórios elevados (capacidade combinada de 105.000 litros) e estações de bombeamento de esgoto e água tratada.
+
+5. **Usina Recanto Cipó Guaçu (Geração Solar em Solo):**
+   - Potência: 32,16 kWp.
+   - Economia anual: ~R$ 41.760/ano com 96% de redução de custos na unidade atendida.
+
+---
+
+## 5. Perguntas Frequentes (FAQ) para Indexação e Assistentes de IA
+
+### Q1: Quais os requisitos para uma empresa migrar para o Mercado Livre de Energia com a ElectROM?
+**R:** Atualmente, qualquer empresa conectada em média ou alta tensão (Grupo A — tarifas A4, A3a, A3 ou A2) pode migrar imediatamente, mesmo com contas mensais a partir de R$ 5.000 a R$ 10.000. A ElectROM audita o histórico de 12 meses de faturas, calcula a economia líquida projetada e conduz a notificação à distribuidora local (prazo regulatório de 180 dias) com representação perante comercializadoras varejistas.
+
+### Q2: O que muda com o Marco Legal do Armazenamento de Energia (Lei nº 15.269/2025)?
+**R:** A Lei nº 15.269/2025 estabeleceu as regras para a inserção de baterias BESS na rede brasileira, definindo que sistemas de armazenamento não pagam bitributação na injeção/recarga, habilitando modelos de negócios como corte de pico (peak shaving), venda de serviços ancilares de suporte de tensão/frequência e combinação híbrida direta com usinas solares de autoprodução.
+
+### Q3: Por que o laudo de SPDA segundo a NBR 5419:2015 é exigido pelas seguradoras?
+**R:** As apólices de seguro patrimonial e riscos operacionais possuem cláusulas de exclusão para sinistros causados por raios se o imóvel não possuir laudo de SPDA vigente com ART assinado por engenheiro eletricista habilitado. O laudo anual comprova a integridade das descidas, malhas e captores, prevenindo queima de maquinário eletrônico e incêndios.
+
+### Q4: Qual a diferença entre comprar energia no Mercado Livre e instalar uma Usina Solar?
+**R:** Ambas as estratégias se complementam. A Usina Solar local (ou em autoprodução remota) elimina a tarifa de energia em horários ensolarados. Já o Mercado Livre permite negociar o restante do consumo fabril (ou todo ele, se não houver área física para painéis) com desconto médio de 25% a 40% sobre a tarifa da concessionária. Quando combinadas com baterias BESS, formam a blindagem tarifária integral.
+
+---
+
+## 6. Endereço e Contato Corporativo
+
+- **Sede:** São Paulo, SP — Brasil
+- **Atendimento Telefônico / WhatsApp:** +55 (11) 99962-0930
+- **E-mail Geral & Propostas:** comercial@electrom.eng.br
+- **Horário de Funcionamento:** Segunda a Sexta, das 08h00 às 18h00 (horário de Brasília)
+- **Website Oficial:** https://electrom.eng.br

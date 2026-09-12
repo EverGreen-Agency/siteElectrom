@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FaLeaf, FaChartLine, FaIndustry, FaSolarPanel, FaUsers, FaShieldAlt, FaCertificate, FaChartPie, FaClipboardCheck, FaFileAlt, FaWhatsapp, FaTree, FaCloudDownloadAlt } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
-import { companyData } from '../../data/companyData';
+import { companyData, testimonialsData } from '../../data';
 
 export default function SustentabilidadePage() {
   const odsItems = [
@@ -259,16 +259,7 @@ export default function SustentabilidadePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                quote: "Além do retorno financeiro imediato da usina fotovoltaica, conseguimos lastrear os dados da ElectROM em nosso Balanço de Sustentabilidade anual de forma auditável.",
-                author: "Diretoria de ESG, Grupo Metalúrgico SP"
-              },
-              {
-                quote: "A modernização da cabine primária e o diagnóstico de reativos reduziram perdas físicas de rede e ajudaram na obtenção de certificação verde com investidores.",
-                author: "Gerência de Operações, Hub Logístico B2B"
-              }
-            ].map((depoimento, index) => (
+            {testimonialsData.slice(0, 2).map((depoimento, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

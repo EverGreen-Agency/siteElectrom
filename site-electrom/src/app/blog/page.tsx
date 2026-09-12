@@ -1,11 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaSearch, FaCalendarAlt, FaUser, FaTag, FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
-import { wordpressService } from '../../services/wordpress';
 import { blogPostsData } from '../../data/blogPosts';
 
 interface Post {
@@ -19,7 +18,7 @@ interface Post {
   slug: string;
 }
 
-const postsFallback: Post[] = blogPostsData.map(item => ({
+const postsStatic: Post[] = blogPostsData.map(item => ({
   id: item.id,
   titulo: item.title,
   resumo: item.excerpt,
@@ -30,76 +29,8 @@ const postsFallback: Post[] = blogPostsData.map(item => ({
   slug: item.slug
 }));
 
-interface WordPressPost {
-  id: number;
-  date?: string;
-  slug?: string;
-  title?: {
-    rendered?: string;
-  };
-  excerpt?: {
-    rendered?: string;
-  };
-  _embedded?: {
-    'wp:featuredmedia'?: Array<{
-      source_url: string;
-      alt_text?: string;
-    }>;
-    'author'?: Array<{
-      name: string;
-    }>;
-    'wp:term'?: Array<Array<{
-      id: number;
-      name: string;
-      slug: string;
-      taxonomy: string;
-    }>>;
-  };
-}
-
-const mapWordPressPostToLocal = (wp: WordPressPost): Post => {
-  let dataFormatada = 'Sem data';
-  if (wp.date) {
-    try {
-      const dataObj = new Date(wp.date);
-      dataFormatada = dataObj.toLocaleDateString('pt-BR');
-    } catch {
-      dataFormatada = wp.date;
-    }
-  }
-
-  const imagem = wp._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg';
-  const autor = wp._embedded?.['author']?.[0]?.name || 'ElectROM';
-
-  let categoria = 'sustentabilidade';
-  if (wp._embedded?.['wp:term'] && wp._embedded?.['wp:term']?.[0]) {
-    const termos = wp._embedded?.['wp:term']?.[0];
-    if (termos && termos.length > 0) {
-      const slugsPermitidos = ['energia-solar', 'eficiencia', 'sustentabilidade', 'inovacao'];
-      const termoEncontrado = termos.find((t: { slug: string }) => slugsPermitidos.includes(t.slug));
-      categoria = termoEncontrado ? termoEncontrado.slug : termos[0].slug || 'sustentabilidade';
-    }
-  }
-
-  const resumoCru = wp.excerpt?.rendered || '';
-  const resumoLimpo = resumoCru.replace(/<[^>]*>/g, '').trim();
-
-  return {
-    id: wp.id,
-    titulo: wp.title?.rendered || 'Sem Título',
-    resumo: resumoLimpo || 'Leia mais sobre este assunto acessando a matéria completa.',
-    data: dataFormatada,
-    autor: autor,
-    categoria: categoria,
-    imagem: imagem,
-    slug: wp.slug || ''
-  };
-};
-
 const BlogPage = () => {
-  const [posts, setPosts] = useState<Post[]>(postsFallback);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [posts] = useState<Post[]>(postsStatic);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('todos');
   const [newsletterEmail, setNewsletterEmail] = useState('');
@@ -113,31 +44,6 @@ const BlogPage = () => {
     { id: 'media-e-baixa-tensao', nome: 'Média e Baixa Tensão' },
     { id: 'gerenciamento-de-obras', nome: 'Gerenciamento de Obras' }
   ];
-
-  useEffect(() => {
-    const carregarPosts = async () => {
-      try {
-        const postsWP = await wordpressService.getPosts(1, 20);
-        
-        if (postsWP && postsWP.length > 0) {
-          const postsMapeados = postsWP.map(mapWordPressPostToLocal);
-          // Mescla posts do WP com o acervo técnico local sem duplicar slugs
-          const existingSlugs = new Set(postsMapeados.map(p => p.slug));
-          const complementaryFallback = postsFallback.filter(p => !existingSlugs.has(p.slug));
-          setPosts([...postsMapeados, ...complementaryFallback]);
-          setError(null);
-        } else {
-          setPosts(postsFallback);
-        }
-      } catch {
-        setPosts(postsFallback);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    carregarPosts();
-  }, []);
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -241,30 +147,8 @@ const BlogPage = () => {
           </div>
         </div>
 
-        {/* Warning messages */}
-        {error && (
-          <div className="mb-8 p-4 bg-brand-gold/10 border border-brand-gold/20 rounded-xl text-brand-gold text-xs flex items-center gap-2 max-w-fit">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
-            <span>{error}</span>
-          </div>
-        )}
-
-        {/* Grid de Posts / Skeleton Loading */}
-        {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((n) => (
-              <div key={n} className="glass-card rounded-2xl overflow-hidden border-white/5 h-[480px] animate-pulse flex flex-col justify-between p-6">
-                <div className="w-full h-48 bg-white/5 rounded-xl mb-4" />
-                <div className="space-y-3 flex-grow">
-                  <div className="w-1/3 h-3 bg-white/5 rounded" />
-                  <div className="w-3/4 h-5 bg-white/5 rounded" />
-                  <div className="w-full h-12 bg-white/5 rounded" />
-                </div>
-                <div className="w-full h-8 bg-white/5 rounded mt-4" />
-              </div>
-            ))}
-          </div>
-        ) : postsFiltrados.length === 0 ? (
+        {/* Grid de Posts */}
+        {postsFiltrados.length === 0 ? (
           <div className="text-center py-16 glass-card rounded-2xl border-white/5">
             <p className="text-lg text-gray-400 font-light">Nenhuma publicação encontrada para a busca.</p>
           </div>

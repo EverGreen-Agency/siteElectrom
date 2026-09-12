@@ -13,7 +13,6 @@ import {
   FaWhatsapp, 
   FaListUl 
 } from 'react-icons/fa';
-import { wordpressService } from '../../../services/wordpress';
 import { 
   getBlogPostBySlug, 
   getRelatedBlogPosts, 
@@ -65,24 +64,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  // Tentar no WordPress
-  try {
-    const wpPost = await wordpressService.getPostBySlug(slug);
-    if (wpPost) {
-      const wpTitle = (wpPost.title?.rendered || 'Artigo Técnico').replace(/&amp;/g, '&');
-      const wpExcerpt = wpPost.excerpt?.rendered?.replace(/<[^>]+>/g, '').trim() || 'Artigo técnico especializado.';
-      return {
-        title: `${wpTitle} | ElectROM Engenharia`,
-        description: wpExcerpt,
-        alternates: {
-          canonical: `https://electrom.eng.br/blog/${slug}`,
-        },
-      };
-    }
-  } catch {
-    // Silent
-  }
-
   return {
     title: 'Artigo | ElectROM Engenharia',
     description: 'Artigo técnico e análises sobre engenharia elétrica e energia solar.',
@@ -90,64 +71,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 async function fetchPost(slug: string): Promise<BlogPostItem | null> {
-  // 1. Tentar primeiro na base técnica local
-  const localItem = getBlogPostBySlug(slug);
-  if (localItem) {
-    return localItem;
-  }
-
-  // 2. Buscar no WordPress CMS
-  try {
-    const wpPost = await wordpressService.getPostBySlug(slug);
-    if (wpPost) {
-      const wpTitle = wpPost.title?.rendered || 'Sem título';
-      const wpContent = wpPost.content?.rendered || '';
-      const wpDate = wpPost.date ? new Date(wpPost.date).toLocaleDateString('pt-BR') : 'Recente';
-
-      const embedded = wpPost._embedded as unknown as {
-        'wp:featuredmedia'?: Array<{ source_url?: string }>;
-        'author'?: Array<{ name?: string }>;
-        'wp:term'?: Array<Array<{ name?: string }>>;
-      } | undefined;
-
-      const wpImg = embedded?.['wp:featuredmedia']?.[0]?.source_url || '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg';
-      const wpAuthor = embedded?.['author']?.[0]?.name || 'Equipe ElectROM';
-      const wpCategoryName = embedded?.['wp:term']?.[0]?.[0]?.name || 'Engenharia de Energias';
-
-      let excerptText = '';
-      if ('excerpt' in wpPost && wpPost.excerpt?.rendered) {
-        excerptText = wpPost.excerpt.rendered.replace(/<[^>]+>/g, '').trim();
-      } else if (wpContent) {
-        excerptText = wpContent.replace(/<[^>]+>/g, '').slice(0, 160) + '...';
-      }
-
-      return {
-        id: wpPost.id,
-        slug: slug,
-        title: wpTitle.replace(/&amp;/g, '&'),
-        excerpt: excerptText,
-        content: wpContent,
-        date: wpDate,
-        readTime: '6 min de leitura',
-        author: {
-          name: wpAuthor,
-          role: 'Especialista em Engenharia | ElectROM',
-          avatar: '/ElectROM - Horizontal.png'
-        },
-        category: {
-          id: 'artigo-tecnico',
-          name: wpCategoryName
-        },
-        image: wpImg,
-        tags: ['Engenharia Elétrica', 'Energia Industrial', 'ElectROM'],
-        featured: false
-      };
-    }
-  } catch {
-    // Silent fallback
-  }
-
-  return null;
+  return getBlogPostBySlug(slug) || null;
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
@@ -188,8 +112,78 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const relatedPosts = getRelatedBlogPosts(slug, post.category.id, 3);
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image?.startsWith('http') ? post.image : `https://electrom.eng.br${post.image || '/HeroO1.png'}`,
+    datePublished: post.date,
+    dateModified: new Date().toISOString(),
+    inLanguage: 'pt-BR',
+    author: {
+      '@type': 'Person',
+      name: post.author?.name || 'Equipe de Engenharia ElectROM',
+      jobTitle: post.author?.role || 'Engenheiro Eletricista',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'ElectROM Engenharia',
+        url: 'https://electrom.eng.br',
+      },
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'ElectROM Engenharia',
+      url: 'https://electrom.eng.br',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://electrom.eng.br/ElectROM%20-%20Horizontal.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://electrom.eng.br/blog/${slug}`,
+    },
+    keywords: post.tags?.join(', ') || post.category.name,
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Início',
+        item: 'https://electrom.eng.br',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://electrom.eng.br/blog',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://electrom.eng.br/blog/${slug}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-brand-petrol text-white relative overflow-hidden">
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* Background Grid & Aurora */}
       <div className="absolute inset-0 blueprint-bg opacity-15 pointer-events-none" />
       <div className="absolute top-[5%] left-[20%] w-[50vw] h-[50vw] rounded-full mix-blend-screen filter blur-[160px] opacity-10 bg-brand-blue pointer-events-none" />
