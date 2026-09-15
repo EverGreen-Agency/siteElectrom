@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSearch, FaCalendarAlt, FaUser, FaTag, FaArrowRight } from 'react-icons/fa';
+import { FaSearch, FaCalendarAlt, FaTag, FaArrowRight, FaClock, FaBolt } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
 import { blogPostsData } from '../../data/blogPosts';
@@ -16,6 +16,8 @@ interface Post {
   categoria: string;
   imagem: string;
   slug: string;
+  readTime?: string;
+  featured?: boolean;
 }
 
 const postsStatic: Post[] = blogPostsData.map(item => ({
@@ -26,7 +28,9 @@ const postsStatic: Post[] = blogPostsData.map(item => ({
   autor: item.author.name,
   categoria: item.category.id,
   imagem: item.image,
-  slug: item.slug
+  slug: item.slug,
+  readTime: item.readTime,
+  featured: item.featured
 }));
 
 const BlogPage = () => {
@@ -170,6 +174,12 @@ const BlogPage = () => {
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 to-transparent" />
+                    {post.featured && (
+                      <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan font-mono text-[9px] uppercase tracking-wider font-bold backdrop-blur-md flex items-center gap-1 shadow-lg shadow-black/40">
+                        <FaBolt className="text-[8px]" />
+                        Destaque
+                      </div>
+                    )}
                   </div>
 
                   {/* Post Content */}
@@ -180,10 +190,12 @@ const BlogPage = () => {
                         <FaCalendarAlt className="text-brand-blue" />
                         {post.data}
                       </div>
-                      <div className="flex items-center gap-1.5">
-                        <FaUser className="text-brand-blue" />
-                        {post.autor}
-                      </div>
+                      {post.readTime && (
+                        <div className="flex items-center gap-1 text-gray-400">
+                          <FaClock className="text-brand-cyan text-[10px]" />
+                          {post.readTime}
+                        </div>
+                      )}
                     </div>
 
                     {/* Title */}

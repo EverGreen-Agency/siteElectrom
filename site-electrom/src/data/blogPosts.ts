@@ -88,6 +88,14 @@ export const blogPostsData: BlogPostItem[] = [
         <li><strong>Nobreak Industrial Dinâmico:</strong> Geradores a diesel tradicionais levam de 15 a 30 segundos para dar partida e sincronizar. O BESS responde em menos de 20 milissegundos (&lt; 20ms), sustentando linhas de produção contínuas, fornos, PLCs e robôs sem perda de lote.</li>
       </ul>
 
+      <figure class="blog-inline-figure">
+        <img src="/obras/SmartFitSolar_inversores.png" alt="Inversores Industriais e Cabine de Paralelismo para Autoprodução e BESS" />
+        <figcaption>
+          <span>Figura 1: Inversores industriais de alta potência e chaveamento dinâmico para integração BESS e Usina Solar</span>
+          <span class="tag">Engenharia ElectROM</span>
+        </figcaption>
+      </figure>
+
       <h2 id="tabela-comparativa">3. Comparativo: Mercado Cativo vs. ACL vs. Tríade Completa</h2>
       <div class="overflow-x-auto my-6">
         <table class="w-full text-left border-collapse border border-white/10 text-sm">
@@ -207,6 +215,14 @@ export const blogPostsData: BlogPostItem[] = [
       <h2 id="termografia-preventiva">4. Termografia Infravermelha em Painéis Elétricos</h2>
       <p>A termografia é uma tecnologia preditiva indispensável. Utilizando câmeras infravermelhas com sensor microbolômetro calibrado, os engenheiros da ElectROM detectam conexões frouxas, oxidação em barramentos e sobrecargas térmicas invisíveis a olho nu, permitindo o reaperto programado antes que ocorra arco elétrico ou queima de disjuntores gerais.</p>
 
+      <figure class="blog-inline-figure">
+        <img src="/obras/QuadroDistribuicao.png" alt="Inspeção Técnica de Quadro Geral de Baixa Tensão (QGBT) e Proteção contra Surtos" />
+        <figcaption>
+          <span>Figura 1: Painel QGBT industrial com proteção de seletividade e ensaios periódicos de continuidade de aterramento</span>
+          <span class="tag">Conformidade NBR 5419</span>
+        </figcaption>
+      </figure>
+
       <h2 id="conclusao-conformidade">5. Diagnóstico e Regularização Técnica</h2>
       <p>A <strong>ElectROM Engenharia</strong> emite laudos periciais de SPDA, aterramento e NR-10 com instrumentos de ponta aferidos pelo INMETRO (terrômetros, micro-ohmímetros e termovisores) e ART recolhida junto ao CREA, garantindo total tranquilidade perante auditorias, fiscalizações e seguradoras.</p>
     `
@@ -313,6 +329,14 @@ export const blogPostsData: BlogPostItem[] = [
         <li><strong>Impacto ambiental rastreável:</strong> 180 toneladas de CO2 evitadas no balanço ESG da empresa.</li>
       </ul>
 
+      <figure class="blog-inline-figure">
+        <img src="/obras/SmartFitSolar.png" alt="Usina Fotovoltaica Comercial e Industrial Turn-Key Instalada pela ElectROM Engenharia" />
+        <figcaption>
+          <span>Figura 1: Sistema fotovoltaico comercial de alta performance com amortização de capital em 3,2 anos</span>
+          <span class="tag">Case Real ElectROM</span>
+        </figcaption>
+      </figure>
+
       <h2 id="fatores-roi">4. Fatores que Influenciam o ROI</h2>
       <p>O retorno de investimento de uma planta solar depende de rigor na engenharia de projeto:</p>
       <ul>
@@ -386,6 +410,14 @@ export const blogPostsData: BlogPostItem[] = [
       <h2 id="aspectos-tecnicos">3. Aspectos Técnicos e Integração com Cabines de Média Tensão</h2>
       <p>Projetos industriais operam normalmente no Grupo A (conectados em média ou alta tensão, como 13.8 kV, 23 kV ou 34.5 kV). Isso exige que a injeção de potência solar seja integrada de forma harmoniosa com os transformadores e quadros gerais de baixa tensão (QGBT) existentes.</p>
       
+      <figure class="blog-inline-figure">
+        <img src="/obras/ObraRecantoFotovoltaica/IMG_20181205_173826509_HDR.jpg" alt="Estrutura de Fixação e Módulos Fotovoltaicos em Telhado Fabril" />
+        <figcaption>
+          <span>Figura 1: Arranjo fotovoltaico em cobertura industrial com análise de carga estrutural e seletividade de proteção</span>
+          <span class="tag">Infraestrutura Solar ElectROM</span>
+        </figcaption>
+      </figure>
+
       <p>Principais cuidados que a <strong>ElectROM Engenharia</strong> avalia em campo:</p>
       <ol>
         <li><strong>Estudo de Seletividade e Proteção:</strong> Ajuste dos relés de proteção (como relés ANSI 50/51, 59N, 81O/U) para evitar desarmes indesejados da cabine primária.</li>
@@ -418,7 +450,7 @@ export const blogPostsData: BlogPostItem[] = [
       id: 'engenharia-de-energias',
       name: 'Engenharia de Energias'
     },
-    image: '/obras/Obras/Imagem6.png',
+    image: '/blog/eficiencia-energetica-industrial.jpg',
     tags: ['Eficiência Energética', 'Motores IE4', 'Automação', 'Retrofit', 'Gestão de Energia'],
     featured: false,
     tableOfContents: [
@@ -453,6 +485,14 @@ export const blogPostsData: BlogPostItem[] = [
       <h2 id="tendencia-2">3. Inversores de Frequência e Controle Adaptativo</h2>
       <p>Em cargas quadráticas (bombas centrífugas e ventiladores industriais), reduzir a rotação em apenas 20% através de inversores VFD pode reduzir a potência demandada em quase <strong>50%</strong> (leis de afinidade das máquinas de fluxo).</p>
 
+      <figure class="blog-inline-figure">
+        <img src="/obras/SmartFitSolar_lateral.png" alt="Telemetria e Medição Setorizada em Instalação Industrial" />
+        <figcaption>
+          <span>Figura 1: Medição setorizada e telemetria para controle dinâmico de perdas em planta fabril</span>
+          <span class="tag">Eficiência Energética ElectROM</span>
+        </figcaption>
+      </figure>
+
       <h2 id="tendencia-3">4. Monitoramento IoT e Telemetria em Tempo Real</h2>
       <p>A instalação de medidores digitais setorizados com comunicação Modbus/Ethernet permite identificar exatamente qual linha de produção ou turno está gerando picos indesejados de demanda na fatura.</p>
 
@@ -482,7 +522,7 @@ export const blogPostsData: BlogPostItem[] = [
       id: 'consultoria-de-energia',
       name: 'Consultoria de Energia'
     },
-    image: '/obras/Obras/Imagem10.png',
+    image: '/blog/mercado-livre-transicao.jpg',
     tags: ['Mercado Livre', 'ACL', 'Economia de Energia', 'CCEE', 'Regulação ANEEL'],
     featured: false,
     tableOfContents: [
@@ -520,6 +560,14 @@ export const blogPostsData: BlogPostItem[] = [
         <li><strong>Assinatura do Contrato de Compra e Venda de Energia (PPA):</strong> Travamento de preços fixos ou indexados com garantias firmes.</li>
       </ol>
 
+      <figure class="blog-inline-figure">
+        <img src="/obras/EstruturaTensao.jpeg" alt="Subestação de Média Tensão e Painel de Medição SMF para Faturamento no ACL" />
+        <figcaption>
+          <span>Figura 1: Infraestrutura de média tensão e painel de medição homologado CCEE para migração ACL</span>
+          <span class="tag">Engenharia Regulatória ElectROM</span>
+        </figcaption>
+      </figure>
+
       <h2 id="gestao-e-riscos">4. Gestão Pós-Migração e Mitigação de Riscos</h2>
       <p>Migrar é apenas o primeiro passo. A gestão contínua exige monitoramento do consumo hora a hora, ajuste de montantes sazonais, validação de faturas da CCEE e da distribuidora e liquidações financeiras no mercado de curto prazo (PLD).</p>
 
@@ -528,107 +576,11 @@ export const blogPostsData: BlogPostItem[] = [
     `
   },
   {
-    id: 4,
-    slug: 'como-reduzir-custos-com-energia-solar',
-    title: 'Como Reduzir Custos com Energia Solar na Indústria: Estratégias e Payback',
-    excerpt: 'Descubra estratégias práticas para maximizar a economia de energia em grandes plantas fabris com minigeração solar e payback acelerado.',
-    date: '10/06/2024',
-    readTime: '5 min de leitura',
-    author: {
-      name: 'Eng. Roberto Moreira',
-      role: 'Diretor Técnico de Engenharia | ElectROM',
-      avatar: '/ElectROM - Horizontal.png'
-    },
-    category: {
-      id: 'energias-renovaveis',
-      name: 'Energias Renováveis'
-    },
-    image: '/obras/UsinaCipoGuacu/IMG_20190714_112159631_HDR.jpg',
-    tags: ['Minigeração', 'Usinas Fotovoltaicas', 'Economia Industrial', 'Payback'],
-    featured: false,
-    tableOfContents: [
-      { id: 'estrategia-solar', title: '1. Estratégia de Minigeração Solar' },
-      { id: 'simulacao-custos', title: '2. Simulação de Economia e Payback' },
-      { id: 'adequacao-cabine', title: '3. Adequação da Cabine Primária' }
-    ],
-    content: `
-      <p class="lead">Grandes coberturas fabris e galpões logísticos oferecem uma oportunidade ímpar para a implantação de miniusinas solares que transformam áreas ociosas em fontes contínuas de geração de caixa.</p>
-      <h2 id="estrategia-solar">1. Estratégia de Minigeração Solar</h2>
-      <p>Ao implementar sistemas acima de 75 kW até 3 MW (Minigeração Distribuída), a indústria obtém economia de escala substancial na aquisição de equipamentos e custos de instalação.</p>
-      <h2 id="simulacao-custos">2. Simulação de Economia e Payback</h2>
-      <p>A taxa interna de retorno (TIR) de projetos solares industriais situa-se frequentemente entre 25% e 40% ao ano, superando com folga aplicações financeiras conservadoras de renda fixa.</p>
-      <h2 id="adequacao-cabine">3. Adequação da Cabine Primária</h2>
-      <p>A conexão à rede de média tensão exige laudo de viabilidade da concessionária e proteção de paralelismo de acordo com o padrão técnico da distribuidora (Enel, CPFL, EDP, etc.).</p>
-    `
-  },
-  {
-    id: 5,
-    slug: 'eficiencia-energetica-tendencias',
-    title: 'Eficiência Energética: Principais Tendências Industriais',
-    excerpt: 'Explore inovações tecnológicas como motores IE4/IE5 e inversores de frequência inteligentes que estão liderando a descarbonização industrial.',
-    date: '02/06/2024',
-    readTime: '7 min de leitura',
-    author: {
-      name: 'Equipe Técnica ElectROM',
-      role: 'Engenharia de Aplicação',
-      avatar: '/ElectROM - Horizontal.png'
-    },
-    category: {
-      id: 'engenharia-de-energias',
-      name: 'Engenharia de Energias'
-    },
-    image: '/obras/Obras/Imagem6.png',
-    tags: ['Eficiência', 'Inversores', 'Descarbonização', 'Indústria'],
-    featured: false,
-    tableOfContents: [
-      { id: 'visão-geral', title: '1. Visão Geral das Inovações' },
-      { id: 'gestão-termica', title: '2. Gestão Térmica e Elétrica Integrada' }
-    ],
-    content: `
-      <p class="lead">A busca por menores custos operacionais impulsiona a modernização dos ativos elétricos industriais. Compreenda como o retrofit tecnológico transforma plantas fabris tradicionais em operações de alta performance energética.</p>
-      <h2 id="visão-geral">1. Visão Geral das Inovações</h2>
-      <p>A integração entre acionamentos inteligentes, iluminação industrial LED de alto rendimento luminotécnico e automação predial/fabril permite cortes diretos na fatura de energia.</p>
-      <h2 id="gestão-termica">2. Gestão Térmica e Elétrica Integrada</h2>
-      <p>A medição contínua da eficiência dos transformadores e cabos elétricos evita perdas por efeito Joule e eleva a confiabilidade operacional.</p>
-    `
-  },
-  {
-    id: 6,
-    slug: 'mercado-livre-guia-migracao',
-    title: 'Mercado Livre de Energia: Guia Prático de Migração',
-    excerpt: 'Entenda os requisitos regulatórios obrigatórios e as vantagens financeiras da portabilidade para o Ambiente de Contratação Livre (ACL).',
-    date: '28/05/2024',
-    readTime: '6 min de leitura',
-    author: {
-      name: 'Consultoria Regulante ElectROM',
-      role: 'Mercado Livre & Regulação',
-      avatar: '/ElectROM - Horizontal.png'
-    },
-    category: {
-      id: 'consultoria-de-energia',
-      name: 'Consultoria de Energia'
-    },
-    image: '/obras/Obras/Imagem10.png',
-    tags: ['Mercado Livre', 'Migração ACL', 'Economia', 'CCEE'],
-    featured: false,
-    tableOfContents: [
-      { id: 'vantagens-migracao', title: '1. Principais Vantagens' },
-      { id: 'cronograma', title: '2. Cronograma de Implantação' }
-    ],
-    content: `
-      <p class="lead">A portabilidade para o Mercado Livre de Energia representa um dos maiores saltos de competitividade para médias e grandes empresas. Saiba como estruturar essa transição sem sobressaltos operacionais.</p>
-      <h2 id="vantagens-migracao">1. Principais Vantagens</h2>
-      <p>Além da redução direta do preço da energia, o consumidor adquire previsibilidade orçamentária para 2 a 5 anos e pode escolher fontes 100% renováveis.</p>
-      <h2 id="cronograma">2. Cronograma de Implantação</h2>
-      <p>O processo completo dura normalmente entre 4 e 6 meses, englobando a denúncia do contrato cativo, a contratação no mercado livre e a vistoria do sistema de medição pela concessionária.</p>
-    `
-  },
-  {
     id: 'ed-04',
     slug: 'mercado-livre-varejo-agente-varejista-ccee',
     title: 'Mercado Livre de Energia para Varejo e Pequena Indústria: O Papel do Agente Varejista da CCEE',
     excerpt: 'Descubra como pequenas indústrias e redes varejistas do Grupo A estão migrando para o ACL sem riscos operacionais através de comercializadoras varejistas credenciadas na CCEE.',
-    date: '15/10/2026',
+    date: '15/09/2026',
     readTime: '7 min de leitura',
     author: {
       name: 'Consultoria Regulante ElectROM',
@@ -642,8 +594,7 @@ export const blogPostsData: BlogPostItem[] = [
     image: '/obras/consultoria-de-energia.png',
     tags: ['Mercado Livre', 'Varejista CCEE', 'Economia de Energia', 'Varejo', 'Grupo A'],
     featured: false,
-    status: 'scheduled',
-    scheduledDate: '15/10/2026',
+    status: 'published',
     tableOfContents: [
       { id: 'desmistificando-varejista', title: '1. O que é a Comercialização Varejista?' },
       { id: 'vantagens-pequenas-empresas', title: '2. Vantagens Diretas para Redes e Galpões' },
@@ -673,6 +624,14 @@ export const blogPostsData: BlogPostItem[] = [
         <li><strong>Rastreabilidade de Sustentabilidade:</strong> Emissão de certificados I-REC para atendimento a exigências de auditorias de fornecimento e metas ESG.</li>
       </ul>
 
+      <figure class="blog-inline-figure">
+        <img src="/obras/Paineis.jpeg" alt="Painéis Fotovoltaicos em Telhado Comercial para Mercado Livre de Energia" />
+        <figcaption>
+          <span>Figura 1: Instalação comercial integrada à gestão de contratos livres de energia</span>
+          <span class="tag">CCEE Varejista ElectROM</span>
+        </figcaption>
+      </figure>
+
       <h2 id="passo-a-passo-migracao">3. Como Ocorre a Portabilidade na Prática</h2>
       <p>O processo segue etapas regulatórias formais:</p>
       <ol>
@@ -691,7 +650,7 @@ export const blogPostsData: BlogPostItem[] = [
     slug: 'retrofit-cabine-primaria-termografia-preventiva',
     title: 'Retrofit de Cabines Primárias e Transformadores: Maximização da Vida Útil e Eliminação de Paradas',
     excerpt: 'Saiba como o retrofit de subestações de média tensão e a manutenção preditiva com termografia infravermelha previnem acidentes e economizam até 60% frente à compra de ativos novos.',
-    date: '10/11/2026',
+    date: '08/09/2026',
     readTime: '6 min de leitura',
     author: {
       name: 'Equipe Técnica ElectROM',
@@ -705,8 +664,7 @@ export const blogPostsData: BlogPostItem[] = [
     image: '/obras/EstruturaTensao.jpeg',
     tags: ['Cabine Primária', 'Retrofit', 'Subestação', 'Termografia', 'Transformadores'],
     featured: false,
-    status: 'scheduled',
-    scheduledDate: '10/11/2026',
+    status: 'published',
     tableOfContents: [
       { id: 'sinais-desgaste', title: '1. Os Sinais de Envelhecimento da Subestação' },
       { id: 'retrofit-vs-substituicao', title: '2. Retrofit Planejado vs. Compra de Equipamento Novo' },
@@ -737,6 +695,14 @@ export const blogPostsData: BlogPostItem[] = [
         <li>Troca de buchas, isoladores de epóxi e fiação de comando auxiliar.</li>
       </ul>
 
+      <figure class="blog-inline-figure">
+        <img src="/obras/Estrutura2.jpeg" alt="Transformadores e Barramentos de Subestação Industrial em Retrofit" />
+        <figcaption>
+          <span>Figura 1: Intervenção técnica em subestação com ensaios preditivos e modernização de relés digitais</span>
+          <span class="tag">Média Tensão ElectROM</span>
+        </figcaption>
+      </figure>
+
       <h2 id="ensaios-preditivos">3. Ensaios em Óleo Isolante e Termografia</h2>
       <p>Para atestar a saúde do transformador sem retirá-lo de campo, realizamos análises físico-químicas e cromatográficas do óleo mineral (detecção de gases dissolvidos como hidrogênio, metano e acetileno), além de varredura termográfica com câmeras calibradas para registrar desvios de temperatura nos pontos de conexão.</p>
 
@@ -749,7 +715,7 @@ export const blogPostsData: BlogPostItem[] = [
     slug: 'energia-solar-agronegocio-irrigantes-silos',
     title: 'Energia Solar no Agronegócio: Como Silos e Irrigantes Reduzem em até 70% o Custo Tarifário Rural',
     excerpt: 'Descubra como fazendas, silos de secagem e produtores de irrigação por pivô central estão conquistando autossuficiência e blindagem energética com usinas fotovoltaicas dedicadas.',
-    date: '05/12/2026',
+    date: '01/09/2026',
     readTime: '8 min de leitura',
     author: {
       name: 'Eng. Roberto Moreira',
@@ -763,8 +729,7 @@ export const blogPostsData: BlogPostItem[] = [
     image: '/obras/CargillAgricola.png',
     tags: ['Agronegócio', 'Energia Solar Rural', 'Pivô Central', 'Silos de Grãos', 'Sustentabilidade Agro'],
     featured: false,
-    status: 'scheduled',
-    scheduledDate: '05/12/2026',
+    status: 'published',
     tableOfContents: [
       { id: 'desafio-energia-campo', title: '1. O Peso da Eletricidade na Safra e Irrigação' },
       { id: 'solucoes-solares-agro', title: '2. Usinas em Solo e Coberturas de Barracões' },
@@ -795,6 +760,14 @@ export const blogPostsData: BlogPostItem[] = [
         <li><strong>Autoprodução Compartilhada:</strong> Uma usina centralizada em uma propriedade gerando créditos para abater o consumo de outras fazendas e sedes sob o mesmo CPF/CNPJ.</li>
       </ul>
 
+      <figure class="blog-inline-figure">
+        <img src="/obras/CargillAgricola.png" alt="Engenharia Elétrica de Alta Performance para Complexo Agroindustrial" />
+        <figcaption>
+          <span>Figura 1: Infraestrutura de média tensão e subestação dedicada para complexo agroindustrial e secagem de grãos</span>
+          <span class="tag">Agro Sustentável ElectROM</span>
+        </figcaption>
+      </figure>
+
       <h2 id="linhas-financiamento">3. Linhas de Financiamento Sustentável (Plano Safra)</h2>
       <p>O setor agropecuário conta com linhas incentivadas como o Pronaf Eco, Inovagro e linhas de bancos cooperativos (Sicredi, Sicoob, Banco do Brasil) que oferecem taxas de juros competitivas e carências de até 24 meses, fazendo com que a própria economia na conta de luz pague as parcelas do financiamento.</p>
 
@@ -806,8 +779,8 @@ export const blogPostsData: BlogPostItem[] = [
     id: 'ed-07',
     slug: 'abertura-baixa-tensao-guia-gestor-comercial',
     title: 'Abertura do Mercado Livre para Baixa Tensão (Decreto 13.097): O Guia do Gestor Comercial',
-    excerpt: 'Compreenda o cronograma oficial de abertura do mercado de eletricidade para pequenos comércios e clínicas a partir de 2027 e saiba como se posicionar estrategicamente.',
-    date: '15/01/2027',
+    excerpt: 'Compreenda o cronograma oficial de abertura do mercado de eletricidade para pequenos comércios e clínicas e saiba como se posicionar estrategicamente.',
+    date: '25/08/2026',
     readTime: '5 min de leitura',
     author: {
       name: 'Consultoria Regulante ElectROM',
@@ -821,8 +794,7 @@ export const blogPostsData: BlogPostItem[] = [
     image: '/obras/engenharia-das-energias.png',
     tags: ['Baixa Tensão', 'Decreto 13097', 'Mercado Livre', 'Pequenas Empresas', 'Regulação'],
     featured: false,
-    status: 'scheduled',
-    scheduledDate: '15/01/2027',
+    status: 'published',
     tableOfContents: [
       { id: 'o-que-diz-decreto', title: '1. O Marco do Decreto nº 13.097' },
       { id: 'cronograma-datas', title: '2. Cronograma Oficial de Abertura' },
@@ -850,6 +822,14 @@ export const blogPostsData: BlogPostItem[] = [
         <li><strong>25 de Novembro de 2027:</strong> Abertura compulsória para todos os consumidores das classes <em>Comercial e Industrial</em> atendidos em baixa tensão (tensão inferior a 2,3 kV);</li>
         <li><strong>25 de Novembro de 2028:</strong> Abertura para a classe <em>Residencial e Rural</em>, atingindo a universalização total do mercado brasileiro.</li>
       </ul>
+
+      <figure class="blog-inline-figure">
+        <img src="/obras/CarregadorEletrico/CarregadorEletrico.jpeg" alt="Infraestrutura Elétrica Comercial e Mobilidade para Baixa Tensão" />
+        <figcaption>
+          <span>Figura 1: Infraestrutura de carregamento e gestão predial adaptada para nova dinâmica de contratação livre</span>
+          <span class="tag">Baixa Tensão ElectROM</span>
+        </figcaption>
+      </figure>
 
       <h2 id="como-funciona-baixa-tensao">3. A Dinâmica Comercial para PMEs</h2>
       <p>Diferente de grandes contratos industriais bilaterais, a baixa tensão operará por assinatura digital padronizada, similar a planos de telefonia móvel. O comercializador varejista cuidará de todas as interações perante a distribuidora e a câmara de liquidação.</p>
