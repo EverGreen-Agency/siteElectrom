@@ -30,6 +30,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: '/blog', priority: 0.9, changeFrequency: 'weekly' },
     { route: '/contato', priority: 0.8, changeFrequency: 'monthly' },
     { route: '/legal', priority: 0.4, changeFrequency: 'yearly' },
+    { route: '/privacidade', priority: 0.3, changeFrequency: 'yearly' },
+    { route: '/termos', priority: 0.3, changeFrequency: 'yearly' },
   ];
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((item) => ({
