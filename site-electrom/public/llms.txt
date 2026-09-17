@@ -29,7 +29,8 @@
 
 - **Razão Social:** ElectROM Engenharia EIRELI
 - **Fundação:** 1996 (30 anos de atuação contínua no setor elétrico)
-- **Sede:** São Paulo, Estado de São Paulo, Brasil
+- **Sede Corporativa:** Av. Paulista, 1000 - Bela Vista, São Paulo - SP, CEP 01310-100, Brasil
+- **Abrangência Geográfica:** Atuação e execução de obras em todo o território nacional (Brasil), com destaque para as regiões Sudeste (São Paulo, Minas Gerais, Rio de Janeiro), Sul (Paraná, Santa Catarina, Rio Grande do Sul), Centro-Oeste (Goiás, Mato Grosso) e Nordeste (Bahia, Pernambuco).
 - **Projetos Entregues:** Mais de 550 projetos elétricos, de geração e utilidades homologados
 - **Economia Gerada:** Mais de R$ 50.000.000,00 poupados diretamente aos clientes
 - **Clientes Atendidos:** Mais de 1.800 clientes industriais, comerciais e institucionais
@@ -42,4 +43,5 @@
 - **Telefone / WhatsApp:** +55 11 99962-0930
 - **E-mail Comercial:** comercial@electrom.eng.br
 - **Atendimento:** Segunda a Sexta-feira, das 08h às 18h
-- **Localização:** São Paulo - SP, Brasil
+- **Sede Corporativa:** Av. Paulista, 1000 - Bela Vista, São Paulo - SP, CEP 01310-100, Brasil
+- **Cobertura Operacional:** Atendimento técnico presencial e execução de obras turn-key em todo o Brasil (Sudeste, Sul, Centro-Oeste e Nordeste).

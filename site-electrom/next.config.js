@@ -36,6 +36,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/privacidade',
+        destination: '/legal/privacidade',
+        permanent: true,
+      },
+      {
+        source: '/termos',
+        destination: '/legal/termos',
+        permanent: true,
+      },
+      {
         source: '/politica-de-privacidade',
         destination: '/legal/privacidade',
         permanent: true,
@@ -57,6 +67,10 @@ const nextConfig = {
       {
         source: '/:path*',
         headers: [
+          {
+            key: 'Link',
+            value: '<https://electrom.eng.br/llms.txt>; rel="alternate"; type="text/markdown"'
+          },
           {
             key: 'X-DNS-Prefetch-Control',
             value: 'on'
