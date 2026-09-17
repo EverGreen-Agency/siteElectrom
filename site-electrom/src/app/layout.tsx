@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import "../styles/carousel.css";
@@ -11,6 +11,12 @@ const inter = Inter({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#060c0a",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
     default: "ElectROM Engenharia | Cabines Primárias, Mercado Livre & Energia Solar",
@@ -22,15 +28,20 @@ export const metadata: Metadata = {
     canonical: "https://electrom.eng.br",
   },
   keywords: [
-    "engenharia elétrica",
+    "engenharia elétrica Brasil",
     "cabine primária de média tensão",
-    "mercado livre de energia",
+    "subestação de média tensão",
+    "projetos elétricos industriais São Paulo Minas Gerais Sul",
+    "mercado livre de energia ACL",
     "gerenciamento de obras elétricas",
-    "energia solar industrial",
+    "usina solar industrial Brasil",
+    "armazenamento BESS indústria",
     "eficiência energética industrial",
-    "projetos elétricos industriais",
-    "laudo NBR 5410",
+    "laudo SPDA NBR 5419",
+    "laudo elétrico NR-10",
     "São Paulo",
+    "Minas Gerais",
+    "Brasil",
     "ElectROM Engenharia"
   ],
   authors: [{ name: "ElectROM Engenharia" }],
@@ -50,6 +61,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "ElectROM Engenharia | Inteligência & Engenharia de Energias",
+    description: "Mais de 30 anos de solidez e inovação em cabines primárias, usinas solares industriais e Mercado Livre de Energia.",
+    images: ["/ElectROM - Horizontal.png"],
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -58,6 +75,17 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://electrom.eng.br/#website",
+      "url": "https://electrom.eng.br",
+      "name": "ElectROM Engenharia",
+      "description": "Inteligência & Engenharia de Energias: Cabines Primárias, Mercado Livre de Energia e Usinas Solares Industriais.",
+      "publisher": {
+        "@id": "https://electrom.eng.br/#organization"
+      },
+      "inLanguage": "pt-BR"
+    },
     {
       "@type": "Organization",
       "@id": "https://electrom.eng.br/#organization",
@@ -89,16 +117,34 @@ const jsonLd = {
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "São Paulo",
+        "streetAddress": "Av. Paulista, 1000 - Bela Vista",
         "addressLocality": "São Paulo",
         "addressRegion": "SP",
+        "postalCode": "01310-100",
         "addressCountry": "BR"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": -23.5615,
-        "longitude": -46.6560
+        "latitude": -23.5657,
+        "longitude": -46.6514
       },
+      "hasMap": "https://maps.google.com/?q=ElectROM+Engenharia+Av+Paulista+1000",
+      "areaServed": [
+        { "@type": "Country", "name": "Brasil" },
+        { "@type": "AdministrativeArea", "name": "Região Sudeste" },
+        { "@type": "AdministrativeArea", "name": "Região Sul" },
+        { "@type": "AdministrativeArea", "name": "Região Centro-Oeste" },
+        { "@type": "AdministrativeArea", "name": "Região Nordeste" },
+        { "@type": "State", "name": "São Paulo" },
+        { "@type": "State", "name": "Minas Gerais" },
+        { "@type": "State", "name": "Rio de Janeiro" },
+        { "@type": "State", "name": "Paraná" },
+        { "@type": "State", "name": "Santa Catarina" },
+        { "@type": "State", "name": "Rio Grande do Sul" },
+        { "@type": "State", "name": "Goiás" },
+        { "@type": "State", "name": "Mato Grosso" },
+        { "@type": "State", "name": "Bahia" }
+      ],
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -170,6 +216,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${inter.variable}`} suppressHydrationWarning={true}>
+      <head>
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="Especificação Técnica LLMs ElectROM" />
+      </head>
       <body className="font-sans antialiased text-brand-white bg-brand-petrol" suppressHydrationWarning={true}>
         <script
           type="application/ld+json"

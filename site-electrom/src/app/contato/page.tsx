@@ -149,14 +149,20 @@ const ContactPage = () => {
                 </div>
               </a>
 
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-[#10B981]">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-[#10B981] mt-0.5">
                   <FaMapMarkerAlt className="text-lg" />
                 </div>
                 <div>
                   <span className="block text-xs font-mono text-gray-400 uppercase">Sede Corporativa</span>
-                  <span className="block text-white text-sm font-medium leading-normal mt-0.5">
-                    {companyData.address.city} - {companyData.address.state}
+                  <span className="block text-white text-sm font-medium leading-snug mt-0.5">
+                    {companyData.address.street} - {companyData.address.neighborhood}
+                  </span>
+                  <span className="block text-gray-400 text-xs mt-0.5">
+                    {companyData.address.city} - {companyData.address.state}, CEP {companyData.address.zipCode}
+                  </span>
+                  <span className="inline-block mt-2 px-2.5 py-1 rounded bg-brand-cyan/10 border border-brand-cyan/20 text-[10px] font-mono text-brand-cyan uppercase tracking-wider font-semibold">
+                    Atuação em Todo o Brasil: Sudeste, Sul, Centro-Oeste e Nordeste
                   </span>
                 </div>
               </div>

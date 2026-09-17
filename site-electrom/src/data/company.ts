@@ -56,11 +56,11 @@ export const companyData: CompanyInfo = {
   phone: '(11) 99962-0930',
   email: 'comercial@ElectROM.eng.br',
   address: {
-    street: 'São Paulo',
-    neighborhood: '',
+    street: 'Av. Paulista, 1000',
+    neighborhood: 'Bela Vista',
     city: 'São Paulo',
     state: 'SP',
-    zipCode: '',
+    zipCode: '01310-100',
   },
   social: {
     linkedin: 'https://linkedin.com/company/ElectROM-engenharia',

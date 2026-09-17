@@ -131,7 +131,7 @@ export const blogPostsData: BlogPostItem[] = [
       </div>
 
       <h2 id="integracao-tecnica">4. Integração Técnica com a Subestação e Cabine Primária</h2>
-      <p>Diferente de instalações solares residenciais, projetos de grande porte exigem compatibilidade com a cabine primária (13.8 kV, 23 kV ou 34.5 kV). A <strong>ElectROM Engenharia</strong> avalia parâmetros rigorosos:</p>
+      <p>Diferente de instalações solares residenciais, projetos de grande porte exigem compatibilidade com a <a href="/solucoes" class="text-brand-cyan hover:underline font-medium">cabine primária e subestações de média tensão</a> (13.8 kV, 23 kV ou 34.5 kV). A <strong>ElectROM Engenharia</strong> avalia parâmetros rigorosos:</p>
       <ol>
         <li><strong>Estudos de Curto-Circuito e Seletividade:</strong> Parametrização de relés digitais (funções ANSI 50/51, 27/59, 81O/U) para que a usina solar ou as baterias não causem desarme acidental na proteção da concessionária.</li>
         <li><strong>Controle de Reativos:</strong> Inversores e inversores bidirecionais PCS configurados com controle dinâmico de potência reativa (cos phi e curva Q(U)), prevenindo penalidades de excedente reativo.</li>
@@ -139,7 +139,7 @@ export const blogPostsData: BlogPostItem[] = [
       </ol>
 
       <h2 id="independencia-energetica">5. Como Estruturar o Diagnóstico na Sua Empresa</h2>
-      <p>O primeiro passo é o levantamento da memória de massa e faturas dos últimos 24 meses. A equipe de engenharia da ElectROM desenvolve a modelagem computacional da curva de carga para determinar a proporção exata entre capacidade solar, potência do banco BESS e volume contratado no ACL.</p>
+      <p>O primeiro passo é o levantamento da memória de massa e faturas dos últimos 24 meses. A equipe de engenharia da ElectROM desenvolve a modelagem computacional da curva de carga para determinar a proporção exata entre capacidade solar, potência do banco BESS e volume contratado no ACL. Confira também o nosso <a href="/blog/sustentabilidade-futuro-energia" class="text-brand-cyan hover:underline font-medium">guia completo de transição para o Mercado Livre de Energia</a> ou <a href="/contato" class="text-brand-cyan hover:underline font-semibold">solicite um diagnóstico preliminar com nossos especialistas</a>.</p>
     `
   },
   {
@@ -224,7 +224,7 @@ export const blogPostsData: BlogPostItem[] = [
       </figure>
 
       <h2 id="conclusao-conformidade">5. Diagnóstico e Regularização Técnica</h2>
-      <p>A <strong>ElectROM Engenharia</strong> emite laudos periciais de SPDA, aterramento e NR-10 com instrumentos de ponta aferidos pelo INMETRO (terrômetros, micro-ohmímetros e termovisores) e ART recolhida junto ao CREA, garantindo total tranquilidade perante auditorias, fiscalizações e seguradoras.</p>
+      <p>A <strong>ElectROM Engenharia</strong> emite laudos periciais de SPDA, aterramento e NR-10 com instrumentos de ponta aferidos pelo INMETRO (terrômetros, micro-ohmímetros e termovisores) e ART recolhida junto ao CREA, garantindo total tranquilidade perante auditorias, fiscalizações e seguradoras. Conheça também nossas <a href="/solucoes" class="text-brand-cyan hover:underline font-medium">soluções completas em média e baixa tensão</a>, veja nosso artigo sobre <a href="/blog/retrofit-cabine-primaria-termografia-preventiva" class="text-brand-cyan hover:underline font-medium">termografia preditiva em cabines primárias</a> ou <a href="/contato" class="text-brand-cyan hover:underline font-semibold">entre em contato para agendar uma auditoria técnica</a>.</p>
     `
   },
   {
@@ -346,7 +346,7 @@ export const blogPostsData: BlogPostItem[] = [
       </ul>
 
       <h2 id="conclusao-momento">5. Conclusão: O Momento do Investimento</h2>
-      <p>Com as projeções tarifárias das concessionárias e o custo competitivo dos equipamentos, a questão estratégica para gestores não é se a energia solar compensa, mas sim quanto custo desnecessário sua empresa continuará pagando a cada mês de adiamento.</p>
+      <p>Com as projeções tarifárias das concessionárias e o custo competitivo dos equipamentos, a questão estratégica para gestores não é se a energia solar compensa, mas sim quanto custo desnecessário sua empresa continuará pagando a cada mês de adiamento. Explore nossos <a href="/cases" class="text-brand-cyan hover:underline font-medium">cases de usinas solares homologadas</a> ou <a href="/contato" class="text-brand-cyan hover:underline font-semibold">solicite um estudo preliminar de viabilidade e payback para a sua planta</a>.</p>
     `
   },
   {
@@ -840,6 +840,20 @@ export const blogPostsData: BlogPostItem[] = [
   }
 ];
 
+// Mapa de aliases para compatibilidade total, URLs legadas do WordPress e variações de motores de IA (GEO)
+export const blogAliasesMap: Record<string, string> = {
+  'como-reduzir-custos-com-energia-solar': 'energia-solar-setor-industrial',
+  'eficiencia-energetica-tendencias': 'tendencias-eficiencia-energetica-2024',
+  'mercado-livre-guia-migracao': 'sustentabilidade-futuro-energia',
+  'como-montar-sua-primeira-maquina-de-vendas-com-zero-equipe-eg-growth': 'energia-solar-vale-a-pena-2025-numeros-reais',
+  'energia-solar-vale-a-pena-2025': 'energia-solar-vale-a-pena-2025-numeros-reais',
+  'spda-nbr-5419-laudo-nr10-industria-seguranca': 'laudo-spda-nbr5419-prontuario-nr10-industria',
+  'laudo-spda-nbr-5419': 'laudo-spda-nbr5419-prontuario-nr10-industria',
+  'mercado-livre-baixa-tensao-pme-cronograma-2026-2028': 'abertura-baixa-tensao-guia-gestor-comercial',
+  'bess-armazenamento-baterias-industria-peak-shaving': 'autoproducao-solar-bess-mercado-livre-industria',
+  'armazenamento-baterias-bess-industria': 'autoproducao-solar-bess-mercado-livre-industria',
+};
+
 // Funções auxiliares
 export function getAllBlogPosts(): BlogPostItem[] {
   return blogPostsData;
@@ -853,16 +867,7 @@ export function getBlogPostBySlug(slug: string): BlogPostItem | undefined {
   const directMatch = blogPostsData.find(p => p.slug.toLowerCase() === normalizedSlug);
   if (directMatch) return directMatch;
 
-  // Mapa de aliases para compatibilidade total e URLs legadas do WordPress
-  const aliasMap: Record<string, string> = {
-    'como-reduzir-custos-com-energia-solar': 'energia-solar-setor-industrial',
-    'eficiencia-energetica-tendencias': 'tendencias-eficiencia-energetica-2024',
-    'mercado-livre-guia-migracao': 'sustentabilidade-futuro-energia',
-    'como-montar-sua-primeira-maquina-de-vendas-com-zero-equipe-eg-growth': 'energia-solar-vale-a-pena-2025-numeros-reais',
-    'energia-solar-vale-a-pena-2025': 'energia-solar-vale-a-pena-2025-numeros-reais'
-  };
-
-  const mappedSlug = aliasMap[normalizedSlug];
+  const mappedSlug = blogAliasesMap[normalizedSlug];
   if (mappedSlug) {
     return blogPostsData.find(p => p.slug === mappedSlug);
   }
@@ -871,9 +876,17 @@ export function getBlogPostBySlug(slug: string): BlogPostItem | undefined {
 }
 
 export function getRelatedBlogPosts(currentSlug: string, categoryId?: string, limit = 3): BlogPostItem[] {
-  return blogPostsData
-    .filter(p => p.slug !== currentSlug)
-    .filter(p => !categoryId || p.category.id === categoryId || true)
-    .slice(0, limit);
+  const otherPosts = blogPostsData.filter(p => p.slug !== currentSlug);
+
+  if (categoryId) {
+    const sameCategory = otherPosts.filter(p => p.category.id === categoryId);
+    if (sameCategory.length >= limit) {
+      return sameCategory.slice(0, limit);
+    }
+    const rest = otherPosts.filter(p => p.category.id !== categoryId);
+    return [...sameCategory, ...rest].slice(0, limit);
+  }
+
+  return otherPosts.slice(0, limit);
 }
 

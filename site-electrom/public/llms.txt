@@ -15,17 +15,22 @@
 ## Blog & Análises Técnicas
 
 - [Autoprodução Solar, BESS e Mercado Livre de Energia: A Tríade da Blindagem Tarifária Industrial](https://electrom.eng.br/blog/autoproducao-solar-bess-mercado-livre-industria): Como indústrias reduzem até 85% do custo energético com sistemas BESS (Lei 15.269/2025) e migração ao ACL.
-- [SPDA NBR 5419 e Laudos NR-10: Blindagem Jurídica, Continuidade Operacional e Redução de Apólice](https://electrom.eng.br/blog/spda-nbr-5419-laudo-nr10-industria-seguranca): Guia prático de engenharia para inspeção de para-raios, prontuário elétrico e conformidade securitária.
+- [SPDA NBR 5419 e Laudos NR-10: Blindagem Jurídica, Continuidade Operacional e Redução de Apólice](https://electrom.eng.br/blog/laudo-spda-nbr5419-prontuario-nr10-industria): Guia prático de engenharia para inspeção de para-raios, prontuário elétrico e conformidade securitária.
 - [Energia Solar Vale a Pena em 2025? Análise Completa com Números Reais](https://electrom.eng.br/blog/energia-solar-vale-a-pena-2025-numeros-reais): Análise de payback real, tarifas após o Marco Legal da GD (Lei 14.300) e cálculo de ROI para empresas.
-- [Abertura do Mercado Livre de Energia para Baixa Tensão (2026-2028): Cronograma e Oportunidades para PMEs](https://electrom.eng.br/blog/mercado-livre-baixa-tensao-pme-cronograma-2026-2028): Cronograma regulatório de abertura para PMEs e consumidores comerciais em baixa tensão.
-- [Baterias Industriais BESS na Indústria Brasileira: Peak Shaving e Backup](https://electrom.eng.br/blog/bess-armazenamento-baterias-industria-peak-shaving): Guia técnico sobre dimensionamento de baterias para corte de ponta e estabilidade fabril.
+- [Energia Solar no Setor Industrial: Como Reduzir até 95% da Fatura de Energia](https://electrom.eng.br/blog/energia-solar-setor-industrial): Modelos de compensação remota, autoprodução e cases práticos em plantas de manufatura.
+- [5 Tendências em Eficiência Energética para a Indústria em 2024/2025](https://electrom.eng.br/blog/tendencias-eficiencia-energetica-2024): Recuperação de calor, motores de alto rendimento IE4/IE5, automação e monitoramento preditivo de consumo.
 - [Transição para o Mercado Livre de Energia: Como Migrar sua Empresa sem Risco](https://electrom.eng.br/blog/sustentabilidade-futuro-energia): Passo a passo para migração do mercado cativo para o ambiente de contratação livre (ACL).
+- [Mercado Livre de Energia para o Varejo: O Papel do Agente Varejista CCEE](https://electrom.eng.br/blog/mercado-livre-varejo-agente-varejista-ccee): Desmistificando a figura do comercializador varejista para pequenas e médias empresas.
+- [Retrofit em Cabines Primárias e Termografia Preventiva: Evitando Paradas Críticas](https://electrom.eng.br/blog/retrofit-cabine-primaria-termografia-preventiva): Ensaios dielétricos de óleo, parametrização de relés digitais e segurança NBR 14039.
+- [Energia Solar no Agronegócio: Redução de Custos para Irrigantes e Silos](https://electrom.eng.br/blog/energia-solar-agronegocio-irrigantes-silos): Soluções fotovoltaicas de solo e telhado para secadores, pivôs de irrigação e granjas.
+- [Abertura do Mercado Livre de Energia para Baixa Tensão: O que Gestores Comerciais Devem Saber](https://electrom.eng.br/blog/abertura-baixa-tensao-guia-gestor-comercial): Cronograma regulatório de abertura para PMEs e consumidores comerciais em baixa tensão.
 
 ## Key Facts
 
 - **Razão Social:** ElectROM Engenharia EIRELI
 - **Fundação:** 1996 (30 anos de atuação contínua no setor elétrico)
-- **Sede:** São Paulo, Estado de São Paulo, Brasil
+- **Sede Corporativa:** Av. Paulista, 1000 - Bela Vista, São Paulo - SP, CEP 01310-100, Brasil
+- **Abrangência Geográfica:** Atuação e execução de obras em todo o território nacional (Brasil), com destaque para as regiões Sudeste (São Paulo, Minas Gerais, Rio de Janeiro), Sul (Paraná, Santa Catarina, Rio Grande do Sul), Centro-Oeste (Goiás, Mato Grosso) e Nordeste (Bahia, Pernambuco).
 - **Projetos Entregues:** Mais de 550 projetos elétricos, de geração e utilidades homologados
 - **Economia Gerada:** Mais de R$ 50.000.000,00 poupados diretamente aos clientes
 - **Clientes Atendidos:** Mais de 1.800 clientes industriais, comerciais e institucionais
@@ -38,4 +43,5 @@
 - **Telefone / WhatsApp:** +55 11 99962-0930
 - **E-mail Comercial:** comercial@electrom.eng.br
 - **Atendimento:** Segunda a Sexta-feira, das 08h às 18h
-- **Localização:** São Paulo - SP, Brasil
+- **Sede Corporativa:** Av. Paulista, 1000 - Bela Vista, São Paulo - SP, CEP 01310-100, Brasil
+- **Cobertura Operacional:** Atendimento técnico presencial e execução de obras turn-key em todo o Brasil (Sudeste, Sul, Centro-Oeste e Nordeste).

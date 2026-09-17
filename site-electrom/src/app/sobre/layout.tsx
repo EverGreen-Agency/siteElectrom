@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sobre a ElectROM | 30 Anos de Engenharia de Energias',
+  title: 'Sobre Nós | 30 Anos de Engenharia de Energias',
   description: 'Conheça o legado de 30 anos da ElectROM Engenharia (fundada em 1996), equipe técnica credenciada pelo CREA-SP, rigor normativo e mais de 550 projetos entregues.',
   alternates: {
     canonical: 'https://electrom.eng.br/sobre',

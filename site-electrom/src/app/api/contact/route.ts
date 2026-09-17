@@ -16,6 +16,9 @@ interface LeadData {
 const getLeadsFilePath = () => path.join(process.cwd(), 'src', 'data', 'leads_received.json');
 
 function readLocalLeads(): LeadData[] {
+  if (process.env.NODE_ENV !== 'development') {
+    return [];
+  }
   try {
     const filePath = getLeadsFilePath();
     if (fs.existsSync(filePath)) {
@@ -29,6 +32,10 @@ function readLocalLeads(): LeadData[] {
 }
 
 function saveLocalLeads(leads: LeadData[]): void {
+  // Em ambientes serverless (Vercel), o filesystem é read-only (EROFS)
+  if (process.env.NODE_ENV !== 'development') {
+    return;
+  }
   try {
     const dataDir = path.join(process.cwd(), 'src', 'data');
     if (!fs.existsSync(dataDir)) {
@@ -40,8 +47,18 @@ function saveLocalLeads(leads: LeadData[]): void {
   }
 }
 
-// GET Endpoint: Export / View stored leads
+// GET Endpoint: Export / View stored leads (Protegido por token de administração)
 export async function GET(request: Request) {
+  const authHeader = request.headers.get('authorization');
+  const adminKey = process.env.ADMIN_API_KEY || process.env.CRON_SECRET;
+
+  if (!adminKey || authHeader !== `Bearer ${adminKey}`) {
+    return NextResponse.json(
+      { success: false, error: 'Acesso não autorizado. Token de segurança obrigatório.' },
+      { status: 401 }
+    );
+  }
+
   const { searchParams } = new URL(request.url);
   const format = searchParams.get('format');
   const leads = readLocalLeads();
