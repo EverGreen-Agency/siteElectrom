@@ -26,15 +26,19 @@ export default function Footer() {
       links: [
         { name: "Energia Solar", href: "/solucoes" },
         { name: "Eficiência Energética", href: "/solucoes" },
-        { name: "Projetos Elétricos", href: "/solucoes" },
-        { name: "Consultoria", href: "/solucoes" }
+        { name: "Média & Baixa Tensão", href: "/solucoes" },
+        { name: "Mercado Livre (ACL)", href: "/solucoes" },
+        { name: "Gerenciamento de Obras", href: "/solucoes" },
       ]
     },
     {
-      title: "Empresa",
+      title: "Institucional",
       links: [
+        { name: "Sobre a Empresa", href: "/sobre" },
+        { name: "Cases de Sucesso", href: "/cases" },
         { name: "Sustentabilidade", href: "/sustentabilidade" },
-        { name: "Blog", href: "/blog" }
+        { name: "Blog Técnico", href: "/blog" },
+        { name: "Fale com a Engenharia", href: "/contato" },
       ]
     }
   ];
@@ -119,12 +123,12 @@ export default function Footer() {
                 <ul className="space-y-3">
                   {section.links.map((link) => (
                     <li key={link.name}>
-                      <a
+                      <Link
                         href={link.href}
                         className="text-xs text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-1.5"
                       >
                         {link.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -170,6 +174,8 @@ export default function Footer() {
               <Link href="/legal/privacidade" className="hover:text-brand-blue transition-colors">Privacidade</Link>
               <span>•</span>
               <Link href="/legal/termos" className="hover:text-brand-blue transition-colors">Termos</Link>
+              <span>•</span>
+              <a href="/llms.txt" target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan transition-colors" title="Especificação Técnica para LLMs e Agentes">llms.txt</a>
             </div>
           </div>
         </motion.div>

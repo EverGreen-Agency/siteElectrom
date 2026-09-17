@@ -876,9 +876,17 @@ export function getBlogPostBySlug(slug: string): BlogPostItem | undefined {
 }
 
 export function getRelatedBlogPosts(currentSlug: string, categoryId?: string, limit = 3): BlogPostItem[] {
-  return blogPostsData
-    .filter(p => p.slug !== currentSlug)
-    .filter(p => !categoryId || p.category.id === categoryId || true)
-    .slice(0, limit);
+  const otherPosts = blogPostsData.filter(p => p.slug !== currentSlug);
+
+  if (categoryId) {
+    const sameCategory = otherPosts.filter(p => p.category.id === categoryId);
+    if (sameCategory.length >= limit) {
+      return sameCategory.slice(0, limit);
+    }
+    const rest = otherPosts.filter(p => p.category.id !== categoryId);
+    return [...sameCategory, ...rest].slice(0, limit);
+  }
+
+  return otherPosts.slice(0, limit);
 }
 

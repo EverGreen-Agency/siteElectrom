@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { permanentRedirect } from 'next/navigation';
 import { 
   FaCalendarAlt, 
   FaClock, 
@@ -43,8 +44,8 @@ function formatIsoDate(dateStr: string): string {
 
 export async function generateStaticParams() {
   const localPosts = getAllBlogPosts();
-  const primarySlugs = localPosts.map((p) => ({
-    slug: p.slug,
+  const primarySlugs = localPosts.map((post) => ({
+    slug: post.slug,
   }));
   const aliasSlugs = Object.keys(blogAliasesMap).map((alias) => ({
     slug: alias,
@@ -58,7 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (localPost) {
     return {
-      title: `${localPost.title} | ElectROM Engenharia`,
+      title: localPost.title,
       description: localPost.excerpt,
       alternates: {
         canonical: `https://electrom.eng.br/blog/${localPost.slug}`,
@@ -83,7 +84,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: 'Artigo | ElectROM Engenharia',
+    title: 'Artigo Técnico',
     description: 'Artigo técnico e análises sobre engenharia elétrica e energia solar.',
   };
 }
@@ -94,6 +95,13 @@ async function fetchPost(slug: string): Promise<BlogPostItem | null> {
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
+  const normalizedSlug = slug.toLowerCase().trim();
+  const canonicalTarget = blogAliasesMap[normalizedSlug];
+
+  if (canonicalTarget) {
+    permanentRedirect(`/blog/${canonicalTarget}`);
+  }
+
   const post = await fetchPost(slug);
 
   if (!post) {

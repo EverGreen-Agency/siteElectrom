@@ -1,12 +1,5 @@
-'use client';
-
-import { Suspense } from 'react';
-import { LegalContent } from '../../components/LegalContent';
+import { permanentRedirect } from 'next/navigation';
 
 export default function TopPrivacidadePage() {
-  return (
-    <Suspense fallback={<div className="bg-brand-petrol min-h-screen" />}>
-      <LegalContent defaultTab="privacidade" />
-    </Suspense>
-  );
+  permanentRedirect('/legal/privacidade');
 }
